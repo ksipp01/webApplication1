@@ -15,5 +15,8 @@
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="submit" />
     </div>
     </form>
+      <br />
+        <br />
+        <a href="index.aspx">Index</a>
 </body>
 </html>

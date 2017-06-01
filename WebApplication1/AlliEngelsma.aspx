@@ -15,6 +15,9 @@
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="submit" />
     </div>
+        <br />
+        <br />
+         <a href="index.aspx">Index</a>
     </form>
 </body>
 </html>

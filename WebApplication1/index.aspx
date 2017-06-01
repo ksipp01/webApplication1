@@ -79,7 +79,7 @@ table {
 <table style="width:80%">
             <tr>
                 <td class="auto-style1">
-                    &nbsp;<a href="KarenAnderson.aspx">Karen Anderson</a>&nbsp;&nbsp;</td>
+                    <a href="KarenAnderson.aspx">Karen Anderson</a>&nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox1" runat="server" Width="60px"></asp:TextBox>
                 </td>
