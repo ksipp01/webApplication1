@@ -608,6 +608,7 @@ namespace WebApplication1
                 TextBox3.BackColor = System.Drawing.Color.WhiteSmoke;
                 DeweyArrivalButton.Text = "HERE"; 
                 Global.ArrivedanDewey = true;
+                DeweyArrivalButton.Enabled = false;
             }
             //else
             //{
