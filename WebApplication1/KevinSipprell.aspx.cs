@@ -27,7 +27,7 @@ namespace WebApplication1
         {
             name = RemoveSpace(this.AppRelativeVirtualPath.ToString());
         }
-
+        //
         protected void Button1_Click(object sender, EventArgs e)
         {
             Global.MDrespond++;
