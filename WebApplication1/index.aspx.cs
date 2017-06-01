@@ -915,6 +915,62 @@ namespace WebApplication1
             Global.ArriveerinnVonRein = true;
         }
 
-       
+        protected void Button51_Click(object sender, EventArgs e)
+        {
+            CleartextBoxes(Page);
+        }
+        public void CleartextBoxes(Control parent)
+        {
+            if (parent.HasControls())
+            {
+                foreach (Control x in parent.Controls)
+                {
+                    if ((x.GetType() == typeof(TextBox)))
+                    {
+                        ((TextBox)(x)).Text = "";
+                        ((TextBox)(x)).BackColor = default(System.Drawing.Color);
+                    }
+
+                  
+                    if (x.GetType() == typeof(Button))
+                    {
+                        if (((Button)(x)).Enabled == false)
+                        {
+                            ((Button)(x)).Enabled = true;
+                            ((Button)(x)).Text = "Arrived";
+                        }
+                    }
+
+                    CleartextBoxes(x);
+                }
+            }
+        }
+
+        //private void SetBackColor(Control Parentcontrol)
+        //{
+
+        //    if (Parentcontrol.HasControls())
+        //    {
+        //        foreach (Control c in Parentcontrol.Controls)
+        //        {
+        //            SetBackColor(c);
+        //            TextBox tb = c as TextBox;
+        //            if (tb != null)
+        //                //  if (tb.Text != "" && tb.BackColor != System.Drawing.Color.WhiteSmoke)
+        //                if (tb.Text == "" || tb.Text.Contains("hrs"))
+        //                    tb.BackColor = tb.BackColor;
+        //                else
+        //                    tb.BackColor = System.Drawing.Color.Lime;
+        //        }
+
+        //    }
+        //}
+
+
+
+
+
+
+
     }
 }

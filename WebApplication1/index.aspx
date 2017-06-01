@@ -21,6 +21,7 @@
 <body>
     
     <form id="form1" runat="server">
+        <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="EMPAC Casualty Response Provider Tracker"></asp:Label>
         <br />
         <br />
         <table style="width: 100%;">
@@ -354,7 +355,10 @@ table {
             <br />
        
 
-     <a href="Log.aspx">View Log</a>
+     <a href="Log.aspx">View Log</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <asp:Button ID="Button51" runat="server" Text="Reset" OnClientClick = "return confirm('Are you sure you want to reset?');" OnClick="Button51_Click"/>
+       
     <br />
     <br />
     <br />
