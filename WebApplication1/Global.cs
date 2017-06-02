@@ -367,369 +367,369 @@ namespace WebApplication1
             }
         }
 
-        public static bool ArrivedaveLarson
-        {
-            get
-            {
-                return _arrivedaveLarson;
-            }
+        //public static bool ArrivedaveLarson
+        //{
+        //    get
+        //    {
+        //        return _arrivedaveLarson;
+        //    }
 
-            set
-            {
-                _arrivedaveLarson = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivedaveLarson = value;
+        //    }
+        //}
 
-        public static bool ArrivegregPeterson
-        {
-            get
-            {
-                return _arrivegregPeterson;
-            }
+        //public static bool ArrivegregPeterson
+        //{
+        //    get
+        //    {
+        //        return _arrivegregPeterson;
+        //    }
 
-            set
-            {
-                _arrivegregPeterson = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivegregPeterson = value;
+        //    }
+        //}
 
-        public static bool ArrivemattHerold
-        {
-            get
-            {
-                return _arrivemattHerold;
-            }
+        //public static bool ArrivemattHerold
+        //{
+        //    get
+        //    {
+        //        return _arrivemattHerold;
+        //    }
 
-            set
-            {
-                _arrivemattHerold = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivemattHerold = value;
+        //    }
+        //}
 
-        public static bool ArrivekevinSipprell
-        {
-            get
-            {
-                return _arrivekevinSipprell;
-            }
+        //public static bool ArrivekevinSipprell
+        //{
+        //    get
+        //    {
+        //        return _arrivekevinSipprell;
+        //    }
 
-            set
-            {
-                _arrivekevinSipprell = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivekevinSipprell = value;
+        //    }
+        //}
 
-        public static bool ArrivejoseDundee
-        {
-            get
-            {
-                return ArrivejoseDundee1;
-            }
+        //public static bool ArrivejoseDundee
+        //{
+        //    get
+        //    {
+        //        return ArrivejoseDundee1;
+        //    }
 
-            set
-            {
-                ArrivejoseDundee1 = value;
-            }
-        }
+        //    set
+        //    {
+        //        ArrivejoseDundee1 = value;
+        //    }
+        //}
 
-        public static bool ArrivejoseDundee1
-        {
-            get
-            {
-                return _arrivejoseDundee;
-            }
+        //public static bool ArrivejoseDundee1
+        //{
+        //    get
+        //    {
+        //        return _arrivejoseDundee;
+        //    }
 
-            set
-            {
-                _arrivejoseDundee = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivejoseDundee = value;
+        //    }
+        //}
 
-        public static bool ArrivesarahDundee
-        {
-            get
-            {
-                return _arrivesarahDundee;
-            }
+        //public static bool ArrivesarahDundee
+        //{
+        //    get
+        //    {
+        //        return _arrivesarahDundee;
+        //    }
 
-            set
-            {
-                _arrivesarahDundee = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivesarahDundee = value;
+        //    }
+        //}
 
-        public static bool ArrivelaresaDeboer
-        {
-            get
-            {
-                return _arrivelaresaDeboer;
-            }
+        //public static bool ArrivelaresaDeboer
+        //{
+        //    get
+        //    {
+        //        return _arrivelaresaDeboer;
+        //    }
 
-            set
-            {
-                _arrivelaresaDeboer = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivelaresaDeboer = value;
+        //    }
+        //}
 
-        public static bool ArrivesaraFish
-        {
-            get
-            {
-                return _arrivesaraFish;
-            }
+        //public static bool ArrivesaraFish
+        //{
+        //    get
+        //    {
+        //        return _arrivesaraFish;
+        //    }
 
-            set
-            {
-                _arrivesaraFish = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivesaraFish = value;
+        //    }
+        //}
 
-        public static bool ArrivevalerieJohnson
-        {
-            get
-            {
-                return _arrivevalerieJohnson;
-            }
+        //public static bool ArrivevalerieJohnson
+        //{
+        //    get
+        //    {
+        //        return _arrivevalerieJohnson;
+        //    }
 
-            set
-            {
-                _arrivevalerieJohnson = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivevalerieJohnson = value;
+        //    }
+        //}
 
-        public static bool ArrivekarenAnderson
-        {
-            get
-            {
-                return _arrivekarenAnderson;
-            }
+        //public static bool ArrivekarenAnderson
+        //{
+        //    get
+        //    {
+        //        return _arrivekarenAnderson;
+        //    }
 
-            set
-            {
-                _arrivekarenAnderson = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivekarenAnderson = value;
+        //    }
+        //}
 
-        public static bool ArriveyoSchugel
-        {
-            get
-            {
-                return _arriveyoSchugel;
-            }
+        //public static bool ArriveyoSchugel
+        //{
+        //    get
+        //    {
+        //        return _arriveyoSchugel;
+        //    }
 
-            set
-            {
-                _arriveyoSchugel = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arriveyoSchugel = value;
+        //    }
+        //}
 
-        public static bool ArriveerinFong
-        {
-            get
-            {
-                return _arriveerinFong;
-            }
+        //public static bool ArriveerinFong
+        //{
+        //    get
+        //    {
+        //        return _arriveerinFong;
+        //    }
 
-            set
-            {
-                _arriveerinFong = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arriveerinFong = value;
+        //    }
+        //}
 
-        public static bool ArrivedanDewey
-        {
-            get
-            {
-                return _arrivedanDewey;
-            }
+        //public static bool ArrivedanDewey
+        //{
+        //    get
+        //    {
+        //        return _arrivedanDewey;
+        //    }
 
-            set
-            {
-                _arrivedanDewey = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivedanDewey = value;
+        //    }
+        //}
 
-        public static bool ArriveamyOsborn
-        {
-            get
-            {
-                return _arriveamyOsborn;
-            }
+        //public static bool ArriveamyOsborn
+        //{
+        //    get
+        //    {
+        //        return _arriveamyOsborn;
+        //    }
 
-            set
-            {
-                _arriveamyOsborn = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arriveamyOsborn = value;
+        //    }
+        //}
 
-        public static bool ArriveemilyAnderson
-        {
-            get
-            {
-                return _arriveemilyAnderson;
-            }
+        //public static bool ArriveemilyAnderson
+        //{
+        //    get
+        //    {
+        //        return _arriveemilyAnderson;
+        //    }
 
-            set
-            {
-                _arriveemilyAnderson = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arriveemilyAnderson = value;
+        //    }
+        //}
 
-        public static bool ArrivejerodBarnes
-        {
-            get
-            {
-                return _arrivejerodBarnes;
-            }
+        //public static bool ArrivejerodBarnes
+        //{
+        //    get
+        //    {
+        //        return _arrivejerodBarnes;
+        //    }
 
-            set
-            {
-                _arrivejerodBarnes = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivejerodBarnes = value;
+        //    }
+        //}
 
-        public static bool ArriveerinBischoff
-        {
-            get
-            {
-                return _arriveerinBischoff;
-            }
+        //public static bool ArriveerinBischoff
+        //{
+        //    get
+        //    {
+        //        return _arriveerinBischoff;
+        //    }
 
-            set
-            {
-                _arriveerinBischoff = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arriveerinBischoff = value;
+        //    }
+        //}
 
-        public static bool ArrivefredDemeuse
-        {
-            get
-            {
-                return _arrivefredDemeuse;
-            }
+        //public static bool ArrivefredDemeuse
+        //{
+        //    get
+        //    {
+        //        return _arrivefredDemeuse;
+        //    }
 
-            set
-            {
-                _arrivefredDemeuse = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivefredDemeuse = value;
+        //    }
+        //}
 
-        public static bool ArrivechelseaErnisse
-        {
-            get
-            {
-                return _arrivechelseaErnisse;
-            }
+        //public static bool ArrivechelseaErnisse
+        //{
+        //    get
+        //    {
+        //        return _arrivechelseaErnisse;
+        //    }
 
-            set
-            {
-                _arrivechelseaErnisse = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivechelseaErnisse = value;
+        //    }
+        //}
 
-        public static bool ArriveallisonEngelsma
-        {
-            get
-            {
-                return _arriveallisonEngelsma;
-            }
+        //public static bool ArriveallisonEngelsma
+        //{
+        //    get
+        //    {
+        //        return _arriveallisonEngelsma;
+        //    }
 
-            set
-            {
-                _arriveallisonEngelsma = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arriveallisonEngelsma = value;
+        //    }
+        //}
 
-        public static bool ArrivebradyGriffith
-        {
-            get
-            {
-                return _arrivebradyGriffith;
-            }
+        //public static bool ArrivebradyGriffith
+        //{
+        //    get
+        //    {
+        //        return _arrivebradyGriffith;
+        //    }
 
-            set
-            {
-                _arrivebradyGriffith = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivebradyGriffith = value;
+        //    }
+        //}
 
-        public static bool ArrivejasonHicks
-        {
-            get
-            {
-                return _arrivejasonHicks;
-            }
+        //public static bool ArrivejasonHicks
+        //{
+        //    get
+        //    {
+        //        return _arrivejasonHicks;
+        //    }
 
-            set
-            {
-                _arrivejasonHicks = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivejasonHicks = value;
+        //    }
+        //}
 
-        public static bool ArrivelisaLarson
-        {
-            get
-            {
-                return _arrivelisaLarson;
-            }
+        //public static bool ArrivelisaLarson
+        //{
+        //    get
+        //    {
+        //        return _arrivelisaLarson;
+        //    }
 
-            set
-            {
-                _arrivelisaLarson = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivelisaLarson = value;
+        //    }
+        //}
 
-        public static bool ArrivebethRadke
-        {
-            get
-            {
-                return _arrivebethRadke;
-            }
+        //public static bool ArrivebethRadke
+        //{
+        //    get
+        //    {
+        //        return _arrivebethRadke;
+        //    }
 
-            set
-            {
-                _arrivebethRadke = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivebethRadke = value;
+        //    }
+        //}
 
-        public static bool ArrivetamrahTenhaeff
-        {
-            get
-            {
-                return _arrivetamrahTenhaeff;
-            }
+        //public static bool ArrivetamrahTenhaeff
+        //{
+        //    get
+        //    {
+        //        return _arrivetamrahTenhaeff;
+        //    }
 
-            set
-            {
-                _arrivetamrahTenhaeff = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivetamrahTenhaeff = value;
+        //    }
+        //}
 
-        public static bool ArriveerinnVonRein
-        {
-            get
-            {
-                return _arriveerinnVonRein;
-            }
+        //public static bool ArriveerinnVonRein
+        //{
+        //    get
+        //    {
+        //        return _arriveerinnVonRein;
+        //    }
 
-            set
-            {
-                _arriveerinnVonRein = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arriveerinnVonRein = value;
+        //    }
+        //}
 
-        public static bool ArrivebruceHubbard
-        {
-            get
-            {
-                return _arrivebruceHubbard;
-            }
+        //public static bool ArrivebruceHubbard
+        //{
+        //    get
+        //    {
+        //        return _arrivebruceHubbard;
+        //    }
 
-            set
-            {
-                _arrivebruceHubbard = value;
-            }
-        }
+        //    set
+        //    {
+        //        _arrivebruceHubbard = value;
+        //    }
+        //}
 
         public static int MDrespond
         {
@@ -1191,33 +1191,33 @@ namespace WebApplication1
         private static string _erinnVonReinStatus;
 
 
-        private static bool _arrivedaveLarson;
-        private static bool _arrivegregPeterson;
-        private static bool _arrivemattHerold;
-        private static bool _arrivekevinSipprell;
-        private static bool _arrivejoseDundee;
-        private static bool _arrivesarahDundee;
-        private static bool _arrivelaresaDeboer;
-        private static bool _arrivesaraFish;
-        private static bool _arrivekarenAnderson;
-        private static bool _arrivevalerieJohnson;
-        private static bool _arriveyoSchugel;
-        private static bool _arriveerinFong;
-        private static bool _arrivedanDewey;
-        private static bool _arrivebruceHubbard;
-        private static bool _arriveamyOsborn;
-        private static bool _arriveemilyAnderson;
-        private static bool _arrivejerodBarnes;
-        private static bool _arriveerinBischoff;
-        private static bool _arrivefredDemeuse;
-        private static bool _arrivechelseaErnisse;
-        private static bool _arriveallisonEngelsma;
-        private static bool _arrivebradyGriffith;
-        private static bool _arrivejasonHicks;
-        private static bool _arrivelisaLarson;
-        private static bool _arrivebethRadke;
-        private static bool _arrivetamrahTenhaeff;
-        private static bool _arriveerinnVonRein;
+        //private static bool _arrivedaveLarson;
+        //private static bool _arrivegregPeterson;
+        //private static bool _arrivemattHerold;
+        //private static bool _arrivekevinSipprell;
+        //private static bool _arrivejoseDundee;
+        //private static bool _arrivesarahDundee;
+        //private static bool _arrivelaresaDeboer;
+        //private static bool _arrivesaraFish;
+        //private static bool _arrivekarenAnderson;
+        //private static bool _arrivevalerieJohnson;
+        //private static bool _arriveyoSchugel;
+        //private static bool _arriveerinFong;
+        //private static bool _arrivedanDewey;
+        //private static bool _arrivebruceHubbard;
+        //private static bool _arriveamyOsborn;
+        //private static bool _arriveemilyAnderson;
+        //private static bool _arrivejerodBarnes;
+        //private static bool _arriveerinBischoff;
+        //private static bool _arrivefredDemeuse;
+        //private static bool _arrivechelseaErnisse;
+        //private static bool _arriveallisonEngelsma;
+        //private static bool _arrivebradyGriffith;
+        //private static bool _arrivejasonHicks;
+        //private static bool _arrivelisaLarson;
+        //private static bool _arrivebethRadke;
+        //private static bool _arrivetamrahTenhaeff;
+        //private static bool _arriveerinnVonRein;
 
 
 
@@ -1229,7 +1229,36 @@ namespace WebApplication1
 
         public static void Reset ()
         {
-            _daveLarson = DateTime.MinValue;
+            _daveLarsonStatus = null;
+           _gregPetersonStatus = null;
+            _mattHeroldStatus = null;
+            _kevinSipprellStatus = null;
+            _joseDundeeStatus = null;
+            _sarahDundeeStatus = null;
+            _laresaDeboerStatus = null;
+            _saraFishStatus = null;
+            _karenAndersonStatus = null;
+            _valerieJohnsonStatus = null;
+            _yoSchugelStatus = null;
+            _erinFongStatus = null;
+            _danDeweyStatus = null;
+            _bruceHubbardStatus = null;
+            _amyOsbornStatus = null;
+            _emilyAndersonStatus = null;
+            _jerodBarnesStatus = null;
+            _erinBischoffStatus = null;
+            _fredDemeuseStatus = null;
+            _chelseaErnisseStatus = null;
+            _allisonEngelsmaStatus = null;
+            _bradyGriffithStatus = null;
+            _jasonHicksStatus = null;
+            _lisaLarsonStatus = null;
+            _bethRadkeStatus = null;
+            _tamrahTenhaeffStatus = null;
+            _erinnVonReinStatus = null;
+
+
+        _daveLarson = DateTime.MinValue;
             _gregPeterson = DateTime.MinValue;
             _mattHerold = DateTime.MinValue;
             _kevinSipprell = DateTime.MinValue;
@@ -1257,38 +1286,14 @@ namespace WebApplication1
             _tamrahTenhaeff = DateTime.MinValue;
             _erinnVonRein = DateTime.MinValue;
 
-            _arrivedaveLarson = false;
-            _arrivegregPeterson = false;
-            _arrivemattHerold = false;
-            _arrivekevinSipprell = false;
-            _arrivejoseDundee = false;
-            _arrivesarahDundee = false;
-            _arrivelaresaDeboer = false;
-            _arrivesaraFish = false;
-            _arrivekarenAnderson = false;
-            _arrivevalerieJohnson = false;
-            _arriveyoSchugel = false;
-            _arriveerinFong = false;
-            _arrivedanDewey = false;
-            _arrivebruceHubbard = false;
-            _arriveamyOsborn = false;
-            _arriveemilyAnderson = false;
-            _arrivejerodBarnes = false;
-            _arriveerinBischoff = false;
-            _arrivefredDemeuse = false;
-            _arrivechelseaErnisse = false;
-            _arriveallisonEngelsma = false;
-            _arrivebradyGriffith = false;
-            _arrivejasonHicks = false;
-            _arrivelisaLarson = false; 
-            _arrivebethRadke = false;
-            _arrivetamrahTenhaeff = false;
-            _arriveerinnVonRein = false;
+
 
             _MDrespond = 0;
             _Mdhere = 0;
             _PArespond = 0;
             _PAhere = 0;
+            
+
     }
 
 

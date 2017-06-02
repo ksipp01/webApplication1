@@ -581,6 +581,8 @@ namespace WebApplication1
             if (!IsPageRefresh) // prevent page refresh from tiggering again
             {
 
+                if (Global.LaresaDeboerStatus !=null)
+                    Global.MDrespond--;
 
                     Global.Mdhere++;
                     Global.LaresaDeboerStatus = "Here";
@@ -588,7 +590,7 @@ namespace WebApplication1
                     LaresaArrivalButton.Enabled = false;
                     Log.Logstring += "Laresa DeBoer Arrived: " + DateTime.Now.ToString() + "\n";
                     TextBox2.BackColor = System.Drawing.Color.Yellow;
-                    Global.MDrespond--;
+                    
                     CheckLaresaDeboerStatus();
                     Response.Redirect("index.aspx");
 
@@ -629,6 +631,8 @@ namespace WebApplication1
         {
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
+                if (Global.KarenAndersonStatus != null)
+                    Global.MDrespond--;
 
                 Global.Mdhere++;
                 Global.KarenAndersonStatus = "Here";
@@ -636,7 +640,7 @@ namespace WebApplication1
            //     Button28.Enabled = false;
                 Log.Logstring += "Karen Anderson Arrived: " + DateTime.Now.ToString() + "\n";
            //     TextBox1.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+              //  Global.MDrespond--;
                 CheckKarenAndersonStatus();
                 Response.Redirect("index.aspx");
              
@@ -647,6 +651,8 @@ namespace WebApplication1
 
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
+                if (Global.DanDeweyStatus != null)
+                    Global.MDrespond--;
 
                 Global.Mdhere++;
                 Global.DanDeweyStatus = "Here";
@@ -654,7 +660,7 @@ namespace WebApplication1
                 DeweyArrivalButton.Enabled = false;
                 Log.Logstring += "Dan Dewey Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox3.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+              //  Global.MDrespond--;
                 CheckDanDeweyStatus();
                 Response.Redirect("index.aspx");
 
@@ -705,13 +711,16 @@ namespace WebApplication1
 
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
+
+                if (Global.JoseDundeeStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.JoseDundeeStatus = "Here";
                 Global.JoseDundee = DateTime.Now;
                 JoseArrivalButton.Enabled = false;
                 Log.Logstring += "Jose Dundee Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox4.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+             //   Global.MDrespond--;
                 CheckJoseDundeeStatus();
                 Response.Redirect("index.aspx");
                 //if (Global.ArrivejoseDundee)
@@ -766,13 +775,16 @@ namespace WebApplication1
                 //    // SDundeeARrivalButton.Enabled = false;
                 //    Global.ArrivesarahDundee = true;
                 //}
+                if (Global.SarahDundeeStatus != null)
+                    Global.MDrespond--;
+
                 Global.Mdhere++;
                 Global.SarahDundeeStatus = "Here";
                 Global.SarahDundee = DateTime.Now;
                 SDundeeARrivalButton.Enabled = false;
                 Log.Logstring += "Sarah Dundee Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox5.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+            //    Global.MDrespond--;
                 CheckSarahDundeeStatus();
                 Response.Redirect("index.aspx");
             }
@@ -806,14 +818,15 @@ namespace WebApplication1
                 //    // Button29.Enabled = false;
                 //    Global.ArrivesaraFish = true;
                 //}
-
+                if (Global.SaraFishStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.SaraFishStatus = "Here";
                 Global.SaraFish = DateTime.Now;
                 Button29.Enabled = false;
                 Log.Logstring += "Sara Fish Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox6.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+              //  Global.MDrespond--;
                 CheckSaraFishStatus();
                 Response.Redirect("index.aspx");
             }
@@ -846,13 +859,15 @@ namespace WebApplication1
                 //    //Button30.Enabled = false;
                 //    Global.ArriveerinFong = true;
                 //}
+                if (Global.ErinFongStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.ErinFongStatus = "Here";
                 Global.ErinFong = DateTime.Now;
                 Button30.Enabled = false;
                 Log.Logstring += "Erine Fong Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox7.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+            //    Global.MDrespond--;
                 CheckErinFongStatus();
                 Response.Redirect("index.aspx");
             }
@@ -885,13 +900,15 @@ namespace WebApplication1
                 //    //Button31.Enabled = false;
                 //    Global.ArrivemattHerold = true;
                 //}
+                if (Global.MattHeroldStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.MattHeroldStatus = "Here";
                 Global.MattHerold = DateTime.Now;
                 Button31.Enabled = false;
                 Log.Logstring += "Matt Herold Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox8.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+             //   Global.MDrespond--;
                 CheckMattHeroldStatus();
                 Response.Redirect("index.aspx");
 
@@ -926,13 +943,15 @@ namespace WebApplication1
                 //    Button32.Text = "HERE";
                 ////    Button32.Enabled = false;
                 //    Global.ArrivebruceHubbard = true;
+                if (Global.BruceHubbardStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.BruceHubbardStatus = "Here";
                 Global.BruceHubbard = DateTime.Now;
                 Button32.Enabled = false;
                 Log.Logstring += "Bruce Hubbard Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox9.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+              //  Global.MDrespond--;
                 CheckBruceHubbardStatus();
                 Response.Redirect("index.aspx");
             
@@ -967,13 +986,15 @@ namespace WebApplication1
                 //    //   Button33.Enabled = false;
                 //    Global.ArrivevalerieJohnson = true;
                 //}
+                if (Global.ValerieJohnsonStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.ValerieJohnsonStatus = "Here";
                 Global.ValerieJohnson = DateTime.Now;
                 Button33.Enabled = false;
                 Log.Logstring += "Valerie Johnson Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox10.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+             //   Global.MDrespond--;
                 CheckValerieJohnsonStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1007,13 +1028,15 @@ namespace WebApplication1
                 //    //   Button34.Enabled = false;
                 //    Global.ArrivedaveLarson = true;
                 //}DaveLarson  
+                if (Global.DaveLarsonStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.DaveLarsonStatus = "Here";
                 Global.DaveLarson = DateTime.Now;
                 Button34.Enabled = false;
                 Log.Logstring += "Dave Larson Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox11.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+              //  Global.MDrespond--;
                 CheckDaveLarsonStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1046,13 +1069,15 @@ namespace WebApplication1
                 //    //Button35.Enabled = false;
                 //    GlobaAmyOsbornyOsborn = true;
                 //}
+                if (Global.AmyOsbornStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.AmyOsbornStatus = "Here";
                 Global.AmyOsborn = DateTime.Now;
                 Button35.Enabled = false;
                 Log.Logstring += "Amy Osborn Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox12.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+              //  Global.MDrespond--;
                 CheckAmyOsbornStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1085,13 +1110,15 @@ namespace WebApplication1
                 ////           Button36.Enabled = false;
                 //           Global.ArrivegregPeterson = true;
                 //       }
+                if (Global.GregPetersonStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.GregPetersonStatus = "Here";
                 Global.GregPeterson = DateTime.Now;
                 Button36.Enabled = false;
                 Log.Logstring += "Greg Peterson Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox13.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+             //   Global.MDrespond--;
                 CheckGregPetersonStatus();
                 Response.Redirect("index.aspx");
 
@@ -1125,13 +1152,15 @@ namespace WebApplication1
                 //    //   Button37.Enabled = false;
                 //    Global.ArriveyoSchugel = true;
                 //}
+                if (Global.YoSchugelStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.YoSchugelStatus = "Here";
                 Global.YoSchugel = DateTime.Now;
                 Button37.Enabled = false;
                 Log.Logstring += "Yo Schugel Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox14.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+              //  Global.MDrespond--;
                 CheckYoSchugelStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1164,13 +1193,15 @@ namespace WebApplication1
                 //    //Button38.Enabled = false;
                 //    Global.ArrivekevinSipprell = true;
                 //}
+                if (Global.KevinSipprellStatus != null)
+                    Global.MDrespond--;
                 Global.Mdhere++;
                 Global.KevinSipprellStatus = "Here";
                 Global.KevinSipprell = DateTime.Now;
                 Button38.Enabled = false;
                 Log.Logstring += "Kevin Sipprell Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox15.BackColor = System.Drawing.Color.Yellow;
-                Global.MDrespond--;
+             //   Global.MDrespond--;
                 CheckKevinSipprellStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1204,13 +1235,15 @@ namespace WebApplication1
                 //    //    Button39.Enabled = false;
                 //    Global.ArriveemilyAnderson = true;
                 //}
+                if (Global.EmilyAndersonStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.EmilyAndersonStatus = "Here";
                 Global.EmilyAnderson = DateTime.Now;
                 Button39.Enabled = false;
                 Log.Logstring += "Emily Anderson Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox16.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+             //   Global.PArespond--;
                 CheckEmilyAndersonStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1244,13 +1277,15 @@ namespace WebApplication1
                 //    //   Button40.Enabled = false;
                 //    Global.ArrivejerodBarnes = true;
                 //}
+                if (Global.JerodBarnesStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.JerodBarnesStatus = "Here";
                 Global.JerodBarnes = DateTime.Now;
                 Button40.Enabled = false;
                 Log.Logstring += "Jerod Barnes Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox17.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+           //     Global.PArespond--;
                 CheckJerodBarnesStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1283,13 +1318,15 @@ namespace WebApplication1
                 //    // Button41.Enabled = false;
                 //    Global.ArriveerinBischoff = true;
                 //}
+                if (Global.ErinBischoffStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.ErinBischoffStatus = "Here";
                 Global.ErinBischoff = DateTime.Now;
                 Button41.Enabled = false;
                 Log.Logstring += "Erin Bischoff Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox18.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+            //    Global.PArespond--;
                 CheckErinBischoffStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1323,13 +1360,15 @@ namespace WebApplication1
                 //    //  Button42.Enabled = false;
                 //    Global.ArrivefredDemeuse = true;
                 //}
+                if (Global.FredDemeuseStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.FredDemeuseStatus = "Here";
                 Global.FredDemeuse = DateTime.Now;
                 Button42.Enabled = false;
                 Log.Logstring += "Fred DeMeuse Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox19.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+              //  Global.PArespond--;
                 CheckFredDemeuseStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1363,13 +1402,15 @@ namespace WebApplication1
                 //    //   Button43.Enabled = false;
                 //    Global.ArrivechelseaErnisse = true;
                 //}
+                if (Global.ChelseaErnisseStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.ChelseaErnisseStatus = "Here";
                 Global.ChelseaErnisse = DateTime.Now;
                 Button43.Enabled = false;
                 Log.Logstring += "Chelsea Eernisse Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox20.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+             //   Global.PArespond--;
                 CheckChelseaErnisseStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1404,13 +1445,15 @@ namespace WebApplication1
                 //    //   Button44.Enabled = false;
                 //    Global.ArriveallisonEngelsma = true;
                 //}
+                if (Global.AllisonEngelsmaStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.AllisonEngelsmaStatus = "Here";
                 Global.AllisonEngelsma = DateTime.Now;
                 Button44.Enabled = false;
                 Log.Logstring += "Alli Engelsma Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox21.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+            //    Global.PArespond--;
                 CheckAlliEngelsmaStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1443,13 +1486,15 @@ namespace WebApplication1
                 //    //Button45.Enabled = false;
                 //    Global.ArrivebradyGriffith = true;
                 //}
+                if (Global.BradyGriffithStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.BradyGriffithStatus = "Here";
                 Global.BradyGriffith = DateTime.Now;
                 Button45.Enabled = false;
                 Log.Logstring += "Brady Griffith Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox22.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+              //  Global.PArespond--;
                 CheckBradyGriffithStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1482,13 +1527,15 @@ namespace WebApplication1
                 //    //  Button46.Enabled = false;
                 //    Global.ArrivejasonHicks = true;
                 //}
+                if (Global.JasonHicksStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.JasonHicksStatus = "Here";
                 Global.JasonHicks = DateTime.Now;
                 Button46.Enabled = false;
                 Log.Logstring += "Jason Hicks Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox23.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+              //  Global.PArespond--;
                 CheckJasonHicksStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1520,13 +1567,15 @@ namespace WebApplication1
                 //    //    Button47.Enabled = false;
                 //    Global.ArrivelisaLarson = true;
                 //}
+                if (Global.LisaLarsonStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.LisaLarsonStatus = "Here";
                 Global.LisaLarson = DateTime.Now;
                 Button47.Enabled = false;
                 Log.Logstring += "Lisa Larson Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox24.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+            //    Global.PArespond--;
                 CheckLisaLarsonStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1560,13 +1609,15 @@ namespace WebApplication1
                 //    //   Button48.Enabled = false;
                 //    Global.ArrivebethRadke = true;
                 //}
+                if (Global.BethRadkeStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.BethRadkeStatus = "Here";
                 Global.BethRadke = DateTime.Now;
                 Button48.Enabled = false;
                 Log.Logstring += "Beth Radke Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox25.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+             //   Global.PArespond--;
                 CheckBethRadkeStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1599,13 +1650,15 @@ namespace WebApplication1
             //        //  Button49.Enabled = false;
             //        Global.ArrivetamrahTenhaeff = true;
             //    }
+            if (Global.TamrahTenhaeffStatus != null)
+                Global.PArespond--;
             Global.PAhere++;
             Global.TamrahTenhaeffStatus = "Here";
             Global.TamrahTenhaeff = DateTime.Now;
             Button49.Enabled = false;
             Log.Logstring += "Tamrah Tenhaeff Arrived: " + DateTime.Now.ToString() + "\n";
             TextBox26.BackColor = System.Drawing.Color.Yellow;
-            Global.PArespond--;
+         //   Global.PArespond--;
             CheckTamrahTenhaeffStatus();
             Response.Redirect("index.aspx");
         
@@ -1638,13 +1691,15 @@ namespace WebApplication1
                 //    //  Button50.Enabled = false;
                 //    Global.ArriveerinnVonRein = true;
                 //}
+                if (Global.ErinnVonReinStatus != null)
+                    Global.PArespond--;
                 Global.PAhere++;
                 Global.ErinnVonReinStatus = "Here";
                 Global.ErinnVonRein = DateTime.Now;
                 Button50.Enabled = false;
                 Log.Logstring += "Erinn VonRein Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox27.BackColor = System.Drawing.Color.Yellow;
-                Global.PArespond--;
+             //   Global.PArespond--;
                 CheckErinnVonReinStatus();
                 Response.Redirect("index.aspx");
             }
@@ -1652,9 +1707,12 @@ namespace WebApplication1
 
         protected void Button51_Click(object sender, EventArgs e)
         {
-            CleartextBoxes(Page);
             Global.Reset();
-            
+            CleartextBoxes(Page);
+            DisplayETA();
+            SetBackColor(Page);
+            //    Response.Redirect("index.apsx");
+
         }
         public void CleartextBoxes(Control parent)
         {
@@ -1676,11 +1734,13 @@ namespace WebApplication1
                             ((Button)(x)).Enabled = true;
                             ((Button)(x)).Text = "Arrived";
                         }
+                      
                     }
 
                     CleartextBoxes(x);
                 }
             }
+          
         }
         public void CheckKarenAndersonStatus()
         {
@@ -1716,7 +1776,7 @@ namespace WebApplication1
         {
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
-
+                
                 Global.KarenAndersonStatus = "Done";
                 Global.KarenAnderson = DateTime.Now;
                 Log.Logstring += "Karen Anderson Done: " + DateTime.Now.ToString() + "\n";
