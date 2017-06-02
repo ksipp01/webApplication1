@@ -43,48 +43,48 @@ namespace WebApplication1
 
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
-        {
+        //protected void Button2_Click(object sender, EventArgs e)
+        //{
           
-            TextBox1.Text += " *******EMPAC_Log.txt saved to My Documents********";
-            string mydocpath =
-            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            var line = _logstring.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            // Write the string array to a new file named "WriteLines.txt".
-            using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\EMPAC_Log.txt"))
-            {
-                foreach (var s in line)
-                    outputFile.WriteLine(s);
-            }
+        //    TextBox1.Text += " *******EMPAC_Log.txt saved to My Documents********";
+        //    string mydocpath =
+        //    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        //    var line = _logstring.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        //    // Write the string array to a new file named "WriteLines.txt".
+        //    using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\EMPAC_Log.txt"))
+        //    {
+        //        foreach (var s in line)
+        //            outputFile.WriteLine(s);
+        //    }
       
-                //    string output = "Output";
-                //  sb.AppendFormat("{0}<br />", _logstring);
-                //   sb.Append(_logstring);
+        //        //    string output = "Output";
+        //        //  sb.AppendFormat("{0}<br />", _logstring);
+        //        //   sb.Append(_logstring);
 
-                //   //   sb.Append("\r\n");
-                //sb.Replace(Environment.NewLine, "<br />").ToString();
-                //   string text = sb.ToString();
-
-
+        //        //   //   sb.Append("\r\n");
+        //        //sb.Replace(Environment.NewLine, "<br />").ToString();
+        //        //   string text = sb.ToString();
 
 
 
 
 
-          //      StringBuilder sb = new StringBuilder();
 
-          //      Response.Clear();
-          //  Response.ClearHeaders();
+
+        //  //      StringBuilder sb = new StringBuilder();
+
+        //  //      Response.Clear();
+        //  //  Response.ClearHeaders();
            
-          //  //   Response.AddHeader("Content-Length", text.Length.ToString());
-          //  Response.AddHeader("Content-Length", _logstring.Length.ToString());
-          //  Response.ContentType = "text/plain";
-          ////  Response.ContentType = "application/octet-stream";
-          //  Response.AppendHeader("content-disposition", "attachment;filename=\"log.txt\"");
-          //  string output = _logstring.Replace("\n\r", "<br>");
-          //  // Response.Write(text);
-          //  Response.Write(output);
-          //  Response.End();
+        //  //  //   Response.AddHeader("Content-Length", text.Length.ToString());
+        //  //  Response.AddHeader("Content-Length", _logstring.Length.ToString());
+        //  //  Response.ContentType = "text/plain";
+        //  ////  Response.ContentType = "application/octet-stream";
+        //  //  Response.AppendHeader("content-disposition", "attachment;filename=\"log.txt\"");
+        //  //  string output = _logstring.Replace("\n\r", "<br>");
+        //  //  // Response.Write(text);
+        //  //  Response.Write(output);
+        //  //  Response.End();
 
 
 
@@ -93,18 +93,18 @@ namespace WebApplication1
 
 
 
-            //  var datafile = Server.MapPath("~/App_data/log.txt");
-            //File.WriteAllText(@datafile, _logstring);
+        //    //  var datafile = Server.MapPath("~/App_data/log.txt");
+        //    //File.WriteAllText(@datafile, _logstring);
 
-         //   Response.Clear();
-         //   Response.AppendHeader("Content-Disposition", "attachment; filename=log.txt");
-         ////   Response.AppendHeader("", "attachment; filename=log.txt");
-         //   //     Response.AppendHeader("Content-Length", _logstring.Length.ToString());
-         //   Response.ContentType = "text/plain";
-         //   Response.Write(_logstring);
-         //   Response.Flush();
-         //   Response.End();
+        // //   Response.Clear();
+        // //   Response.AppendHeader("Content-Disposition", "attachment; filename=log.txt");
+        // ////   Response.AppendHeader("", "attachment; filename=log.txt");
+        // //   //     Response.AppendHeader("Content-Length", _logstring.Length.ToString());
+        // //   Response.ContentType = "text/plain";
+        // //   Response.Write(_logstring);
+        // //   Response.Flush();
+        // //   Response.End();
 
-        }
+        //}
     }
 }

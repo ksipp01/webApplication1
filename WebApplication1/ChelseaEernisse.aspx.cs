@@ -30,7 +30,9 @@ namespace WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             Global.PArespond++;
+            Global.ChelseaErnisseStatus = "Enroute";
             int minutes = Convert.ToInt16(TextBox1.Text);
             DateTime time = DateTime.Now;
             TimeSpan eta = new TimeSpan(0, minutes, 0);

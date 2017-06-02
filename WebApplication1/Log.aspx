@@ -16,7 +16,6 @@
         <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Clear Log" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Save Log" />
-    </form>
+        </form>
 </body>
 </html>

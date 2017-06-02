@@ -783,6 +783,357 @@ namespace WebApplication1
             }
         }
 
+        public static string DaveLarsonStatus
+        {
+            get
+            {
+                return _daveLarsonStatus;
+            }
+
+            set
+            {
+                _daveLarsonStatus = value;
+            }
+        }
+
+        public static string GregPetersonStatus
+        {
+            get
+            {
+                return _gregPetersonStatus;
+            }
+
+            set
+            {
+                _gregPetersonStatus = value;
+            }
+        }
+
+        public static string MattHeroldStatus
+        {
+            get
+            {
+                return _mattHeroldStatus;
+            }
+
+            set
+            {
+                _mattHeroldStatus = value;
+            }
+        }
+
+        public static string KevinSipprellStatus
+        {
+            get
+            {
+                return _kevinSipprellStatus;
+            }
+
+            set
+            {
+                _kevinSipprellStatus = value;
+            }
+        }
+
+        public static string JoseDundeeStatus
+        {
+            get
+            {
+                return _joseDundeeStatus;
+            }
+
+            set
+            {
+                _joseDundeeStatus = value;
+            }
+        }
+
+        public static string SarahDundeeStatus
+        {
+            get
+            {
+                return _sarahDundeeStatus;
+            }
+
+            set
+            {
+                _sarahDundeeStatus = value;
+            }
+        }
+
+        public static string LaresaDeboerStatus
+        {
+            get
+            {
+                return _laresaDeboerStatus;
+            }
+
+            set
+            {
+                _laresaDeboerStatus = value;
+            }
+        }
+
+        public static string SaraFishStatus
+        {
+            get
+            {
+                return _saraFishStatus;
+            }
+
+            set
+            {
+                _saraFishStatus = value;
+            }
+        }
+
+        public static string KarenAndersonStatus
+        {
+            get
+            {
+                return _karenAndersonStatus;
+            }
+
+            set
+            {
+                _karenAndersonStatus = value;
+            }
+        }
+
+        public static string ValerieJohnsonStatus
+        {
+            get
+            {
+                return _valerieJohnsonStatus;
+            }
+
+            set
+            {
+                _valerieJohnsonStatus = value;
+            }
+        }
+
+        public static string YoSchugelStatus
+        {
+            get
+            {
+                return _yoSchugelStatus;
+            }
+
+            set
+            {
+                _yoSchugelStatus = value;
+            }
+        }
+
+        public static string ErinFongStatus
+        {
+            get
+            {
+                return _erinFongStatus;
+            }
+
+            set
+            {
+                _erinFongStatus = value;
+            }
+        }
+
+        public static string DanDeweyStatus
+        {
+            get
+            {
+                return _danDeweyStatus;
+            }
+
+            set
+            {
+                _danDeweyStatus = value;
+            }
+        }
+
+        public static string BruceHubbardStatus
+        {
+            get
+            {
+                return _bruceHubbardStatus;
+            }
+
+            set
+            {
+                _bruceHubbardStatus = value;
+            }
+        }
+
+        public static string AmyOsbornStatus
+        {
+            get
+            {
+                return _amyOsbornStatus;
+            }
+
+            set
+            {
+                _amyOsbornStatus = value;
+            }
+        }
+
+        public static string EmilyAndersonStatus
+        {
+            get
+            {
+                return _emilyAndersonStatus;
+            }
+
+            set
+            {
+                _emilyAndersonStatus = value;
+            }
+        }
+
+        public static string JerodBarnesStatus
+        {
+            get
+            {
+                return _jerodBarnesStatus;
+            }
+
+            set
+            {
+                _jerodBarnesStatus = value;
+            }
+        }
+
+        public static string ErinBischoffStatus
+        {
+            get
+            {
+                return _erinBischoffStatus;
+            }
+
+            set
+            {
+                _erinBischoffStatus = value;
+            }
+        }
+
+        public static string FredDemeuseStatus
+        {
+            get
+            {
+                return _fredDemeuseStatus;
+            }
+
+            set
+            {
+                _fredDemeuseStatus = value;
+            }
+        }
+
+        public static string ChelseaErnisseStatus
+        {
+            get
+            {
+                return _chelseaErnisseStatus;
+            }
+
+            set
+            {
+                _chelseaErnisseStatus = value;
+            }
+        }
+
+        public static string AllisonEngelsmaStatus
+        {
+            get
+            {
+                return _allisonEngelsmaStatus;
+            }
+
+            set
+            {
+                _allisonEngelsmaStatus = value;
+            }
+        }
+
+        public static string BradyGriffithStatus
+        {
+            get
+            {
+                return _bradyGriffithStatus;
+            }
+
+            set
+            {
+                _bradyGriffithStatus = value;
+            }
+        }
+
+        public static string JasonHicksStatus
+        {
+            get
+            {
+                return _jasonHicksStatus;
+            }
+
+            set
+            {
+                _jasonHicksStatus = value;
+            }
+        }
+
+        public static string LisaLarsonStatus
+        {
+            get
+            {
+                return _lisaLarsonStatus;
+            }
+
+            set
+            {
+                _lisaLarsonStatus = value;
+            }
+        }
+
+        public static string BethRadkeStatus
+        {
+            get
+            {
+                return _bethRadkeStatus;
+            }
+
+            set
+            {
+                _bethRadkeStatus = value;
+            }
+        }
+
+        public static string TamrahTenhaeffStatus
+        {
+            get
+            {
+                return _tamrahTenhaeffStatus;
+            }
+
+            set
+            {
+                _tamrahTenhaeffStatus = value;
+            }
+        }
+
+        public static string ErinnVonReinStatus
+        {
+            get
+            {
+                return _erinnVonReinStatus;
+            }
+
+            set
+            {
+                _erinnVonReinStatus = value;
+            }
+        }
+
         private static DateTime _daveLarson;
         private static DateTime _gregPeterson;
         private static DateTime _mattHerold;
@@ -810,6 +1161,35 @@ namespace WebApplication1
         private static DateTime _bethRadke;
         private static DateTime _tamrahTenhaeff;
         private static DateTime _erinnVonRein;
+
+        private static string _daveLarsonStatus;
+        private static string _gregPetersonStatus;
+        private static string _mattHeroldStatus;
+        private static string _kevinSipprellStatus;
+        private static string _joseDundeeStatus;
+        private static string _sarahDundeeStatus;
+        private static string _laresaDeboerStatus;
+        private static string _saraFishStatus;
+        private static string _karenAndersonStatus;
+        private static string _valerieJohnsonStatus;
+        private static string _yoSchugelStatus;
+        private static string _erinFongStatus;
+        private static string _danDeweyStatus;
+        private static string _bruceHubbardStatus;
+        private static string _amyOsbornStatus;
+        private static string _emilyAndersonStatus;
+        private static string _jerodBarnesStatus;
+        private static string _erinBischoffStatus;
+        private static string _fredDemeuseStatus;
+        private static string _chelseaErnisseStatus;
+        private static string _allisonEngelsmaStatus;
+        private static string _bradyGriffithStatus;
+        private static string _jasonHicksStatus;
+        private static string _lisaLarsonStatus;
+        private static string _bethRadkeStatus;
+        private static string _tamrahTenhaeffStatus;
+        private static string _erinnVonReinStatus;
+
 
         private static bool _arrivedaveLarson;
         private static bool _arrivegregPeterson;
@@ -839,12 +1219,77 @@ namespace WebApplication1
         private static bool _arrivetamrahTenhaeff;
         private static bool _arriveerinnVonRein;
 
+
+
+
         private static int _MDrespond = 0;
         private static int _Mdhere = 0;
         private static int _PArespond = 0;
         private static int _PAhere = 0;
 
-    
+        public static void Reset ()
+        {
+            _daveLarson = DateTime.MinValue;
+            _gregPeterson = DateTime.MinValue;
+            _mattHerold = DateTime.MinValue;
+            _kevinSipprell = DateTime.MinValue;
+             _joseDundee = DateTime.MinValue;
+            _sarahDundee = DateTime.MinValue;
+            _laresaDeboer = DateTime.MinValue;
+            _saraFish = DateTime.MinValue;
+            _karenAnderson = DateTime.MinValue;
+            _valerieJohnson = DateTime.MinValue;
+            _yoSchugel = DateTime.MinValue;
+            _erinFong = DateTime.MinValue;
+            _danDewey = DateTime.MinValue;
+            _bruceHubbard = DateTime.MinValue;
+            _amyOsborn = DateTime.MinValue;
+            _emilyAnderson = DateTime.MinValue;
+            _jerodBarnes = DateTime.MinValue;
+            _erinBischoff = DateTime.MinValue;
+            _fredDemeuse = DateTime.MinValue;
+            _chelseaErnisse = DateTime.MinValue;
+            _allisonEngelsma = DateTime.MinValue;
+            _bradyGriffith = DateTime.MinValue;
+            _jasonHicks = DateTime.MinValue;
+            _lisaLarson = DateTime.MinValue;
+            _bethRadke = DateTime.MinValue;
+            _tamrahTenhaeff = DateTime.MinValue;
+            _erinnVonRein = DateTime.MinValue;
+
+            _arrivedaveLarson = false;
+            _arrivegregPeterson = false;
+            _arrivemattHerold = false;
+            _arrivekevinSipprell = false;
+            _arrivejoseDundee = false;
+            _arrivesarahDundee = false;
+            _arrivelaresaDeboer = false;
+            _arrivesaraFish = false;
+            _arrivekarenAnderson = false;
+            _arrivevalerieJohnson = false;
+            _arriveyoSchugel = false;
+            _arriveerinFong = false;
+            _arrivedanDewey = false;
+            _arrivebruceHubbard = false;
+            _arriveamyOsborn = false;
+            _arriveemilyAnderson = false;
+            _arrivejerodBarnes = false;
+            _arriveerinBischoff = false;
+            _arrivefredDemeuse = false;
+            _arrivechelseaErnisse = false;
+            _arriveallisonEngelsma = false;
+            _arrivebradyGriffith = false;
+            _arrivejasonHicks = false;
+            _arrivelisaLarson = false; 
+            _arrivebethRadke = false;
+            _arrivetamrahTenhaeff = false;
+            _arriveerinnVonRein = false;
+
+            _MDrespond = 0;
+            _Mdhere = 0;
+            _PArespond = 0;
+            _PAhere = 0;
+    }
 
 
 

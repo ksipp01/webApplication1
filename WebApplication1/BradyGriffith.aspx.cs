@@ -34,6 +34,7 @@ namespace WebApplication1
         protected void Button1_Click(object sender, EventArgs e)
         {
             Global.PArespond++;
+            Global.BradyGriffithStatus = "Enroute";
             //   Global.BradyGriffith = TextBox1.Text;
 
             //   TextBox1.BackColor = System.Drawing.Color.Lime;
