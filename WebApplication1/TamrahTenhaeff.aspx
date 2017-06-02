@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div style="width: 280px">
      <p>
             Tamrah Tenhaeff - ETA:</p>
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
