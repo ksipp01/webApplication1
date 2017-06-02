@@ -151,7 +151,7 @@ table {
                 <td class="auto-style1">      
         <a href="SaraFish.aspx">Sara Fish</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">
-        <asp:TextBox ID="TextBox6" runat="server" Width="60px" Height="22px"></asp:TextBox>
+        <asp:TextBox ID="TextBox6" runat="server" Width="60px"></asp:TextBox>
                  </td>
                 <td class="auto-style7">
         <asp:Button ID="Button29" runat="server" OnClick="Button29_Click" Text="Arrived" />
