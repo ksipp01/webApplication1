@@ -1732,6 +1732,10 @@ namespace WebApplication1
                         if (((Button)(x)).Enabled == false)
                         {
                             ((Button)(x)).Enabled = true;
+                            
+                            if (((Button)(x)).Text == "Done")
+                                ((Button)(x)).Text = "Complete";
+                            else
                             ((Button)(x)).Text = "Arrived";
                         }
                       
@@ -1768,7 +1772,8 @@ namespace WebApplication1
                 TextBox1.Text = Global.KarenAnderson.ToString("HHmm") + ("hrs");
                 Button52.Text = Global.KarenAndersonStatus;
                 Button52.Enabled = false;
-                Button28.Text = Global.KarenAndersonStatus;
+             //   Button28.Text = Global.KarenAndersonStatus;
+                Button28.Text = "        ";
                 Button28.Enabled = false;
             }
         }
@@ -1812,7 +1817,7 @@ namespace WebApplication1
                 TextBox2.Text = Global.LaresaDeboer.ToString("HHmm") + ("hrs");
                 Button1.Text = Global.LaresaDeboerStatus;
                 Button1.Enabled = false;
-                LaresaArrivalButton.Text = Global.LaresaDeboerStatus;
+                LaresaArrivalButton.Text = "        ";
                 LaresaArrivalButton.Enabled = false;
             }
         }
@@ -1856,7 +1861,7 @@ namespace WebApplication1
                 TextBox3.Text = Global.DanDewey.ToString("HHmm") + ("hrs");
                 Button2.Text = Global.DanDeweyStatus;
                 Button2.Enabled = false;
-                DeweyArrivalButton.Text = Global.DanDeweyStatus;
+                DeweyArrivalButton.Text = "        ";
                 DeweyArrivalButton.Enabled = false;
             }
         }
@@ -1900,7 +1905,7 @@ namespace WebApplication1
                 TextBox4.Text = Global.JoseDundee.ToString("HHmm") + ("hrs");
                 Button3.Text = Global.JoseDundeeStatus;
                 Button3.Enabled = false;
-                JoseArrivalButton.Text = Global.JoseDundeeStatus;
+                JoseArrivalButton.Text = "        ";
                 JoseArrivalButton.Enabled = false;
             }
         }
@@ -1944,7 +1949,7 @@ namespace WebApplication1
                 TextBox5.Text = Global.SarahDundee.ToString("HHmm") + ("hrs");
                 Button4.Text = Global.SarahDundeeStatus;
                 Button4.Enabled = false;
-                SDundeeARrivalButton.Text = Global.SarahDundeeStatus;
+                SDundeeARrivalButton.Text = "        ";
                 SDundeeARrivalButton.Enabled = false;
             }
         }
@@ -1988,7 +1993,7 @@ namespace WebApplication1
                 TextBox6.Text = Global.SaraFish.ToString("HHmm") + ("hrs");
                 Button5.Text = Global.SaraFishStatus;
                 Button5.Enabled = false;
-                Button29.Text = Global.SaraFishStatus;
+                Button29.Text = "        ";
                 Button29.Enabled = false;
             }
         }
@@ -2032,7 +2037,7 @@ namespace WebApplication1
                 TextBox7.Text = Global.ErinFong.ToString("HHmm") + ("hrs");
                 Button6.Text = Global.ErinFongStatus;
                 Button6.Enabled = false;
-                Button30.Text = Global.ErinFongStatus;
+                Button30.Text = "        ";
                 Button30.Enabled = false;
             }
         }
@@ -2078,7 +2083,7 @@ namespace WebApplication1
                 TextBox8.Text = Global.MattHerold.ToString("HHmm") + ("hrs");
                 Button7.Text = Global.MattHeroldStatus;
                 Button7.Enabled = false;
-                Button31.Text = Global.MattHeroldStatus;
+                Button31.Text = "        "; ;
                 Button31.Enabled = false;
             }
         }
@@ -2123,7 +2128,7 @@ namespace WebApplication1
                 TextBox9.Text = Global.BruceHubbard.ToString("HHmm") + ("hrs");
                 Button8.Text = Global.BruceHubbardStatus;
                 Button8.Enabled = false;
-                Button32.Text = Global.BruceHubbardStatus;
+                Button32.Text = "        ";
                 Button32.Enabled = false;
             }
         }
@@ -2167,7 +2172,7 @@ namespace WebApplication1
                 TextBox10.Text = Global.ValerieJohnson.ToString("HHmm") + ("hrs");
                 Button9.Text = Global.ValerieJohnsonStatus;
                 Button9.Enabled = false;
-                Button33.Text = Global.ValerieJohnsonStatus;
+                Button33.Text = "        ";
                 Button33.Enabled = false;
             }
         }
@@ -2211,7 +2216,7 @@ namespace WebApplication1
                 TextBox11.Text = Global.DaveLarson.ToString("HHmm") + ("hrs");
                 Button10.Text = Global.DaveLarsonStatus;
                 Button10.Enabled = false;
-                Button34.Text = Global.DaveLarsonStatus;
+                Button34.Text = "        ";
                 Button34.Enabled = false;
             }
         }
@@ -2255,7 +2260,7 @@ namespace WebApplication1
                 TextBox12.Text = Global.AmyOsborn.ToString("HHmm") + ("hrs");
                 Button11.Text = Global.AmyOsbornStatus;
                 Button11.Enabled = false;
-                Button35.Text = Global.AmyOsbornStatus;
+                Button35.Text = "        ";
                 Button35.Enabled = false;
             }
         }
@@ -2299,7 +2304,7 @@ namespace WebApplication1
                 TextBox13.Text = Global.GregPeterson.ToString("HHmm") + ("hrs");
                 Button12.Text = Global.GregPetersonStatus;
                 Button12.Enabled = false;
-                Button36.Text = Global.GregPetersonStatus;
+                Button36.Text = "        ";
                 Button36.Enabled = false;
             }
         }
@@ -2343,7 +2348,7 @@ namespace WebApplication1
                 TextBox14.Text = Global.YoSchugel.ToString("HHmm") + ("hrs");
                 Button13.Text = Global.YoSchugelStatus;
                 Button13.Enabled = false;
-                Button37.Text = Global.YoSchugelStatus;
+                Button37.Text = "        ";
                 Button37.Enabled = false;
             }
         }
@@ -2387,7 +2392,7 @@ namespace WebApplication1
                 TextBox15.Text = Global.KevinSipprell.ToString("HHmm") + ("hrs");
                 Button14.Text = Global.KevinSipprellStatus;
                 Button14.Enabled = false;
-                Button38.Text = Global.KevinSipprellStatus;
+                Button38.Text = "        ";
                 Button38.Enabled = false;
             }
         }
@@ -2431,7 +2436,7 @@ namespace WebApplication1
                 TextBox16.Text = Global.EmilyAnderson.ToString("HHmm") + ("hrs");
                 Button15.Text = Global.EmilyAndersonStatus;
                 Button15.Enabled = false;
-                Button39.Text = Global.EmilyAndersonStatus;
+                Button39.Text = "        ";
                 Button39.Enabled = false;
             }
         }
@@ -2475,7 +2480,7 @@ namespace WebApplication1
                 TextBox17.Text = Global.JerodBarnes.ToString("HHmm") + ("hrs");
                 Button16.Text = Global.JerodBarnesStatus;
                 Button16.Enabled = false;
-                Button40.Text = Global.JerodBarnesStatus;
+                Button40.Text = "        ";
                 Button40.Enabled = false;
             }
         }
@@ -2519,7 +2524,7 @@ namespace WebApplication1
                 TextBox18.Text = Global.ErinBischoff.ToString("HHmm") + ("hrs");
                 Button17.Text = Global.ErinBischoffStatus;
                 Button17.Enabled = false;
-                Button41.Text = Global.ErinBischoffStatus;
+                Button41.Text = "        ";
                 Button41.Enabled = false;
             }
         }
@@ -2563,7 +2568,7 @@ namespace WebApplication1
                 TextBox19.Text = Global.FredDemeuse.ToString("HHmm") + ("hrs");
                 Button18.Text = Global.FredDemeuseStatus;
                 Button18.Enabled = false;
-                Button42.Text = Global.FredDemeuseStatus;
+                Button42.Text = "        ";
                 Button42.Enabled = false;
             }
         }
@@ -2607,7 +2612,7 @@ namespace WebApplication1
                 TextBox20.Text = Global.ChelseaErnisse.ToString("HHmm") + ("hrs");
                 Button19.Text = Global.ChelseaErnisseStatus;
                 Button19.Enabled = false;
-                Button43.Text = Global.ChelseaErnisseStatus;
+                Button43.Text = "        ";
                 Button43.Enabled = false;
             }
         }
@@ -2651,7 +2656,7 @@ namespace WebApplication1
                 TextBox21.Text = Global.AllisonEngelsma.ToString("HHmm") + ("hrs");
                 Button20.Text = Global.AllisonEngelsmaStatus;
                 Button20.Enabled = false;
-                Button44.Text = Global.AllisonEngelsmaStatus;
+                Button44.Text = "        ";
                 Button44.Enabled = false;
             }
         }
@@ -2695,7 +2700,7 @@ namespace WebApplication1
                 TextBox22.Text = Global.BradyGriffith.ToString("HHmm") + ("hrs");
                 Button21.Text = Global.BradyGriffithStatus;
                 Button21.Enabled = false;
-                Button45.Text = Global.BradyGriffithStatus;
+                Button45.Text = "        ";
                 Button45.Enabled = false;
             }
         }
@@ -2740,7 +2745,7 @@ namespace WebApplication1
                 TextBox23.Text = Global.JasonHicks.ToString("HHmm") + ("hrs");
                 Button22.Text = Global.JasonHicksStatus;
                 Button22.Enabled = false;
-                Button46.Text = Global.JasonHicksStatus;
+                Button46.Text = "        ";
                 Button46.Enabled = false;
             }
         }
@@ -2785,7 +2790,7 @@ namespace WebApplication1
                 TextBox24.Text = Global.LisaLarson.ToString("HHmm") + ("hrs");
                 Button23.Text = Global.LisaLarsonStatus;
                 Button23.Enabled = false;
-                Button47.Text = Global.LisaLarsonStatus;
+                Button47.Text = "        ";
                 Button47.Enabled = false;
             }
         }
@@ -2829,7 +2834,7 @@ namespace WebApplication1
                 TextBox25.Text = Global.BethRadke.ToString("HHmm") + ("hrs");
                 Button24.Text = Global.BethRadkeStatus;
                 Button24.Enabled = false;
-                Button48.Text = Global.BethRadkeStatus;
+                Button48.Text = "        ";
                 Button48.Enabled = false;
             }
         }
@@ -2873,7 +2878,7 @@ namespace WebApplication1
                 TextBox26.Text = Global.TamrahTenhaeff.ToString("HHmm") + ("hrs");
                 Button25.Text = Global.TamrahTenhaeffStatus;
                 Button25.Enabled = false;
-                Button49.Text = Global.TamrahTenhaeffStatus;
+                Button49.Text = "        ";
                 Button49.Enabled = false;
             }
         }
@@ -2917,7 +2922,7 @@ namespace WebApplication1
                 TextBox27.Text = Global.ErinnVonRein.ToString("HHmm") + ("hrs");
                 Button26.Text = Global.ErinnVonReinStatus;
                 Button26.Enabled = false;
-                Button50.Text = Global.ErinnVonReinStatus;
+                Button50.Text = "        ";
                 Button50.Enabled = false;
             }
         }
