@@ -1781,7 +1781,7 @@ namespace WebApplication1
         {
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
-                //
+                
                 Global.KarenAndersonStatus = "Done";
                 Global.KarenAnderson = DateTime.Now;
                 Log.Logstring += "Karen Anderson Done: " + DateTime.Now.ToString() + "\n";
