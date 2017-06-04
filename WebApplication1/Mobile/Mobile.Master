@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
         <div style="text-align: center; margin: 0; padding: 0;">
-         <%--   <img src="../image/fpt.png" height="80" alt="" /> --%>
+         <%--     <img src="../image/fpt.png" height="80" alt="" /> --%>
             </div>
     <div class ="page" >
         <div class="header">

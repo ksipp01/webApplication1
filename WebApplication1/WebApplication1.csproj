@@ -96,11 +96,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Mobile\Default.aspx" />
+    <Content Include="Mobile\Styles\Mobile.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Mobile\Mobile.Master" />
     <None Include="Properties\PublishProfiles\EMPAC-Tracker - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -135,6 +139,7 @@
     <Content Include="MattHerold.aspx" />
     <Content Include="SaraFish.aspx" />
     <Content Include="SarahDundee.aspx" />
+    <Content Include="Styles\Site.css" />
     <Content Include="TamrahTenhaeff.aspx" />
     <Content Include="ValerieJohnson.aspx" />
     <Content Include="index.aspx" />
@@ -235,6 +240,9 @@
     <Compile Include="FredDemeuse.aspx.designer.cs">
       <DependentUpon>FredDemeuse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="GregPeterson.aspx.cs">
       <DependentUpon>GregPeterson.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -305,6 +313,20 @@
     <Compile Include="MattHerold.aspx.designer.cs">
       <DependentUpon>MattHerold.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mobile\Mobile.Master.cs">
+      <DependentUpon>Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Mobile.Master.designer.cs">
+      <DependentUpon>Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SaraFish.aspx.cs">
       <DependentUpon>SaraFish.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -353,6 +375,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
