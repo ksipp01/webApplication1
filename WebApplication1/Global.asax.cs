@@ -18,17 +18,17 @@ namespace WebApplication1
         protected void Session_Start(object sender, EventArgs e)
         {
             //
-            HttpRequest _httpRequest = HttpContext.Current.Request;
-            if (_httpRequest.Browser.IsMobileDevice)
-            {
-                string _path = _httpRequest.Url.PathAndQuery;
-                bool _isMobileDevice = _path.StartsWith("/Mobile");
-                if (!_isMobileDevice)
-                {
-                    string _redirectTo = "/Mobile";
-                    HttpContext.Current.Response.Redirect(_redirectTo);
-                }
-            }
+            //HttpRequest _httpRequest = HttpContext.Current.Request;
+            //if (_httpRequest.Browser.IsMobileDevice)
+            //{
+            //    string _path = _httpRequest.Url.PathAndQuery;
+            //    bool _isMobileDevice = _path.StartsWith("/Mobile");
+            //    if (!_isMobileDevice)
+            //    {
+            //        string _redirectTo = "/Mobile";
+            //        HttpContext.Current.Response.Redirect(_redirectTo);
+            //    }
+            //}
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

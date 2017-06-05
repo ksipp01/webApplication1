@@ -23,6 +23,14 @@ namespace WebApplication1
             }
             return trim.Insert(index, " ").Substring(0, trim.LastIndexOf(".") + 1);
         }
+
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            if (Request.Browser.IsMobileDevice)
+                MasterPageFile = "~/Master1.Master";
+        }
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             name = RemoveSpace(this.AppRelativeVirtualPath.ToString());

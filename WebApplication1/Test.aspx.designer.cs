@@ -10,7 +10,7 @@
 namespace WebApplication1 {
     
     
-    public partial class KevinSipprell {
+    public partial class Test {
         
         /// <summary>
         /// TextBox1 control.

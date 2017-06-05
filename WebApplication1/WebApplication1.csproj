@@ -105,6 +105,7 @@
     </Content>
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Mobile\Mobile.Master" />
+    <Content Include="Master.Master" />
     <None Include="Properties\PublishProfiles\EMPAC-Tracker - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -141,6 +142,7 @@
     <Content Include="SarahDundee.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="TamrahTenhaeff.aspx" />
+    <Content Include="Test.aspx" />
     <Content Include="ValerieJohnson.aspx" />
     <Content Include="index.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -306,6 +308,13 @@
     <Compile Include="Log.aspx.designer.cs">
       <DependentUpon>Log.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
     <Compile Include="MattHerold.aspx.cs">
       <DependentUpon>MattHerold.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -347,6 +356,13 @@
     </Compile>
     <Compile Include="TamrahTenhaeff.aspx.designer.cs">
       <DependentUpon>TamrahTenhaeff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="ValerieJohnson.aspx.cs">
       <DependentUpon>ValerieJohnson.aspx</DependentUpon>
