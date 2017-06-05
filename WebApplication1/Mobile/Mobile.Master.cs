@@ -11,7 +11,7 @@ namespace WebApplication1.Mobile
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // add comment for redeploy
         }
     }
 }

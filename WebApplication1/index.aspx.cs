@@ -35,7 +35,7 @@ namespace WebApplication1
 
             }
         }
-
+        // 
         //public static string GetPropValue(String name, Object obj)
         //{
         //    Type type = obj.GetType();
