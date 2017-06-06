@@ -4,7 +4,7 @@
     <div>
      <p>
             Jason Hicks - ETA:</p>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" pattern="[0-9]*"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="submit" />
     </div>
             (Enter estimated minutes to arrival e.g. 20) <br />
