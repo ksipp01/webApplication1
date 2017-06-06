@@ -82,6 +82,12 @@ table {
 <body>
 
 <table style="width:100%">
+     <tr>
+                <td style="border-bottom: thin solid" class="auto-style1"> MDs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td style="border-bottom: thin solid" class="auto-style5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>                   
+                <td style="border-bottom: thin solid" class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                 <td style="border-bottom: thin solid" class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
             <tr>
                 <td class="auto-style1">
                     <a href="KarenAnderson.aspx">Karen Anderson</a>&nbsp;&nbsp;</td>
@@ -224,6 +230,7 @@ table {
                   <td class="auto-style6">
                     <asp:Button ID="Button10" runat="server" Text="Complete" OnClick="Button10_Click" />
                 </td>
+                 </tr>
                   <tr>
                 <td class="auto-style1">
         <a href="AmyOsborn.aspx">Amy Osborn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -275,6 +282,18 @@ table {
                        <td class="auto-style6">
                     <asp:Button ID="Button14" runat="server" Text="Complete" OnClick="Button14_Click" />
                 </td>
+                       <tr>
+                <td style="border-top: thin dashed" class="auto-style1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td style="border-top: thin dashed" class="auto-style5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>                   
+                <td style="border-top: thin dashed" class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                 <td style="border-top: thin dashed" class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            </tr>
+                 <tr>
+                <td style="border-bottom: thin solid" class="auto-style1"> PAs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td style="border-bottom: thin solid" class="auto-style5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>                   
+                <td style="border-bottom: thin solid" class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                 <td style="border-bottom: thin solid" class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
             </tr>
                   <tr>
                 <td class="auto-style1">
@@ -366,6 +385,7 @@ table {
                        <td class="auto-style6">
                     <asp:Button ID="Button21" runat="server" Text="Complete" OnClick="Button21_Click" />
                 </td>
+                      </tr>
                        <tr>
                 <td class="auto-style1">
         <a href="JasonHicks.aspx">Jason Hicks</a>&nbsp;&nbsp;</td>
@@ -419,25 +439,22 @@ table {
                 </td>
             </tr>
                        <tr>
-                <td class="auto-style1">
+                <td style="border-bottom: thin dashed" class="auto-style1">
         <a href="ErinnVonRein.aspx">Erinn VonRein</a>&nbsp;&nbsp;</td>
-                <td class="auto-style5">
+                <td style="border-bottom: thin dashed" class="auto-style5">
         <asp:TextBox ID="TextBox27" runat="server" Width="60px"></asp:TextBox>
                            </td>
-                <td class="auto-style7">
+                <td style="border-bottom: thin dashed" class="auto-style7">
         <asp:Button ID="Button50" runat="server" OnClick="Button50_Click" Text="Arrived" />
                            </td>
-                            <td class="auto-style6">
+                            <td style="border-bottom: thin dashed" class="auto-style6">
                     <asp:Button ID="Button26" runat="server" Text="Complete" OnClick="Button26_Click" />
                 </td>
             </tr>
     
-            </tr>
-            </tr>
        
         </table>
-
-            <br />
+                <br />
        
 
      <a href="Log.aspx">View Log</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
