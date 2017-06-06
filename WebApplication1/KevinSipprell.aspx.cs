@@ -24,11 +24,11 @@ namespace WebApplication1
             return trim.Insert(index, " ").Substring(0, trim.LastIndexOf(".") + 1);
         }
 
-        protected void Page_PreInit(object sender, EventArgs e)
-        {
-            if (Request.Browser.IsMobileDevice)
-                MasterPageFile = "~/Master1.Master";
-        }
+        //protected void Page_PreInit(object sender, EventArgs e)
+        //{
+        //    if (Request.Browser.IsMobileDevice)
+        //        MasterPageFile = "~/Master1.Master";
+        //}
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -37,6 +37,11 @@ namespace WebApplication1
         }
         //
         protected void Button1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
         {
             Global.MDrespond++;
             Global.KevinSipprellStatus = "Enroute";
