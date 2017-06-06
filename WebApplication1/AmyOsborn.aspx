@@ -1,13 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AmyOsborn.aspx.cs" Inherits="WebApplication1.AmyOsborn" %>
+﻿<%@ Page Language="C# "MasterPageFile="~/Master.master" AutoEventWireup="true" CodeBehind="AmyOsborn.aspx.cs" Inherits="WebApplication1.AmyOsborn" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body style="width: 280px">
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
      <p>
             Amy Osborn - ETA:</p>
@@ -17,6 +10,4 @@
         (Enter estimated minutes to arrival e.g. 20)<br />
         <br />
         <a href="index.aspx">Index</a>
-    </form>
-</body>
-</html>
+</asp:Content>
