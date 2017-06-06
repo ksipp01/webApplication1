@@ -1,27 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="YoSchugel.aspx.cs" Inherits="WebApplication1.YoSchugel" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Master.master" AutoEventWireup="true" CodeBehind="YoSchugel.aspx.cs" Inherits="WebApplication1.YoSchugel" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        #form1 {
-            width: 280px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
      <p>
             Yo Schugel - ETA:</p>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" pattern="[0-9]*"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="submit" />
     </div>
             (Enter estimated minutes to arrival e.g. 20) <br />
      <br />
      <a href = "index.aspx" > Index</a>
-    </form>
-</body>
-</html>
+</asp:Content>
+
