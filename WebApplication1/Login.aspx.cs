@@ -205,15 +205,15 @@ namespace WebApplication1
 
     }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        protected void TextBox1_TextChanged(object sender, EventArgs e) // enter name here
         {
-            Button2.Enabled = true;
+          
             //name = RemoveSpace(UppercaseWords(TextBox1.Text));
             //Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
             //Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e) // submit name
         {
             //  name = RemoveSpace(UppercaseWords(TextBox1.Text));
             name = UppercaseWords(TextBox1.Text);
