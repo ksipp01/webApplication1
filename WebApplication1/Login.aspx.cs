@@ -104,6 +104,7 @@ namespace WebApplication1
                         Response.Cookies["user"].Expires = DateTime.MaxValue;
                         TextBox1.BackColor = System.Drawing.Color.Lime;
                         TextBox1.Text = Response.Cookies["user"].Value;
+                        Button2.Enabled = false;
                     }
                     else
                         TextBox1.Text = "Invalid User";
@@ -206,6 +207,7 @@ namespace WebApplication1
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
+            Button2.Enabled = true;
             //name = RemoveSpace(UppercaseWords(TextBox1.Text));
             //Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
             //Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
@@ -229,6 +231,7 @@ namespace WebApplication1
                 Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
                 TextBox1.BackColor = System.Drawing.Color.Lime;
                 TextBox1.Text = Response.Cookies["user"].Value;
+                Button2.Enabled = false;
             }
             else
                 TextBox1.Text = "Invalid User";
