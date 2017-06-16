@@ -1691,11 +1691,11 @@ namespace WebApplication1
                 //    //  Button50.Enabled = false;
                 //    Global.ArriveerinnVonRein = true;
                 //}
-                if (Global.ErinnVonReinStatus != null)
+                if (Global.ErinnVonreinStatus != null)
                     Global.PArespond--;
                 Global.PAhere++;
-                Global.ErinnVonReinStatus = "Here";
-                Global.ErinnVonRein = DateTime.Now;
+                Global.ErinnVonreinStatus = "Here";
+                Global.ErinnVonrein = DateTime.Now;
                 Button50.Enabled = false;
                 Log.Logstring += "Erinn VonRein Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox27.BackColor = System.Drawing.Color.Yellow;
@@ -1754,10 +1754,14 @@ namespace WebApplication1
             if (Global.KarenAndersonStatus == "Enroute")
             {
                 TimeSpan diff = (Global.KarenAnderson.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox1.Text = diff.ToString("mm");
-                else
-                    TextBox1.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox1.Text = m.ToString();
+
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox1.Text = diff.ToString("mm");
+                //else
+                //    TextBox1.Text = "-" + diff.ToString("mm");
             }
             else if (Global.KarenAndersonStatus == "Here")
             {
@@ -1799,10 +1803,13 @@ namespace WebApplication1
             if (Global.LaresaDeboerStatus == "Enroute")
             {
                 TimeSpan diff = (Global.LaresaDeboer.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox2.Text = diff.ToString("mm");
-                else
-                    TextBox2.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox2.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox2.Text = diff.ToString("mm");
+                //else
+                //    TextBox2.Text = "-" + diff.ToString("mm");
             }
             else if (Global.LaresaDeboerStatus == "Here")
             {
@@ -1843,10 +1850,13 @@ namespace WebApplication1
             if (Global.DanDeweyStatus == "Enroute")
             {
                 TimeSpan diff = (Global.DanDewey.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox3.Text = diff.ToString("mm");
-                else
-                    TextBox3.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox3.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox3.Text = diff.ToString("mm");
+                //else
+                //    TextBox3.Text = "-" + diff.ToString("mm");
             }
             else if (Global.DanDeweyStatus == "Here")
             {
@@ -1887,10 +1897,13 @@ namespace WebApplication1
             if (Global.JoseDundeeStatus == "Enroute")
             {
                 TimeSpan diff = (Global.JoseDundee.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox4.Text = diff.ToString("mm");
-                else
-                    TextBox4.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox4.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox4.Text = diff.ToString("mm");
+                //else
+                //    TextBox4.Text = "-" + diff.ToString("mm");
             }
             else if (Global.JoseDundeeStatus == "Here")
             {
@@ -1931,10 +1944,13 @@ namespace WebApplication1
             if (Global.SarahDundeeStatus == "Enroute")
             {
                 TimeSpan diff = (Global.SarahDundee.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox5.Text = diff.ToString("mm");
-                else
-                    TextBox5.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox5.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox5.Text = diff.ToString("mm");
+                //else
+                //    TextBox5.Text = "-" + diff.ToString("mm");
             }
             else if (Global.SarahDundeeStatus == "Here")
             {
@@ -1975,10 +1991,13 @@ namespace WebApplication1
             if (Global.SaraFishStatus == "Enroute")
             {
                 TimeSpan diff = (Global.SaraFish.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox6.Text = diff.ToString("mm");
-                else
-                    TextBox6.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox6.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox6.Text = diff.ToString("mm");
+                //else
+                //    TextBox6.Text = "-" + diff.ToString("mm");
             }
             else if (Global.SaraFishStatus == "Here")
             {
@@ -2019,10 +2038,13 @@ namespace WebApplication1
             if (Global.ErinFongStatus == "Enroute")
             {
                 TimeSpan diff = (Global.ErinFong.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox7.Text = diff.ToString("mm");
-                else
-                    TextBox7.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox7.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox7.Text = diff.ToString("mm");
+                //else
+                //    TextBox7.Text = "-" + diff.ToString("mm");
             }
             else if (Global.ErinFongStatus == "Here")
             {
@@ -2065,10 +2087,13 @@ namespace WebApplication1
             if (Global.MattHeroldStatus == "Enroute")
             {
                 TimeSpan diff = (Global.MattHerold.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox8.Text = diff.ToString("mm");
-                else
-                    TextBox8.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox8.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox8.Text = diff.ToString("mm");
+                //else
+                //    TextBox8.Text = "-" + diff.ToString("mm");
             }
             else if (Global.MattHeroldStatus == "Here")
             {
@@ -2110,10 +2135,13 @@ namespace WebApplication1
             if (Global.BruceHubbardStatus == "Enroute")
             {
                 TimeSpan diff = (Global.BruceHubbard.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox9.Text = diff.ToString("mm");
-                else
-                    TextBox9.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox9.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox9.Text = diff.ToString("mm");
+                //else
+                //    TextBox9.Text = "-" + diff.ToString("mm");
             }
             else if (Global.BruceHubbardStatus == "Here")
             {
@@ -2154,10 +2182,13 @@ namespace WebApplication1
             if (Global.ValerieJohnsonStatus == "Enroute")
             {
                 TimeSpan diff = (Global.ValerieJohnson.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox10.Text = diff.ToString("mm");
-                else
-                    TextBox10.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox10.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox10.Text = diff.ToString("mm");
+                //else
+                //    TextBox10.Text = "-" + diff.ToString("mm");
             }
             else if (Global.ValerieJohnsonStatus == "Here")
             {
@@ -2198,10 +2229,13 @@ namespace WebApplication1
             if (Global.DaveLarsonStatus == "Enroute")
             {
                 TimeSpan diff = (Global.DaveLarson.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox11.Text = diff.ToString("mm");
-                else
-                    TextBox11.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox11.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox11.Text = diff.ToString("mm");
+                //else
+                //    TextBox11.Text = "-" + diff.ToString("mm");
             }
             else if (Global.DaveLarsonStatus == "Here")
             {
@@ -2242,10 +2276,13 @@ namespace WebApplication1
             if (Global.AmyOsbornStatus == "Enroute")
             {
                 TimeSpan diff = (Global.AmyOsborn.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox12.Text = diff.ToString("mm");
-                else
-                    TextBox12.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox12.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox12.Text = diff.ToString("mm");
+                //else
+                //    TextBox12.Text = "-" + diff.ToString("mm");
             }
             else if (Global.AmyOsbornStatus == "Here")
             {
@@ -2286,10 +2323,13 @@ namespace WebApplication1
             if (Global.GregPetersonStatus == "Enroute")
             {
                 TimeSpan diff = (Global.GregPeterson.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox13.Text = diff.ToString("mm");
-                else
-                    TextBox13.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox13.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox13.Text = diff.ToString("mm");
+                //else
+                //    TextBox13.Text = "-" + diff.ToString("mm");
             }
             else if (Global.GregPetersonStatus == "Here")
             {
@@ -2330,10 +2370,13 @@ namespace WebApplication1
             if (Global.YoSchugelStatus == "Enroute")
             {
                 TimeSpan diff = (Global.YoSchugel.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox14.Text = diff.ToString("mm");
-                else
-                    TextBox14.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox14.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox14.Text = diff.ToString("mm");
+                //else
+                //    TextBox14.Text = "-" + diff.ToString("mm");
             }
             else if (Global.YoSchugelStatus == "Here")
             {
@@ -2374,10 +2417,13 @@ namespace WebApplication1
             if (Global.KevinSipprellStatus == "Enroute")
             {
                 TimeSpan diff = (Global.KevinSipprell.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox15.Text = diff.ToString("mm");
-                else
-                    TextBox15.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox15.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox15.Text = diff.ToString("mm");
+                //else
+                //    TextBox15.Text = "-" + diff.ToString("mm");
             }
             else if (Global.KevinSipprellStatus == "Here")
             {
@@ -2418,10 +2464,13 @@ namespace WebApplication1
             if (Global.EmilyAndersonStatus == "Enroute")
             {
                 TimeSpan diff = (Global.EmilyAnderson.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox16.Text = diff.ToString("mm");
-                else
-                    TextBox16.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox16.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox16.Text = diff.ToString("mm");
+                //else
+                //    TextBox16.Text = "-" + diff.ToString("mm");
             }
             else if (Global.EmilyAndersonStatus == "Here")
             {
@@ -2462,10 +2511,13 @@ namespace WebApplication1
             if (Global.JerodBarnesStatus == "Enroute")
             {
                 TimeSpan diff = (Global.JerodBarnes.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox17.Text = diff.ToString("mm");
-                else
-                    TextBox17.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox17.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox17.Text = diff.ToString("mm");
+                //else
+                //    TextBox17.Text = "-" + diff.ToString("mm");
             }
             else if (Global.JerodBarnesStatus == "Here")
             {
@@ -2506,10 +2558,13 @@ namespace WebApplication1
             if (Global.ErinBischoffStatus == "Enroute")
             {
                 TimeSpan diff = (Global.ErinBischoff.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox18.Text = diff.ToString("mm");
-                else
-                    TextBox18.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox18.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox18.Text = diff.ToString("mm");
+                //else
+                //    TextBox18.Text = "-" + diff.ToString("mm");
             }
             else if (Global.ErinBischoffStatus == "Here")
             {
@@ -2550,10 +2605,13 @@ namespace WebApplication1
             if (Global.FredDemeuseStatus == "Enroute")
             {
                 TimeSpan diff = (Global.FredDemeuse.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox19.Text = diff.ToString("mm");
-                else
-                    TextBox19.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox19.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox19.Text = diff.ToString("mm");
+                //else
+                //    TextBox19.Text = "-" + diff.ToString("mm");
             }
             else if (Global.FredDemeuseStatus == "Here")
             {
@@ -2594,10 +2652,13 @@ namespace WebApplication1
             if (Global.ChelseaErnisseStatus == "Enroute")
             {
                 TimeSpan diff = (Global.ChelseaErnisse.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox20.Text = diff.ToString("mm");
-                else
-                    TextBox20.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox20.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox20.Text = diff.ToString("mm");
+                //else
+                //    TextBox20.Text = "-" + diff.ToString("mm");
             }
             else if (Global.ChelseaErnisseStatus == "Here")
             {
@@ -2638,10 +2699,13 @@ namespace WebApplication1
             if (Global.AllisonEngelsmaStatus == "Enroute")
             {
                 TimeSpan diff = (Global.AllisonEngelsma.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox21.Text = diff.ToString("mm");
-                else
-                    TextBox21.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox21.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox21.Text = diff.ToString("mm");
+                //else
+                //    TextBox21.Text = "-" + diff.ToString("mm");
             }
             else if (Global.AllisonEngelsmaStatus == "Here")
             {
@@ -2682,10 +2746,13 @@ namespace WebApplication1
             if (Global.BradyGriffithStatus == "Enroute")
             {
                 TimeSpan diff = (Global.BradyGriffith.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox22.Text = diff.ToString("mm");
-                else
-                    TextBox22.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox22.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox22.Text = diff.ToString("mm");
+                //else
+                //    TextBox22.Text = "-" + diff.ToString("mm");
             }
             else if (Global.BradyGriffithStatus == "Here")
             {
@@ -2727,10 +2794,13 @@ namespace WebApplication1
             if (Global.JasonHicksStatus == "Enroute")
             {
                 TimeSpan diff = (Global.JasonHicks.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox23.Text = diff.ToString("mm");
-                else
-                    TextBox23.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox23.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox23.Text = diff.ToString("mm");
+                //else
+                //    TextBox23.Text = "-" + diff.ToString("mm");
             }
             else if (Global.JasonHicksStatus == "Here")
             {
@@ -2772,10 +2842,13 @@ namespace WebApplication1
             if (Global.LisaLarsonStatus == "Enroute")
             {
                 TimeSpan diff = (Global.LisaLarson.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox24.Text = diff.ToString("mm");
-                else
-                    TextBox24.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox24.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox24.Text = diff.ToString("mm");
+                //else
+                //    TextBox24.Text = "-" + diff.ToString("mm");
             }
             else if (Global.LisaLarsonStatus == "Here")
             {
@@ -2816,10 +2889,13 @@ namespace WebApplication1
             if (Global.BethRadkeStatus == "Enroute")
             {
                 TimeSpan diff = (Global.BethRadke.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox25.Text = diff.ToString("mm");
-                else
-                    TextBox25.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox25.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox25.Text = diff.ToString("mm");
+                //else
+                //    TextBox25.Text = "-" + diff.ToString("mm");
             }
             else if (Global.BethRadkeStatus == "Here")
             {
@@ -2860,10 +2936,13 @@ namespace WebApplication1
             if (Global.TamrahTenhaeffStatus == "Enroute")
             {
                 TimeSpan diff = (Global.TamrahTenhaeff.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox26.Text = diff.ToString("mm");
-                else
-                    TextBox26.Text = "-" + diff.ToString("mm");
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox26.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //    TextBox26.Text = diff.ToString("mm");
+                //else
+                //    TextBox26.Text = "-" + diff.ToString("mm");
             }
             else if (Global.TamrahTenhaeffStatus == "Here")
             {
@@ -2896,31 +2975,38 @@ namespace WebApplication1
 
             }
         }
+
+
+     
         public void CheckErinnVonReinStatus()
         {
-            if (Global.ErinnVonReinStatus == null)
+            if (Global.ErinnVonreinStatus == null)
                 return;
 
-            if (Global.ErinnVonReinStatus == "Enroute")
+            if (Global.ErinnVonreinStatus == "Enroute")
             {
-                TimeSpan diff = (Global.ErinnVonRein.Subtract(DateTime.Now));
-                if (diff.TotalMinutes >= 0)
-                    TextBox27.Text = diff.ToString("mm");
-                else
-                    TextBox27.Text = "-" + diff.ToString("mm");
+                TimeSpan diff = (Global.ErinnVonrein.Subtract(DateTime.Now));
+                double m = diff.TotalMinutes;
+                m = Math.Round(m, MidpointRounding.AwayFromZero);
+                TextBox27.Text = m.ToString();
+                //if (diff.TotalMinutes >= 0)
+                //     TextBox27.Text = m.ToString("mm");
+                //else
+                //    TextBox27.Text = "-" + diff.ToString("mm");
+                
             }
-            else if (Global.ErinnVonReinStatus == "Here")
+            else if (Global.ErinnVonreinStatus == "Here")
             {
-                TextBox27.Text = Global.ErinnVonRein.ToString("HHmm") + ("hrs");
+                TextBox27.Text = Global.ErinnVonrein.ToString("HHmm") + ("hrs");
                 TextBox27.BackColor = System.Drawing.Color.Yellow;
-                Button50.Text = Global.ErinnVonReinStatus;
+                Button50.Text = Global.ErinnVonreinStatus;
                 Button50.Enabled = false;
             }
-            else if (Global.ErinnVonReinStatus == "Done")
+            else if (Global.ErinnVonreinStatus == "Done")
             {
                 TextBox27.BackColor = System.Drawing.Color.Red;
-                TextBox27.Text = Global.ErinnVonRein.ToString("HHmm") + ("hrs");
-                Button26.Text = Global.ErinnVonReinStatus;
+                TextBox27.Text = Global.ErinnVonrein.ToString("HHmm") + ("hrs");
+                Button26.Text = Global.ErinnVonreinStatus;
                 Button26.Enabled = false;
                 Button50.Text = "        ";
                 Button50.Enabled = false;
@@ -2931,8 +3017,8 @@ namespace WebApplication1
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
 
-                Global.ErinnVonReinStatus = "Done";
-                Global.ErinnVonRein = DateTime.Now;
+                Global.ErinnVonreinStatus = "Done";
+                Global.ErinnVonrein = DateTime.Now;
                 Log.Logstring += "Erinn VonRein Done: " + DateTime.Now.ToString() + "\n";
                 Global.PAhere--;
                 CheckErinnVonReinStatus();

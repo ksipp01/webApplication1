@@ -31,11 +31,11 @@ namespace WebApplication1
         protected void Button1_Click(object sender, EventArgs e)
         {
             Global.PArespond++;
-            Global.ErinnVonReinStatus = "Enroute";
+            Global.ErinnVonreinStatus = "Enroute";
             int minutes = Convert.ToInt16(TextBox1.Text);
             DateTime time = DateTime.Now;
             TimeSpan eta = new TimeSpan(0, minutes, 0);
-            Global.ErinnVonRein = time.Add(eta);
+            Global.ErinnVonrein = time.Add(eta);
             TextBox1.BackColor = System.Drawing.Color.Lime;
             string responded = name + " Responded: " + TextBox1.Text + " min ETA at " + DateTime.Now.ToString();
             Log.Logstring += responded + "\n";
