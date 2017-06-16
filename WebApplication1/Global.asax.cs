@@ -33,9 +33,9 @@ namespace WebApplication1
             HttpRequest _httpRequest = HttpContext.Current.Request;
             if (_httpRequest.Browser.IsMobileDevice)
             {
-                if (_httpRequest.Path == "/index.aspx")
-                    return;
-                else
+                //if (_httpRequest.Path == "/index.aspx")
+                //    return;
+                //else
                 {
                     string _redirectTo = "/Login.aspx";
                     HttpContext.Current.Response.Redirect(_redirectTo);
