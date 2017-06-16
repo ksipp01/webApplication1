@@ -29,6 +29,25 @@ namespace WebApplication1
             //        HttpContext.Current.Response.Redirect(_redirectTo);
             //    }
             //}
+
+            HttpRequest _httpRequest = HttpContext.Current.Request;
+            if (_httpRequest.Browser.IsMobileDevice)
+            {
+                if (_httpRequest.Path == "/index.aspx")
+                    return;
+                else
+                {
+                    string _redirectTo = "/Login.aspx";
+                    HttpContext.Current.Response.Redirect(_redirectTo);
+                }
+                //string _path = _httpRequest.Url.PathAndQuery;
+                //bool _isMobileDevice = _path.StartsWith("/Mobile");
+                //if (!_isMobileDevice)
+                //{
+                //    string _redirectTo = "/Mobile";
+                //    HttpContext.Current.Response.Redirect(_redirectTo);
+                //}
+            }
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
