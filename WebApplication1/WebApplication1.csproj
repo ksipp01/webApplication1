@@ -96,6 +96,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AlliEngelsma.aspx" />
+    <Content Include="AmyOsborn.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Mobile\Default.aspx" />
@@ -116,8 +118,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AlliEngelsma.aspx" />
-    <Content Include="AmyOsborn.aspx" />
     <Content Include="BethRadke.aspx" />
     <Content Include="BradyGriffith.aspx" />
     <Content Include="BruceHubbard.aspx" />

@@ -8,6 +8,9 @@
     <meta http-equiv="refresh" content="20" />
     <style type="text/css">
         #form1 {
+            font: normal 14px Verdana, sans-serif;
+            margin-left: 50px;
+            margin-top: 30px;            
             height: 1185px;
             width: 488px;
         }
@@ -90,7 +93,7 @@ table {
             </tr>
             <tr>
                 <td class="auto-style1">
-                    <a href="KarenAnderson.aspx">Karen Anderson</a>&nbsp;&nbsp;</td>
+                  Karen Anderson &nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox1" runat="server" Width="60px"></asp:TextBox>
                 </td>
@@ -103,7 +106,7 @@ table {
             </tr>
             <tr>
                 <td class="auto-style1">
-            <a href="LaresaDeBoer.aspx">Laresa DeBoer</a>&nbsp;&nbsp;</td>
+            Laresa DeBoer &nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox2" runat="server" Width="60px"></asp:TextBox>
                 </td>
@@ -116,7 +119,7 @@ table {
             </tr>
              <tr>
                 <td class="auto-style1">
-            <a href="DanDewey.aspx">Dan Dewey</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+           Dan Dewey &nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox3" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -129,7 +132,7 @@ table {
             </tr>
              <tr>
                 <td class="auto-style1">
-         <a href="JoseDundee.aspx">Jose Dundee</a>&nbsp;&nbsp;</td>
+       Jose Dundee &nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox4" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -142,7 +145,7 @@ table {
             </tr>
              <tr>
                 <td class="auto-style1">
-        <a href="SarahDundee.aspx">Sarah Dundee</a>&nbsp;&nbsp;&nbsp;</td>
+         Sarah Dundee &nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">     
         <asp:TextBox ID="TextBox5" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -154,8 +157,8 @@ table {
                 </td>
             </tr>
              <tr>
-                <td class="auto-style1">      
-        <a href="SaraFish.aspx">Sara Fish</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="auto-style1">       
+          Sara Fish &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox6" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -168,7 +171,7 @@ table {
             </tr>
              <tr>
                 <td class="auto-style1">
-        <a href="ErineFong.aspx">Erine Fong</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        Erine Fong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox7" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -181,7 +184,7 @@ table {
             </tr>
              <tr>
                 <td class="auto-style1">
-        <a href="MattHerold.aspx">Matt Herold</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+        Matt Herold &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                 <td class="auto-style5">        
         <asp:TextBox ID="TextBox8" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -194,7 +197,7 @@ table {
             </tr>
              <tr>
                 <td class="auto-style1">
-          <a href="BruceHubbard.aspx">Bruce Hubbard</a>&nbsp;&nbsp;&nbsp;</td>
+          Bruce Hubbard &nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">     
         <asp:TextBox ID="TextBox9" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -207,7 +210,7 @@ table {
             </tr>
              <tr>
                 <td class="auto-style1">
-         <a href="ValerieJohnson.aspx">Valerie Johnson</a>&nbsp;&nbsp;&nbsp;</td>
+         Valerie Johnson &nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">    
         <asp:TextBox ID="TextBox10" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -220,7 +223,7 @@ table {
             </tr>
              <tr>
                 <td class="auto-style1">
-        <a href="DaveLarson.aspx">Dave Larson</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        Dave Larson &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">      
         <asp:TextBox ID="TextBox11" runat="server" Width="60px"></asp:TextBox>
                  </td>
@@ -233,7 +236,7 @@ table {
                  </tr>
                   <tr>
                 <td class="auto-style1">
-        <a href="AmyOsborn.aspx">Amy Osborn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        Amy Osborn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5"> 
         <asp:TextBox ID="TextBox12" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -246,7 +249,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-        <a href="GregPeterson.aspx">Greg Peterson</a>&nbsp;&nbsp;</td>
+        Greg Peterson &nbsp;&nbsp;</td>
                 <td class="auto-style5"> 
         <asp:TextBox ID="TextBox13" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -259,7 +262,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-        <a href="YoSchugel.aspx">Yo Schugel</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+       Yo Schugel &nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5"> 
         <asp:TextBox ID="TextBox14" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -271,8 +274,7 @@ table {
                 </td>
             </tr>
                   <tr>
-                <td class="auto-style1">
-        <a href="KevinSipprell.aspx">Kevin Sipprell</a>&nbsp;&nbsp;</td>
+                <td class="auto-style1">Kevin Sipprell&nbsp;&nbsp;</td>
                 <td class="auto-style5">      
         <asp:TextBox ID="TextBox15" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -297,7 +299,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-         <a href="EmilyAnderson.aspx">Emily Anderson</a>&nbsp;&nbsp;&nbsp;</td>
+        Emily Anderson &nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5"> 
         <asp:TextBox ID="TextBox16" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -310,7 +312,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-         <a href="JerodBarnes.aspx">Jarod Barnes</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+         Jarod Barnes &nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5"> 
         <asp:TextBox ID="TextBox17" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -323,7 +325,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-         <a href="ErinBischoff.aspx">Erin Bischoff</a>&nbsp;&nbsp;&nbsp;</td>
+         Erin Bischoff &nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">   
         <asp:TextBox ID="TextBox18" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -336,7 +338,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-        <a href="FredDemeuse.aspx">Fred Demeuse</a>&nbsp;&nbsp;</td>
+        Fred Demeuse &nbsp;&nbsp;</td>
                 <td class="auto-style5"> 
         <asp:TextBox ID="TextBox19" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -349,7 +351,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-        <a href="ChelseaEernisse.aspx">Chelsea Eernisse</a>&nbsp;&nbsp;</td>
+        Chelsea Eernisse &nbsp;&nbsp;</td>
                 <td class="auto-style5">     
         <asp:TextBox ID="TextBox20" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -362,7 +364,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-        <a href="AlliEngelsma.aspx">Alli Engelsma</a></td>
+        Alli Engelsma </td>
                 <td class="auto-style5">    
         <asp:TextBox ID="TextBox21" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -375,7 +377,7 @@ table {
             </tr>
                   <tr>
                 <td class="auto-style1">
-        <a href="BradyGriffith.aspx">Brady Griffith</a>&nbsp;&nbsp;&nbsp;</td>
+        Brady Griffith &nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">      
         <asp:TextBox ID="TextBox22" runat="server" Width="60px"></asp:TextBox>
                       </td>
@@ -388,7 +390,7 @@ table {
                       </tr>
                        <tr>
                 <td class="auto-style1">
-        <a href="JasonHicks.aspx">Jason Hicks</a>&nbsp;&nbsp;</td>
+       Jason Hicks&nbsp;&nbsp;</td>
                 <td class="auto-style5">    
         <asp:TextBox ID="TextBox23" runat="server" Width="60px"></asp:TextBox>
                            </td>
@@ -401,7 +403,7 @@ table {
             </tr>
                        <tr>
                 <td class="auto-style1">
-        <a href="LisaLarson.aspx">Lisa Larson</a>&nbsp;&nbsp;</td>
+        Lisa Larson &nbsp;&nbsp;</td>
                 <td class="auto-style5">       
         <asp:TextBox ID="TextBox24" runat="server" Width="60px"></asp:TextBox>
                            </td>
@@ -414,7 +416,7 @@ table {
             </tr>
                        <tr>
                 <td class="auto-style1">
-        <a href="BethRadke.aspx">Beth Radke</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        Beth Radke &nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox25" runat="server" Width="60px"></asp:TextBox>
                            </td>
@@ -427,7 +429,7 @@ table {
             </tr>
                        <tr>
                 <td class="auto-style1">
-        <a href="TamrahTenhaeff.aspx">Tamrah Tenhaeff</a>&nbsp;&nbsp;</td>
+        Tamrah Tenhaeff &nbsp;&nbsp;</td>
                 <td class="auto-style5">
         <asp:TextBox ID="TextBox26" runat="server" Width="60px"></asp:TextBox>
                            </td>
@@ -440,7 +442,7 @@ table {
             </tr>
                        <tr>
                 <td style="border-bottom: thin dashed" class="auto-style1">
-        <a href="ErinnVonRein.aspx">Erinn VonRein</a>&nbsp;&nbsp;</td>
+        Erinn VonRein &nbsp;&nbsp;</td>
                 <td style="border-bottom: thin dashed" class="auto-style5">
         <asp:TextBox ID="TextBox27" runat="server" Width="60px"></asp:TextBox>
                            </td>
