@@ -96,8 +96,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AlliEngelsma.aspx" />
-    <Content Include="AmyOsborn.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Mobile\Default.aspx" />
@@ -118,182 +116,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BethRadke.aspx" />
-    <Content Include="BradyGriffith.aspx" />
-    <Content Include="BruceHubbard.aspx" />
-    <Content Include="ChelseaEernisse.aspx" />
-    <Content Include="DanDewey.aspx" />
-    <Content Include="DaveLarson.aspx" />
-    <Content Include="EmilyAnderson.aspx" />
-    <Content Include="ErinBischoff.aspx" />
-    <Content Include="ErineFong.aspx" />
-    <Content Include="ErinnVonRein.aspx" />
-    <Content Include="FredDemeuse.aspx" />
-    <Content Include="GregPeterson.aspx" />
-    <Content Include="JasonHicks.aspx" />
-    <Content Include="JerodBarnes.aspx" />
-    <Content Include="JoseDundee.aspx" />
-    <Content Include="KarenAnderson.aspx" />
-    <Content Include="LaresaDeBoer.aspx" />
-    <Content Include="LisaLarson.aspx" />
     <Content Include="Log.aspx" />
-    <Content Include="MattHerold.aspx" />
-    <Content Include="SaraFish.aspx" />
-    <Content Include="SarahDundee.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Success.aspx" />
-    <Content Include="TamrahTenhaeff.aspx" />
     <Content Include="Test.aspx" />
-    <Content Include="ValerieJohnson.aspx" />
     <Content Include="index.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Web.config" />
-    <Content Include="YoSchugel.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlliEngelsma.aspx.cs">
-      <DependentUpon>AlliEngelsma.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AlliEngelsma.aspx.designer.cs">
-      <DependentUpon>AlliEngelsma.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AmyOsborn.aspx.cs">
-      <DependentUpon>AmyOsborn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AmyOsborn.aspx.designer.cs">
-      <DependentUpon>AmyOsborn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BethRadke.aspx.cs">
-      <DependentUpon>BethRadke.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BethRadke.aspx.designer.cs">
-      <DependentUpon>BethRadke.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BradyGriffith.aspx.cs">
-      <DependentUpon>BradyGriffith.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BradyGriffith.aspx.designer.cs">
-      <DependentUpon>BradyGriffith.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BruceHubbard.aspx.cs">
-      <DependentUpon>BruceHubbard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BruceHubbard.aspx.designer.cs">
-      <DependentUpon>BruceHubbard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ChelseaEernisse.aspx.cs">
-      <DependentUpon>ChelseaEernisse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ChelseaEernisse.aspx.designer.cs">
-      <DependentUpon>ChelseaEernisse.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DanDewey.aspx.cs">
-      <DependentUpon>DanDewey.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DanDewey.aspx.designer.cs">
-      <DependentUpon>DanDewey.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DaveLarson.aspx.cs">
-      <DependentUpon>DaveLarson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DaveLarson.aspx.designer.cs">
-      <DependentUpon>DaveLarson.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EmilyAnderson.aspx.cs">
-      <DependentUpon>EmilyAnderson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EmilyAnderson.aspx.designer.cs">
-      <DependentUpon>EmilyAnderson.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ErinBischoff.aspx.cs">
-      <DependentUpon>ErinBischoff.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ErinBischoff.aspx.designer.cs">
-      <DependentUpon>ErinBischoff.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ErineFong.aspx.cs">
-      <DependentUpon>ErineFong.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ErineFong.aspx.designer.cs">
-      <DependentUpon>ErineFong.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ErinnVonRein.aspx.cs">
-      <DependentUpon>ErinnVonRein.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ErinnVonRein.aspx.designer.cs">
-      <DependentUpon>ErinnVonRein.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FredDemeuse.aspx.cs">
-      <DependentUpon>FredDemeuse.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FredDemeuse.aspx.designer.cs">
-      <DependentUpon>FredDemeuse.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="GregPeterson.aspx.cs">
-      <DependentUpon>GregPeterson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GregPeterson.aspx.designer.cs">
-      <DependentUpon>GregPeterson.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="JasonHicks.aspx.cs">
-      <DependentUpon>JasonHicks.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="JasonHicks.aspx.designer.cs">
-      <DependentUpon>JasonHicks.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="JerodBarnes.aspx.cs">
-      <DependentUpon>JerodBarnes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="JerodBarnes.aspx.designer.cs">
-      <DependentUpon>JerodBarnes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="JoseDundee.aspx.cs">
-      <DependentUpon>JoseDundee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="JoseDundee.aspx.designer.cs">
-      <DependentUpon>JoseDundee.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="KarenAnderson.aspx.cs">
-      <DependentUpon>KarenAnderson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="KarenAnderson.aspx.designer.cs">
-      <DependentUpon>KarenAnderson.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LaresaDeBoer.aspx.cs">
-      <DependentUpon>LaresaDeBoer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LaresaDeBoer.aspx.designer.cs">
-      <DependentUpon>LaresaDeBoer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LisaLarson.aspx.cs">
-      <DependentUpon>LisaLarson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LisaLarson.aspx.designer.cs">
-      <DependentUpon>LisaLarson.aspx</DependentUpon>
     </Compile>
     <Compile Include="Log.aspx.cs">
       <DependentUpon>Log.aspx</DependentUpon>
@@ -316,13 +150,6 @@
     <Compile Include="Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
-    <Compile Include="MattHerold.aspx.cs">
-      <DependentUpon>MattHerold.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MattHerold.aspx.designer.cs">
-      <DependentUpon>MattHerold.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Mobile\Mobile.Master.cs">
       <DependentUpon>Mobile.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -337,20 +164,6 @@
     <Compile Include="Mobile\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SaraFish.aspx.cs">
-      <DependentUpon>SaraFish.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SaraFish.aspx.designer.cs">
-      <DependentUpon>SaraFish.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SarahDundee.aspx.cs">
-      <DependentUpon>SarahDundee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SarahDundee.aspx.designer.cs">
-      <DependentUpon>SarahDundee.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Success.aspx.cs">
       <DependentUpon>Success.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -358,26 +171,12 @@
     <Compile Include="Success.aspx.designer.cs">
       <DependentUpon>Success.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TamrahTenhaeff.aspx.cs">
-      <DependentUpon>TamrahTenhaeff.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TamrahTenhaeff.aspx.designer.cs">
-      <DependentUpon>TamrahTenhaeff.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Test.aspx.cs">
       <DependentUpon>Test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Test.aspx.designer.cs">
       <DependentUpon>Test.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ValerieJohnson.aspx.cs">
-      <DependentUpon>ValerieJohnson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ValerieJohnson.aspx.designer.cs">
-      <DependentUpon>ValerieJohnson.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="index.aspx.cs">
@@ -388,13 +187,6 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="YoSchugel.aspx.cs">
-      <DependentUpon>YoSchugel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="YoSchugel.aspx.designer.cs">
-      <DependentUpon>YoSchugel.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
