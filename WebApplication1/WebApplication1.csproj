@@ -134,7 +134,6 @@
     <Content Include="JerodBarnes.aspx" />
     <Content Include="JoseDundee.aspx" />
     <Content Include="KarenAnderson.aspx" />
-    <Content Include="KevinSipprell.aspx" />
     <Content Include="LaresaDeBoer.aspx" />
     <Content Include="LisaLarson.aspx" />
     <Content Include="Log.aspx" />
@@ -142,6 +141,7 @@
     <Content Include="SaraFish.aspx" />
     <Content Include="SarahDundee.aspx" />
     <Content Include="Styles\Site.css" />
+    <Content Include="Success.aspx" />
     <Content Include="TamrahTenhaeff.aspx" />
     <Content Include="Test.aspx" />
     <Content Include="ValerieJohnson.aspx" />
@@ -281,13 +281,6 @@
     <Compile Include="KarenAnderson.aspx.designer.cs">
       <DependentUpon>KarenAnderson.aspx</DependentUpon>
     </Compile>
-    <Compile Include="KevinSipprell.aspx.cs">
-      <DependentUpon>KevinSipprell.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="KevinSipprell.aspx.designer.cs">
-      <DependentUpon>KevinSipprell.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LaresaDeBoer.aspx.cs">
       <DependentUpon>LaresaDeBoer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -357,6 +350,13 @@
     </Compile>
     <Compile Include="SarahDundee.aspx.designer.cs">
       <DependentUpon>SarahDundee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
     </Compile>
     <Compile Include="TamrahTenhaeff.aspx.cs">
       <DependentUpon>TamrahTenhaeff.aspx</DependentUpon>

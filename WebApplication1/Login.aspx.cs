@@ -158,7 +158,7 @@ namespace WebApplication1
         /// </summary>
        
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e) // submit ETA
         {
 
 
@@ -201,7 +201,7 @@ namespace WebApplication1
             TextBox2.BackColor = System.Drawing.Color.Lime;
             string responded = name + " Responded: " + TextBox2.Text + " min ETA at " + DateTime.Now.ToString();
             Log.Logstring += responded + "\n";
-        
+            Response.Redirect("~/success.aspx");
 
     }
 
