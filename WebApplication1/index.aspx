@@ -13,10 +13,12 @@
             margin-top: 30px;            
             height: 1185px;
             width: 488px;
+      
         }
         .auto-style1 {
             width: 130px;
              height: 20px;
+             
         }
        </style>
 
@@ -38,16 +40,16 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:TextBox ID="TextBox28" runat="server" Width="50px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox28" runat="server" style="text-align:center" Width="50px" ></asp:TextBox>
                 </td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="TextBox29" runat="server" Width="50px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox29" runat="server" style="text-align:center" Width="50px"></asp:TextBox>
                 </td>
                  <td class="auto-style3">
-                     <asp:TextBox ID="TextBox30" runat="server" Width="50px"></asp:TextBox>
+                     <asp:TextBox ID="TextBox30" runat="server" style="text-align:center" Width="50px"></asp:TextBox>
                 </td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="TextBox31" runat="server" Width="50px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox31" runat="server" style="text-align:center" Width="50px"></asp:TextBox>
                 </td>
 
             </tr>
@@ -67,9 +69,11 @@ table {
 }
             .auto-style2 {
                 width: 287px;
+                text-align:center;
             }
             .auto-style3 {
                 width: 214px;
+                text-align:center;
             }
             .auto-style5 {
                 width: 74px;
@@ -459,9 +463,9 @@ table {
                 <br />
        
 
-     <a href="Log.aspx">View Log</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="Log.aspx">View Log</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Login.aspx">HUC - ETA Entry</a>&nbsp;&nbsp;&nbsp;&nbsp;
     
-    <asp:Button ID="Button51" runat="server" Text="Reset" OnClientClick = "return confirm('Are you sure you want to reset?');" OnClick="Button51_Click"/>
+    <asp:Button ID="Button51" runat="server" Text="Reset Form" Style="margin-left:50px" OnClientClick = "return confirm('Are you sure you want to reset?');" OnClick="Button51_Click"/>
        
     <br />
     <br />

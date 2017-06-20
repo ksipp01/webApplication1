@@ -60,7 +60,7 @@ namespace WebApplication1
         }
 
 
-
+        HttpRequest _httpRequest = HttpContext.Current.Request;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -80,43 +80,49 @@ namespace WebApplication1
             //     if (TextBox1.Text == "")
             if (!Page.IsPostBack)
             {
-                TextBox1.Text = string.Empty;
-                TextBox2.Text = string.Empty;
-                TextBox1.BackColor = default(System.Drawing.Color);
-                TextBox2.BackColor = default(System.Drawing.Color);
-                if (Request.Cookies["user"] != null)
+               
+                if (_httpRequest.Browser.IsMobileDevice) // only use cookies if mobile device.  This way if HUC enters from desktop, the name TB is blank
                 {
-                    TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
 
-                    name = UppercaseWords(TextBox1.Text);
-                    //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
-               //     Response.Cookies["user"].Value = name;
-               //     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-
-                    //   var propval = prop.GetValue(ob);
-                    var type = typeof(Global);
-
-                    var prop = type.GetProperty(RemoveSpace(name));
-                    if (prop != null)
+                    TextBox1.Text = string.Empty;
+                    TextBox2.Text = string.Empty;
+                    TextBox1.BackColor = default(System.Drawing.Color);
+                    TextBox2.BackColor = default(System.Drawing.Color);
+                    if (Request.Cookies["user"] != null)
                     {
-                        Response.Cookies["user"].Value = name;
-                        //  Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-                        Response.Cookies["user"].Expires = DateTime.MaxValue;
-                        TextBox1.BackColor = System.Drawing.Color.Lime;
-                        TextBox1.Text = Response.Cookies["user"].Value;
-                        Button2.Enabled = false;
+                        TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
+
+                        name = UppercaseWords(TextBox1.Text);
+                        //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
+                        //     Response.Cookies["user"].Value = name;
+                        //     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+
+                        //   var propval = prop.GetValue(ob);
+                        var type = typeof(Global);
+
+                        var prop = type.GetProperty(RemoveSpace(name));
+                        if (prop != null)
+                        {
+                            Response.Cookies["user"].Value = name;
+                            //  Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+                            Response.Cookies["user"].Expires = DateTime.MaxValue;
+                            TextBox1.BackColor = System.Drawing.Color.Lime;
+                            TextBox1.Text = Response.Cookies["user"].Value;
+                            Button2.Enabled = false;
+                        }
+                        else
+                            TextBox1.Text = "Invalid User";
+
+
+
+
+
+
                     }
                     else
-                        TextBox1.Text = "Invalid User";
-
-
-
-
-
+                        return;
 
                 }
-                else
-                    return;
                 //  TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
             }
             //if (TextBox1.Text == Server.HtmlEncode(Request.Cookies["user"].Value))
@@ -201,9 +207,13 @@ namespace WebApplication1
             TextBox2.BackColor = System.Drawing.Color.Lime;
             string responded = name + " Responded: " + TextBox2.Text + " min ETA at " + DateTime.Now.ToString();
             Log.Logstring += responded + "\n";
-            Response.Redirect("~/success.aspx");
+            
+            if (!_httpRequest.Browser.IsMobileDevice)
+                Response.Redirect("~/index.aspx");  // redirect back to index for HUC ETA entry.  
+            else
+                Response.Redirect("~/success.aspx");
 
-    }
+        }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e) // enter name here
         {

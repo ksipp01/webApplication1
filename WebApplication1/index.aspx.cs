@@ -26,13 +26,28 @@ namespace WebApplication1
                     SetBackColor(c);
                     TextBox tb = c as TextBox;
                     if (tb != null)
+                    {
                         //  if (tb.Text != "" && tb.BackColor != System.Drawing.Color.WhiteSmoke)
                         if (tb.Text == "" || tb.Text.Contains("hrs"))
                             tb.BackColor = tb.BackColor;
                         else
                             tb.BackColor = System.Drawing.Color.Lime;
+                        if (tb.Text != "" && tb.Text.Substring(0, 1) == "-")
+                        {
+                          //  tb.BackColor = System.Drawing.Color.Li;
+                            tb.BorderColor = System.Drawing.Color.Red;
+                            tb.BorderWidth = 3;
+                        }
+                    }
                 }
-
+                if (TextBox28.Text == "0")
+                    TextBox28.BackColor = System.Drawing.Color.Yellow;
+                if (TextBox29.Text == "0")
+                    TextBox29.BackColor = System.Drawing.Color.Yellow;
+                if (TextBox30.Text == "0")
+                    TextBox30.BackColor = System.Drawing.Color.Yellow;
+                if (TextBox31.Text == "0")
+                    TextBox31.BackColor = System.Drawing.Color.Yellow;
             }
         }
         // 
@@ -581,7 +596,7 @@ namespace WebApplication1
             if (!IsPageRefresh) // prevent page refresh from tiggering again
             {
 
-                if (Global.LaresaDeboerStatus !=null)
+                if (Global.LaresaDeboerStatus != "MD")
                     Global.MDrespond--;
 
                     Global.Mdhere++;
@@ -631,7 +646,7 @@ namespace WebApplication1
         {
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
-                if (Global.KarenAndersonStatus != null)
+                if (Global.KarenAndersonStatus != "MD")
                     Global.MDrespond--;
 
                 Global.Mdhere++;
@@ -651,7 +666,7 @@ namespace WebApplication1
 
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
-                if (Global.DanDeweyStatus != null)
+                if (Global.DanDeweyStatus != "MD")
                     Global.MDrespond--;
 
                 Global.Mdhere++;
@@ -712,7 +727,7 @@ namespace WebApplication1
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
 
-                if (Global.JoseDundeeStatus != null)
+                if (Global.JoseDundeeStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.JoseDundeeStatus = "Here";
@@ -775,7 +790,7 @@ namespace WebApplication1
                 //    // SDundeeARrivalButton.Enabled = false;
                 //    Global.ArrivesarahDundee = true;
                 //}
-                if (Global.SarahDundeeStatus != null)
+                if (Global.SarahDundeeStatus != "MD")
                     Global.MDrespond--;
 
                 Global.Mdhere++;
@@ -818,7 +833,7 @@ namespace WebApplication1
                 //    // Button29.Enabled = false;
                 //    Global.ArrivesaraFish = true;
                 //}
-                if (Global.SaraFishStatus != null)
+                if (Global.SaraFishStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.SaraFishStatus = "Here";
@@ -859,7 +874,7 @@ namespace WebApplication1
                 //    //Button30.Enabled = false;
                 //    Global.ArriveerinFong = true;
                 //}
-                if (Global.ErinFongStatus != null)
+                if (Global.ErinFongStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.ErinFongStatus = "Here";
@@ -900,7 +915,7 @@ namespace WebApplication1
                 //    //Button31.Enabled = false;
                 //    Global.ArrivemattHerold = true;
                 //}
-                if (Global.MattHeroldStatus != null)
+                if (Global.MattHeroldStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.MattHeroldStatus = "Here";
@@ -943,7 +958,7 @@ namespace WebApplication1
                 //    Button32.Text = "HERE";
                 ////    Button32.Enabled = false;
                 //    Global.ArrivebruceHubbard = true;
-                if (Global.BruceHubbardStatus != null)
+                if (Global.BruceHubbardStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.BruceHubbardStatus = "Here";
@@ -986,7 +1001,7 @@ namespace WebApplication1
                 //    //   Button33.Enabled = false;
                 //    Global.ArrivevalerieJohnson = true;
                 //}
-                if (Global.ValerieJohnsonStatus != null)
+                if (Global.ValerieJohnsonStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.ValerieJohnsonStatus = "Here";
@@ -1028,7 +1043,7 @@ namespace WebApplication1
                 //    //   Button34.Enabled = false;
                 //    Global.ArrivedaveLarson = true;
                 //}DaveLarson  
-                if (Global.DaveLarsonStatus != null)
+                if (Global.DaveLarsonStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.DaveLarsonStatus = "Here";
@@ -1069,7 +1084,7 @@ namespace WebApplication1
                 //    //Button35.Enabled = false;
                 //    GlobaAmyOsbornyOsborn = true;
                 //}
-                if (Global.AmyOsbornStatus != null)
+                if (Global.AmyOsbornStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.AmyOsbornStatus = "Here";
@@ -1110,7 +1125,7 @@ namespace WebApplication1
                 ////           Button36.Enabled = false;
                 //           Global.ArrivegregPeterson = true;
                 //       }
-                if (Global.GregPetersonStatus != null)
+                if (Global.GregPetersonStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.GregPetersonStatus = "Here";
@@ -1152,7 +1167,7 @@ namespace WebApplication1
                 //    //   Button37.Enabled = false;
                 //    Global.ArriveyoSchugel = true;
                 //}
-                if (Global.YoSchugelStatus != null)
+                if (Global.YoSchugelStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.YoSchugelStatus = "Here";
@@ -1193,7 +1208,7 @@ namespace WebApplication1
                 //    //Button38.Enabled = false;
                 //    Global.ArrivekevinSipprell = true;
                 //}
-                if (Global.KevinSipprellStatus != null)
+                if (Global.KevinSipprellStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
                 Global.KevinSipprellStatus = "Here";
@@ -1235,7 +1250,7 @@ namespace WebApplication1
                 //    //    Button39.Enabled = false;
                 //    Global.ArriveemilyAnderson = true;
                 //}
-                if (Global.EmilyAndersonStatus != null)
+                if (Global.EmilyAndersonStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.EmilyAndersonStatus = "Here";
@@ -1277,7 +1292,7 @@ namespace WebApplication1
                 //    //   Button40.Enabled = false;
                 //    Global.ArrivejerodBarnes = true;
                 //}
-                if (Global.JerodBarnesStatus != null)
+                if (Global.JerodBarnesStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.JerodBarnesStatus = "Here";
@@ -1318,7 +1333,7 @@ namespace WebApplication1
                 //    // Button41.Enabled = false;
                 //    Global.ArriveerinBischoff = true;
                 //}
-                if (Global.ErinBischoffStatus != null)
+                if (Global.ErinBischoffStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.ErinBischoffStatus = "Here";
@@ -1360,7 +1375,7 @@ namespace WebApplication1
                 //    //  Button42.Enabled = false;
                 //    Global.ArrivefredDemeuse = true;
                 //}
-                if (Global.FredDemeuseStatus != null)
+                if (Global.FredDemeuseStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.FredDemeuseStatus = "Here";
@@ -1402,7 +1417,7 @@ namespace WebApplication1
                 //    //   Button43.Enabled = false;
                 //    Global.ArrivechelseaErnisse = true;
                 //}
-                if (Global.ChelseaErnisseStatus != null)
+                if (Global.ChelseaErnisseStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.ChelseaErnisseStatus = "Here";
@@ -1445,7 +1460,7 @@ namespace WebApplication1
                 //    //   Button44.Enabled = false;
                 //    Global.ArriveallisonEngelsma = true;
                 //}
-                if (Global.AllisonEngelsmaStatus != null)
+                if (Global.AllisonEngelsmaStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.AllisonEngelsmaStatus = "Here";
@@ -1486,7 +1501,7 @@ namespace WebApplication1
                 //    //Button45.Enabled = false;
                 //    Global.ArrivebradyGriffith = true;
                 //}
-                if (Global.BradyGriffithStatus != null)
+                if (Global.BradyGriffithStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.BradyGriffithStatus = "Here";
@@ -1527,7 +1542,7 @@ namespace WebApplication1
                 //    //  Button46.Enabled = false;
                 //    Global.ArrivejasonHicks = true;
                 //}
-                if (Global.JasonHicksStatus != null)
+                if (Global.JasonHicksStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.JasonHicksStatus = "Here";
@@ -1567,7 +1582,7 @@ namespace WebApplication1
                 //    //    Button47.Enabled = false;
                 //    Global.ArrivelisaLarson = true;
                 //}
-                if (Global.LisaLarsonStatus != null)
+                if (Global.LisaLarsonStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.LisaLarsonStatus = "Here";
@@ -1609,7 +1624,7 @@ namespace WebApplication1
                 //    //   Button48.Enabled = false;
                 //    Global.ArrivebethRadke = true;
                 //}
-                if (Global.BethRadkeStatus != null)
+                if (Global.BethRadkeStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.BethRadkeStatus = "Here";
@@ -1650,7 +1665,7 @@ namespace WebApplication1
             //        //  Button49.Enabled = false;
             //        Global.ArrivetamrahTenhaeff = true;
             //    }
-            if (Global.TamrahTenhaeffStatus != null)
+            if (Global.TamrahTenhaeffStatus != "PA")
                 Global.PArespond--;
             Global.PAhere++;
             Global.TamrahTenhaeffStatus = "Here";
@@ -1691,7 +1706,7 @@ namespace WebApplication1
                 //    //  Button50.Enabled = false;
                 //    Global.ArriveerinnVonRein = true;
                 //}
-                if (Global.ErinnVonreinStatus != null)
+                if (Global.ErinnVonreinStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
                 Global.ErinnVonreinStatus = "Here";
@@ -1797,7 +1812,7 @@ namespace WebApplication1
         }
         public void CheckLaresaDeboerStatus()
         {
-            if (Global.LaresaDeboerStatus == null)
+            if (Global.LaresaDeboerStatus == "MD")
                 return;
 
             if (Global.LaresaDeboerStatus == "Enroute")
@@ -1844,7 +1859,7 @@ namespace WebApplication1
         }
         public void CheckDanDeweyStatus()
         {
-            if (Global.DanDeweyStatus == null)
+            if (Global.DanDeweyStatus == "MD")
                 return;
 
             if (Global.DanDeweyStatus == "Enroute")
@@ -1891,7 +1906,7 @@ namespace WebApplication1
         }
         public void CheckJoseDundeeStatus()
         {
-            if (Global.JoseDundeeStatus == null)
+            if (Global.JoseDundeeStatus == "MD")
                 return;
 
             if (Global.JoseDundeeStatus == "Enroute")
@@ -1938,7 +1953,7 @@ namespace WebApplication1
         }
         public void CheckSarahDundeeStatus()
         {
-            if (Global.SarahDundeeStatus == null)
+            if (Global.SarahDundeeStatus == "MD")
                 return;
 
             if (Global.SarahDundeeStatus == "Enroute")
@@ -1985,7 +2000,7 @@ namespace WebApplication1
         }
         public void CheckSaraFishStatus()
         {
-            if (Global.SaraFishStatus == null)
+            if (Global.SaraFishStatus == "MD")
                 return;
 
             if (Global.SaraFishStatus == "Enroute")
@@ -2032,7 +2047,7 @@ namespace WebApplication1
         }
         public void CheckErinFongStatus()
         {
-            if (Global.ErinFongStatus == null)
+            if (Global.ErinFongStatus == "MD")
                 return;
 
             if (Global.ErinFongStatus == "Enroute")
@@ -2081,7 +2096,7 @@ namespace WebApplication1
        
         public void CheckMattHeroldStatus()
         {
-            if (Global.MattHeroldStatus == null)
+            if (Global.MattHeroldStatus == "MD")
                 return;
 
             if (Global.MattHeroldStatus == "Enroute")
@@ -2129,7 +2144,7 @@ namespace WebApplication1
        
         public void CheckBruceHubbardStatus()
         {
-            if (Global.BruceHubbardStatus == null)
+            if (Global.BruceHubbardStatus == "MD")
                 return;
 
             if (Global.BruceHubbardStatus == "Enroute")
@@ -2176,7 +2191,7 @@ namespace WebApplication1
         }
         public void CheckValerieJohnsonStatus()
         {
-            if (Global.ValerieJohnsonStatus == null)
+            if (Global.ValerieJohnsonStatus == "MD")
                 return;
 
             if (Global.ValerieJohnsonStatus == "Enroute")
@@ -2223,7 +2238,7 @@ namespace WebApplication1
         }
         public void CheckDaveLarsonStatus()
         {
-            if (Global.DaveLarsonStatus == null)
+            if (Global.DaveLarsonStatus == "MD")
                 return;
 
             if (Global.DaveLarsonStatus == "Enroute")
@@ -2270,7 +2285,7 @@ namespace WebApplication1
         }
         public void CheckAmyOsbornStatus()
         {
-            if (Global.AmyOsbornStatus == null)
+            if (Global.AmyOsbornStatus == "MD")
                 return;
 
             if (Global.AmyOsbornStatus == "Enroute")
@@ -2317,7 +2332,7 @@ namespace WebApplication1
         }
         public void CheckGregPetersonStatus()
         { 
-            if (Global.GregPetersonStatus == null)
+            if (Global.GregPetersonStatus == "MD")
                 return;
 
             if (Global.GregPetersonStatus == "Enroute")
@@ -2364,7 +2379,7 @@ namespace WebApplication1
         }
         public void CheckYoSchugelStatus()
         {
-            if (Global.YoSchugelStatus == null)
+            if (Global.YoSchugelStatus == "MD")
                 return;
 
             if (Global.YoSchugelStatus == "Enroute")
@@ -2411,7 +2426,7 @@ namespace WebApplication1
         }
         public void CheckKevinSipprellStatus()
         {
-            if (Global.KevinSipprellStatus == null)
+            if (Global.KevinSipprellStatus == "MD")
                 return;
 
             if (Global.KevinSipprellStatus == "Enroute")
@@ -2458,7 +2473,7 @@ namespace WebApplication1
         }
         public void CheckEmilyAndersonStatus()
         {
-            if (Global.EmilyAndersonStatus == null)
+            if (Global.EmilyAndersonStatus == "PA")
                 return;
 
             if (Global.EmilyAndersonStatus == "Enroute")
@@ -2505,7 +2520,7 @@ namespace WebApplication1
         }
         public void CheckJerodBarnesStatus()
         {
-            if (Global.JerodBarnesStatus == null)
+            if (Global.JerodBarnesStatus == "PA")
                 return;
 
             if (Global.JerodBarnesStatus == "Enroute")
@@ -2552,7 +2567,7 @@ namespace WebApplication1
         }
         public void CheckErinBischoffStatus()
         {
-            if (Global.ErinBischoffStatus == null)
+            if (Global.ErinBischoffStatus == "PA")
                 return;
 
             if (Global.ErinBischoffStatus == "Enroute")
@@ -2599,7 +2614,7 @@ namespace WebApplication1
         }
         public void CheckFredDemeuseStatus()
         {
-            if (Global.FredDemeuseStatus == null)
+            if (Global.FredDemeuseStatus == "PA")
                 return;
 
             if (Global.FredDemeuseStatus == "Enroute")
@@ -2646,7 +2661,7 @@ namespace WebApplication1
         }
         public void CheckChelseaErnisseStatus()
         {
-            if (Global.ChelseaErnisseStatus == null)
+            if (Global.ChelseaErnisseStatus == "PA")
                 return;
 
             if (Global.ChelseaErnisseStatus == "Enroute")
@@ -2693,7 +2708,7 @@ namespace WebApplication1
         }
         public void CheckAlliEngelsmaStatus()
         {
-            if (Global.AllisonEngelsmaStatus == null)
+            if (Global.AllisonEngelsmaStatus == "PA")
                 return;
 
             if (Global.AllisonEngelsmaStatus == "Enroute")
@@ -2740,7 +2755,7 @@ namespace WebApplication1
         }
         public void CheckBradyGriffithStatus()
         {
-            if (Global.BradyGriffithStatus == null)
+            if (Global.BradyGriffithStatus == "PA")
                 return;
 
             if (Global.BradyGriffithStatus == "Enroute")
@@ -2788,7 +2803,7 @@ namespace WebApplication1
         }
         public void CheckJasonHicksStatus()
         {
-            if (Global.JasonHicksStatus == null)
+            if (Global.JasonHicksStatus == "PA")
                 return;
 
             if (Global.JasonHicksStatus == "Enroute")
@@ -2836,7 +2851,7 @@ namespace WebApplication1
         }
         public void CheckLisaLarsonStatus()
         {
-            if (Global.LisaLarsonStatus == null)
+            if (Global.LisaLarsonStatus == "PA")
                 return;
 
             if (Global.LisaLarsonStatus == "Enroute")
@@ -2883,7 +2898,7 @@ namespace WebApplication1
         }
         public void CheckBethRadkeStatus()
         {
-            if (Global.BethRadkeStatus == null)
+            if (Global.BethRadkeStatus == "PA")
                 return;
 
             if (Global.BethRadkeStatus == "Enroute")
@@ -2930,7 +2945,7 @@ namespace WebApplication1
         }
         public void CheckTamrahTenhaeffStatus()
         {
-            if (Global.TamrahTenhaeffStatus == null)
+            if (Global.TamrahTenhaeffStatus == "PA")
                 return;
 
             if (Global.TamrahTenhaeffStatus == "Enroute")
@@ -2980,7 +2995,7 @@ namespace WebApplication1
      
         public void CheckErinnVonReinStatus()
         {
-            if (Global.ErinnVonreinStatus == null)
+            if (Global.ErinnVonreinStatus == "PA")
                 return;
 
             if (Global.ErinnVonreinStatus == "Enroute")
