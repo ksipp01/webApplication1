@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <title>EMPAC Tracker - ETA</title>
+     <title>EMPAC - ETA</title>
      <link href="Styles/Mobile.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width" />
     <asp:ContentPlaceHolder ID="head" runat="server">
