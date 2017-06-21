@@ -251,6 +251,19 @@ table {
                     <asp:Button ID="Button10" runat="server" Text="Complete" OnClick="Button10_Click" />
                 </td>
                  </tr>
+                          <tr>
+                <td class="auto-style1">
+        Lisa Larson &nbsp;&nbsp;</td>
+                <td class="auto-style5">       
+        <asp:TextBox ID="TextBox24" runat="server" Width="60px"></asp:TextBox>
+                           </td>
+                <td class="auto-style7">
+        <asp:Button ID="Button47" runat="server" OnClick="Button47_Click" Text="Arrived" />
+                           </td>
+                            <td class="auto-style6">
+                    <asp:Button ID="Button23" runat="server" Text="Complete" OnClick="Button23_Click" />
+                </td>
+            </tr>
                   <tr>
                 <td class="auto-style1">
         Amy Osborn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -416,19 +429,6 @@ table {
                            </td>
                             <td class="auto-style6">
                     <asp:Button ID="Button22" runat="server" Text="Complete" OnClick="Button22_Click" />
-                </td>
-            </tr>
-                       <tr>
-                <td class="auto-style1">
-        Lisa Larson &nbsp;&nbsp;</td>
-                <td class="auto-style5">       
-        <asp:TextBox ID="TextBox24" runat="server" Width="60px"></asp:TextBox>
-                           </td>
-                <td class="auto-style7">
-        <asp:Button ID="Button47" runat="server" OnClick="Button47_Click" Text="Arrived" />
-                           </td>
-                            <td class="auto-style6">
-                    <asp:Button ID="Button23" runat="server" Text="Complete" OnClick="Button23_Click" />
                 </td>
             </tr>
                        <tr>

@@ -1582,9 +1582,9 @@ namespace WebApplication1
                 //    //    Button47.Enabled = false;
                 //    Global.ArrivelisaLarson = true;
                 //}
-                if (Global.LisaLarsonStatus != "PA")
-                    Global.PArespond--;
-                Global.PAhere++;
+                if (Global.LisaLarsonStatus != "MD")
+                    Global.MDrespond--;
+                Global.Mdhere++;
                 Global.LisaLarsonStatus = "Here";
                 Global.LisaLarson = DateTime.Now;
                 Button47.Enabled = false;
@@ -2851,7 +2851,7 @@ namespace WebApplication1
         }
         public void CheckLisaLarsonStatus()
         {
-            if (Global.LisaLarsonStatus == "PA")
+            if (Global.LisaLarsonStatus == "MD")
                 return;
 
             if (Global.LisaLarsonStatus == "Enroute")
@@ -2890,7 +2890,7 @@ namespace WebApplication1
                 Global.LisaLarsonStatus = "Done";
                 Global.LisaLarson = DateTime.Now;
                 Log.Logstring += "Lisa Larson Done: " + DateTime.Now.ToString() + "\n";
-                Global.PAhere--;
+                Global.Mdhere--;
                 CheckLisaLarsonStatus();
                 Response.Redirect("index.aspx");
 

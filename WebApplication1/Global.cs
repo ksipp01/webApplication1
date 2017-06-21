@@ -1185,7 +1185,7 @@ namespace WebApplication1
         private static string _allisonEngelsmaStatus = "PA";
         private static string _bradyGriffithStatus = "PA";
         private static string _jasonHicksStatus = "PA";
-        private static string _lisaLarsonStatus = "PA";
+        private static string _lisaLarsonStatus = "MD";
         private static string _bethRadkeStatus = "PA";
         private static string _tamrahTenhaeffStatus = "PA";
         private static string _erinnVonreinStatus = "PA";
