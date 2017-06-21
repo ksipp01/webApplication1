@@ -25,7 +25,7 @@
  <link runat="server" rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
     <link runat="server" rel="icon" href="~/favicon.ico" type="image/ico" />
     <link rel="icon" type="image/png" href="~/favicon.png" />
-    <link rel="apple-touch-icon" href="~/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="~/apple-touch-icon60.png" />
 
 
 </head>
