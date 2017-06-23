@@ -1763,7 +1763,7 @@ namespace WebApplication1
         }
         public void CheckKarenAndersonStatus()
         {
-            if (Global.KarenAndersonStatus == null)
+            if (Global.KarenAndersonStatus == "MD")
                 return;
 
             if (Global.KarenAndersonStatus == "Enroute")
