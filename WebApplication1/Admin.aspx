@@ -30,7 +30,7 @@
         <style>            table, th, td {
        padding: 2px;
 }
-           tr{height:6px}
+           tr{height:8px}
 table {
     border-spacing: 0px;
 }
