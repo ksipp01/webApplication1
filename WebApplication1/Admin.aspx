@@ -23,24 +23,16 @@
                 <td class="auto-style2">PA Respond: <asp:TextBox ID="TextBox62" runat="server" Width="25px"></asp:TextBox>
                   </td>
 
-            </tr>
-            <tr>
-                 <td class="auto-style3">
-                     &nbsp;</td>
-                <td class="auto-style2">
-                    &nbsp;</td>
-
-            </tr>
-          
-          
+            </tr>        
+         
         </table>
   
         <style>            table, th, td {
        padding: 2px;
 }
-           tr{height:8px}
+           tr{height:6px}
 table {
-    border-spacing: 2px;
+    border-spacing: 0px;
 }
 table {
     border-collapse: collapse;
