@@ -11,31 +11,26 @@
 
         <table style="width: 100%;">
             <tr>
-                <td class="auto-style3">MDs Here</td>
-                <td class="auto-style2">MDs Responding</td>
+                <td class="auto-style3">MDs Here: <asp:TextBox ID="TextBox59" runat="server" Width="50px"></asp:TextBox>
+                </td>
+                <td class="auto-style2">MDs Responding: <asp:TextBox ID="TextBox60" runat="server" Width="50px"></asp:TextBox>
+                </td>
                 </tr>
              
-            <tr>
-                <td class="auto-style3">
-                    <asp:TextBox ID="TextBox59" runat="server" Width="50px"></asp:TextBox>
-                </td>
-                <td class="auto-style2">
-                    <asp:TextBox ID="TextBox60" runat="server" Width="50px"></asp:TextBox>
-                </td>
-                </tr>
+           
 
               <tr>
-                 <td class="auto-style3">PAs Here</td>
-                <td class="auto-style2">PAs Responding</td>
+                 <td class="auto-style3">PAs Here: <asp:TextBox ID="TextBox61" runat="server" Width="50px"></asp:TextBox>
+                  </td>
+                <td class="auto-style2">PAs Responding: <asp:TextBox ID="TextBox62" runat="server" Width="50px"></asp:TextBox>
+                  </td>
 
             </tr>
             <tr>
                  <td class="auto-style3">
-                     <asp:TextBox ID="TextBox61" runat="server" Width="50px"></asp:TextBox>
-                </td>
+                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="TextBox62" runat="server" Width="50px"></asp:TextBox>
-                </td>
+                    &nbsp;</td>
 
             </tr>
           
