@@ -11,16 +11,16 @@
 
         <table style="width: 100%;">
             <tr>
-                <td class="auto-style3">MDs Here: <asp:TextBox ID="TextBox59" runat="server" Width="50px"></asp:TextBox>
+                <td class="auto-style3">MD Here: <asp:TextBox ID="TextBox59" runat="server" Width="25px"></asp:TextBox>
                 </td>
-                <td class="auto-style2">MDs Responding: <asp:TextBox ID="TextBox60" runat="server" Width="50px"></asp:TextBox>
+                <td class="auto-style2">MD Respond: <asp:TextBox ID="TextBox60" runat="server" Width="25px"></asp:TextBox>
                 </td>
                 </tr>
 
               <tr>
-                 <td class="auto-style3">PAs Here: <asp:TextBox ID="TextBox61" runat="server" Width="50px"></asp:TextBox>
+                 <td class="auto-style3">PA Here: <asp:TextBox ID="TextBox61" runat="server" Width="25px"></asp:TextBox>
                   </td>
-                <td class="auto-style2">PAs Responding: <asp:TextBox ID="TextBox62" runat="server" Width="50px"></asp:TextBox>
+                <td class="auto-style2">PA Respond: <asp:TextBox ID="TextBox62" runat="server" Width="25px"></asp:TextBox>
                   </td>
 
             </tr>
