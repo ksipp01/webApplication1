@@ -16,8 +16,6 @@
                 <td class="auto-style2">MDs Responding: <asp:TextBox ID="TextBox60" runat="server" Width="50px"></asp:TextBox>
                 </td>
                 </tr>
-             
-           
 
               <tr>
                  <td class="auto-style3">PAs Here: <asp:TextBox ID="TextBox61" runat="server" Width="50px"></asp:TextBox>
