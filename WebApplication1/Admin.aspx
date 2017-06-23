@@ -5,9 +5,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
          <asp:HiddenField runat="server" ID="_repostcheckcode" />
-          <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="EMPAC Casualty Response Provider Tracker"></asp:Label>
+            <meta http-equiv="refresh" content="20" />
+          <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="large" Text="EMPAC Provider Tracker"></asp:Label>
         <br />
-        <br />
+
         <table style="width: 100%;">
             <tr>
                 <td class="auto-style3">MDs Here</td>
@@ -22,9 +23,7 @@
                     <asp:TextBox ID="TextBox60" runat="server" Width="50px"></asp:TextBox>
                 </td>
                 </tr>
-                 <tr>
-                              <td class="auto-style1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>   
-                 </tr>
+
               <tr>
                  <td class="auto-style3">PAs Here</td>
                 <td class="auto-style2">PAs Responding</td>
@@ -42,19 +41,19 @@
           
           
         </table>
-        <br />
+  
         <style>            table, th, td {
        padding: 2px;
 }
-           tr{height:10px}
+           tr{height:8px}
 table {
-    border-spacing: 5px;
+    border-spacing: 2px;
 }
 table {
     border-collapse: collapse;
 }
              .auto-style1 {
-                width: auto;
+                width: 100px;
                 text-align:left;
             }
       
@@ -207,13 +206,13 @@ table {
                                </tr>
                        <tr>
                 <td style="border-top: thin dashed" class="auto-style1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td style="border-top: thin dashed" class="auto-style5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>                   
+                  
   
             </tr>
    
                  <tr>
                 <td style="border-bottom: thin solid" class="auto-style1"> PAs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td style="border-bottom: thin solid" class="auto-style5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>                   
+                
 
             </tr>
                   <tr>
