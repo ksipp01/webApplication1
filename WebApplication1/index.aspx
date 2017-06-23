@@ -21,14 +21,14 @@
              
         }
        </style>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="apple-mobile-web-app-title" content="EMPAC - ETA">
-<meta name="application-name" content="EMPAC - ETA">
-<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+<link rel="manifest" href="/manifest.json"/>
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+<meta name="apple-mobile-web-app-title" content="EMPAC - ETA"/>
+<meta name="application-name" content="EMPAC - ETA"/>
+<meta name="theme-color" content="#ffffff"/>
 <!--  old working  <link runat="server" rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
     <link runat="server" rel="icon" href="~/favicon.ico" type="image/ico" />
     <link rel="icon" type="image/png" href="~/favicon.png" />
@@ -98,8 +98,8 @@ table {
                 width: 73px;
             }
             </style>
-</head>
-<body>
+
+
 
 <table style="width:100%">
      <tr>
@@ -314,13 +314,14 @@ table {
                        <td class="auto-style6">
                     <asp:Button ID="Button14" runat="server" Text="Complete" OnClick="Button14_Click" />
                 </td>
+                               </tr>
                        <tr>
                 <td style="border-top: thin dashed" class="auto-style1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td style="border-top: thin dashed" class="auto-style5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>                   
                 <td style="border-top: thin dashed" class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                  <td style="border-top: thin dashed" class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
             </tr>
-            </tr>
+   
                  <tr>
                 <td style="border-bottom: thin solid" class="auto-style1"> PAs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td style="border-bottom: thin solid" class="auto-style5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>                   
@@ -483,7 +484,8 @@ table {
     <br />
     <br />
     <br />
+  
     </form>
-</body>
+  </body>
     
 </html>

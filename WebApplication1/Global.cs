@@ -8,8 +8,7 @@ namespace WebApplication1
     public class Global
     {
         
-       
-       
+            
         public static DateTime LaresaDeboer
         {
             get
