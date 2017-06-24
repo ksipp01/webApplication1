@@ -158,16 +158,16 @@ namespace WebApplication1
             }
         }
 
-        public static DateTime ErinFong
+        public static DateTime ErineFong
         {
             get
             {
-                return _erinFong;
+                return _erineFong;
             }
 
             set
             {
-                _erinFong = value;
+                _erineFong = value;
             }
         }
 
@@ -925,16 +925,16 @@ namespace WebApplication1
             }
         }
 
-        public static string ErinFongStatus
+        public static string ErineFongStatus
         {
             get
             {
-                return _erinFongStatus;
+                return _erineFongStatus;
             }
 
             set
             {
-                _erinFongStatus = value;
+                _erineFongStatus = value;
             }
         }
 
@@ -1144,7 +1144,7 @@ namespace WebApplication1
         private static DateTime _karenAnderson;
         private static DateTime _valerieJohnson;
         private static DateTime _yoSchugel;
-        private static DateTime _erinFong;
+        private static DateTime _erineFong;
         private static DateTime _danDewey;
         private static DateTime _bruceHubbard;
         private static DateTime _amyOsborn;
@@ -1172,7 +1172,7 @@ namespace WebApplication1
         private static string _karenAndersonStatus = "MD";
         private static string _valerieJohnsonStatus = "MD";
         private static string _yoSchugelStatus = "MD";
-        private static string _erinFongStatus = "MD";
+        private static string _erineFongStatus = "MD";
         private static string _danDeweyStatus = "MD";
         private static string _bruceHubbardStatus = "MD";
         private static string _amyOsbornStatus = "MD";
@@ -1267,7 +1267,7 @@ namespace WebApplication1
             _karenAndersonStatus = "MD";
             _valerieJohnsonStatus = "MD";
             _yoSchugelStatus = "MD";
-            _erinFongStatus = "MD";
+            _erineFongStatus = "MD";
             _danDeweyStatus = "MD";
             _bruceHubbardStatus = "MD";
             _amyOsbornStatus = "MD"; 
@@ -1297,7 +1297,7 @@ namespace WebApplication1
             _karenAnderson = DateTime.MinValue;
             _valerieJohnson = DateTime.MinValue;
             _yoSchugel = DateTime.MinValue;
-            _erinFong = DateTime.MinValue;
+            _erineFong = DateTime.MinValue;
             _danDewey = DateTime.MinValue;
             _bruceHubbard = DateTime.MinValue;
             _amyOsborn = DateTime.MinValue;

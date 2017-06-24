@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace WebApplication1
 {
@@ -116,12 +117,15 @@ namespace WebApplication1
                 if (val.Contains("Status"))
                 {
                     var status = type.GetProperty(val);
+                    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                     if (status.GetValue(null).ToString() == "Enroute")
                     {
                         Label lbl = new Label();
                         lbl.Width = 200;
                         lbl.BackColor = System.Drawing.Color.Lime;
-                        lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+                    //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
+                        //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+                        lbl.Text = name + " - Enroute";
                         placeholder.Controls.Add(lbl);
                         LiteralControl linebreak = new LiteralControl("<br>");
                         placeholder.Controls.Add(linebreak);
@@ -162,6 +166,7 @@ namespace WebApplication1
                 //if (status.GetValue(null).ToString() == "Enroute")
                 //{
                 string val = property.Name.ToString();
+                string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                 if (val.Contains("Status"))
                 {
                     var status = type.GetProperty(val);
@@ -181,7 +186,8 @@ namespace WebApplication1
                         Label lbl = new Label();
                         lbl.Width = 200;
                         lbl.BackColor = System.Drawing.Color.Yellow;
-                        lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
+                        //  lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
+                        lbl.Text = name + " - Arrived";
                         placeholder.Controls.Add(lbl);
                         LiteralControl linebreak = new LiteralControl("<br>");
                         placeholder.Controls.Add(linebreak);
@@ -211,6 +217,7 @@ namespace WebApplication1
                 //if (status.GetValue(null).ToString() == "Enroute")
                 //{
                 string val = property.Name.ToString();
+                string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                 if (val.Contains("Status"))
                 {
                     var status = type.GetProperty(val);
@@ -241,7 +248,8 @@ namespace WebApplication1
                         Label lbl = new Label();
                         lbl.Width = 200;
                         lbl.BackColor = System.Drawing.Color.Red;
-                        lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
+                        //  lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
+                        lbl.Text = name + " - Done";
                         placeholder.Controls.Add(lbl);
                         LiteralControl linebreak = new LiteralControl("<br>");
                         placeholder.Controls.Add(linebreak);

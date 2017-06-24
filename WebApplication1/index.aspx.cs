@@ -877,11 +877,11 @@ namespace WebApplication1
                 //    //Button30.Enabled = false;
                 //    Global.ArriveerinFong = true;
                 //}
-                if (Global.ErinFongStatus != "MD")
+                if (Global.ErineFongStatus != "MD")
                     Global.MDrespond--;
                 Global.Mdhere++;
-                Global.ErinFongStatus = "Here";
-                Global.ErinFong = DateTime.Now;
+                Global.ErineFongStatus = "Here";
+                Global.ErineFong = DateTime.Now;
                 Button30.Enabled = false;
                 Log.Logstring += "Erine Fong Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox7.BackColor = System.Drawing.Color.Yellow;
@@ -2107,7 +2107,7 @@ namespace WebApplication1
         }
         public void CheckErinFongStatus()
         {
-            if (Global.ErinFongStatus == "MD")
+            if (Global.ErineFongStatus == "MD")
             {
                 Button6.Enabled = false;
                 Button6.Text = "Complete";
@@ -2115,9 +2115,9 @@ namespace WebApplication1
             }
                 
 
-            if (Global.ErinFongStatus == "Enroute")
+            if (Global.ErineFongStatus == "Enroute")
             {
-                TimeSpan diff = (Global.ErinFong.Subtract(DateTime.Now));
+                TimeSpan diff = (Global.ErineFong.Subtract(DateTime.Now));
                 double m = diff.TotalMinutes;
                 m = Math.Round(m, MidpointRounding.AwayFromZero);
                 TextBox7.Text = m.ToString();
@@ -2127,19 +2127,19 @@ namespace WebApplication1
                 //    TextBox7.Text = "-" + diff.ToString("mm");
                 Button6.Enabled = false;
             }
-            else if (Global.ErinFongStatus == "Here")
+            else if (Global.ErineFongStatus == "Here")
             {
-                TextBox7.Text = Global.ErinFong.ToString("HHmm") + ("hrs");
+                TextBox7.Text = Global.ErineFong.ToString("HHmm") + ("hrs");
                 TextBox7.BackColor = System.Drawing.Color.Yellow;
-                Button30.Text = Global.ErinFongStatus;
+                Button30.Text = Global.ErineFongStatus;
                 Button30.Enabled = false;
                 Button6.Enabled = true;
             }
-            else if (Global.ErinFongStatus == "Done")
+            else if (Global.ErineFongStatus == "Done")
             {
                 TextBox7.BackColor = System.Drawing.Color.Red;
-                TextBox7.Text = Global.ErinFong.ToString("HHmm") + ("hrs");
-                Button6.Text = Global.ErinFongStatus;
+                TextBox7.Text = Global.ErineFong.ToString("HHmm") + ("hrs");
+                Button6.Text = Global.ErineFongStatus;
                 Button6.Enabled = false;
                 Button30.Text = "        ";
                 Button30.Enabled = false;
@@ -2151,8 +2151,8 @@ namespace WebApplication1
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
 
-                Global.ErinFongStatus = "Done";
-                Global.ErinFong = DateTime.Now;
+                Global.ErineFongStatus = "Done";
+                Global.ErineFong = DateTime.Now;
                 Log.Logstring += "Erine Fong Done: " + DateTime.Now.ToString() + "\n";
                 Global.Mdhere--;
                 CheckErinFongStatus();

@@ -150,7 +150,7 @@ namespace WebApplication1
             TextBox35.Text = Global.JoseDundeeStatus;
             TextBox36.Text = Global.SarahDundeeStatus;
             TextBox37.Text = Global.SaraFishStatus;
-            TextBox38.Text = Global.ErinFongStatus;
+            TextBox38.Text = Global.ErineFongStatus;
             TextBox39.Text = Global.MattHeroldStatus;
             TextBox40.Text = Global.BruceHubbardStatus;
             TextBox41.Text = Global.ValerieJohnsonStatus;
