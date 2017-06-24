@@ -19,7 +19,12 @@ table {
              .auto-style3 {
                 width: auto;
             }
-
+.labelClass
+{
+	display:block;
+	float:left;
+	width:100px;
+}
          
             </style>
     <div>
@@ -52,6 +57,11 @@ table {
 
    <div id="placeholder" runat="server">
     <!-- here is where the dinamically created elements will be placed -->
+     <!--  <asp:Label ID="Label2" runat="server"  CssClass="labelClass" Text="Enroute "></asp:Label>
+       <asp:Label ID="Label3" runat="server"  CssClass="labelClass" Text="Arrived"></asp:Label>
+       <asp:Label ID="Label4" runat="server" CssClass="labelClass" Text="Done"></asp:Label> 
+          <br />-->
+       <hr />
     </div>
 
 

@@ -18,6 +18,9 @@ namespace WebApplication1
             TextBox64.Text = Global.MDrespond.ToString();
             TextBox65.Text = Global.PAhere.ToString();
             TextBox66.Text = Global.PArespond.ToString();
+            Label2.BackColor = System.Drawing.Color.Lime;
+            Label3.BackColor = System.Drawing.Color.Yellow;
+            Label4.BackColor = System.Drawing.Color.Red;
             if (TextBox63.Text == "0")
                 TextBox63.BackColor = System.Drawing.Color.Yellow;
             else
@@ -86,8 +89,6 @@ namespace WebApplication1
 
 
 
-        private static string name = "KevinSipprell";
-        private static string nameStatus = "KevinSipprellStatus";
         private void CreateChildControls()
         {
 
@@ -124,8 +125,57 @@ namespace WebApplication1
                         placeholder.Controls.Add(lbl);
                         LiteralControl linebreak = new LiteralControl("<br>");
                         placeholder.Controls.Add(linebreak);
-                        
+
                     }
+                    //if (status.GetValue(null).ToString() == "Here")
+                    //{
+                    //    Label lbl = new Label();
+                    //    lbl.Width = 200;
+                    //    lbl.BackColor = System.Drawing.Color.Yellow;
+                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
+                    //    placeholder.Controls.Add(lbl);
+                    //    LiteralControl linebreak = new LiteralControl("<br>");
+                    //    placeholder.Controls.Add(linebreak);
+
+                    //}
+                    //if (status.GetValue(null).ToString() == "Done")
+                    //{
+                    //    Label lbl = new Label();
+                    //    lbl.Width = 200;
+                    //    lbl.BackColor = System.Drawing.Color.Red;
+                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
+                    //    placeholder.Controls.Add(lbl);
+                    //    LiteralControl linebreak = new LiteralControl("<br>");
+                    //    placeholder.Controls.Add(linebreak);
+
+                    //}
+
+                }
+            }
+            foreach (PropertyInfo property in properties)
+            {
+
+                //  string NameStatus = RemoveSpace(name) + "Status";
+                //var status = type.GetProperty(nameStatus);
+                // var name = status.Name;
+                // var s = status.GetValue(null);
+                //if (status.GetValue(null).ToString() == "Enroute")
+                //{
+                string val = property.Name.ToString();
+                if (val.Contains("Status"))
+                {
+                    var status = type.GetProperty(val);
+                    //if (status.GetValue(null).ToString() == "Enroute")
+                    //{
+                    //    Label lbl = new Label();
+                    //    lbl.Width = 200;
+                    //    lbl.BackColor = System.Drawing.Color.Lime;
+                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+                    //    placeholder.Controls.Add(lbl);
+                    //    LiteralControl linebreak = new LiteralControl("<br>");
+                    //    placeholder.Controls.Add(linebreak);
+
+                    //}
                     if (status.GetValue(null).ToString() == "Here")
                     {
                         Label lbl = new Label();
@@ -137,6 +187,55 @@ namespace WebApplication1
                         placeholder.Controls.Add(linebreak);
 
                     }
+                    //if (status.GetValue(null).ToString() == "Done")
+                    //{
+                    //    Label lbl = new Label();
+                    //    lbl.Width = 200;
+                    //    lbl.BackColor = System.Drawing.Color.Red;
+                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
+                    //    placeholder.Controls.Add(lbl);
+                    //    LiteralControl linebreak = new LiteralControl("<br>");
+                    //    placeholder.Controls.Add(linebreak);
+
+                    //}
+
+                }
+            }
+            foreach (PropertyInfo property in properties)
+            {
+
+                //  string NameStatus = RemoveSpace(name) + "Status";
+                //var status = type.GetProperty(nameStatus);
+                // var name = status.Name;
+                // var s = status.GetValue(null);
+                //if (status.GetValue(null).ToString() == "Enroute")
+                //{
+                string val = property.Name.ToString();
+                if (val.Contains("Status"))
+                {
+                    var status = type.GetProperty(val);
+                    //if (status.GetValue(null).ToString() == "Enroute")
+                    //{
+                    //    Label lbl = new Label();
+                    //    lbl.Width = 200;
+                    //    lbl.BackColor = System.Drawing.Color.Lime;
+                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+                    //    placeholder.Controls.Add(lbl);
+                    //    LiteralControl linebreak = new LiteralControl("<br>");
+                    //    placeholder.Controls.Add(linebreak);
+
+                    //}
+                    //if (status.GetValue(null).ToString() == "Here")
+                    //{
+                    //    Label lbl = new Label();
+                    //    lbl.Width = 200;
+                    //    lbl.BackColor = System.Drawing.Color.Yellow;
+                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
+                    //    placeholder.Controls.Add(lbl);
+                    //    LiteralControl linebreak = new LiteralControl("<br>");
+                    //    placeholder.Controls.Add(linebreak);
+
+                    //}
                     if (status.GetValue(null).ToString() == "Done")
                     {
                         Label lbl = new Label();
@@ -150,8 +249,11 @@ namespace WebApplication1
                     }
 
                 }
-              //  }
+
             }
+
+                        //  }
+                 
 
         
 
