@@ -97,6 +97,22 @@ table {
             .auto-style7 {
                 width: 73px;
             }
+            .auto-style8 {
+                width: 74px;
+                height: 21px;
+            }
+            .auto-style9 {
+                width: 73px;
+                height: 21px;
+            }
+            .auto-style10 {
+                width: 136px;
+                height: 21px;
+            }
+            .auto-style11 {
+                width: 130px;
+                height: 21px;
+            }
             </style>
 
 
@@ -118,7 +134,7 @@ table {
         <asp:Button ID="Button28" runat="server" OnClick="Button28_Click" Text="Arrived" />
                     </td>
                      <td class="auto-style6">
-                    <asp:Button ID="Button52" runat="server" Text="Complete" OnClick="Button52_Click" />
+                    <asp:Button ID="Button52" runat="server" Text="Complete" OnClick="Button52_Click" Enabled="False" />
                 </td>
             </tr>
             <tr>
@@ -128,10 +144,10 @@ table {
         <asp:TextBox ID="TextBox2" runat="server" Width="60px"></asp:TextBox>
                 </td>
                 <td class="auto-style7">
-        <asp:Button ID="LaresaArrivalButton" runat="server" OnClick="LaresaArrivalButton_Click" Text="Arrived" />
+        <asp:Button ID="LaresaArrivalButton" UseSubmitBehavior="false" runat="server" OnClick="LaresaArrivalButton_Click" Text="Arrived" />
                 </td>
                  <td class="auto-style6">
-                    <asp:Button ID="Button1" runat="server" Text="Complete" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1"  UseSubmitBehavior="false" runat="server" Text="Complete" OnClick="Button1_Click" Enabled="False" />
                 </td>
             </tr>
              <tr>
@@ -200,15 +216,15 @@ table {
                 </td>
             </tr>
              <tr>
-                <td class="auto-style1">
+                <td class="auto-style11">
         Matt Herold &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                <td class="auto-style5">        
+                <td class="auto-style8">        
         <asp:TextBox ID="TextBox8" runat="server" Width="60px"></asp:TextBox>
                  </td>
-                <td class="auto-style7">
+                <td class="auto-style9">
         <asp:Button ID="Button31" runat="server" OnClick="Button31_Click" Text="Arrived" />
                  </td>
-                  <td class="auto-style6">
+                  <td class="auto-style10">
                     <asp:Button ID="Button7" runat="server" Text="Complete" OnClick="Button7_Click" />
                 </td>
             </tr>

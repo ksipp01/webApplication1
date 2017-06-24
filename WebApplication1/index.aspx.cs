@@ -605,10 +605,10 @@ namespace WebApplication1
                     LaresaArrivalButton.Enabled = false;
                     Log.Logstring += "Laresa DeBoer Arrived: " + DateTime.Now.ToString() + "\n";
                     TextBox2.BackColor = System.Drawing.Color.Yellow;
-                    
-                    CheckLaresaDeboerStatus();
+             //   Button26.Enabled = true;
+                CheckLaresaDeboerStatus();
                     Response.Redirect("index.aspx");
-
+       
                // }
 
                 //if (Global.ArrivelaresaDeboer)
@@ -658,7 +658,7 @@ namespace WebApplication1
               //  Global.MDrespond--;
                 CheckKarenAndersonStatus();
                 Response.Redirect("index.aspx");
-             
+                Button52.Enabled = true;
             }
         }
         protected void DeweyArrivalButton_Click(object sender, EventArgs e)
@@ -678,7 +678,7 @@ namespace WebApplication1
               //  Global.MDrespond--;
                 CheckDanDeweyStatus();
                 Response.Redirect("index.aspx");
-
+           //     Button2.Enabled = true;
 
                 //if (Global.ArrivedanDewey)
                 //{
@@ -738,6 +738,7 @@ namespace WebApplication1
              //   Global.MDrespond--;
                 CheckJoseDundeeStatus();
                 Response.Redirect("index.aspx");
+           //     Button3.Enabled = true;
                 //if (Global.ArrivejoseDundee)
                 //{
                 //    Global.Mdhere--;
@@ -802,6 +803,7 @@ namespace WebApplication1
             //    Global.MDrespond--;
                 CheckSarahDundeeStatus();
                 Response.Redirect("index.aspx");
+           //     Button4.Enabled = true;
             }
         }
         protected void Button29_Click(object sender, EventArgs e)
@@ -844,6 +846,7 @@ namespace WebApplication1
               //  Global.MDrespond--;
                 CheckSaraFishStatus();
                 Response.Redirect("index.aspx");
+            //    Button5.Enabled = true;
             }
         }
         protected void Button30_Click(object sender, EventArgs e)
@@ -885,6 +888,7 @@ namespace WebApplication1
             //    Global.MDrespond--;
                 CheckErinFongStatus();
                 Response.Redirect("index.aspx");
+            //    Button6.Enabled = true;
             }
         }
         protected void Button31_Click(object sender, EventArgs e)
@@ -926,6 +930,7 @@ namespace WebApplication1
              //   Global.MDrespond--;
                 CheckMattHeroldStatus();
                 Response.Redirect("index.aspx");
+            //    Button7.Enabled = true;
 
             }
 
@@ -968,6 +973,7 @@ namespace WebApplication1
                 TextBox9.BackColor = System.Drawing.Color.Yellow;
               //  Global.MDrespond--;
                 CheckBruceHubbardStatus();
+           //     Button8.Enabled = true;
                 Response.Redirect("index.aspx");
             
             }
@@ -1011,6 +1017,7 @@ namespace WebApplication1
                 TextBox10.BackColor = System.Drawing.Color.Yellow;
              //   Global.MDrespond--;
                 CheckValerieJohnsonStatus();
+            //    Button9.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1053,6 +1060,7 @@ namespace WebApplication1
                 TextBox11.BackColor = System.Drawing.Color.Yellow;
               //  Global.MDrespond--;
                 CheckDaveLarsonStatus();
+             //   Button10.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1094,6 +1102,7 @@ namespace WebApplication1
                 TextBox12.BackColor = System.Drawing.Color.Yellow;
               //  Global.MDrespond--;
                 CheckAmyOsbornStatus();
+             //   Button11.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1135,6 +1144,7 @@ namespace WebApplication1
                 TextBox13.BackColor = System.Drawing.Color.Yellow;
              //   Global.MDrespond--;
                 CheckGregPetersonStatus();
+            //    Button12.Enabled = true;
                 Response.Redirect("index.aspx");
 
             }
@@ -1177,6 +1187,7 @@ namespace WebApplication1
                 TextBox14.BackColor = System.Drawing.Color.Yellow;
               //  Global.MDrespond--;
                 CheckYoSchugelStatus();
+            //    Button13.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1218,6 +1229,7 @@ namespace WebApplication1
                 TextBox15.BackColor = System.Drawing.Color.Yellow;
              //   Global.MDrespond--;
                 CheckKevinSipprellStatus();
+            //    Button14.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1260,6 +1272,7 @@ namespace WebApplication1
                 TextBox16.BackColor = System.Drawing.Color.Yellow;
              //   Global.PArespond--;
                 CheckEmilyAndersonStatus();
+             //   Button15.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1302,6 +1315,7 @@ namespace WebApplication1
                 TextBox17.BackColor = System.Drawing.Color.Yellow;
            //     Global.PArespond--;
                 CheckJerodBarnesStatus();
+              //  Button16.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1343,6 +1357,7 @@ namespace WebApplication1
                 TextBox18.BackColor = System.Drawing.Color.Yellow;
             //    Global.PArespond--;
                 CheckErinBischoffStatus();
+            //    Button17.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1385,6 +1400,7 @@ namespace WebApplication1
                 TextBox19.BackColor = System.Drawing.Color.Yellow;
               //  Global.PArespond--;
                 CheckFredDemeuseStatus();
+              //  Button18.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1427,6 +1443,7 @@ namespace WebApplication1
                 TextBox20.BackColor = System.Drawing.Color.Yellow;
              //   Global.PArespond--;
                 CheckChelseaErnisseStatus();
+               // Button19.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1470,6 +1487,7 @@ namespace WebApplication1
                 TextBox21.BackColor = System.Drawing.Color.Yellow;
             //    Global.PArespond--;
                 CheckAlliEngelsmaStatus();
+               // Button20.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1511,6 +1529,7 @@ namespace WebApplication1
                 TextBox22.BackColor = System.Drawing.Color.Yellow;
               //  Global.PArespond--;
                 CheckBradyGriffithStatus();
+              //  Button21.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1552,6 +1571,7 @@ namespace WebApplication1
                 TextBox23.BackColor = System.Drawing.Color.Yellow;
               //  Global.PArespond--;
                 CheckJasonHicksStatus();
+            //    Button22.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1592,6 +1612,7 @@ namespace WebApplication1
                 TextBox24.BackColor = System.Drawing.Color.Yellow;
             //    Global.PArespond--;
                 CheckLisaLarsonStatus();
+          //      Button23.Enabled = true;
                 Response.Redirect("index.aspx");
             }
 
@@ -1634,6 +1655,7 @@ namespace WebApplication1
                 TextBox25.BackColor = System.Drawing.Color.Yellow;
              //   Global.PArespond--;
                 CheckBethRadkeStatus();
+           //     Button24.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1675,6 +1697,7 @@ namespace WebApplication1
             TextBox26.BackColor = System.Drawing.Color.Yellow;
          //   Global.PArespond--;
             CheckTamrahTenhaeffStatus();
+          //  Button25.Enabled = true;
             Response.Redirect("index.aspx");
         
         }
@@ -1716,6 +1739,7 @@ namespace WebApplication1
                 TextBox27.BackColor = System.Drawing.Color.Yellow;
              //   Global.PArespond--;
                 CheckErinnVonReinStatus();
+            //    Button26.Enabled = true;
                 Response.Redirect("index.aspx");
             }
         }
@@ -1764,7 +1788,11 @@ namespace WebApplication1
         public void CheckKarenAndersonStatus()
         {
             if (Global.KarenAndersonStatus == "MD")
+            {
+                Button52.Text = "Complete";
+                Button52.Enabled = false;
                 return;
+            }
 
             if (Global.KarenAndersonStatus == "Enroute")
             {
@@ -1772,7 +1800,7 @@ namespace WebApplication1
                 double m = diff.TotalMinutes;
                 m = Math.Round(m, MidpointRounding.AwayFromZero);
                 TextBox1.Text = m.ToString();
-
+               
                 //if (diff.TotalMinutes >= 0)
                 //    TextBox1.Text = diff.ToString("mm");
                 //else
@@ -1784,6 +1812,7 @@ namespace WebApplication1
                 TextBox1.BackColor = System.Drawing.Color.Yellow;
                 Button28.Text = Global.KarenAndersonStatus;
                 Button28.Enabled = false;
+                Button52.Enabled = true;
             }
             else if (Global.KarenAndersonStatus == "Done")
             {
@@ -1813,7 +1842,12 @@ namespace WebApplication1
         public void CheckLaresaDeboerStatus()
         {
             if (Global.LaresaDeboerStatus == "MD")
+            {
+                Button1.Text = "Complete";
+                Button1.Enabled = false;
                 return;
+            }
+              
 
             if (Global.LaresaDeboerStatus == "Enroute")
             {
@@ -1830,10 +1864,11 @@ namespace WebApplication1
             {
                 TextBox2.Text = Global.LaresaDeboer.ToString("HHmm") + ("hrs");
                 TextBox2.BackColor = System.Drawing.Color.Yellow;
-                LaresaArrivalButton.Text = Global.LaresaDeboerStatus;
+                LaresaArrivalButton.Text = Global.LaresaDeboerStatus;              
                 LaresaArrivalButton.Enabled = false;
+                Button1.Enabled = true;
             }
-            else if (Global.KarenAndersonStatus == "Done")
+            else if (Global.LaresaDeboerStatus == "Done")
             {
                 TextBox2.BackColor = System.Drawing.Color.Red;
                 TextBox2.Text = Global.LaresaDeboer.ToString("HHmm") + ("hrs");
@@ -1860,7 +1895,11 @@ namespace WebApplication1
         public void CheckDanDeweyStatus()
         {
             if (Global.DanDeweyStatus == "MD")
+            {
+                Button2.Enabled = false;
+                Button2.Text = "Complete";
                 return;
+            }
 
             if (Global.DanDeweyStatus == "Enroute")
             {
@@ -1907,7 +1946,11 @@ namespace WebApplication1
         public void CheckJoseDundeeStatus()
         {
             if (Global.JoseDundeeStatus == "MD")
+            {
+                Button3.Enabled = false;
+                Button3.Text = "Complete";
                 return;
+            }
 
             if (Global.JoseDundeeStatus == "Enroute")
             {
@@ -1926,6 +1969,7 @@ namespace WebApplication1
                 TextBox4.BackColor = System.Drawing.Color.Yellow;
                 JoseArrivalButton.Text = Global.JoseDundeeStatus;
                 JoseArrivalButton.Enabled = false;
+                Button3.Enabled = true;
             }
             else if (Global.JoseDundeeStatus == "Done")
             {
@@ -1954,7 +1998,11 @@ namespace WebApplication1
         public void CheckSarahDundeeStatus()
         {
             if (Global.SarahDundeeStatus == "MD")
+            {
+                Button4.Enabled = false;
+                Button4.Text = "Complete";
                 return;
+            }
 
             if (Global.SarahDundeeStatus == "Enroute")
             {
@@ -1973,6 +2021,7 @@ namespace WebApplication1
                 TextBox5.BackColor = System.Drawing.Color.Yellow;
                 SDundeeARrivalButton.Text = Global.SarahDundeeStatus;
                 SDundeeARrivalButton.Enabled = false;
+                Button4.Enabled = true;
             }
             else if (Global.SarahDundeeStatus == "Done")
             {
@@ -2001,7 +2050,11 @@ namespace WebApplication1
         public void CheckSaraFishStatus()
         {
             if (Global.SaraFishStatus == "MD")
+            {
+                Button5.Enabled = false;
+                Button5.Text = "Complete";
                 return;
+            }
 
             if (Global.SaraFishStatus == "Enroute")
             {
@@ -2020,6 +2073,7 @@ namespace WebApplication1
                 TextBox6.BackColor = System.Drawing.Color.Yellow;
                 Button29.Text = Global.SaraFishStatus;
                 Button29.Enabled = false;
+                Button5.Enabled = true;
             }
             else if (Global.SaraFishStatus == "Done")
             {
@@ -2048,7 +2102,12 @@ namespace WebApplication1
         public void CheckErinFongStatus()
         {
             if (Global.ErinFongStatus == "MD")
+            {
+                Button6.Enabled = false;
+                Button6.Text = "Complete";
                 return;
+            }
+                
 
             if (Global.ErinFongStatus == "Enroute")
             {
@@ -2067,6 +2126,7 @@ namespace WebApplication1
                 TextBox7.BackColor = System.Drawing.Color.Yellow;
                 Button30.Text = Global.ErinFongStatus;
                 Button30.Enabled = false;
+                Button6.Enabled = true;
             }
             else if (Global.ErinFongStatus == "Done")
             {
@@ -2097,7 +2157,11 @@ namespace WebApplication1
         public void CheckMattHeroldStatus()
         {
             if (Global.MattHeroldStatus == "MD")
+            {
+                Button7.Enabled = false;
+                Button7.Text = "Complete";
                 return;
+            }
 
             if (Global.MattHeroldStatus == "Enroute")
             {
@@ -2116,6 +2180,7 @@ namespace WebApplication1
                 TextBox8.BackColor = System.Drawing.Color.Yellow;
                 Button31.Text = Global.MattHeroldStatus;
                 Button31.Enabled = false;
+                Button7.Enabled = true;
             }
             else if (Global.MattHeroldStatus == "Done")
             {
@@ -2145,7 +2210,12 @@ namespace WebApplication1
         public void CheckBruceHubbardStatus()
         {
             if (Global.BruceHubbardStatus == "MD")
+            {
+                Button8.Enabled = false;
+                Button8.Text = "Complete";
                 return;
+            }
+               
 
             if (Global.BruceHubbardStatus == "Enroute")
             {
@@ -2164,6 +2234,7 @@ namespace WebApplication1
                 TextBox9.BackColor = System.Drawing.Color.Yellow;
                 Button32.Text = Global.BruceHubbardStatus;
                 Button32.Enabled = false;
+                Button8.Enabled = true;
             }
             else if (Global.BruceHubbardStatus == "Done")
             {
@@ -2192,8 +2263,13 @@ namespace WebApplication1
         public void CheckValerieJohnsonStatus()
         {
             if (Global.ValerieJohnsonStatus == "MD")
+            {
+                Button9.Enabled = false;
+                Button9.Text = "Complete";
                 return;
-
+            }
+                
+        
             if (Global.ValerieJohnsonStatus == "Enroute")
             {
                 TimeSpan diff = (Global.ValerieJohnson.Subtract(DateTime.Now));
@@ -2211,6 +2287,7 @@ namespace WebApplication1
                 TextBox10.BackColor = System.Drawing.Color.Yellow;
                 Button33.Text = Global.ValerieJohnsonStatus;
                 Button33.Enabled = false;
+                Button9.Enabled = true;
             }
             else if (Global.ValerieJohnsonStatus == "Done")
             {
@@ -2239,7 +2316,11 @@ namespace WebApplication1
         public void CheckDaveLarsonStatus()
         {
             if (Global.DaveLarsonStatus == "MD")
+            {
+                Button10.Enabled = false;
+                Button10.Text = "Complete";
                 return;
+            }
 
             if (Global.DaveLarsonStatus == "Enroute")
             {
@@ -2258,6 +2339,7 @@ namespace WebApplication1
                 TextBox11.BackColor = System.Drawing.Color.Yellow;
                 Button34.Text = Global.DaveLarsonStatus;
                 Button34.Enabled = false;
+                Button10.Enabled = true;
             }
             else if (Global.DaveLarsonStatus == "Done")
             {
@@ -2286,7 +2368,11 @@ namespace WebApplication1
         public void CheckAmyOsbornStatus()
         {
             if (Global.AmyOsbornStatus == "MD")
+            {
+                Button11.Enabled = false;
+                Button11.Text = "Complete";
                 return;
+            }
 
             if (Global.AmyOsbornStatus == "Enroute")
             {
@@ -2305,6 +2391,7 @@ namespace WebApplication1
                 TextBox12.BackColor = System.Drawing.Color.Yellow;
                 Button35.Text = Global.AmyOsbornStatus;
                 Button35.Enabled = false;
+                Button11.Enabled = true;
             }
             else if (Global.AmyOsbornStatus == "Done")
             {
@@ -2331,9 +2418,13 @@ namespace WebApplication1
             }
         }
         public void CheckGregPetersonStatus()
-        { 
+        {
             if (Global.GregPetersonStatus == "MD")
+            {
+                Button12.Enabled = false;
+                Button12.Text = "Complete";
                 return;
+            }
 
             if (Global.GregPetersonStatus == "Enroute")
             {
@@ -2352,6 +2443,7 @@ namespace WebApplication1
                 TextBox13.BackColor = System.Drawing.Color.Yellow;
                 Button36.Text = Global.GregPetersonStatus;
                 Button36.Enabled = false;
+                Button12.Enabled = true;
             }
             else if (Global.GregPetersonStatus == "Done")
             {
@@ -2380,7 +2472,11 @@ namespace WebApplication1
         public void CheckYoSchugelStatus()
         {
             if (Global.YoSchugelStatus == "MD")
+            {
+                Button13.Enabled = false;
+                Button13.Text = "Complete";
                 return;
+            }
 
             if (Global.YoSchugelStatus == "Enroute")
             {
@@ -2399,6 +2495,7 @@ namespace WebApplication1
                 TextBox14.BackColor = System.Drawing.Color.Yellow;
                 Button37.Text = Global.YoSchugelStatus;
                 Button37.Enabled = false;
+                Button13.Enabled = true;
             }
             else if (Global.YoSchugelStatus == "Done")
             {
@@ -2427,7 +2524,11 @@ namespace WebApplication1
         public void CheckKevinSipprellStatus()
         {
             if (Global.KevinSipprellStatus == "MD")
+            {
+                Button14.Enabled = false;
+                Button14.Text = "Complete";
                 return;
+            }
 
             if (Global.KevinSipprellStatus == "Enroute")
             {
@@ -2446,6 +2547,7 @@ namespace WebApplication1
                 TextBox15.BackColor = System.Drawing.Color.Yellow;
                 Button38.Text = Global.KevinSipprellStatus;
                 Button38.Enabled = false;
+                Button14.Enabled = true;
             }
             else if (Global.KevinSipprellStatus == "Done")
             {
@@ -2474,7 +2576,11 @@ namespace WebApplication1
         public void CheckEmilyAndersonStatus()
         {
             if (Global.EmilyAndersonStatus == "PA")
+            {
+                Button15.Enabled = false;
+                Button15.Text = "Complete";
                 return;
+            }
 
             if (Global.EmilyAndersonStatus == "Enroute")
             {
@@ -2493,6 +2599,7 @@ namespace WebApplication1
                 TextBox16.BackColor = System.Drawing.Color.Yellow;
                 Button39.Text = Global.EmilyAndersonStatus;
                 Button39.Enabled = false;
+                Button15.Enabled = true;
             }
             else if (Global.EmilyAndersonStatus == "Done")
             {
@@ -2521,7 +2628,12 @@ namespace WebApplication1
         public void CheckJerodBarnesStatus()
         {
             if (Global.JerodBarnesStatus == "PA")
+            {
+                Button16.Enabled = false;
+                Button16.Text = "Complete";
                 return;
+            }
+                
 
             if (Global.JerodBarnesStatus == "Enroute")
             {
@@ -2540,6 +2652,7 @@ namespace WebApplication1
                 TextBox17.BackColor = System.Drawing.Color.Yellow;
                 Button40.Text = Global.JerodBarnesStatus;
                 Button40.Enabled = false;
+                Button16.Enabled = true;
             }
             else if (Global.JerodBarnesStatus == "Done")
             {
@@ -2568,7 +2681,11 @@ namespace WebApplication1
         public void CheckErinBischoffStatus()
         {
             if (Global.ErinBischoffStatus == "PA")
+            {
+                Button17.Enabled = false;
+                Button17.Text = "Complete";
                 return;
+            }
 
             if (Global.ErinBischoffStatus == "Enroute")
             {
@@ -2587,6 +2704,7 @@ namespace WebApplication1
                 TextBox18.BackColor = System.Drawing.Color.Yellow;
                 Button41.Text = Global.ErinBischoffStatus;
                 Button41.Enabled = false;
+                Button17.Enabled = true;
             }
             else if (Global.ErinBischoffStatus == "Done")
             {
@@ -2615,7 +2733,11 @@ namespace WebApplication1
         public void CheckFredDemeuseStatus()
         {
             if (Global.FredDemeuseStatus == "PA")
+            {
+                Button18.Enabled = false;
+                Button18.Text = "Complete";
                 return;
+            }
 
             if (Global.FredDemeuseStatus == "Enroute")
             {
@@ -2634,6 +2756,8 @@ namespace WebApplication1
                 TextBox19.BackColor = System.Drawing.Color.Yellow;
                 Button42.Text = Global.FredDemeuseStatus;
                 Button42.Enabled = false;
+                Button18.Enabled = true;
+
             }
             else if (Global.FredDemeuseStatus == "Done")
             {
@@ -2662,7 +2786,11 @@ namespace WebApplication1
         public void CheckChelseaErnisseStatus()
         {
             if (Global.ChelseaErnisseStatus == "PA")
+            {
+                Button19.Enabled = false;
+                Button19.Text = "Complete";
                 return;
+            }
 
             if (Global.ChelseaErnisseStatus == "Enroute")
             {
@@ -2681,6 +2809,7 @@ namespace WebApplication1
                 TextBox20.BackColor = System.Drawing.Color.Yellow;
                 Button43.Text = Global.ChelseaErnisseStatus;
                 Button43.Enabled = false;
+                Button19.Enabled = true;
             }
             else if (Global.ChelseaErnisseStatus == "Done")
             {
@@ -2709,7 +2838,11 @@ namespace WebApplication1
         public void CheckAlliEngelsmaStatus()
         {
             if (Global.AllisonEngelsmaStatus == "PA")
+            {
+                Button20.Enabled = false;
+                Button20.Text = "Complete";
                 return;
+            }
 
             if (Global.AllisonEngelsmaStatus == "Enroute")
             {
@@ -2728,6 +2861,7 @@ namespace WebApplication1
                 TextBox21.BackColor = System.Drawing.Color.Yellow;
                 Button44.Text = Global.AllisonEngelsmaStatus;
                 Button44.Enabled = false;
+                Button20.Enabled = true;
             }
             else if (Global.AllisonEngelsmaStatus == "Done")
             {
@@ -2756,7 +2890,12 @@ namespace WebApplication1
         public void CheckBradyGriffithStatus()
         {
             if (Global.BradyGriffithStatus == "PA")
+            {
+                Button21.Enabled = false;
+                Button21.Text = "Complete";
                 return;
+            }
+                
 
             if (Global.BradyGriffithStatus == "Enroute")
             {
@@ -2775,6 +2914,7 @@ namespace WebApplication1
                 TextBox22.BackColor = System.Drawing.Color.Yellow;
                 Button45.Text = Global.BradyGriffithStatus;
                 Button45.Enabled = false;
+                Button21.Enabled = true;
             }
             else if (Global.BradyGriffithStatus == "Done")
             {
@@ -2804,7 +2944,11 @@ namespace WebApplication1
         public void CheckJasonHicksStatus()
         {
             if (Global.JasonHicksStatus == "PA")
+            {
+                Button22.Enabled = false;
+                Button22.Text = "Complete";
                 return;
+            }
 
             if (Global.JasonHicksStatus == "Enroute")
             {
@@ -2823,6 +2967,7 @@ namespace WebApplication1
                 TextBox23.BackColor = System.Drawing.Color.Yellow;
                 Button46.Text = Global.JasonHicksStatus;
                 Button46.Enabled = false;
+                Button22.Enabled = true;
             }
             else if (Global.JasonHicksStatus == "Done")
             {
@@ -2852,7 +2997,12 @@ namespace WebApplication1
         public void CheckLisaLarsonStatus()
         {
             if (Global.LisaLarsonStatus == "MD")
+            {
+                Button23.Enabled = false;
+                Button23.Text = "Complete";
                 return;
+            }
+              
 
             if (Global.LisaLarsonStatus == "Enroute")
             {
@@ -2871,6 +3021,7 @@ namespace WebApplication1
                 TextBox24.BackColor = System.Drawing.Color.Yellow;
                 Button47.Text = Global.LisaLarsonStatus;
                 Button47.Enabled = false;
+                Button23.Enabled = true;
             }
             else if (Global.LisaLarsonStatus == "Done")
             {
@@ -2899,7 +3050,11 @@ namespace WebApplication1
         public void CheckBethRadkeStatus()
         {
             if (Global.BethRadkeStatus == "PA")
+            {
+                Button24.Enabled = false;
+                Button24.Text = "Complete";
                 return;
+            }
 
             if (Global.BethRadkeStatus == "Enroute")
             {
@@ -2918,6 +3073,7 @@ namespace WebApplication1
                 TextBox25.BackColor = System.Drawing.Color.Yellow;
                 Button48.Text = Global.BethRadkeStatus;
                 Button48.Enabled = false;
+                Button24.Enabled = true;
             }
             else if (Global.BethRadkeStatus == "Done")
             {
@@ -2946,7 +3102,11 @@ namespace WebApplication1
         public void CheckTamrahTenhaeffStatus()
         {
             if (Global.TamrahTenhaeffStatus == "PA")
+            {
+                Button25.Enabled = false;
+                Button25.Text = "Complete";
                 return;
+            }
 
             if (Global.TamrahTenhaeffStatus == "Enroute")
             {
@@ -2965,6 +3125,7 @@ namespace WebApplication1
                 TextBox26.BackColor = System.Drawing.Color.Yellow;
                 Button49.Text = Global.TamrahTenhaeffStatus;
                 Button49.Enabled = false;
+                Button25.Enabled = true;
             }
             else if (Global.TamrahTenhaeffStatus == "Done")
             {
@@ -2996,7 +3157,11 @@ namespace WebApplication1
         public void CheckErinnVonReinStatus()
         {
             if (Global.ErinnVonreinStatus == "PA")
+            {
+                Button26.Enabled = false;
+                Button26.Text = "Complete";
                 return;
+            }
 
             if (Global.ErinnVonreinStatus == "Enroute")
             {
@@ -3016,6 +3181,7 @@ namespace WebApplication1
                 TextBox27.BackColor = System.Drawing.Color.Yellow;
                 Button50.Text = Global.ErinnVonreinStatus;
                 Button50.Enabled = false;
+                Button26.Enabled = true;
             }
             else if (Global.ErinnVonreinStatus == "Done")
             {

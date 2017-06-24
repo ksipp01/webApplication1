@@ -14,6 +14,26 @@ namespace WebApplication1
         private Boolean IsPageRefresh = false;
         protected void Page_Load(object sender, EventArgs e)
         {
+            TextBox63.Text = Global.Mdhere.ToString();
+            TextBox64.Text = Global.MDrespond.ToString();
+            TextBox65.Text = Global.PAhere.ToString();
+            TextBox66.Text = Global.PArespond.ToString();
+            if (TextBox63.Text == "0")
+                TextBox63.BackColor = System.Drawing.Color.Yellow;
+            else
+                TextBox63.BackColor = System.Drawing.Color.Lime;
+            if (TextBox64.Text == "0")
+                TextBox64.BackColor = System.Drawing.Color.Yellow;
+            else
+                TextBox64.BackColor = System.Drawing.Color.Lime;
+            if (TextBox65.Text == "0")
+                TextBox65.BackColor = System.Drawing.Color.Yellow;
+            else
+                TextBox65.BackColor = System.Drawing.Color.Lime;
+            if (TextBox66.Text == "0")
+                TextBox66.BackColor = System.Drawing.Color.Yellow;
+            else
+                TextBox66.BackColor = System.Drawing.Color.Lime;
 
             CancelUnexpectedRePost();
             CreateChildControls();
@@ -98,13 +118,37 @@ namespace WebApplication1
                     if (status.GetValue(null).ToString() == "Enroute")
                     {
                         Label lbl = new Label();
+                        lbl.Width = 200;
                         lbl.BackColor = System.Drawing.Color.Lime;
-                        lbl.Text = property.Name.ToString().Replace("Status", "");
+                        lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
                         placeholder.Controls.Add(lbl);
                         LiteralControl linebreak = new LiteralControl("<br>");
                         placeholder.Controls.Add(linebreak);
                         
                     }
+                    if (status.GetValue(null).ToString() == "Here")
+                    {
+                        Label lbl = new Label();
+                        lbl.Width = 200;
+                        lbl.BackColor = System.Drawing.Color.Yellow;
+                        lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
+                        placeholder.Controls.Add(lbl);
+                        LiteralControl linebreak = new LiteralControl("<br>");
+                        placeholder.Controls.Add(linebreak);
+
+                    }
+                    if (status.GetValue(null).ToString() == "Done")
+                    {
+                        Label lbl = new Label();
+                        lbl.Width = 200;
+                        lbl.BackColor = System.Drawing.Color.Red;
+                        lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
+                        placeholder.Controls.Add(lbl);
+                        LiteralControl linebreak = new LiteralControl("<br>");
+                        placeholder.Controls.Add(linebreak);
+
+                    }
+
                 }
               //  }
             }
