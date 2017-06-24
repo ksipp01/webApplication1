@@ -1800,7 +1800,7 @@ namespace WebApplication1
                 double m = diff.TotalMinutes;
                 m = Math.Round(m, MidpointRounding.AwayFromZero);
                 TextBox1.Text = m.ToString();
-               
+                Button52.Enabled = false;
                 //if (diff.TotalMinutes >= 0)
                 //    TextBox1.Text = diff.ToString("mm");
                 //else
@@ -1859,6 +1859,7 @@ namespace WebApplication1
                 //    TextBox2.Text = diff.ToString("mm");
                 //else
                 //    TextBox2.Text = "-" + diff.ToString("mm");
+                Button1.Enabled = false;
             }
             else if (Global.LaresaDeboerStatus == "Here")
             {
@@ -1867,6 +1868,7 @@ namespace WebApplication1
                 LaresaArrivalButton.Text = Global.LaresaDeboerStatus;              
                 LaresaArrivalButton.Enabled = false;
                 Button1.Enabled = true;
+               
             }
             else if (Global.LaresaDeboerStatus == "Done")
             {
@@ -1911,6 +1913,7 @@ namespace WebApplication1
                 //    TextBox3.Text = diff.ToString("mm");
                 //else
                 //    TextBox3.Text = "-" + diff.ToString("mm");
+                Button2.Enabled = false;
             }
             else if (Global.DanDeweyStatus == "Here")
             {
@@ -1962,6 +1965,7 @@ namespace WebApplication1
                 //    TextBox4.Text = diff.ToString("mm");
                 //else
                 //    TextBox4.Text = "-" + diff.ToString("mm");
+                Button3.Enabled = false;
             }
             else if (Global.JoseDundeeStatus == "Here")
             {
@@ -2014,6 +2018,7 @@ namespace WebApplication1
                 //    TextBox5.Text = diff.ToString("mm");
                 //else
                 //    TextBox5.Text = "-" + diff.ToString("mm");
+                Button4.Enabled = false;
             }
             else if (Global.SarahDundeeStatus == "Here")
             {
@@ -2051,8 +2056,8 @@ namespace WebApplication1
         {
             if (Global.SaraFishStatus == "MD")
             {
-                Button5.Enabled = false;
                 Button5.Text = "Complete";
+                Button5.Enabled = false;             
                 return;
             }
 
@@ -2066,6 +2071,7 @@ namespace WebApplication1
                 //    TextBox6.Text = diff.ToString("mm");
                 //else
                 //    TextBox6.Text = "-" + diff.ToString("mm");
+                Button5.Enabled = false;
             }
             else if (Global.SaraFishStatus == "Here")
             {
@@ -2119,6 +2125,7 @@ namespace WebApplication1
                 //    TextBox7.Text = diff.ToString("mm");
                 //else
                 //    TextBox7.Text = "-" + diff.ToString("mm");
+                Button6.Enabled = false;
             }
             else if (Global.ErinFongStatus == "Here")
             {
@@ -2173,6 +2180,7 @@ namespace WebApplication1
                 //    TextBox8.Text = diff.ToString("mm");
                 //else
                 //    TextBox8.Text = "-" + diff.ToString("mm");
+                Button7.Enabled = false;
             }
             else if (Global.MattHeroldStatus == "Here")
             {
@@ -2227,6 +2235,7 @@ namespace WebApplication1
                 //    TextBox9.Text = diff.ToString("mm");
                 //else
                 //    TextBox9.Text = "-" + diff.ToString("mm");
+                Button8.Enabled = false;
             }
             else if (Global.BruceHubbardStatus == "Here")
             {
@@ -2280,6 +2289,7 @@ namespace WebApplication1
                 //    TextBox10.Text = diff.ToString("mm");
                 //else
                 //    TextBox10.Text = "-" + diff.ToString("mm");
+                Button9.Enabled = false;
             }
             else if (Global.ValerieJohnsonStatus == "Here")
             {
@@ -2332,6 +2342,7 @@ namespace WebApplication1
                 //    TextBox11.Text = diff.ToString("mm");
                 //else
                 //    TextBox11.Text = "-" + diff.ToString("mm");
+                Button10.Enabled = false;
             }
             else if (Global.DaveLarsonStatus == "Here")
             {
@@ -2384,6 +2395,7 @@ namespace WebApplication1
                 //    TextBox12.Text = diff.ToString("mm");
                 //else
                 //    TextBox12.Text = "-" + diff.ToString("mm");
+                Button11.Enabled = false;
             }
             else if (Global.AmyOsbornStatus == "Here")
             {
@@ -2436,6 +2448,7 @@ namespace WebApplication1
                 //    TextBox13.Text = diff.ToString("mm");
                 //else
                 //    TextBox13.Text = "-" + diff.ToString("mm");
+                Button12.Enabled = false;
             }
             else if (Global.GregPetersonStatus == "Here")
             {
@@ -2488,6 +2501,7 @@ namespace WebApplication1
                 //    TextBox14.Text = diff.ToString("mm");
                 //else
                 //    TextBox14.Text = "-" + diff.ToString("mm");
+                Button13.Enabled = false;
             }
             else if (Global.YoSchugelStatus == "Here")
             {
@@ -2540,6 +2554,7 @@ namespace WebApplication1
                 //    TextBox15.Text = diff.ToString("mm");
                 //else
                 //    TextBox15.Text = "-" + diff.ToString("mm");
+                Button14.Enabled = false;
             }
             else if (Global.KevinSipprellStatus == "Here")
             {
@@ -2592,6 +2607,7 @@ namespace WebApplication1
                 //    TextBox16.Text = diff.ToString("mm");
                 //else
                 //    TextBox16.Text = "-" + diff.ToString("mm");
+                Button15.Enabled = false;
             }
             else if (Global.EmilyAndersonStatus == "Here")
             {
@@ -2645,6 +2661,7 @@ namespace WebApplication1
                 //    TextBox17.Text = diff.ToString("mm");
                 //else
                 //    TextBox17.Text = "-" + diff.ToString("mm");
+                Button16.Enabled = false;
             }
             else if (Global.JerodBarnesStatus == "Here")
             {
@@ -2697,6 +2714,7 @@ namespace WebApplication1
                 //    TextBox18.Text = diff.ToString("mm");
                 //else
                 //    TextBox18.Text = "-" + diff.ToString("mm");
+                Button17.Enabled = false;
             }
             else if (Global.ErinBischoffStatus == "Here")
             {
@@ -2748,7 +2766,8 @@ namespace WebApplication1
                 //if (diff.TotalMinutes >= 0)
                 //    TextBox19.Text = diff.ToString("mm");
                 //else
-                //    TextBox19.Text = "-" + diff.ToString("mm");
+                //    TextBox19.Text = "-" + diff.ToString("mm");\
+                Button18.Enabled = false;
             }
             else if (Global.FredDemeuseStatus == "Here")
             {
@@ -2802,6 +2821,7 @@ namespace WebApplication1
                 //    TextBox20.Text = diff.ToString("mm");
                 //else
                 //    TextBox20.Text = "-" + diff.ToString("mm");
+                Button19.Enabled = false;
             }
             else if (Global.ChelseaErnisseStatus == "Here")
             {
@@ -2854,6 +2874,7 @@ namespace WebApplication1
                 //    TextBox21.Text = diff.ToString("mm");
                 //else
                 //    TextBox21.Text = "-" + diff.ToString("mm");
+                Button20.Enabled = false;
             }
             else if (Global.AllisonEngelsmaStatus == "Here")
             {
@@ -2907,6 +2928,7 @@ namespace WebApplication1
                 //    TextBox22.Text = diff.ToString("mm");
                 //else
                 //    TextBox22.Text = "-" + diff.ToString("mm");
+                Button21.Enabled = false;
             }
             else if (Global.BradyGriffithStatus == "Here")
             {
@@ -2960,6 +2982,7 @@ namespace WebApplication1
                 //    TextBox23.Text = diff.ToString("mm");
                 //else
                 //    TextBox23.Text = "-" + diff.ToString("mm");
+                Button22.Enabled = false;
             }
             else if (Global.JasonHicksStatus == "Here")
             {
@@ -3014,6 +3037,7 @@ namespace WebApplication1
                 //    TextBox24.Text = diff.ToString("mm");
                 //else
                 //    TextBox24.Text = "-" + diff.ToString("mm");
+                Button23.Enabled = false;
             }
             else if (Global.LisaLarsonStatus == "Here")
             {
@@ -3066,6 +3090,7 @@ namespace WebApplication1
                 //    TextBox25.Text = diff.ToString("mm");
                 //else
                 //    TextBox25.Text = "-" + diff.ToString("mm");
+                Button24.Enabled = false;
             }
             else if (Global.BethRadkeStatus == "Here")
             {
@@ -3118,6 +3143,7 @@ namespace WebApplication1
                 //    TextBox26.Text = diff.ToString("mm");
                 //else
                 //    TextBox26.Text = "-" + diff.ToString("mm");
+                Button25.Enabled = false;
             }
             else if (Global.TamrahTenhaeffStatus == "Here")
             {
@@ -3173,7 +3199,8 @@ namespace WebApplication1
                 //     TextBox27.Text = m.ToString("mm");
                 //else
                 //    TextBox27.Text = "-" + diff.ToString("mm");
-                
+                Button26.Enabled = false;
+
             }
             else if (Global.ErinnVonreinStatus == "Here")
             {
