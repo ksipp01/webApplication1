@@ -13,14 +13,14 @@
             <tr>
                 <td class="auto-style3">MD Here: <asp:TextBox ID="TextBox59" runat="server" Width="25px"></asp:TextBox>
                 </td>
-                <td class="auto-style2">MD Respond: <asp:TextBox ID="TextBox60" runat="server" Width="25px"></asp:TextBox>
+                <td class="auto-style2">MD Responding: <asp:TextBox ID="TextBox60" runat="server" Width="25px"></asp:TextBox>
                 </td>
                 </tr>
 
               <tr>
-                 <td class="auto-style3">PA Here: <asp:TextBox ID="TextBox61" runat="server" Width="25px"></asp:TextBox>
+                 <td class="auto-style3">PA Here:&nbsp; <asp:TextBox ID="TextBox61" runat="server" Width="25px"></asp:TextBox>
                   </td>
-                <td class="auto-style2">PA Respond: <asp:TextBox ID="TextBox62" runat="server" Width="25px"></asp:TextBox>
+                <td class="auto-style2">PA Responding:&nbsp; <asp:TextBox ID="TextBox62" runat="server" Width="25px"></asp:TextBox>
                   </td>
 
             </tr>        

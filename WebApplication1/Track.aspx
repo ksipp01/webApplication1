@@ -37,7 +37,7 @@ table {
                 <td class="auto-style3">MD Here: 
                     <asp:TextBox ID="TextBox63" runat="server" Width="25px"></asp:TextBox>
                 </td>
-                <td class="auto-style2">MD Respond: 
+                <td class="auto-style2">MD Responding: 
                     <asp:TextBox ID="TextBox64" runat="server" Width="25px"></asp:TextBox>
                 </td>
                 </tr>
@@ -46,7 +46,7 @@ table {
                  <td class="auto-style3">PA Here:&nbsp; 
                      <asp:TextBox ID="TextBox65" runat="server" Width="25px"></asp:TextBox>
                   </td>
-                <td class="auto-style2">PA Respond:&nbsp; 
+                <td class="auto-style2">PA Responding:&nbsp; 
                     <asp:TextBox ID="TextBox66" runat="server" Width="25px"></asp:TextBox>
                   </td>
 
