@@ -70,7 +70,10 @@
           
         </table>
         <br />
-        <style>            table, th, td {
+            <asp:Label ID="Label2" runat="server" Text="Enroute" BackColor="Lime" Width="32%"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="Here" BackColor="Yellow" Width="32%"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="Done" BackColor="Red" Width="32%"></asp:Label>
+         <style>            table, th, td {
        padding: 2px;
 }
            tr{height:10px}

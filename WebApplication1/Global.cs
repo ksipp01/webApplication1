@@ -262,29 +262,29 @@ namespace WebApplication1
             }
         }
 
-        public static DateTime ChelseaErnisse
+        public static DateTime ChelseaEernisse
         {
             get
             {
-                return _chelseaErnisse;
+                return _chelseaEernisse;
             }
 
             set
             {
-                _chelseaErnisse = value;
+                _chelseaEernisse = value;
             }
         }
 
-        public static DateTime AllisonEngelsma
+        public static DateTime AlliEngelsma
         {
             get
             {
-                return _allisonEngelsma;
+                return _AlliEngelsma;
             }
 
             set
             {
-                _allisonEngelsma = value;
+                _AlliEngelsma = value;
             }
         }
 
@@ -626,16 +626,16 @@ namespace WebApplication1
         //    }
         //}
 
-        //public static bool ArriveallisonEngelsma
+        //public static bool ArriveAlliEngelsma
         //{
         //    get
         //    {
-        //        return _arriveallisonEngelsma;
+        //        return _arriveAlliEngelsma;
         //    }
 
         //    set
         //    {
-        //        _arriveallisonEngelsma = value;
+        //        _arriveAlliEngelsma = value;
         //    }
         //}
 
@@ -1029,29 +1029,29 @@ namespace WebApplication1
             }
         }
 
-        public static string ChelseaErnisseStatus
+        public static string ChelseaEernisseStatus
         {
             get
             {
-                return _chelseaErnisseStatus;
+                return _chelseaEernisseStatus;
             }
 
             set
             {
-                _chelseaErnisseStatus = value;
+                _chelseaEernisseStatus = value;
             }
         }
 
-        public static string AllisonEngelsmaStatus
+        public static string AlliEngelsmaStatus
         {
             get
             {
-                return _allisonEngelsmaStatus;
+                return _AlliEngelsmaStatus;
             }
 
             set
             {
-                _allisonEngelsmaStatus = value;
+                _AlliEngelsmaStatus = value;
             }
         }
 
@@ -1152,8 +1152,8 @@ namespace WebApplication1
         private static DateTime _jerodBarnes;
         private static DateTime _erinBischoff;
         private static DateTime _fredDemeuse;
-        private static DateTime _chelseaErnisse;
-        private static DateTime _allisonEngelsma;
+        private static DateTime _chelseaEernisse;
+        private static DateTime _AlliEngelsma;
         private static DateTime _bradyGriffith;
         private static DateTime _jasonHicks;
         private static DateTime _lisaLarson;      
@@ -1180,8 +1180,8 @@ namespace WebApplication1
         private static string _jerodBarnesStatus = "PA";
         private static string _erinBischoffStatus = "PA";
         private static string _fredDemeuseStatus = "PA";
-        private static string _chelseaErnisseStatus = "PA";
-        private static string _allisonEngelsmaStatus = "PA";
+        private static string _chelseaEernisseStatus = "PA";
+        private static string _AlliEngelsmaStatus = "PA";
         private static string _bradyGriffithStatus = "PA";
         private static string _jasonHicksStatus = "PA";
         private static string _lisaLarsonStatus = "MD";
@@ -1210,7 +1210,7 @@ namespace WebApplication1
         //private static bool _arriveerinBischoff;
         //private static bool _arrivefredDemeuse;
         //private static bool _arrivechelseaErnisse;
-        //private static bool _arriveallisonEngelsma;
+        //private static bool _arriveAlliEngelsma;
         //private static bool _arrivebradyGriffith;
         //private static bool _arrivejasonHicks;
         //private static bool _arrivelisaLarson;
@@ -1248,7 +1248,7 @@ namespace WebApplication1
            // _erinBischoffStatus = null;
            // _fredDemeuseStatus = null;
            // _chelseaErnisseStatus = null;
-           // _allisonEngelsmaStatus = null;
+           // _AlliEngelsmaStatus = null;
            // _bradyGriffithStatus = null;
            // _jasonHicksStatus = null;
            // _lisaLarsonStatus = null;
@@ -1275,8 +1275,8 @@ namespace WebApplication1
             _jerodBarnesStatus = "PA";
             _erinBischoffStatus = "PA";
             _fredDemeuseStatus = "PA";
-            _chelseaErnisseStatus = "PA";
-            _allisonEngelsmaStatus = "PA";
+            _chelseaEernisseStatus = "PA";
+            _AlliEngelsmaStatus = "PA";
             _bradyGriffithStatus = "PA";
             _jasonHicksStatus = "PA";
             _lisaLarsonStatus = "MD";
@@ -1305,8 +1305,8 @@ namespace WebApplication1
             _jerodBarnes = DateTime.MinValue;
             _erinBischoff = DateTime.MinValue;
             _fredDemeuse = DateTime.MinValue;
-            _chelseaErnisse = DateTime.MinValue;
-            _allisonEngelsma = DateTime.MinValue;
+            _chelseaEernisse = DateTime.MinValue;
+            _AlliEngelsma = DateTime.MinValue;
             _bradyGriffith = DateTime.MinValue;
             _jasonHicks = DateTime.MinValue;
             _lisaLarson = DateTime.MinValue;

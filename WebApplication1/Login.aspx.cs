@@ -11,6 +11,7 @@ namespace WebApplication1
     public partial class LoginTest : System.Web.UI.Page
     {
         private static string name = "";
+       
 
         private string RemoveSpace(string s)
         {
@@ -169,6 +170,7 @@ namespace WebApplication1
 
 
 
+           
 
             //HttpCookie aCookie = new HttpCookie("user");
             //aCookie.Value = TextBox1.Text;
@@ -207,11 +209,26 @@ namespace WebApplication1
             TextBox2.BackColor = System.Drawing.Color.Lime;
             string responded = name + " Responded: " + TextBox2.Text + " min ETA at " + DateTime.Now.ToString();
             Log.Logstring += responded + "\n";
-            
+
+            //// test new Provider class
+            //Provider p = new Provider();
+            ////   p.Name = RemoveSpace(name);
+            //p.Name = name;
+            //p.Eta = time.Add(eta);
+            //p.Status = "Enroute";
+
+
+
+
+
             if (!_httpRequest.Browser.IsMobileDevice)
                 Response.Redirect("~/index.aspx");  // redirect back to index for HUC ETA entry.  
             else
                 Response.Redirect("~/success.aspx");
+
+         
+
+
 
         }
 

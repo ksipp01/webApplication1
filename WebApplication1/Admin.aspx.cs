@@ -164,8 +164,8 @@ namespace WebApplication1
             TextBox49.Text = Global.JerodBarnesStatus;
             TextBox50.Text = Global.ErinBischoffStatus;
             TextBox51.Text = Global.FredDemeuseStatus;
-            TextBox52.Text = Global.ChelseaErnisseStatus;
-            TextBox53.Text = Global.AllisonEngelsmaStatus;
+            TextBox52.Text = Global.ChelseaEernisseStatus;
+            TextBox53.Text = Global.AlliEngelsmaStatus;
             TextBox54.Text = Global.BradyGriffithStatus;
             TextBox55.Text = Global.JasonHicksStatus;
             TextBox56.Text = Global.BethRadkeStatus;

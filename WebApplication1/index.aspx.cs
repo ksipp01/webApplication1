@@ -40,15 +40,15 @@ namespace WebApplication1
                         }
                     }
                 }
-                if (TextBox28.Text == "0")
-                    TextBox28.BackColor = System.Drawing.Color.Yellow;
-                if (TextBox29.Text == "0")
-                    TextBox29.BackColor = System.Drawing.Color.Yellow;
-                if (TextBox30.Text == "0")
-                    TextBox30.BackColor = System.Drawing.Color.Yellow;
-                if (TextBox31.Text == "0")
-                    TextBox31.BackColor = System.Drawing.Color.Yellow;
+               
             }
+
+            TextBox28.BackColor = System.Drawing.Color.Yellow;
+            TextBox29.BackColor = System.Drawing.Color.Lime;
+            TextBox30.BackColor = System.Drawing.Color.Yellow;
+            TextBox31.BackColor = System.Drawing.Color.Lime;
+
+
         }
         // 
         //public static string GetPropValue(String name, Object obj)
@@ -59,7 +59,7 @@ namespace WebApplication1
         //    obj = info.GetValue(obj, null);
         //    return obj.ToString();
         //}
-      
+
 
         private void DisplayETA()
         {
@@ -161,17 +161,17 @@ namespace WebApplication1
             //    Button29.Text = "HERE";
             //    Button29.Enabled = false;
             //}
-            CheckErinFongStatus();
+            CheckErineFongStatus();
 
-            //if (Global.ErinFong != DateTime.MinValue && !Global.ArriveerinFong)
+            //if (Global.ErineFong != DateTime.MinValue && !Global.ArriveErineFong)
             //{
-            //    TimeSpan diff = (Global.ErinFong.Subtract(DateTime.Now));
+            //    TimeSpan diff = (Global.ErineFong.Subtract(DateTime.Now));
             //    if (diff.TotalMinutes >= 0)
             //        TextBox7.Text = diff.ToString("mm");
             //    else
             //        TextBox7.Text = "-" + diff.ToString("mm");
             //}
-            //else if (Global.ArriveerinFong)
+            //else if (Global.ArriveErineFong)
             //{
             //    TextBox6.Text = Global.SaraFish.ToString("HHmm") + "hrs";
             //    TextBox6.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -383,35 +383,35 @@ namespace WebApplication1
             //    Button42.Enabled = false;
             //}
 
-            CheckChelseaErnisseStatus();
-            //if (Global.ChelseaErnisse != DateTime.MinValue && !Global.ArrivechelseaErnisse)
+            CheckChelseaEernisseStatus();
+            //if (Global.ChelseaEernisse != DateTime.MinValue && !Global.ArrivechelseaEernisse)
             //{
-            //    TimeSpan diff = (Global.ChelseaErnisse.Subtract(DateTime.Now));
+            //    TimeSpan diff = (Global.ChelseaEernisse.Subtract(DateTime.Now));
             //    if (diff.TotalMinutes >= 0)
             //        TextBox20.Text = diff.ToString("mm");
             //    else
             //        TextBox20.Text = "-" + diff.ToString("mm");
             //}
-            //else if (Global.ArrivechelseaErnisse)
+            //else if (Global.ArrivechelseaEernisse)
             //{
-            //    TextBox20.Text = Global.ChelseaErnisse.ToString("HHmm") + "hrs";
+            //    TextBox20.Text = Global.ChelseaEernisse.ToString("HHmm") + "hrs";
             //    TextBox20.BackColor = System.Drawing.Color.WhiteSmoke;
             //    Button43.Text = "HERE";
             //    Button43.Enabled = false;
             //}
 
             CheckAlliEngelsmaStatus();
-            //if (Global.AllisonEngelsma != DateTime.MinValue && !Global.ArriveallisonEngelsma)
+            //if (Global.AlliEngelsma != DateTime.MinValue && !Global.ArriveAlliEngelsma)
             //{
-            //    TimeSpan diff = (Global.AllisonEngelsma.Subtract(DateTime.Now));
+            //    TimeSpan diff = (Global.AlliEngelsma.Subtract(DateTime.Now));
             //    if (diff.TotalMinutes >= 0)
             //        TextBox21.Text = diff.ToString("mm");
             //    else
             //        TextBox21.Text = "-" + diff.ToString("mm");
             //}
-            //else if (Global.ArriveallisonEngelsma)
+            //else if (Global.ArriveAlliEngelsma)
             //{
-            //    TextBox21.Text = Global.AllisonEngelsma.ToString("HHmm") + "hrs";
+            //    TextBox21.Text = Global.AlliEngelsma.ToString("HHmm") + "hrs";
             //    TextBox21.BackColor = System.Drawing.Color.WhiteSmoke;
             //    Button44.Text = "HERE";
             //    Button44.Enabled = false;
@@ -551,9 +551,6 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             CancelUnexpectedRePost();
-
-
-
 
 
             if (!IsPostBack)
@@ -853,16 +850,16 @@ namespace WebApplication1
         {
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
-                //if (Global.ArriveerinFong)
+                //if (Global.ArriveErineFong)
                 //{
                 //    Global.Mdhere--;
                 //    Button30.Text = "DONE";
                 //    Button30.Enabled = false;
-                //    Global.ErinFong = DateTime.Now;
-                //    TextBox7.Text = Global.ErinFong.ToString("HHmm") + "hrs";
+                //    Global.ErineFong = DateTime.Now;
+                //    TextBox7.Text = Global.ErineFong.ToString("HHmm") + "hrs";
                 //    TextBox7.BackColor = System.Drawing.Color.Red;
                 //    Log.Logstring += "Erin Fong Done: " + DateTime.Now.ToString() + "\n";
-                //    Global.ArriveerinFong = false;
+                //    Global.ArriveErineFong = false;
                 //}
                 //else
                 //{
@@ -870,12 +867,12 @@ namespace WebApplication1
                 //    Global.Mdhere++;
                 //    Global.MDrespond--;
                 //    Log.Logstring += "Erine Fong Arrival: " + DateTime.Now.ToString() + "\n";
-                //    Global.ErinFong = DateTime.Now;
+                //    Global.ErineFong = DateTime.Now;
                 //    TextBox7.Text = Global.SaraFish.ToString("HHmm") + "hrs";
                 //    TextBox7.BackColor = System.Drawing.Color.WhiteSmoke;
                 //    Button30.Text = "HERE";
                 //    //Button30.Enabled = false;
-                //    Global.ArriveerinFong = true;
+                //    Global.ArriveErineFong = true;
                 //}
                 if (Global.ErineFongStatus != "MD")
                     Global.MDrespond--;
@@ -886,7 +883,7 @@ namespace WebApplication1
                 Log.Logstring += "Erine Fong Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox7.BackColor = System.Drawing.Color.Yellow;
             //    Global.MDrespond--;
-                CheckErinFongStatus();
+                CheckErineFongStatus();
                 Response.Redirect("index.aspx");
             //    Button6.Enabled = true;
             }
@@ -1409,40 +1406,40 @@ namespace WebApplication1
         {
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
-                //if (Global.ArrivechelseaErnisse)
+                //if (Global.ArrivechelseaEernisse)
                 //{
                 //    Global.PAhere--;
                 //    Button43.Text = "DONE";
                 //    Button43.Enabled = false;
-                //    Global.ChelseaErnisse = DateTime.Now;
-                //    TextBox20.Text = Global.ChelseaErnisse.ToString("HHmm") + "hrs";
+                //    Global.ChelseaEernisse = DateTime.Now;
+                //    TextBox20.Text = Global.ChelseaEernisse.ToString("HHmm") + "hrs";
                 //    TextBox20.BackColor = System.Drawing.Color.Red;
-                //    Log.Logstring += "Chelsea Eernisse Done: " + DateTime.Now.ToString() + "\n";
-                //    Global.ArrivechelseaErnisse = false;
+                //    Log.Logstring += "Chelsea EEernisse Done: " + DateTime.Now.ToString() + "\n";
+                //    Global.ArrivechelseaEernisse = false;
                 //}
                 //else
                 //{
 
                 //    Global.PAhere++;
                 //    Global.PArespond--;
-                //    Log.Logstring += "Chelsea Eernisse Arrival: " + DateTime.Now.ToString() + "\n";
-                //    Global.ChelseaErnisse = DateTime.Now;
-                //    TextBox20.Text = Global.ChelseaErnisse.ToString("HHmm") + "hrs";
+                //    Log.Logstring += "Chelsea EEernisse Arrival: " + DateTime.Now.ToString() + "\n";
+                //    Global.ChelseaEernisse = DateTime.Now;
+                //    TextBox20.Text = Global.ChelseaEernisse.ToString("HHmm") + "hrs";
                 //    TextBox20.BackColor = System.Drawing.Color.WhiteSmoke;
                 //    Button43.Text = "HERE";
                 //    //   Button43.Enabled = false;
-                //    Global.ArrivechelseaErnisse = true;
+                //    Global.ArrivechelseaEernisse = true;
                 //}
-                if (Global.ChelseaErnisseStatus != "PA")
+                if (Global.ChelseaEernisseStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
-                Global.ChelseaErnisseStatus = "Here";
-                Global.ChelseaErnisse = DateTime.Now;
+                Global.ChelseaEernisseStatus = "Here";
+                Global.ChelseaEernisse = DateTime.Now;
                 Button43.Enabled = false;
                 Log.Logstring += "Chelsea Eernisse Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox20.BackColor = System.Drawing.Color.Yellow;
              //   Global.PArespond--;
-                CheckChelseaErnisseStatus();
+                CheckChelseaEernisseStatus();
                // Button19.Enabled = true;
                 Response.Redirect("index.aspx");
             }
@@ -1452,16 +1449,16 @@ namespace WebApplication1
         {
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
-                //if (Global.ArriveallisonEngelsma)
+                //if (Global.ArriveAlliEngelsma)
                 //{
                 //    Global.PAhere--;
                 //    Button44.Text = "DONE";
                 //    Button44.Enabled = false;
-                //    Global.AllisonEngelsma = DateTime.Now;
-                //    TextBox21.Text = Global.AllisonEngelsma.ToString("HHmm") + "hrs";
+                //    Global.AlliEngelsma = DateTime.Now;
+                //    TextBox21.Text = Global.AlliEngelsma.ToString("HHmm") + "hrs";
                 //    TextBox21.BackColor = System.Drawing.Color.Red;
                 //    Log.Logstring += "Alli Engelsma Done: " + DateTime.Now.ToString() + "\n";
-                //    Global.ArriveallisonEngelsma = false;
+                //    Global.ArriveAlliEngelsma = false;
                 //}
                 //else
                 //{
@@ -1470,18 +1467,18 @@ namespace WebApplication1
                 //    Global.PAhere++;
                 //    Global.PArespond--;
                 //    Log.Logstring += "Alli Engelsma Arrival: " + DateTime.Now.ToString() + "\n";
-                //    Global.AllisonEngelsma = DateTime.Now;
-                //    TextBox21.Text = Global.AllisonEngelsma.ToString("HHmm") + "hrs";
+                //    Global.AlliEngelsma = DateTime.Now;
+                //    TextBox21.Text = Global.AlliEngelsma.ToString("HHmm") + "hrs";
                 //    TextBox21.BackColor = System.Drawing.Color.WhiteSmoke;
                 //    Button44.Text = "HERE";
                 //    //   Button44.Enabled = false;
-                //    Global.ArriveallisonEngelsma = true;
+                //    Global.ArriveAlliEngelsma = true;
                 //}
-                if (Global.AllisonEngelsmaStatus != "PA")
+                if (Global.AlliEngelsmaStatus != "PA")
                     Global.PArespond--;
                 Global.PAhere++;
-                Global.AllisonEngelsmaStatus = "Here";
-                Global.AllisonEngelsma = DateTime.Now;
+                Global.AlliEngelsmaStatus = "Here";
+                Global.AlliEngelsma = DateTime.Now;
                 Button44.Enabled = false;
                 Log.Logstring += "Alli Engelsma Arrived: " + DateTime.Now.ToString() + "\n";
                 TextBox21.BackColor = System.Drawing.Color.Yellow;
@@ -2105,7 +2102,7 @@ namespace WebApplication1
 
             }
         }
-        public void CheckErinFongStatus()
+        public void CheckErineFongStatus()
         {
             if (Global.ErineFongStatus == "MD")
             {
@@ -2155,7 +2152,7 @@ namespace WebApplication1
                 Global.ErineFong = DateTime.Now;
                 Log.Logstring += "Erine Fong Done: " + DateTime.Now.ToString() + "\n";
                 Global.Mdhere--;
-                CheckErinFongStatus();
+                CheckErineFongStatus();
                 Response.Redirect("index.aspx");
 
             }
@@ -2535,8 +2532,11 @@ namespace WebApplication1
 
             }
         }
+
+       
         public void CheckKevinSipprellStatus()
         {
+            
             if (Global.KevinSipprellStatus == "MD")
             {
                 Button14.Enabled = false;
@@ -2573,7 +2573,14 @@ namespace WebApplication1
                 Button38.Text = "        ";
                 Button38.Enabled = false;
             }
+
+        
+            
+
         }
+
+       
+
         protected void Button14_Click(object sender, EventArgs e)
         {
             if (!IsPageRefresh)// prevent page refresh from tiggering again
@@ -2802,18 +2809,18 @@ namespace WebApplication1
 
             }
         }
-        public void CheckChelseaErnisseStatus()
+        public void CheckChelseaEernisseStatus()
         {
-            if (Global.ChelseaErnisseStatus == "PA")
+            if (Global.ChelseaEernisseStatus == "PA")
             {
                 Button19.Enabled = false;
                 Button19.Text = "Complete";
                 return;
             }
 
-            if (Global.ChelseaErnisseStatus == "Enroute")
+            if (Global.ChelseaEernisseStatus == "Enroute")
             {
-                TimeSpan diff = (Global.ChelseaErnisse.Subtract(DateTime.Now));
+                TimeSpan diff = (Global.ChelseaEernisse.Subtract(DateTime.Now));
                 double m = diff.TotalMinutes;
                 m = Math.Round(m, MidpointRounding.AwayFromZero);
                 TextBox20.Text = m.ToString();
@@ -2823,19 +2830,19 @@ namespace WebApplication1
                 //    TextBox20.Text = "-" + diff.ToString("mm");
                 Button19.Enabled = false;
             }
-            else if (Global.ChelseaErnisseStatus == "Here")
+            else if (Global.ChelseaEernisseStatus == "Here")
             {
-                TextBox20.Text = Global.ChelseaErnisse.ToString("HHmm") + ("hrs");
+                TextBox20.Text = Global.ChelseaEernisse.ToString("HHmm") + ("hrs");
                 TextBox20.BackColor = System.Drawing.Color.Yellow;
-                Button43.Text = Global.ChelseaErnisseStatus;
+                Button43.Text = Global.ChelseaEernisseStatus;
                 Button43.Enabled = false;
                 Button19.Enabled = true;
             }
-            else if (Global.ChelseaErnisseStatus == "Done")
+            else if (Global.ChelseaEernisseStatus == "Done")
             {
                 TextBox20.BackColor = System.Drawing.Color.Red;
-                TextBox20.Text = Global.ChelseaErnisse.ToString("HHmm") + ("hrs");
-                Button19.Text = Global.ChelseaErnisseStatus;
+                TextBox20.Text = Global.ChelseaEernisse.ToString("HHmm") + ("hrs");
+                Button19.Text = Global.ChelseaEernisseStatus;
                 Button19.Enabled = false;
                 Button43.Text = "        ";
                 Button43.Enabled = false;
@@ -2846,27 +2853,27 @@ namespace WebApplication1
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
 
-                Global.ChelseaErnisseStatus = "Done";
-                Global.ChelseaErnisse = DateTime.Now;
-                Log.Logstring += "Chelsea Eernisse Done: " + DateTime.Now.ToString() + "\n";
+                Global.ChelseaEernisseStatus = "Done";
+                Global.ChelseaEernisse = DateTime.Now;
+                Log.Logstring += "Chelsea EEernisse Done: " + DateTime.Now.ToString() + "\n";
                 Global.PAhere--;
-                CheckChelseaErnisseStatus();
+                CheckChelseaEernisseStatus();
                 Response.Redirect("index.aspx");
 
             }
         }
         public void CheckAlliEngelsmaStatus()
         {
-            if (Global.AllisonEngelsmaStatus == "PA")
+            if (Global.AlliEngelsmaStatus == "PA")
             {
                 Button20.Enabled = false;
                 Button20.Text = "Complete";
                 return;
             }
 
-            if (Global.AllisonEngelsmaStatus == "Enroute")
+            if (Global.AlliEngelsmaStatus == "Enroute")
             {
-                TimeSpan diff = (Global.AllisonEngelsma.Subtract(DateTime.Now));
+                TimeSpan diff = (Global.AlliEngelsma.Subtract(DateTime.Now));
                 double m = diff.TotalMinutes;
                 m = Math.Round(m, MidpointRounding.AwayFromZero);
                 TextBox21.Text = m.ToString();
@@ -2876,19 +2883,19 @@ namespace WebApplication1
                 //    TextBox21.Text = "-" + diff.ToString("mm");
                 Button20.Enabled = false;
             }
-            else if (Global.AllisonEngelsmaStatus == "Here")
+            else if (Global.AlliEngelsmaStatus == "Here")
             {
-                TextBox21.Text = Global.AllisonEngelsma.ToString("HHmm") + ("hrs");
+                TextBox21.Text = Global.AlliEngelsma.ToString("HHmm") + ("hrs");
                 TextBox21.BackColor = System.Drawing.Color.Yellow;
-                Button44.Text = Global.AllisonEngelsmaStatus;
+                Button44.Text = Global.AlliEngelsmaStatus;
                 Button44.Enabled = false;
                 Button20.Enabled = true;
             }
-            else if (Global.AllisonEngelsmaStatus == "Done")
+            else if (Global.AlliEngelsmaStatus == "Done")
             {
                 TextBox21.BackColor = System.Drawing.Color.Red;
-                TextBox21.Text = Global.AllisonEngelsma.ToString("HHmm") + ("hrs");
-                Button20.Text = Global.AllisonEngelsmaStatus;
+                TextBox21.Text = Global.AlliEngelsma.ToString("HHmm") + ("hrs");
+                Button20.Text = Global.AlliEngelsmaStatus;
                 Button20.Enabled = false;
                 Button44.Text = "        ";
                 Button44.Enabled = false;
@@ -2899,8 +2906,8 @@ namespace WebApplication1
             if (!IsPageRefresh)// prevent page refresh from tiggering again
             {
 
-                Global.AllisonEngelsmaStatus = "Done";
-                Global.AllisonEngelsma = DateTime.Now;
+                Global.AlliEngelsmaStatus = "Done";
+                Global.AlliEngelsma = DateTime.Now;
                 Log.Logstring += "Alli Engelsma Done: " + DateTime.Now.ToString() + "\n";
                 Global.PAhere--;
                 CheckAlliEngelsmaStatus();
