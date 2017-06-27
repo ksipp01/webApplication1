@@ -119,12 +119,17 @@
     <Content Include="apple-touch-icon-76x76.png" />
     <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="apple-touch-icon.png" />
+    <Content Include="App_Data\Providers.mdf" />
+    <Content Include="App_Data\Providers_log.ldf">
+      <DependentUpon>Providers.mdf</DependentUpon>
+    </Content>
     <Content Include="browserconfig.xml" />
     <Content Include="favicon-16x16.png" />
     <Content Include="favicon-32x32.png" />
     <Content Include="favicon.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="HUC.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Mobile\Default.aspx" />
     <Content Include="Mobile\Styles\Mobile.css" />
@@ -139,6 +144,21 @@
     <Content Include="Master.Master" />
     <Content Include="manifest.json" />
     <None Include="Properties\PublishProfiles\EMPAC-Tracker - Web Deploy.pubxml" />
+    <Content Include="ProviderDataSet.xsc">
+      <DependentUpon>ProviderDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProviderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProviderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="ProviderDataSet.xss">
+      <DependentUpon>ProviderDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,6 +186,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HUC.aspx.cs">
+      <DependentUpon>HUC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HUC.aspx.designer.cs">
+      <DependentUpon>HUC.aspx</DependentUpon>
     </Compile>
     <Compile Include="Log.aspx.cs">
       <DependentUpon>Log.aspx</DependentUpon>
@@ -202,7 +229,17 @@
     <Compile Include="Mobile\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Provider.cs" />
+    <Compile Include="ProviderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProviderDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Success.aspx.cs">
       <DependentUpon>Success.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
