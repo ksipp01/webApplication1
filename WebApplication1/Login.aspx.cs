@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Reflection;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WebApplication1
 {
@@ -217,7 +219,7 @@ namespace WebApplication1
             //p.Eta = time.Add(eta);
             //p.Status = "Enroute";
 
-
+            SetStatus();
 
 
 
@@ -231,6 +233,57 @@ namespace WebApplication1
 
 
         }
+
+        private void SetStatus()
+        {
+            string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ksipp_000\Documents\Visual Studio 2015\Projects\WebApplication1\WebApplication1\App_Data\Providers.mdf"";Integrated Security = True";
+
+            using (var conn = new SqlConnection(connstring))
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    //     cmd.CommandText = "select * from [Table] where Name like '%'+@value+'%'";
+                    //          cmd.CommandText = "SELECT * from [Table] WHERE Status = @value";
+                    //  cmd.CommandText = "SELECT * from [Table]";
+                    //          cmd.Parameters.AddWithValue("@value", target);
+
+                    int minutes = Convert.ToInt16(TextBox2.Text);
+                    DateTime time = DateTime.Now;
+                    TimeSpan eta = new TimeSpan(0, minutes, 0);
+
+               //     cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute', ETA = '@time', WHERE Name = @value";
+                    cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute', ETA = '@time' WHERE Name = @value";
+                    cmd.Parameters.AddWithValue("@time", eta.ToString("mm"));
+                    cmd.Parameters.AddWithValue("@value", name);
+
+  
+
+
+
+                    //     cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute' WHERE Id = 7 ";
+                    //      cmd.CommandText = "UPDATE [Table] SET Status = 'Here' WHERE Id = 12 ";
+                    //  cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute' WHERE Id = 4 ";
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                 //   GridView1.DataSource = dt;
+                 //   GridView1.DataBind();
+                    conn.Close();
+                    //DataSet ds = new DataSet();
+                    //da.Fill(ds, "Name");
+                    //GridView1.DataSource = ds;
+                    //GridView1.DataBind();
+                    //conn.Close();
+
+                }
+
+            }
+        }
+
+
+
 
         protected void TextBox1_TextChanged(object sender, EventArgs e) // enter name here
         {

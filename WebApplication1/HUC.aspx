@@ -15,12 +15,7 @@
             width: 488px;
       
         }
-         .auto-style1 {
-            width: 130px;
-             height: 20px;
-             
-        }
-       </style>
+         </style>
 
     <!-- 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -35,7 +30,7 @@
 <body>
 
     <form id="form1" runat="server">
-        <asp:HiddenField ID="HiddenField1" runat="server" />  
+        <asp:HiddenField runat="server" ID="_repostcheckcode" />
         <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="X-Large" Text="EMPAC Casualty Response Provider Tracker"></asp:Label>   
                <br />
         <br />
@@ -64,20 +59,36 @@
              </table>  
         <br />
             <asp:Label ID="Label2" runat="server" Text="Enroute" BackColor="Lime" Width="32%"></asp:Label>
-            <asp:Label ID="Label3" runat="server" Text="Here" BackColor="Yellow" Width="32%"></asp:Label>
-            <asp:Label ID="Label4" runat="server" Text="Done" BackColor="Red" Width="32%"></asp:Label>
 
    
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server">
+        <asp:GridView ID="GridView1" runat="server" OnRowDataBound="RowDataBound">
         </asp:GridView>
 
    
     <p>
-        &nbsp;</p>
-        <asp:TextBox ID="TextBox32" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            <asp:Label ID="Label3" runat="server" Text="Here" BackColor="Yellow" Width="32%"></asp:Label>
+            <asp:GridView ID="GridView2" runat="server" OnRowDataBound="RowDataBound">
+        </asp:GridView>
+        </p>
+        <p>
+            <asp:Label ID="Label4" runat="server" Text="Done" BackColor="Red" Width="32%"></asp:Label>
+
+   
+        </p>
+        <p>
+            <asp:GridView ID="GridView3" runat="server" OnRowDataBound="RowDataBound">
+            </asp:GridView>
+        </p>
+        <p>
+            &nbsp;</p>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Display All" />
+
+   
+        <p>
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Reset" />
+        </p>
 
    
     </form>
