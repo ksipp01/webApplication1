@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using System.IO;
 namespace WebApplication1
 {
     public class Provider
@@ -90,6 +90,36 @@ namespace WebApplication1
         }
         public Provider ()
         { }
+
+        public static Provider[] providers = new Provider[300];
+        
+        public static void ReadText()
+        {
+            string type = "";
+            //  Provider[] providers = new Provider[3];
+            string path = @"C:\temp\test.txt";
+            using (StreamReader textFile = new StreamReader(path))
+            {
+                int index = 0;
+               
+                while (!textFile.EndOfStream)
+                {
+
+                    if (textFile.ReadLine() == "MD")
+                        type = "MD";
+                    if (textFile.ReadLine() == "PA")
+                        type = "PA";
+                    Provider p = new Provider();
+                    p.Name = textFile.ReadLine();
+                    p.Type = type;
+
+                    providers[index++] = p;
+                }
+
+
+            }
+        }
+
 
     }
 }

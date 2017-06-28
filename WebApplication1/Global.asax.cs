@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.IO;
 
 namespace WebApplication1
 {
@@ -17,20 +18,39 @@ namespace WebApplication1
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            //
-            //HttpRequest _httpRequest = HttpContext.Current.Request;
-            //if (_httpRequest.Browser.IsMobileDevice)
+            Provider.ReadText();
+            //Provider[] providers = new Provider[3];
+            //string path = @"C:\temp\test.txt";
+            //using (StreamReader textFile = new StreamReader(path))
             //{
-            //    string _path = _httpRequest.Url.PathAndQuery;
-            //    bool _isMobileDevice = _path.StartsWith("/Mobile");
-            //    if (!_isMobileDevice)
+            //    int index = 0;
+            //    while (!textFile.EndOfStream)
             //    {
-            //        string _redirectTo = "/Mobile";
-            //        HttpContext.Current.Response.Redirect(_redirectTo);
+            //        Provider p = new Provider();
+            //        p.Name = textFile.ReadLine();
+            //        p.Status = textFile.ReadLine();
+            //        p.Type = textFile.ReadLine();
+
+            //        providers[index++] = p;
             //    }
+                 
+                    
             //}
 
-            HttpRequest _httpRequest = HttpContext.Current.Request;
+                //
+                //HttpRequest _httpRequest = HttpContext.Current.Request;
+                //if (_httpRequest.Browser.IsMobileDevice)
+                //{
+                //    string _path = _httpRequest.Url.PathAndQuery;
+                //    bool _isMobileDevice = _path.StartsWith("/Mobile");
+                //    if (!_isMobileDevice)
+                //    {
+                //        string _redirectTo = "/Mobile";
+                //        HttpContext.Current.Response.Redirect(_redirectTo);
+                //    }
+                //}
+
+                HttpRequest _httpRequest = HttpContext.Current.Request;
 
             //remd all for now 6-23-17
             //if (_httpRequest.Browser.IsMobileDevice)

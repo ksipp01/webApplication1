@@ -173,6 +173,7 @@
     <Content Include="index.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="TestProviderClass.aspx" />
     <Content Include="Track.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -256,6 +257,13 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestProviderClass.aspx.cs">
+      <DependentUpon>TestProviderClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestProviderClass.aspx.designer.cs">
+      <DependentUpon>TestProviderClass.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Track.aspx.cs">
       <DependentUpon>Track.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
