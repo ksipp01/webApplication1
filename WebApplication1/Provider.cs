@@ -97,37 +97,41 @@ namespace WebApplication1
         {
             string type = "";
             //  Provider[] providers = new Provider[3];
-            string path = @"C:\temp\test.txt";
-            using (StreamReader textFile = new StreamReader(path))
-            {
-                int index = 0;
-               
-                while (!textFile.EndOfStream)
+            //string path = @"C:\temp\test.txt";
+            string path = "~/App_Data/test.txt";
+            if (File.Exists(path))
                 {
-                    Provider p = new Provider();
-                    string read = textFile.ReadLine();
-                    if (read == "end")
-                        break;
-                    if (read == "MD")
-                    {
-                        type = "MD";
-                        
-                    }
-                    else if (read == "PA")
-                    {
-                        type = "PA";
-                      
-                    }
-                    else {
+                using (StreamReader textFile = new StreamReader(path))
+                {
+                    int index = 0;
 
-                        p.Name = read;
-                        p.Type = type;
+                    while (!textFile.EndOfStream)
+                    {
+                        Provider p = new Provider();
+                        string read = textFile.ReadLine();
+                        if (read == "end")
+                            break;
+                        if (read == "MD")
+                        {
+                            type = "MD";
+
+                        }
+                        else if (read == "PA")
+                        {
+                            type = "PA";
+
+                        }
+                        else {
+
+                            p.Name = read;
+                            p.Type = type;
+                        }
+                        if (read != "MD" && read != "PA")
+                            providers[index++] = p;
                     }
-                    if (read != "MD" && read != "PA")
-                    providers[index++] = p;
+
+
                 }
-
-
             }
         }
 
