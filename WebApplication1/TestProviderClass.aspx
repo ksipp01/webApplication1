@@ -12,6 +12,9 @@
     
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+        <br />
+        <br />
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
     
     </div>
     </form>

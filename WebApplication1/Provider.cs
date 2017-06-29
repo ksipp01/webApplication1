@@ -91,7 +91,7 @@ namespace WebApplication1
         public Provider ()
         { }
 
-        public static Provider[] providers = new Provider[300];
+        public static Provider[] providers = new Provider[7];
         
         public static void ReadText()
         {
@@ -104,15 +104,26 @@ namespace WebApplication1
                
                 while (!textFile.EndOfStream)
                 {
-
-                    if (textFile.ReadLine() == "MD")
-                        type = "MD";
-                    if (textFile.ReadLine() == "PA")
-                        type = "PA";
                     Provider p = new Provider();
-                    p.Name = textFile.ReadLine();
-                    p.Type = type;
+                    string read = textFile.ReadLine();
+                    if (read == "end")
+                        break;
+                    if (read == "MD")
+                    {
+                        type = "MD";
+                        
+                    }
+                    else if (read == "PA")
+                    {
+                        type = "PA";
+                      
+                    }
+                    else {
 
+                        p.Name = read;
+                        p.Type = type;
+                    }
+                    if (read != "MD" && read != "PA")
                     providers[index++] = p;
                 }
 
