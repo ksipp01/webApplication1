@@ -74,6 +74,7 @@ namespace WebApplication1
         {
             for(int i = 0; i < Provider.providers.Count(); i++)
             {
+                if (Provider.providers[i] != null)
                 if (Provider.providers[i].Status == "Enroute")
                 {
                     Label lbl = new Label();
@@ -83,25 +84,31 @@ namespace WebApplication1
                     string btnName = Provider.providers[i].Name;
                     // btn.Click += new EventHandler(Dymanic_Method);
                     btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
-
-
-
                     TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
                     double m = diff.TotalMinutes;
                     m = Math.Round(m, MidpointRounding.AwayFromZero);
                    
-
                     //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                     //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
                     lbl.Text = Provider.providers[i].Name + " - Enroute" + " ETA: " + m.ToString();
-                    PlaceHolder1.Controls.Add(lbl);
-                    PlaceHolder1.Controls.Add(btn);
-                    LiteralControl linebreak = new LiteralControl("<br>");
-                    PlaceHolder1.Controls.Add(linebreak);
-
+                        if (Provider.providers[i].Type == "MD")
+                        {
+                            PlaceHolder1.Controls.Add(lbl);
+                            PlaceHolder1.Controls.Add(btn);
+                            LiteralControl linebreak = new LiteralControl("<br>");
+                            PlaceHolder1.Controls.Add(linebreak);
+                        }
+                        else
+                        {
+                            PlaceHolder2.Controls.Add(lbl);
+                            PlaceHolder2.Controls.Add(btn);
+                            LiteralControl linebreak = new LiteralControl("<br>");
+                            PlaceHolder2.Controls.Add(linebreak);
+                        }
                    
                 }
-                if (Provider.providers[i].Status == "Here")
+                if (Provider.providers[i] != null)
+                    if (Provider.providers[i].Status == "Here")
                 {
                     Label lbl = new Label();
                     lbl.Width = 250;
@@ -121,67 +128,101 @@ namespace WebApplication1
                     //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                     //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
                     lbl.Text = Provider.providers[i].Name + " - Here" + " at " + Provider.providers[i].Eta.ToString("HHmm");
-                    PlaceHolder2.Controls.Add(lbl);
-                    PlaceHolder2.Controls.Add(btn);
-                    LiteralControl linebreak = new LiteralControl("<br>");
-                    PlaceHolder2.Controls.Add(linebreak);
+                        if (Provider.providers[i].Type == "MD")
+                        {
+                            PlaceHolder3.Controls.Add(lbl);
+                            PlaceHolder3.Controls.Add(btn);
+                            LiteralControl linebreak = new LiteralControl("<br>");
+                            PlaceHolder3.Controls.Add(linebreak);
+                        }
+                        else
+                        {
+                            PlaceHolder6.Controls.Add(lbl);
+                            PlaceHolder6.Controls.Add(btn);
+                            LiteralControl linebreak = new LiteralControl("<br>");
+                            PlaceHolder6.Controls.Add(linebreak);
+                        }
 
 
                 }
-                if (Provider.providers[i].Status == "Done")
+                if (Provider.providers[i] != null)
+                    if (Provider.providers[i].Status == "Done")
+                    {
+                        Label lbl = new Label();
+                        lbl.Width = 250;
+                        lbl.BackColor = System.Drawing.Color.Red;
+                        string btnName = Provider.providers[i].Name;
+                        //btn = new Button() { ID = btnName + " _btn", Text = "Click When Done" };
+                        //// btn.Click += new EventHandler(Dymanic_Method);
+                        //btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+
+
+
+                        //TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
+                        //double m = diff.TotalMinutes;
+                        //m = Math.Round(m, MidpointRounding.AwayFromZero);
+
+
+                        //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
+                        //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+                        lbl.Text = Provider.providers[i].Name + " - Done" + " at " + Provider.providers[i].Eta.ToString("HHmm");
+                        if (Provider.providers[i].Type == "MD")
+                        {
+                            PlaceHolder7.Controls.Add(lbl);
+                            //     PlaceHolder1.Controls.Add(btn);
+                            LiteralControl linebreak = new LiteralControl("<br>");
+                            PlaceHolder7.Controls.Add(linebreak);
+                        }
+                        else
+                        {
+                            PlaceHolder8.Controls.Add(lbl);
+                            //     PlaceHolder1.Controls.Add(btn);
+                            LiteralControl linebreak = new LiteralControl("<br>");
+                            PlaceHolder8.Controls.Add(linebreak);
+                        }
+                    }
+                if (Provider.providers[i] != null)
+                    if (Provider.providers[i].Status == null) // List MD that have not responded
                 {
                     Label lbl = new Label();
                     lbl.Width = 250;
-                    lbl.BackColor = System.Drawing.Color.Red;
-                    string btnName = Provider.providers[i].Name;
-                    //btn = new Button() { ID = btnName + " _btn", Text = "Click When Done" };
-                    //// btn.Click += new EventHandler(Dymanic_Method);
-                    //btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
 
+                        if (Provider.providers[i].Type == "MD")
+                        {
+                            lbl.Text = Provider.providers[i].Name;
+                            PlaceHolder4.Controls.Add(lbl);
 
-
-                    //TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
-                    //double m = diff.TotalMinutes;
-                    //m = Math.Round(m, MidpointRounding.AwayFromZero);
-
-
-                    //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    lbl.Text = Provider.providers[i].Name + " - Done" + " at " + Provider.providers[i].Eta.ToString("HHmm");
-                    PlaceHolder3.Controls.Add(lbl);
-               //     PlaceHolder1.Controls.Add(btn);
-                    LiteralControl linebreak = new LiteralControl("<br>");
-                    PlaceHolder3.Controls.Add(linebreak);
+                            btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Click When Here" };
+                            string btnName = Provider.providers[i].Name;
+                            // btn.Click += new EventHandler(Dymanic_Method);
+                            btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+                            PlaceHolder4.Controls.Add(btn);
+                            LiteralControl linebreak = new LiteralControl("<br>");
+                            PlaceHolder4.Controls.Add(linebreak);
+                        }
 
 
                 }
-                if (Provider.providers[i].Status == null)
-                {
-                    Label lbl = new Label();
-                    lbl.Width = 250;
-                   
-                 //   string btnName = Provider.providers[i].Name;
-                    //btn = new Button() { ID = btnName + " _btn", Text = "Click When Done" };
-                    //// btn.Click += new EventHandler(Dymanic_Method);
-                    //btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+                if (Provider.providers[i] != null) // list PAs that have not responded
+                    if (Provider.providers[i].Status == null)
+                    {
+                        Label lbl = new Label();
+                        lbl.Width = 250;
 
+                        if (Provider.providers[i].Type == "PA")
+                        {
+                            lbl.Text = Provider.providers[i].Name;
+                            PlaceHolder5.Controls.Add(lbl);
+                            btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Click When Here" };
+                            string btnName = Provider.providers[i].Name;
+                            // btn.Click += new EventHandler(Dymanic_Method);
+                            btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+                            PlaceHolder5.Controls.Add(btn);
+                            LiteralControl linebreak = new LiteralControl("<br>");
+                            PlaceHolder5.Controls.Add(linebreak);
+                        }
 
-
-                    //TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
-                    //double m = diff.TotalMinutes;
-                    //m = Math.Round(m, MidpointRounding.AwayFromZero);
-
-
-                    //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    lbl.Text = Provider.providers[i].Name;
-                    PlaceHolder4.Controls.Add(lbl);
-                    //     PlaceHolder1.Controls.Add(btn);
-                    LiteralControl linebreak = new LiteralControl("<br>");
-                    PlaceHolder4.Controls.Add(linebreak);
-
-
-                }
+                    }
 
             }
         }
@@ -189,11 +230,39 @@ namespace WebApplication1
 
         protected void Dymanic_Method(object sender, EventArgs e, string name)
         {
+            bool justShowedUp = false;
             for (int i = 0; i < Provider.providers.Count(); i++)
             {
+                if (Provider.providers[i] != null) // allow for those who don't respond w/ ETA to show up....
+                    if (Provider.providers[i].Name == name)
+                    {
+                        if (Provider.providers[i].Status == null)
+                        {
+                            Provider.providers[i].Status = "Here";
+                            justShowedUp = true; 
+                            if (Provider.providers[i].Type == "MD")
+                            {
+                                Global.Mdhere++;
+                                Provider.providers[i].Eta = DateTime.Now;
+                               
+                               
+                            }
+
+                            else
+                            {
+                                Global.PAhere++;
+                                Provider.providers[i].Eta = DateTime.Now;
+                              
+
+                            }
+                        }
+                    }
+
+
+                        if (Provider.providers[i] != null)
                 if (Provider.providers[i].Name == name)
                 {
-                    if (Provider.providers[i].Status == "Here")
+                    if (Provider.providers[i].Status == "Here" && !justShowedUp)
                     {
                         Provider.providers[i].Status = "Done";
                         if (Provider.providers[i].Type == "MD")
@@ -202,8 +271,8 @@ namespace WebApplication1
                         else
                             Global.PAhere--;
                     }
-
-                    if (Provider.providers[i].Status == "Enroute")
+                        if (Provider.providers[i] != null)
+                        if (Provider.providers[i].Status == "Enroute")
                     {
                         Provider.providers[i].Status = "Here";
                         if (Provider.providers[i].Type == "MD")
@@ -217,10 +286,11 @@ namespace WebApplication1
                             Global.PAhere++;
                         }
                     }
-
-                    Provider.providers[i].Eta = DateTime.Now;
+                        if (Provider.providers[i] != null)
+                            Provider.providers[i].Eta = DateTime.Now;
                 }
             }
+            justShowedUp = false;
             Response.Redirect("~/TestProviderClass.aspx");
         }
 

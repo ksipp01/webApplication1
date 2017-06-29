@@ -91,16 +91,16 @@ namespace WebApplication1
         public Provider ()
         { }
 
-        public static Provider[] providers = new Provider[7];
+        public static Provider[] providers = new Provider[100];
         
         public static void ReadText()
         {
             string type = "";
             //  Provider[] providers = new Provider[3];
             //string path = @"C:\temp\test.txt";
-            string path = "~/App_Data/test.txt";
-            if (File.Exists(path))
-                {
+            string path = HttpContext.Current.Server.MapPath("~/App_Data/Test.txt");
+       //     if (File.Exists(path))
+            //    {
                 using (StreamReader textFile = new StreamReader(path))
                 {
                     int index = 0;
@@ -132,7 +132,7 @@ namespace WebApplication1
 
 
                 }
-            }
+          //  }
         }
 
 

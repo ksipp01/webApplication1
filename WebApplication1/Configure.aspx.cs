@@ -21,6 +21,7 @@ namespace WebApplication1
               //  string Savepath = Server.MapPath("~/Uploaded/" + FileUpload1.FileName);
                 string Savepath = Server.MapPath("~/App_Data/" + FileUpload1.FileName);
                 FileUpload1.SaveAs(Savepath);
+                Provider.ReadText();
             }
         }
     }

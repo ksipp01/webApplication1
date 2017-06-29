@@ -222,11 +222,16 @@ namespace WebApplication1
             //    SetStatus();
 
             for (int i = 0; i < Provider.providers.Count(); i++)
-                if (Provider.providers[i].Name == name)
+                if (Provider.providers[i] != null)
                 {
-                    Provider.providers[i].Status = "Enroute";
-                    Provider.providers[i].Eta = time.Add(eta);
+                    if (Provider.providers[i].Name == name)
+                    {
+                        Provider.providers[i].Status = "Enroute";
+                        Provider.providers[i].Eta = time.Add(eta);
+                    }
                 }
+                else
+                    return;
 
             if (!_httpRequest.Browser.IsMobileDevice)
                 Response.Redirect("~/index.aspx");  // redirect back to index for HUC ETA entry.  
