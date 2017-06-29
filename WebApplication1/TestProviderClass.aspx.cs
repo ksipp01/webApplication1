@@ -31,9 +31,16 @@ namespace WebApplication1
                     Label lbl = new Label();
                     lbl.Width = 200;
                     lbl.BackColor = System.Drawing.Color.Lime;
+
+
+                    TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
+                    double m = diff.TotalMinutes;
+                    m = Math.Round(m, MidpointRounding.AwayFromZero);
+                   
+
                     //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                     //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    lbl.Text = Provider.providers[i].Name + " - Enroute";
+                    lbl.Text = Provider.providers[i].Name + " - Enroute" + " ETA: " + m.ToString();
                     PlaceHolder1.Controls.Add(lbl);
                     LiteralControl linebreak = new LiteralControl("<br>");
                     PlaceHolder1.Controls.Add(linebreak);
