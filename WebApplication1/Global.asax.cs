@@ -51,7 +51,7 @@ namespace WebApplication1
                 //}
 
                 HttpRequest _httpRequest = HttpContext.Current.Request;
-
+            Log.Logstring += "EMPAC Casualty Response Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\n";
             //remd all for now 6-23-17
             //if (_httpRequest.Browser.IsMobileDevice)
             //{

@@ -11,6 +11,8 @@ namespace WebApplication1
 {
     public partial class TestProviderClass : System.Web.UI.Page
     {
+        private bool isMobile = false;
+
         private void CancelUnexpectedRePost()
         {
             string clientCode = _repostcheckcode.Value;
@@ -38,8 +40,8 @@ namespace WebApplication1
             HttpRequest _httpRequest = HttpContext.Current.Request;
             if (_httpRequest.Browser.IsMobileDevice)
             {
-               
-                    HttpContext.Current.Response.Redirect("~/mtrac.aspc");
+                isMobile = true;
+                  //  HttpContext.Current.Response.Redirect("~/mtrac.aspc");
               
             }
 
@@ -107,6 +109,7 @@ namespace WebApplication1
                         if (Provider.providers[i].Type == "MD")
                         {
                             PlaceHolder1.Controls.Add(lbl);
+                            if (!isMobile)
                             PlaceHolder1.Controls.Add(btn);
                             LiteralControl linebreak = new LiteralControl("<br>");
                             PlaceHolder1.Controls.Add(linebreak);
@@ -114,7 +117,8 @@ namespace WebApplication1
                         else
                         {
                             PlaceHolder2.Controls.Add(lbl);
-                            PlaceHolder2.Controls.Add(btn);
+                            if (!isMobile)
+                                PlaceHolder2.Controls.Add(btn);
                             LiteralControl linebreak = new LiteralControl("<br>");
                             PlaceHolder2.Controls.Add(linebreak);
                         }
@@ -146,14 +150,16 @@ namespace WebApplication1
                         if (Provider.providers[i].Type == "MD")
                         {
                             PlaceHolder3.Controls.Add(lbl);
-                            PlaceHolder3.Controls.Add(btn);
+                            if (!isMobile)
+                                PlaceHolder3.Controls.Add(btn);
                             LiteralControl linebreak = new LiteralControl("<br>");
                             PlaceHolder3.Controls.Add(linebreak);
                         }
                         else
                         {
                             PlaceHolder6.Controls.Add(lbl);
-                            PlaceHolder6.Controls.Add(btn);
+                            if (!isMobile)
+                                PlaceHolder6.Controls.Add(btn);
                             LiteralControl linebreak = new LiteralControl("<br>");
                             PlaceHolder6.Controls.Add(linebreak);
                         }
@@ -214,7 +220,8 @@ namespace WebApplication1
                             string btnName = Provider.providers[i].Name;
                             // btn.Click += new EventHandler(Dymanic_Method);
                             btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
-                            PlaceHolder4.Controls.Add(btn);
+                            if (!isMobile)
+                                PlaceHolder4.Controls.Add(btn);
                             LiteralControl linebreak = new LiteralControl("<br>");
                             PlaceHolder4.Controls.Add(linebreak);
                         }
@@ -237,7 +244,8 @@ namespace WebApplication1
                             string btnName = Provider.providers[i].Name;
                             // btn.Click += new EventHandler(Dymanic_Method);
                             btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
-                            PlaceHolder5.Controls.Add(btn);
+                            if (!isMobile)
+                                PlaceHolder5.Controls.Add(btn);
                             LiteralControl linebreak = new LiteralControl("<br>");
                             PlaceHolder5.Controls.Add(linebreak);
                         }
@@ -260,7 +268,7 @@ namespace WebApplication1
                         {
                             Provider.providers[i].Status = "Here";
                             justShowedUp = true;
-                            Log.Logstring += Provider.providers[i].Name + " Arrived at " + DateTime.Now.ToString("HHmm") + "\n";
+                            Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\n";
                             if (Provider.providers[i].Type == "MD")
                             {
                                 Global.Mdhere++;
@@ -286,7 +294,7 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == "Here" && !justShowedUp)
                     {
                         Provider.providers[i].Status = "Done";
-                       Log.Logstring += Provider.providers[i].Name + " Complete at " + DateTime.Now.ToString("HHmm") + "\n";
+                       Log.Logstring += Provider.providers[i].Name + ": Complete - " + DateTime.Now.ToString("HHmm") + "\n";
                             if (Provider.providers[i].Type == "MD")
                             Global.Mdhere--;
 
@@ -297,7 +305,7 @@ namespace WebApplication1
                         if (Provider.providers[i].Status == "Enroute")
                     {
                         Provider.providers[i].Status = "Here";
-                        Log.Logstring += Provider.providers[i].Name + " Arrived at " + DateTime.Now.ToString("HHmm") + "\n";
+                        Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\n";
                           if (Provider.providers[i].Type == "MD")
                         {
                             Global.MDrespond--;
@@ -490,8 +498,11 @@ namespace WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Provider.Reset();
-            Response.Redirect("~/TestProviderClass.aspx");
+            if (!isMobile)
+            {
+                Provider.Reset();
+                Response.Redirect("~/TestProviderClass.aspx");
+            }
         }
     }
 }

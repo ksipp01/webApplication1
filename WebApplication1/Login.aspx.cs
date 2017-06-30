@@ -209,8 +209,8 @@ namespace WebApplication1
 
 
             TextBox2.BackColor = System.Drawing.Color.Lime;
-            string responded = name + " Responded: " + TextBox2.Text + " min ETA at " + DateTime.Now.ToString();
-            Log.Logstring += responded + "\n";
+        //    string responded = name + " Responded: " + TextBox2.Text + " min ETA at " + DateTime.Now.ToString();
+        //    Log.Logstring += responded + "\n";
 
             //// test new Provider class
             //Provider p = new Provider();
@@ -228,7 +228,7 @@ namespace WebApplication1
                     {
                         Provider.providers[i].Status = "Enroute";
                         Provider.providers[i].Eta = time.Add(eta);
-                        Log.Logstring += Provider.providers[i].Name + " Responded: " + TextBox2.Text + " min ETA at: " + DateTime.Now.ToString("HHmm") + "\n";
+                        Log.Logstring += Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm") + "\n";
                     }
                 }
                 //else
