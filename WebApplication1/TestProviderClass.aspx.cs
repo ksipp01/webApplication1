@@ -35,6 +35,16 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            HttpRequest _httpRequest = HttpContext.Current.Request;
+            if (_httpRequest.Browser.IsMobileDevice)
+            {
+               
+                    HttpContext.Current.Response.Redirect("~/mtrac.aspc");
+              
+            }
+
+
+
             TextBox67.Text = Global.Mdhere.ToString();
             TextBox68.Text = Global.MDrespond.ToString();
             TextBox69.Text = Global.PAhere.ToString();
@@ -78,10 +88,12 @@ namespace WebApplication1
                 if (Provider.providers[i].Status == "Enroute")
                 {
                     Label lbl = new Label();
-                    lbl.Width = 250;
-                    lbl.BackColor = System.Drawing.Color.Lime;
-                    btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Click When Here" };
-                    string btnName = Provider.providers[i].Name;
+                    lbl.Width = 350;
+                        lbl.Font.Size = 16;
+                        lbl.BackColor = System.Drawing.Color.Lime;
+                    btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
+                        btn.Font.Size = 14;
+                        string btnName = Provider.providers[i].Name;
                     // btn.Click += new EventHandler(Dymanic_Method);
                     btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
                     TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
@@ -91,6 +103,7 @@ namespace WebApplication1
                     //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                     //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
                     lbl.Text = Provider.providers[i].Name + " - Enroute" + " ETA: " + m.ToString();
+                    
                         if (Provider.providers[i].Type == "MD")
                         {
                             PlaceHolder1.Controls.Add(lbl);
@@ -111,12 +124,14 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == "Here")
                 {
                     Label lbl = new Label();
-                    lbl.Width = 250;
-                    lbl.BackColor = System.Drawing.Color.Yellow;
+                    lbl.Width = 350;
+                        lbl.Font.Size = 16;
+                        lbl.BackColor = System.Drawing.Color.Yellow;
                     string btnName = Provider.providers[i].Name;
-                    btn = new Button() { ID = btnName + " _btn", Text = "Click When Done" };                 
-                    // btn.Click += new EventHandler(Dymanic_Method);
-                    btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+                    btn = new Button() { ID = btnName + " _btn", Text = "Done" };
+                        btn.Font.Size = 14;
+                        // btn.Click += new EventHandler(Dymanic_Method);
+                        btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
 
 
 
@@ -149,10 +164,11 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == "Done")
                     {
                         Label lbl = new Label();
-                        lbl.Width = 250;
+                        lbl.Width = 350;
+                        lbl.Font.Size = 16;
                         lbl.BackColor = System.Drawing.Color.Red;
                         string btnName = Provider.providers[i].Name;
-                        //btn = new Button() { ID = btnName + " _btn", Text = "Click When Done" };
+                        //btn = new Button() { ID = btnName + " _btn", Text = "Done" };
                         //// btn.Click += new EventHandler(Dymanic_Method);
                         //btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
 
@@ -185,14 +201,16 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == null) // List MD that have not responded
                 {
                     Label lbl = new Label();
-                    lbl.Width = 250;
+                    lbl.Width = 350;
+                        lbl.Font.Size = 16;
 
                         if (Provider.providers[i].Type == "MD")
                         {
                             lbl.Text = Provider.providers[i].Name;
                             PlaceHolder4.Controls.Add(lbl);
 
-                            btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Click When Here" };
+                            btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
+                            btn.Font.Size = 14;
                             string btnName = Provider.providers[i].Name;
                             // btn.Click += new EventHandler(Dymanic_Method);
                             btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
@@ -207,13 +225,15 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == null)
                     {
                         Label lbl = new Label();
-                        lbl.Width = 250;
+                        lbl.Width = 350;
+                        lbl.Font.Size = 16;
 
                         if (Provider.providers[i].Type == "PA")
                         {
                             lbl.Text = Provider.providers[i].Name;
                             PlaceHolder5.Controls.Add(lbl);
-                            btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Click When Here" };
+                            btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
+                            btn.Font.Size = 14;
                             string btnName = Provider.providers[i].Name;
                             // btn.Click += new EventHandler(Dymanic_Method);
                             btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
@@ -239,7 +259,8 @@ namespace WebApplication1
                         if (Provider.providers[i].Status == null)
                         {
                             Provider.providers[i].Status = "Here";
-                            justShowedUp = true; 
+                            justShowedUp = true;
+                            Log.Logstring += Provider.providers[i].Name + " Arrived at " + DateTime.Now.ToString("HHmm") + "\n";
                             if (Provider.providers[i].Type == "MD")
                             {
                                 Global.Mdhere++;
@@ -265,7 +286,8 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == "Here" && !justShowedUp)
                     {
                         Provider.providers[i].Status = "Done";
-                        if (Provider.providers[i].Type == "MD")
+                       Log.Logstring += Provider.providers[i].Name + " Complete at " + DateTime.Now.ToString("HHmm") + "\n";
+                            if (Provider.providers[i].Type == "MD")
                             Global.Mdhere--;
 
                         else
@@ -275,7 +297,8 @@ namespace WebApplication1
                         if (Provider.providers[i].Status == "Enroute")
                     {
                         Provider.providers[i].Status = "Here";
-                        if (Provider.providers[i].Type == "MD")
+                        Log.Logstring += Provider.providers[i].Name + " Arrived at " + DateTime.Now.ToString("HHmm") + "\n";
+                          if (Provider.providers[i].Type == "MD")
                         {
                             Global.MDrespond--;
                             Global.Mdhere++;
@@ -465,6 +488,10 @@ namespace WebApplication1
             }
         }
 
-      
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Provider.Reset();
+            Response.Redirect("~/TestProviderClass.aspx");
+        }
     }
 }

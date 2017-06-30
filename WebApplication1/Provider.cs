@@ -134,7 +134,22 @@ namespace WebApplication1
                 }
           //  }
         }
-
+        public static void Reset()
+        {
+        
+                for (int i = 0; i < providers.Count(); i++)
+                {
+                if (Provider.providers[i] != null)
+                {
+                    providers[i].Status = null;
+                    providers[i].Eta = DateTime.MinValue;
+                }      
+                }
+            Global.Mdhere = 0;
+            Global.MDrespond = 0;
+            Global.PAhere = 0;
+            Global.PArespond = 0;
+        }
 
     }
 }

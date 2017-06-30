@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestProviderClass.aspx.cs" Inherits="WebApplication1.TestProviderClass" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mTrac.aspx.cs" Inherits="WebApplication1.mTrac" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <style type="text/css">
       *{box-sizing:border-box;
 
@@ -16,29 +16,30 @@
        }
        [class*="col-"] {
     float: left;
-    padding: 10px;
+    padding: 30px;
 }	
 html {
     font-family: "Lucida Sans", sans-serif;
 }
 .aside {
    /* background-color: #33b5e5; */
-    padding: 30px;
+    padding: 15px;
   /*  color: #ffffff;*/
     text-align: left;
-    font-size: 26px;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-size: 24px;
+  /*  box-shadow: 5px 5px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
 }
 .header {
     background-color: #ff0000;
     color: #ffffff;
     padding: 15px;
+ /*    position:fixed;
 
+  width: 100%;
+  height: 48px;
+  z-index: 10;
+    */
 }
- .footer {
-           padding: 15px;
-           text-align: center;
-       }
 .textbox1 {
     width:30px;
     text-align:left;
@@ -83,39 +84,30 @@ html {
        </style> 
 
     <title>EMPAC - Tracker</title>
+
 </head>
 <body>
- 
     <form id="form1" runat="server">
-   
-   <div class="header">
+  <div class="header">
        <h1>EMPAC - Tracker</h1>
        </div>
-  <hr /> 
-       
-        <asp:HiddenField runat="server" ID="_repostcheckcode"  />
-            <meta http-equiv="refresh" content="20" />
-          <br />
-<div class="row">
-
-  <div class="col-3 col-m-12">     
+         <hr />   
+        <asp:HiddenField  ID="_repostcheckcode" runat="server" />
+ <div class="row"> 
+      <div class="col-3 col-m-12">     
       <div class="aside">
        <p>MDs Responding:          
-      <asp:TextBox ID="TextBox68" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px" ></asp:TextBox></p>
-       
-           <p> MDs Here:
-         <asp:TextBox ID="TextBox67" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>
-        
-<!-- all PA stuff here-->
-      <p>  PAs Responding:
-          <asp:TextBox ID="TextBox70" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>
-    <p> PAs Here:  
-       <asp:TextBox ID="TextBox69" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>   
+           <asp:TextBox ID="TextBox1"  runat="server" CssClass="textbox1" Font-Size="Large" Width="50px" ></asp:TextBox></p>
+        <p> MDs Here:
+            <asp:TextBox ID="TextBox2" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>
+        <p>  PAs Responding:
+            <asp:TextBox ID="TextBox3" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>
+  <p> PAs Here:  
+      <asp:TextBox ID="TextBox4" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>   
   </div>
-</div>
- <div class="col-3 col-m-12">   
-
-        <asp:Label ID="Label2" runat="server" Text="MD Enroute" BackColor="Lime" Font-Size="26px" Font-Underline="True"></asp:Label> <br />
+            </div>
+<div class="col-3 col-m-12">   
+       <asp:Label ID="Label2" runat="server" Text="MD Enroute" BackColor="Lime" Font-Size="26px" Font-Underline="True"></asp:Label> <br />
         <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder><br />
                       <asp:Label ID="Label4" runat="server" Text="MD Here" BackColor="Yellow" Font-Size="26px" Font-Underline="True"></asp:Label> <br />      
         <asp:PlaceHolder ID="PlaceHolder3" runat="server"></asp:PlaceHolder><br />
@@ -144,11 +136,8 @@ html {
     <asp:PlaceHolder ID="PlaceHolder8" runat="server"></asp:PlaceHolder>
     <br />  
 </div>
-    </div>
-  <div class="footer">
-    <asp:Button ID="Button1" runat="server" Text="Reset" OnClick="Button1_Click" /><br />
-      <a href="Log.aspx">View Log</a>
-      </div>
+
+  
     </form>
 </body>
 </html>

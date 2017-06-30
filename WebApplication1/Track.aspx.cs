@@ -12,9 +12,13 @@ namespace WebApplication1
     public partial class Track : System.Web.UI.Page
     {
 
+        
         private Boolean IsPageRefresh = false;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+         
+
             TextBox63.Text = Global.Mdhere.ToString();
             TextBox64.Text = Global.MDrespond.ToString();
             TextBox65.Text = Global.PAhere.ToString();

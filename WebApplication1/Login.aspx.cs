@@ -228,10 +228,11 @@ namespace WebApplication1
                     {
                         Provider.providers[i].Status = "Enroute";
                         Provider.providers[i].Eta = time.Add(eta);
+                        Log.Logstring += Provider.providers[i].Name + " Responded: " + TextBox2.Text + " min ETA at: " + DateTime.Now.ToString("HHmm") + "\n";
                     }
                 }
-                else
-                    return;
+                //else
+                //    return;
 
             if (!_httpRequest.Browser.IsMobileDevice)
                 Response.Redirect("~/index.aspx");  // redirect back to index for HUC ETA entry.  
