@@ -135,7 +135,6 @@
     <Content Include="Mobile\Default.aspx" />
     <Content Include="Mobile\Styles\Mobile.css" />
     <Content Include="mstile-150x150.png" />
-    <Content Include="mTrac.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -238,13 +237,6 @@
     </Compile>
     <Compile Include="Mobile\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mTrac.aspx.cs">
-      <DependentUpon>mTrac.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mTrac.aspx.designer.cs">
-      <DependentUpon>mTrac.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

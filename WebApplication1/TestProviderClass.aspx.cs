@@ -41,7 +41,7 @@ namespace WebApplication1
             if (_httpRequest.Browser.IsMobileDevice)
             {
                 isMobile = true;
-                  //  HttpContext.Current.Response.Redirect("~/mtrac.aspc");
+               // HttpContext.Current.Response.Redirect("~/login.aspx");
               
             }
 

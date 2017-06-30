@@ -34,13 +34,13 @@ namespace WebApplication1
                             tb.BackColor = System.Drawing.Color.Lime;
                         if (tb.Text != "" && tb.Text.Substring(0, 1) == "-")
                         {
-                          //  tb.BackColor = System.Drawing.Color.Li;
+                            //  tb.BackColor = System.Drawing.Color.Li;
                             tb.BorderColor = System.Drawing.Color.Red;
                             tb.BorderWidth = 3;
                         }
                     }
                 }
-               
+
             }
             //
             TextBox28.BackColor = System.Drawing.Color.Yellow;
@@ -65,11 +65,11 @@ namespace WebApplication1
         {
 
 
-            CheckKarenAndersonStatus();     
+            CheckKarenAndersonStatus();
             CheckLaresaDeboerStatus();
             CheckDanDeweyStatus();
-            CheckJoseDundeeStatus(); 
-            CheckSarahDundeeStatus();        
+            CheckJoseDundeeStatus();
+            CheckSarahDundeeStatus();
             CheckSaraFishStatus();
             CheckErineFongStatus();
             CheckMattHeroldStatus();
@@ -78,17 +78,17 @@ namespace WebApplication1
             CheckDaveLarsonStatus();
             CheckAmyOsbornStatus();
             CheckGregPetersonStatus();
-           CheckYoSchugelStatus();
+            CheckYoSchugelStatus();
             CheckKevinSipprellStatus();
             CheckEmilyAndersonStatus();
             CheckJerodBarnesStatus();
             CheckErinBischoffStatus();
-            CheckFredDemeuseStatus();  
+            CheckFredDemeuseStatus();
             CheckChelseaEernisseStatus();
             CheckAlliEngelsmaStatus();
             CheckBradyGriffithStatus();
-           CheckJasonHicksStatus();
-           CheckLisaLarsonStatus();
+            CheckJasonHicksStatus();
+            CheckLisaLarsonStatus();
             CheckBethRadkeStatus();
 
             CheckTamrahTenhaeffStatus();
@@ -126,6 +126,9 @@ namespace WebApplication1
         private Boolean IsPageRefresh = false;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+             HttpContext.Current.Response.Redirect("~/TestProviderClass.aspx");
+
             CancelUnexpectedRePost();
 
 
@@ -161,7 +164,7 @@ namespace WebApplication1
 
         }
 
-      
+
 
         protected void LaresaArrivalButton_Click(object sender, EventArgs e)
         {
