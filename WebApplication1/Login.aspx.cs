@@ -68,6 +68,7 @@ namespace WebApplication1
         {
 
 
+        
 
             //if (TextBox1.Text != "")
             //{
@@ -83,7 +84,17 @@ namespace WebApplication1
             //     if (TextBox1.Text == "")
             if (!Page.IsPostBack)
             {
-               
+                if (ListBox1.Items.Count == 0)
+                    for (int i = 0; i < Provider.providers.Count(); i++)
+                        if (Provider.providers[i] != null)
+                        {
+                            ListBox1.Items.Add(Provider.providers[i].Name);
+                        }
+                //if (ListBox1.SelectedIndex != -1)
+                //    TextBox1.Text = ListBox1.SelectedItem.Text;
+
+
+
                 if (_httpRequest.Browser.IsMobileDevice) // only use cookies if mobile device.  This way if HUC enters from desktop, the name TB is blank
                 {
 
@@ -101,20 +112,23 @@ namespace WebApplication1
                         //     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
 
                         //   var propval = prop.GetValue(ob);
-                        var type = typeof(Global);
 
-                        var prop = type.GetProperty(RemoveSpace(name));
-                        if (prop != null)
-                        {
-                            Response.Cookies["user"].Value = name;
-                            //  Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-                            Response.Cookies["user"].Expires = DateTime.MaxValue;
-                            TextBox1.BackColor = System.Drawing.Color.Lime;
-                            TextBox1.Text = Response.Cookies["user"].Value;
-                            Button2.Enabled = false;
-                        }
-                        else
-                            TextBox1.Text = "Invalid User";
+
+
+                        //var type = typeof(Global);
+
+                        //var prop = type.GetProperty(RemoveSpace(name));
+                        //if (prop != null)
+                        //{
+                        //    Response.Cookies["user"].Value = name;
+                        //    //  Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+                        //    Response.Cookies["user"].Expires = DateTime.MaxValue;
+                        //    TextBox1.BackColor = System.Drawing.Color.Lime;
+                        //    TextBox1.Text = Response.Cookies["user"].Value;
+                        //    Button2.Enabled = false;
+                        //}
+                        //else
+                        //    TextBox1.Text = "Invalid User";
 
 
 
@@ -169,57 +183,10 @@ namespace WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e) // submit ETA
         {
-
-
-
-           
-
-            //HttpCookie aCookie = new HttpCookie("user");
-            //aCookie.Value = TextBox1.Text;
-            //aCookie.Expires = DateTime.Now.AddDays(1);
-            //Response.Cookies.Add(aCookie);
-            //Response.Cookies["user"].Value = name;
-            //Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-
-            //var ob = new Global();
-            //var typ = typeof(Global);
-            //var f = typ.GetField(name);
-            //var prop = typ.GetProperty(name);
-            //   var val = f.GetValue(ob);
-
-            //   var propval = prop.GetValue(ob);
-            var type = typeof(Global);
-            //   var field = type.GetField(name);
-            var prop = type.GetProperty(RemoveSpace(name));
-            string NameStatus = RemoveSpace(name) + "Status";
-            var status = type.GetProperty(NameStatus);
-            if (status.GetValue(null).ToString() == "MD")
-            Global.MDrespond++;
-            if (status.GetValue(null).ToString() == "PA")
-                Global.PArespond++;
-      //      Global.KevinSipprellStatus = "Enroute";
-
-
             int minutes = Convert.ToInt16(TextBox2.Text);
             DateTime time = DateTime.Now;
             TimeSpan eta = new TimeSpan(0, minutes, 0);
-            //   Global.KevinSipprell = time.Add(eta);
-           prop.SetValue(null, time.Add(eta));
-            status.SetValue(null, "Enroute");
 
-
-            TextBox2.BackColor = System.Drawing.Color.Lime;
-        //    string responded = name + " Responded: " + TextBox2.Text + " min ETA at " + DateTime.Now.ToString();
-        //    Log.Logstring += responded + "\n";
-
-            //// test new Provider class
-            //Provider p = new Provider();
-            ////   p.Name = RemoveSpace(name);
-            //p.Name = name;
-            //p.Eta = time.Add(eta);
-            //p.Status = "Enroute";
-
-            //    SetStatus();
 
             for (int i = 0; i < Provider.providers.Count(); i++)
                 if (Provider.providers[i] != null)
@@ -231,8 +198,9 @@ namespace WebApplication1
                         Log.Logstring += Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm") + "\n";
                     }
                 }
-                //else
-                //    return;
+            TextBox2.BackColor = System.Drawing.Color.Lime;
+            //else
+            //    return;
 
             if (!_httpRequest.Browser.IsMobileDevice)
                 Response.Redirect("~/index.aspx");  // redirect back to index for HUC ETA entry.  
@@ -248,53 +216,53 @@ namespace WebApplication1
         
 
 
-        private void SetStatus()
-        {
-            string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ksipp_000\Documents\Visual Studio 2015\Projects\WebApplication1\WebApplication1\App_Data\Providers.mdf"";Integrated Security = True";
+        //private void SetStatus()
+        //{
+        //    string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ksipp_000\Documents\Visual Studio 2015\Projects\WebApplication1\WebApplication1\App_Data\Providers.mdf"";Integrated Security = True";
 
-            using (var conn = new SqlConnection(connstring))
-            {
-                conn.Open();
-                using (var cmd = conn.CreateCommand())
-                {
-                    //     cmd.CommandText = "select * from [Table] where Name like '%'+@value+'%'";
-                    //          cmd.CommandText = "SELECT * from [Table] WHERE Status = @value";
-                    //  cmd.CommandText = "SELECT * from [Table]";
-                    //          cmd.Parameters.AddWithValue("@value", target);
+        //    using (var conn = new SqlConnection(connstring))
+        //    {
+        //        conn.Open();
+        //        using (var cmd = conn.CreateCommand())
+        //        {
+        //            //     cmd.CommandText = "select * from [Table] where Name like '%'+@value+'%'";
+        //            //          cmd.CommandText = "SELECT * from [Table] WHERE Status = @value";
+        //            //  cmd.CommandText = "SELECT * from [Table]";
+        //            //          cmd.Parameters.AddWithValue("@value", target);
 
-                    int minutes = Convert.ToInt16(TextBox2.Text);
-                    DateTime time = DateTime.Now;
-                    TimeSpan eta = new TimeSpan(0, minutes, 0);
+        //            int minutes = Convert.ToInt16(TextBox2.Text);
+        //            DateTime time = DateTime.Now;
+        //            TimeSpan eta = new TimeSpan(0, minutes, 0);
 
-               //     cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute', ETA = '@time', WHERE Name = @value";
-                    cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute', ETA = '@time' WHERE Name = @value";
-                    cmd.Parameters.AddWithValue("@time", eta.ToString("mm"));
-                    cmd.Parameters.AddWithValue("@value", name);
+        //       //     cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute', ETA = '@time', WHERE Name = @value";
+        //            cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute', ETA = '@time' WHERE Name = @value";
+        //            cmd.Parameters.AddWithValue("@time", eta.ToString("mm"));
+        //            cmd.Parameters.AddWithValue("@value", name);
 
   
 
 
 
-                    //     cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute' WHERE Id = 7 ";
-                    //      cmd.CommandText = "UPDATE [Table] SET Status = 'Here' WHERE Id = 12 ";
-                    //  cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute' WHERE Id = 4 ";
-                    SqlDataAdapter da = new SqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                 //   GridView1.DataSource = dt;
-                 //   GridView1.DataBind();
-                    conn.Close();
-                    //DataSet ds = new DataSet();
-                    //da.Fill(ds, "Name");
-                    //GridView1.DataSource = ds;
-                    //GridView1.DataBind();
-                    //conn.Close();
+        //            //     cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute' WHERE Id = 7 ";
+        //            //      cmd.CommandText = "UPDATE [Table] SET Status = 'Here' WHERE Id = 12 ";
+        //            //  cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute' WHERE Id = 4 ";
+        //            SqlDataAdapter da = new SqlDataAdapter();
+        //            da.SelectCommand = cmd;
+        //            DataTable dt = new DataTable();
+        //            da.Fill(dt);
+        //         //   GridView1.DataSource = dt;
+        //         //   GridView1.DataBind();
+        //            conn.Close();
+        //            //DataSet ds = new DataSet();
+        //            //da.Fill(ds, "Name");
+        //            //GridView1.DataSource = ds;
+        //            //GridView1.DataBind();
+        //            //conn.Close();
 
-                }
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
 
 
@@ -309,28 +277,61 @@ namespace WebApplication1
 
         protected void Button2_Click(object sender, EventArgs e) // submit name
         {
-            //  name = RemoveSpace(UppercaseWords(TextBox1.Text));
+              name = UppercaseWords(TextBox1.Text);
+
+
+
+            if (ListBox1.SelectedIndex != -1)
+            TextBox1.Text = ListBox1.SelectedItem.Text;
+            for (int i = 0; i < Provider.providers.Count(); i++)
+                if (Provider.providers[i] != null)
+                {
+                    if (Provider.providers[i].Name == name)
+                    {
+                        TextBox1.BackColor = System.Drawing.Color.Lime;
+                        TextBox1.Text = Provider.providers[i].Name;
+
+                    }
+                    //else
+                    //{
+                    //    TextBox1.Text = "Invalid User";
+                    //    return;
+                    //}
+                }
+            if (TextBox1.BackColor != System.Drawing.Color.Lime)
+            {
+                TextBox1.Text = "Invalid User";
+                return;
+            }
+
+            //    TextBox1.Text = Response.Cookies["user"].Value;
+            //       Button2.Enabled = false;
             name = UppercaseWords(TextBox1.Text);
             //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
-            Response.Cookies["user"].Value = name;
-              Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-          
+            //Response.Cookies["user"].Value = name;
+            Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+
+
             //   var propval = prop.GetValue(ob);
-            var type = typeof(Global);
+            //var type = typeof(Global);
          
-            var prop = type.GetProperty(RemoveSpace(name));
-            if (prop != null)
-            {
-                Response.Cookies["user"].Value = name;
-                Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-                TextBox1.BackColor = System.Drawing.Color.Lime;
-                TextBox1.Text = Response.Cookies["user"].Value;
-                Button2.Enabled = false;
-            }
-            else
-                TextBox1.Text = "Invalid User";
+            //var prop = type.GetProperty(RemoveSpace(name));
+            //if (prop != null)
+            //{
+            //    Response.Cookies["user"].Value = name;
+            //    Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+            //    TextBox1.BackColor = System.Drawing.Color.Lime;
+              
+            //}
+          
 
 
+        }
+
+        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextBox1.Text = ListBox1.SelectedItem.Text;
+        //    Response.Redirect("~/login.aspx");
         }
     }
 }

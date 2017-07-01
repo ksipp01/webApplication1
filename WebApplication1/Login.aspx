@@ -4,6 +4,9 @@
     <div>
         <asp:Label ID="Label2" runat="server" Text="Name:" Font-Names="Arial"></asp:Label>
         <br />
+        <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged" Width="150px"></asp:ListBox>
+    
+        <br />
         <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged" Font-Names="Arial"></asp:TextBox>
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Submit" Font-Names="Arial" />
         <br />
