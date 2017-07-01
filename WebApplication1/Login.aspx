@@ -3,9 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
        
-        <asp:Label ID="Label2" runat="server" Text="Name:" Font-Names="Arial"></asp:Label>  <br />
-        <asp:ListBox ID="ListBox1" runat="server" Width="151px"></asp:ListBox>
-        
+        <asp:Label ID="Label2" runat="server" Text="Name:" Font-Names="Arial"></asp:Label>  <br />       
         <br />
         <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged" Width="150px"></asp:ListBox>
     

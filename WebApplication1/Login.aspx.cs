@@ -66,9 +66,10 @@ namespace WebApplication1
         HttpRequest _httpRequest = HttpContext.Current.Request;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-
+            TextBox1.BackColor = default(System.Drawing.Color);
+            //if (TextBox1.BackColor == System.Drawing.Color.Lime)
+            //    ListBox1.SelectedIndex = -1;
+      
 
             //if (TextBox1.Text != "")
             //{
@@ -84,6 +85,9 @@ namespace WebApplication1
             //     if (TextBox1.Text == "")
             if (!Page.IsPostBack)
             {
+
+           
+
                 if (ListBox1.Items.Count == 0)
                     for (int i = 0; i < Provider.providers.Count(); i++)
                         if (Provider.providers[i] != null)
@@ -107,6 +111,19 @@ namespace WebApplication1
                         TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
 
                         name = UppercaseWords(TextBox1.Text);
+
+
+                        for (int i = 0; i < Provider.providers.Count(); i++)
+                            if (Provider.providers[i] != null)
+                            {
+                                if (Provider.providers[i].Name == name)
+                                {
+                                    TextBox1.BackColor = System.Drawing.Color.Lime;
+                                    Button2.Enabled = false;
+                                }
+                            }
+
+
                         //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
                         //     Response.Cookies["user"].Value = name;
                         //     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
@@ -308,7 +325,7 @@ namespace WebApplication1
             //       Button2.Enabled = false;
             name = UppercaseWords(TextBox1.Text);
             //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
-            //Response.Cookies["user"].Value = name;
+            Response.Cookies["user"].Value = name;
             Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
 
 
