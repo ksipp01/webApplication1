@@ -68,7 +68,6 @@ namespace WebApplication1
         {
 
 
-        
 
 
             //if (TextBox1.Text != "")
@@ -216,53 +215,6 @@ namespace WebApplication1
 
 
 
-<<<<<<< HEAD
-        //private void SetStatus()
-        //{
-        //    string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ksipp_000\Documents\Visual Studio 2015\Projects\WebApplication1\WebApplication1\App_Data\Providers.mdf"";Integrated Security = True";
-
-        //    using (var conn = new SqlConnection(connstring))
-        //    {
-        //        conn.Open();
-        //        using (var cmd = conn.CreateCommand())
-        //        {
-        //            //     cmd.CommandText = "select * from [Table] where Name like '%'+@value+'%'";
-        //            //          cmd.CommandText = "SELECT * from [Table] WHERE Status = @value";
-        //            //  cmd.CommandText = "SELECT * from [Table]";
-        //            //          cmd.Parameters.AddWithValue("@value", target);
-
-        //            int minutes = Convert.ToInt16(TextBox2.Text);
-        //            DateTime time = DateTime.Now;
-        //            TimeSpan eta = new TimeSpan(0, minutes, 0);
-
-        //       //     cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute', ETA = '@time', WHERE Name = @value";
-        //            cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute', ETA = '@time' WHERE Name = @value";
-        //            cmd.Parameters.AddWithValue("@time", eta.ToString("mm"));
-        //            cmd.Parameters.AddWithValue("@value", name);
-
-  
-
-
-
-        //            //     cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute' WHERE Id = 7 ";
-        //            //      cmd.CommandText = "UPDATE [Table] SET Status = 'Here' WHERE Id = 12 ";
-        //            //  cmd.CommandText = "UPDATE [Table] SET Status = 'Enroute' WHERE Id = 4 ";
-        //            SqlDataAdapter da = new SqlDataAdapter();
-        //            da.SelectCommand = cmd;
-        //            DataTable dt = new DataTable();
-        //            da.Fill(dt);
-        //         //   GridView1.DataSource = dt;
-        //         //   GridView1.DataBind();
-        //            conn.Close();
-        //            //DataSet ds = new DataSet();
-        //            //da.Fill(ds, "Name");
-        //            //GridView1.DataSource = ds;
-        //            //GridView1.DataBind();
-        //            //conn.Close();
-
-        //        }
-
-=======
 
         //private void SetStatus()
         //{
@@ -309,7 +261,6 @@ namespace WebApplication1
 
         //        }
 
->>>>>>> SQL
         //    }
         //}
 
@@ -326,62 +277,12 @@ namespace WebApplication1
 
         protected void Button2_Click(object sender, EventArgs e) // submit name
         {
-<<<<<<< HEAD
-              name = UppercaseWords(TextBox1.Text);
-=======
-        
->>>>>>> SQL
+            name = UppercaseWords(TextBox1.Text);
 
             //
 
             if (ListBox1.SelectedIndex != -1)
-<<<<<<< HEAD
-            TextBox1.Text = ListBox1.SelectedItem.Text;
-            for (int i = 0; i < Provider.providers.Count(); i++)
-                if (Provider.providers[i] != null)
-                {
-                    if (Provider.providers[i].Name == name)
-                    {
-                        TextBox1.BackColor = System.Drawing.Color.Lime;
-                        TextBox1.Text = Provider.providers[i].Name;
-
-                    }
-                    //else
-                    //{
-                    //    TextBox1.Text = "Invalid User";
-                    //    return;
-                    //}
-                }
-            if (TextBox1.BackColor != System.Drawing.Color.Lime)
-            {
-                TextBox1.Text = "Invalid User";
-                return;
-            }
-
-            //    TextBox1.Text = Response.Cookies["user"].Value;
-            //       Button2.Enabled = false;
-            name = UppercaseWords(TextBox1.Text);
-            //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
-            //Response.Cookies["user"].Value = name;
-            Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-
-
-            //   var propval = prop.GetValue(ob);
-            //var type = typeof(Global);
-         
-            //var prop = type.GetProperty(RemoveSpace(name));
-            //if (prop != null)
-            //{
-            //    Response.Cookies["user"].Value = name;
-            //    Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-            //    TextBox1.BackColor = System.Drawing.Color.Lime;
-              
-            //}
-          
-=======
                 TextBox1.Text = ListBox1.SelectedItem.Text;
-            name = UppercaseWords(TextBox1.Text);
-
             for (int i = 0; i < Provider.providers.Count(); i++)
                 if (Provider.providers[i] != null)
                 {
@@ -409,7 +310,6 @@ namespace WebApplication1
             //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
             //Response.Cookies["user"].Value = name;
             Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
->>>>>>> SQL
 
 
             //   var propval = prop.GetValue(ob);
@@ -432,12 +332,6 @@ namespace WebApplication1
         {
             TextBox1.Text = ListBox1.SelectedItem.Text;
             //    Response.Redirect("~/login.aspx");
-        }
-
-        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TextBox1.Text = ListBox1.SelectedItem.Text;
-        //    Response.Redirect("~/login.aspx");
         }
     }
 }
