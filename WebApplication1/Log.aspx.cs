@@ -40,10 +40,11 @@ namespace WebApplication1
         {
             _logstring = "";
             TextBox1.Text = string.Empty;
-
+            _logstring += "EMPAC Casualty Response Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\n";
+            Response.Redirect("~/log.aspx");
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e) // save
         {
             //    var datafile = Server.MapPath("~/App_data/log.txt");
             StringBuilder sb = new StringBuilder();

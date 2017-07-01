@@ -63,6 +63,58 @@ namespace WebApplication1
             }
         }
 
+        public static int MDrespond
+        {
+            get
+            {
+                return _MDrespond;
+            }
+
+            set
+            {
+                _MDrespond = value;
+            }
+        }
+
+        public static int Mdhere
+        {
+            get
+            {
+                return _Mdhere;
+            }
+
+            set
+            {
+                _Mdhere = value;
+            }
+        }
+
+        public static int PArespond
+        {
+            get
+            {
+                return _PArespond;
+            }
+
+            set
+            {
+                _PArespond = value;
+            }
+        }
+
+        public static int PAhere
+        {
+            get
+            {
+                return _PAhere;
+            }
+
+            set
+            {
+                _PAhere = value;
+            }
+        }
+
         public Provider (string name, string status, string type, DateTime eta)
         {
             _name = name;
@@ -92,7 +144,13 @@ namespace WebApplication1
         { }
 
         public static Provider[] providers = new Provider[100];
-        
+
+        private static int _MDrespond = 0;
+        private static int _Mdhere = 0;
+        private static int _PArespond = 0;
+        private static int _PAhere = 0;
+
+
         public static void ReadText()
         {
             string type = "";
@@ -145,10 +203,10 @@ namespace WebApplication1
                     providers[i].Eta = DateTime.MinValue;
                 }      
                 }
-            Global.Mdhere = 0;
-            Global.MDrespond = 0;
-            Global.PAhere = 0;
-            Global.PArespond = 0;
+            Provider.Mdhere = 0;
+            Provider.MDrespond = 0;
+            Provider.PAhere = 0;
+            Provider.PArespond = 0;
         }
 
     }

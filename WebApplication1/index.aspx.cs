@@ -47,10 +47,10 @@ namespace WebApplication1
 
 
 
-            TextBox67.Text = Global.Mdhere.ToString();
-            TextBox68.Text = Global.MDrespond.ToString();
-            TextBox69.Text = Global.PAhere.ToString();
-            TextBox70.Text = Global.PArespond.ToString();
+            TextBox67.Text = Provider.Mdhere.ToString();
+            TextBox68.Text = Provider.MDrespond.ToString();
+            TextBox69.Text = Provider.PAhere.ToString();
+            TextBox70.Text =Provider.PArespond.ToString();
             //Label2.BackColor = System.Drawing.Color.Lime;
             //Label3.BackColor = System.Drawing.Color.Yellow;
             //Label4.BackColor = System.Drawing.Color.Red;
@@ -271,7 +271,7 @@ namespace WebApplication1
                             Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\n";
                             if (Provider.providers[i].Type == "MD")
                             {
-                                Global.Mdhere++;
+                                Provider.Mdhere++;
                                 Provider.providers[i].Eta = DateTime.Now;
                                
                                
@@ -279,7 +279,7 @@ namespace WebApplication1
 
                             else
                             {
-                                Global.PAhere++;
+                                Provider.PAhere++;
                                 Provider.providers[i].Eta = DateTime.Now;
                               
 
@@ -296,10 +296,10 @@ namespace WebApplication1
                         Provider.providers[i].Status = "Done";
                        Log.Logstring += Provider.providers[i].Name + ": Complete - " + DateTime.Now.ToString("HHmm") + "\n";
                             if (Provider.providers[i].Type == "MD")
-                            Global.Mdhere--;
+                            Provider.Mdhere--;
 
                         else
-                            Global.PAhere--;
+                            Provider.PAhere--;
                     }
                         if (Provider.providers[i] != null)
                         if (Provider.providers[i].Status == "Enroute")
@@ -308,13 +308,13 @@ namespace WebApplication1
                         Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\n";
                           if (Provider.providers[i].Type == "MD")
                         {
-                            Global.MDrespond--;
-                            Global.Mdhere++;
+                            Provider.MDrespond--;
+                            Provider.Mdhere++;
                         }
                         else
                         {
-                            Global.PArespond--;
-                            Global.PAhere++;
+                           Provider.PArespond--;
+                            Provider.PAhere++;
                         }
                     }
                         if (Provider.providers[i] != null)
@@ -322,179 +322,179 @@ namespace WebApplication1
                 }
             }
             justShowedUp = false;
-            Response.Redirect("~/TestProviderClass.aspx");
+            Response.Redirect("~/index.aspx");
         }
 
-        private void CreateChildControls()
-        {
+        //private void CreateChildControls()
+        //{
 
 
-            var type = typeof(Provider);
-            //   var field = type.GetField(name);
-            //   Type type = obj.GetType();
-            PropertyInfo[] properties = type.GetProperties();
+        //    var type = typeof(Provider);
+        //    //   var field = type.GetField(name);
+        //    //   Type type = obj.GetType();
+        //    PropertyInfo[] properties = type.GetProperties();
 
 
 
-            //var prop = type.GetProperty(name);
+        //    //var prop = type.GetProperty(name);
 
 
-            foreach (PropertyInfo property in properties)
-            {
+        //    foreach (PropertyInfo property in properties)
+        //    {
 
-                //  string NameStatus = RemoveSpace(name) + "Status";
-                //var status = type.GetProperty(nameStatus);
-                // var name = status.Name;
-                // var s = status.GetValue(null);
-                //if (status.GetValue(null).ToString() == "Enroute")
-                //{
-                string val = property.Name.ToString();
-                if (val.Contains("Status"))
-                {
-                    var status = type.GetProperty(val);
-                    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-                    if (status.GetValue(null).ToString() == "Enroute")
-                    {
-                        Label lbl = new Label();
-                        lbl.Width = 200;
-                        lbl.BackColor = System.Drawing.Color.Lime;
-                        //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-                        //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                        lbl.Text = name + " - Enroute";
-                        PlaceHolder1.Controls.Add(lbl);
-                        LiteralControl linebreak = new LiteralControl("<br>");
-                        PlaceHolder1.Controls.Add(linebreak);
+        //        //  string NameStatus = RemoveSpace(name) + "Status";
+        //        //var status = type.GetProperty(nameStatus);
+        //        // var name = status.Name;
+        //        // var s = status.GetValue(null);
+        //        //if (status.GetValue(null).ToString() == "Enroute")
+        //        //{
+        //        string val = property.Name.ToString();
+        //        if (val.Contains("Status"))
+        //        {
+        //            var status = type.GetProperty(val);
+        //            string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
+        //            if (status.GetValue(null).ToString() == "Enroute")
+        //            {
+        //                Label lbl = new Label();
+        //                lbl.Width = 200;
+        //                lbl.BackColor = System.Drawing.Color.Lime;
+        //                //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
+        //                //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+        //                lbl.Text = name + " - Enroute";
+        //                PlaceHolder1.Controls.Add(lbl);
+        //                LiteralControl linebreak = new LiteralControl("<br>");
+        //                PlaceHolder1.Controls.Add(linebreak);
 
-                    }
-                    //if (status.GetValue(null).ToString() == "Here")
-                    //{
-                    //    Label lbl = new Label();
-                    //    lbl.Width = 200;
-                    //    lbl.BackColor = System.Drawing.Color.Yellow;
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
-                    //    placeholder.Controls.Add(lbl);
-                    //    LiteralControl linebreak = new LiteralControl("<br>");
-                    //    placeholder.Controls.Add(linebreak);
+        //            }
+        //            //if (status.GetValue(null).ToString() == "Here")
+        //            //{
+        //            //    Label lbl = new Label();
+        //            //    lbl.Width = 200;
+        //            //    lbl.BackColor = System.Drawing.Color.Yellow;
+        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
+        //            //    placeholder.Controls.Add(lbl);
+        //            //    LiteralControl linebreak = new LiteralControl("<br>");
+        //            //    placeholder.Controls.Add(linebreak);
 
-                    //}
-                    //if (status.GetValue(null).ToString() == "Done")
-                    //{
-                    //    Label lbl = new Label();
-                    //    lbl.Width = 200;
-                    //    lbl.BackColor = System.Drawing.Color.Red;
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
-                    //    placeholder.Controls.Add(lbl);
-                    //    LiteralControl linebreak = new LiteralControl("<br>");
-                    //    placeholder.Controls.Add(linebreak);
+        //            //}
+        //            //if (status.GetValue(null).ToString() == "Done")
+        //            //{
+        //            //    Label lbl = new Label();
+        //            //    lbl.Width = 200;
+        //            //    lbl.BackColor = System.Drawing.Color.Red;
+        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
+        //            //    placeholder.Controls.Add(lbl);
+        //            //    LiteralControl linebreak = new LiteralControl("<br>");
+        //            //    placeholder.Controls.Add(linebreak);
 
-                    //}
+        //            //}
 
-                }
-            }
-            foreach (PropertyInfo property in properties)
-            {
+        //        }
+        //    }
+        //    foreach (PropertyInfo property in properties)
+        //    {
 
-                //  string NameStatus = RemoveSpace(name) + "Status";
-                //var status = type.GetProperty(nameStatus);
-                // var name = status.Name;
-                // var s = status.GetValue(null);
-                //if (status.GetValue(null).ToString() == "Enroute")
-                //{
-                string val = property.Name.ToString();
-                string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-                if (val.Contains("Status"))
-                {
-                    var status = type.GetProperty(val);
-                    //if (status.GetValue(null).ToString() == "Enroute")
-                    //{
-                    //    Label lbl = new Label();
-                    //    lbl.Width = 200;
-                    //    lbl.BackColor = System.Drawing.Color.Lime;
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    //    placeholder.Controls.Add(lbl);
-                    //    LiteralControl linebreak = new LiteralControl("<br>");
-                    //    placeholder.Controls.Add(linebreak);
+        //        //  string NameStatus = RemoveSpace(name) + "Status";
+        //        //var status = type.GetProperty(nameStatus);
+        //        // var name = status.Name;
+        //        // var s = status.GetValue(null);
+        //        //if (status.GetValue(null).ToString() == "Enroute")
+        //        //{
+        //        string val = property.Name.ToString();
+        //        string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
+        //        if (val.Contains("Status"))
+        //        {
+        //            var status = type.GetProperty(val);
+        //            //if (status.GetValue(null).ToString() == "Enroute")
+        //            //{
+        //            //    Label lbl = new Label();
+        //            //    lbl.Width = 200;
+        //            //    lbl.BackColor = System.Drawing.Color.Lime;
+        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+        //            //    placeholder.Controls.Add(lbl);
+        //            //    LiteralControl linebreak = new LiteralControl("<br>");
+        //            //    placeholder.Controls.Add(linebreak);
 
-                    //}
-                    if (status.GetValue(null).ToString() == "Here")
-                    {
-                        Label lbl = new Label();
-                        lbl.Width = 200;
-                        lbl.BackColor = System.Drawing.Color.Yellow;
-                        //  lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
-                        lbl.Text = name + " - Arrived";
-                        PlaceHolder1.Controls.Add(lbl);
-                        LiteralControl linebreak = new LiteralControl("<br>");
-                        PlaceHolder1.Controls.Add(linebreak);
+        //            //}
+        //            if (status.GetValue(null).ToString() == "Here")
+        //            {
+        //                Label lbl = new Label();
+        //                lbl.Width = 200;
+        //                lbl.BackColor = System.Drawing.Color.Yellow;
+        //                //  lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
+        //                lbl.Text = name + " - Arrived";
+        //                PlaceHolder1.Controls.Add(lbl);
+        //                LiteralControl linebreak = new LiteralControl("<br>");
+        //                PlaceHolder1.Controls.Add(linebreak);
 
-                    }
-                    //if (status.GetValue(null).ToString() == "Done")
-                    //{
-                    //    Label lbl = new Label();
-                    //    lbl.Width = 200;
-                    //    lbl.BackColor = System.Drawing.Color.Red;
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
-                    //    placeholder.Controls.Add(lbl);
-                    //    LiteralControl linebreak = new LiteralControl("<br>");
-                    //    placeholder.Controls.Add(linebreak);
+        //            }
+        //            //if (status.GetValue(null).ToString() == "Done")
+        //            //{
+        //            //    Label lbl = new Label();
+        //            //    lbl.Width = 200;
+        //            //    lbl.BackColor = System.Drawing.Color.Red;
+        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
+        //            //    placeholder.Controls.Add(lbl);
+        //            //    LiteralControl linebreak = new LiteralControl("<br>");
+        //            //    placeholder.Controls.Add(linebreak);
 
-                    //}
+        //            //}
 
-                }
-            }
-            foreach (PropertyInfo property in properties)
-            {
+        //        }
+        //    }
+        //    foreach (PropertyInfo property in properties)
+        //    {
 
-                //  string NameStatus = RemoveSpace(name) + "Status";
-                //var status = type.GetProperty(nameStatus);
-                // var name = status.Name;
-                // var s = status.GetValue(null);
-                //if (status.GetValue(null).ToString() == "Enroute")
-                //{
-                string val = property.Name.ToString();
-                string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-                if (val.Contains("Status"))
-                {
-                    var status = type.GetProperty(val);
-                    //if (status.GetValue(null).ToString() == "Enroute")
-                    //{
-                    //    Label lbl = new Label();
-                    //    lbl.Width = 200;
-                    //    lbl.BackColor = System.Drawing.Color.Lime;
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    //    placeholder.Controls.Add(lbl);
-                    //    LiteralControl linebreak = new LiteralControl("<br>");
-                    //    placeholder.Controls.Add(linebreak);
+        //        //  string NameStatus = RemoveSpace(name) + "Status";
+        //        //var status = type.GetProperty(nameStatus);
+        //        // var name = status.Name;
+        //        // var s = status.GetValue(null);
+        //        //if (status.GetValue(null).ToString() == "Enroute")
+        //        //{
+        //        string val = property.Name.ToString();
+        //        string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
+        //        if (val.Contains("Status"))
+        //        {
+        //            var status = type.GetProperty(val);
+        //            //if (status.GetValue(null).ToString() == "Enroute")
+        //            //{
+        //            //    Label lbl = new Label();
+        //            //    lbl.Width = 200;
+        //            //    lbl.BackColor = System.Drawing.Color.Lime;
+        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+        //            //    placeholder.Controls.Add(lbl);
+        //            //    LiteralControl linebreak = new LiteralControl("<br>");
+        //            //    placeholder.Controls.Add(linebreak);
 
-                    //}
-                    //if (status.GetValue(null).ToString() == "Here")
-                    //{
-                    //    Label lbl = new Label();
-                    //    lbl.Width = 200;
-                    //    lbl.BackColor = System.Drawing.Color.Yellow;
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
-                    //    placeholder.Controls.Add(lbl);
-                    //    LiteralControl linebreak = new LiteralControl("<br>");
-                    //    placeholder.Controls.Add(linebreak);
+        //            //}
+        //            //if (status.GetValue(null).ToString() == "Here")
+        //            //{
+        //            //    Label lbl = new Label();
+        //            //    lbl.Width = 200;
+        //            //    lbl.BackColor = System.Drawing.Color.Yellow;
+        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
+        //            //    placeholder.Controls.Add(lbl);
+        //            //    LiteralControl linebreak = new LiteralControl("<br>");
+        //            //    placeholder.Controls.Add(linebreak);
 
-                    //}
-                    if (status.GetValue(null).ToString() == "Done")
-                    {
-                        Label lbl = new Label();
-                        lbl.Width = 200;
-                        lbl.BackColor = System.Drawing.Color.Red;
-                        //  lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
-                        lbl.Text = name + " - Done";
-                        PlaceHolder1.Controls.Add(lbl);
-                        LiteralControl linebreak = new LiteralControl("<br>");
-                        PlaceHolder1.Controls.Add(linebreak);
+        //            //}
+        //            if (status.GetValue(null).ToString() == "Done")
+        //            {
+        //                Label lbl = new Label();
+        //                lbl.Width = 200;
+        //                lbl.BackColor = System.Drawing.Color.Red;
+        //                //  lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
+        //                lbl.Text = name + " - Done";
+        //                PlaceHolder1.Controls.Add(lbl);
+        //                LiteralControl linebreak = new LiteralControl("<br>");
+        //                PlaceHolder1.Controls.Add(linebreak);
 
-                    }
+        //            }
 
-                }
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
         protected void Button1_Click(object sender, EventArgs e)
         {
