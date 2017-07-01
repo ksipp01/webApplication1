@@ -43,9 +43,29 @@ namespace WebApplication1
 
         }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            //    var datafile = Server.MapPath("~/App_data/log.txt");
+            StringBuilder sb = new StringBuilder();
+          //  string output = "Output";
+            sb.Append(_logstring);
+        //    sb.Append("\r\n");
+            string text = sb.ToString();
+
+            Response.Clear();
+            Response.ClearHeaders();
+
+            Response.AddHeader("Content-Length", text.Length.ToString());
+            Response.ContentType = "text/plain";
+            Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC-Tracker Log.txt\"");
+
+            Response.Write(text);
+            Response.End();
+        }
+
         //protected void Button2_Click(object sender, EventArgs e)
         //{
-          
+
         //    TextBox1.Text += " *******EMPAC_Log.txt saved to My Documents********";
         //    string mydocpath =
         //    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -56,7 +76,7 @@ namespace WebApplication1
         //        foreach (var s in line)
         //            outputFile.WriteLine(s);
         //    }
-      
+
         //        //    string output = "Output";
         //        //  sb.AppendFormat("{0}<br />", _logstring);
         //        //   sb.Append(_logstring);
@@ -75,7 +95,7 @@ namespace WebApplication1
 
         //  //      Response.Clear();
         //  //  Response.ClearHeaders();
-           
+
         //  //  //   Response.AddHeader("Content-Length", text.Length.ToString());
         //  //  Response.AddHeader("Content-Length", _logstring.Length.ToString());
         //  //  Response.ContentType = "text/plain";
