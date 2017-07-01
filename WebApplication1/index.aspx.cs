@@ -268,7 +268,7 @@ namespace WebApplication1
                         {
                             Provider.providers[i].Status = "Here";
                             justShowedUp = true;
-                            Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\n";
+                            Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\r\n";
                             if (Provider.providers[i].Type == "MD")
                             {
                                 Provider.Mdhere++;
@@ -294,7 +294,7 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == "Here" && !justShowedUp)
                     {
                         Provider.providers[i].Status = "Done";
-                       Log.Logstring += Provider.providers[i].Name + ": Complete - " + DateTime.Now.ToString("HHmm") + "\n";
+                       Log.Logstring += Provider.providers[i].Name + ": Complete - " + DateTime.Now.ToString("HHmm") + "\r\n";
                             if (Provider.providers[i].Type == "MD")
                             Provider.Mdhere--;
 
@@ -305,7 +305,7 @@ namespace WebApplication1
                         if (Provider.providers[i].Status == "Enroute")
                     {
                         Provider.providers[i].Status = "Here";
-                        Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\n";
+                        Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\r\n";
                           if (Provider.providers[i].Type == "MD")
                         {
                             Provider.MDrespond--;

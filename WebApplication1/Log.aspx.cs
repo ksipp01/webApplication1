@@ -40,7 +40,7 @@ namespace WebApplication1
         {
             _logstring = "";
             TextBox1.Text = string.Empty;
-            _logstring += "EMPAC Casualty Response Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\n";
+            _logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\n";
             Response.Redirect("~/log.aspx");
         }
 
@@ -50,7 +50,7 @@ namespace WebApplication1
             StringBuilder sb = new StringBuilder();
           //  string output = "Output";
             sb.Append(_logstring);
-        //    sb.Append("\r\n");
+            sb.Append("\r\n");
             string text = sb.ToString();
 
             Response.Clear();
@@ -58,8 +58,9 @@ namespace WebApplication1
 
             Response.AddHeader("Content-Length", text.Length.ToString());
             Response.ContentType = "text/plain";
-            Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC-Tracker Log.txt\"");
-
+        
+            //   Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC-Tracker Log.txt\"");
+            Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC_Tracker" + DateTime.Now.ToString("yyyyMMddHHmm") + ".txt");
             Response.Write(text);
             Response.End();
         }
