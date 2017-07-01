@@ -96,7 +96,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin.aspx" />
     <Content Include="android-chrome-192x192.png" />
     <Content Include="android-chrome-512x512.png" />
     <Content Include="apple-touch-icon-114x114-precomposed.png" />
@@ -119,10 +118,6 @@
     <Content Include="apple-touch-icon-76x76.png" />
     <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="apple-touch-icon.png" />
-    <Content Include="App_Data\Providers.mdf" />
-    <Content Include="App_Data\Providers_log.ldf">
-      <DependentUpon>Providers.mdf</DependentUpon>
-    </Content>
     <Content Include="browserconfig.xml" />
     <Content Include="Configure.aspx" />
     <Content Include="favicon-16x16.png" />
@@ -130,7 +125,6 @@
     <Content Include="favicon.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="HUC.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Mobile\Default.aspx" />
     <Content Include="Mobile\Styles\Mobile.css" />
@@ -145,21 +139,10 @@
     <Content Include="Master.Master" />
     <Content Include="manifest.json" />
     <None Include="Properties\PublishProfiles\EMPAC-Tracker - Web Deploy.pubxml" />
-    <Content Include="ProviderDataSet.xsc">
-      <DependentUpon>ProviderDataSet.xsd</DependentUpon>
-    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="ProviderDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProviderDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="ProviderDataSet.xss">
-      <DependentUpon>ProviderDataSet.xsd</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -174,17 +157,9 @@
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="index.aspx" />
-    <Content Include="Track.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.aspx.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin.aspx.designer.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Configure.aspx.cs">
       <DependentUpon>Configure.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -194,13 +169,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="HUC.aspx.cs">
-      <DependentUpon>HUC.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HUC.aspx.designer.cs">
-      <DependentUpon>HUC.aspx</DependentUpon>
     </Compile>
     <Compile Include="Log.aspx.cs">
       <DependentUpon>Log.aspx</DependentUpon>
@@ -243,11 +211,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Provider.cs" />
-    <Compile Include="ProviderDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProviderDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Success.aspx.cs">
       <DependentUpon>Success.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,7 +218,6 @@
     <Compile Include="Success.aspx.designer.cs">
       <DependentUpon>Success.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Global.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -264,19 +226,15 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Track.aspx.cs">
-      <DependentUpon>Track.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Track.aspx.designer.cs">
-      <DependentUpon>Track.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
