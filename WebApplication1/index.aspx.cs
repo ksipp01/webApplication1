@@ -518,5 +518,10 @@ namespace WebApplication1
         {
             Response.Redirect("~/log.aspx");
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/configure.aspx");
+        }
     }
 }
