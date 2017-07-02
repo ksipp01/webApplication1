@@ -34,52 +34,53 @@ namespace WebApplication1
                 Response.Redirect(Request.Url.AbsoluteUri);
             }
         }
+        private Boolean IsPageRefresh = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            HttpRequest _httpRequest = HttpContext.Current.Request;
-            if (_httpRequest.Browser.IsMobileDevice)
+            CancelUnexpectedRePost();
+            if (!IsPostBack)
             {
-                isMobile = true;
-                // HttpContext.Current.Response.Redirect("~/login.aspx");
-                Button1.Enabled = false;
-                Button2.Enabled = false;
-                Button3.Enabled = false;
-                Button4.Enabled = false;
-              
+                ViewState["postids"] = System.Guid.NewGuid().ToString();
+                Session["postid"] = ViewState["postids"].ToString();
             }
-
-
+            else
+            {
+                if (ViewState["postids"].ToString() != Session["postid"].ToString())
+                {
+                    IsPageRefresh = true;
+                }
+                Session["postid"] = System.Guid.NewGuid().ToString();
+                ViewState["postids"] = Session["postid"].ToString();
+            }
 
             TextBox67.Text = Provider.Mdhere.ToString();
             TextBox68.Text = Provider.MDrespond.ToString();
             TextBox69.Text = Provider.PAhere.ToString();
-            TextBox70.Text =Provider.PArespond.ToString();
-            //Label2.BackColor = System.Drawing.Color.Lime;
-            //Label3.BackColor = System.Drawing.Color.Yellow;
-            //Label4.BackColor = System.Drawing.Color.Red;
-         //   if (TextBox67.Text == "0")
+            TextBox70.Text = Provider.PArespond.ToString();
+
+            if (!IsPageRefresh)
+            {
+
+                HttpRequest _httpRequest = HttpContext.Current.Request;
+                if (_httpRequest.Browser.IsMobileDevice)
+                {
+                    isMobile = true;
+                    // HttpContext.Current.Response.Redirect("~/login.aspx");
+                    Button1.Enabled = false;
+                    Button2.Enabled = false;
+                    Button3.Enabled = false;
+                    Button4.Enabled = false;
+
+                }
                 TextBox67.BackColor = System.Drawing.Color.Yellow;
-            //    else
-            //        TextBox67.BackColor = System.Drawing.Color.Lime;
-            //    if (TextBox68.Text == "0")
-            TextBox68.BackColor = System.Drawing.Color.Lime;
-         //   else
-               // TextBox68.BackColor = System.Drawing.Color.Lime;
-        //    if (TextBox69.Text == "0")
+                TextBox68.BackColor = System.Drawing.Color.Lime;
                 TextBox69.BackColor = System.Drawing.Color.Yellow;
-            //  else
-            //  TextBox69.BackColor = System.Drawing.Color.Lime;
-            //    if (TextBox70.Text == "0")
-            TextBox70.BackColor = System.Drawing.Color.Lime;
-          //  else
-           //     TextBox70.BackColor = System.Drawing.Color.Lime;
+                TextBox70.BackColor = System.Drawing.Color.Lime;
+    
+                FindStatus();
 
-            CancelUnexpectedRePost();
-            FindStatus();
-        
+            }
         }
-
         //protected void Button1_Click(object sender, EventArgs e)
         //{
         //    //  TextBox1.Text = Provider.providers[4].Name + " " + Provider.providers[4].Type;
@@ -329,180 +330,11 @@ namespace WebApplication1
             Response.Redirect("~/index.aspx");
         }
 
-        //private void CreateChildControls()
-        //{
-
-
-        //    var type = typeof(Provider);
-        //    //   var field = type.GetField(name);
-        //    //   Type type = obj.GetType();
-        //    PropertyInfo[] properties = type.GetProperties();
-
-
-
-        //    //var prop = type.GetProperty(name);
-
-
-        //    foreach (PropertyInfo property in properties)
-        //    {
-
-        //        //  string NameStatus = RemoveSpace(name) + "Status";
-        //        //var status = type.GetProperty(nameStatus);
-        //        // var name = status.Name;
-        //        // var s = status.GetValue(null);
-        //        //if (status.GetValue(null).ToString() == "Enroute")
-        //        //{
-        //        string val = property.Name.ToString();
-        //        if (val.Contains("Status"))
-        //        {
-        //            var status = type.GetProperty(val);
-        //            string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-        //            if (status.GetValue(null).ToString() == "Enroute")
-        //            {
-        //                Label lbl = new Label();
-        //                lbl.Width = 200;
-        //                lbl.BackColor = System.Drawing.Color.Lime;
-        //                //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-        //                //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-        //                lbl.Text = name + " - Enroute";
-        //                PlaceHolder1.Controls.Add(lbl);
-        //                LiteralControl linebreak = new LiteralControl("<br>");
-        //                PlaceHolder1.Controls.Add(linebreak);
-
-        //            }
-        //            //if (status.GetValue(null).ToString() == "Here")
-        //            //{
-        //            //    Label lbl = new Label();
-        //            //    lbl.Width = 200;
-        //            //    lbl.BackColor = System.Drawing.Color.Yellow;
-        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
-        //            //    placeholder.Controls.Add(lbl);
-        //            //    LiteralControl linebreak = new LiteralControl("<br>");
-        //            //    placeholder.Controls.Add(linebreak);
-
-        //            //}
-        //            //if (status.GetValue(null).ToString() == "Done")
-        //            //{
-        //            //    Label lbl = new Label();
-        //            //    lbl.Width = 200;
-        //            //    lbl.BackColor = System.Drawing.Color.Red;
-        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
-        //            //    placeholder.Controls.Add(lbl);
-        //            //    LiteralControl linebreak = new LiteralControl("<br>");
-        //            //    placeholder.Controls.Add(linebreak);
-
-        //            //}
-
-        //        }
-        //    }
-        //    foreach (PropertyInfo property in properties)
-        //    {
-
-        //        //  string NameStatus = RemoveSpace(name) + "Status";
-        //        //var status = type.GetProperty(nameStatus);
-        //        // var name = status.Name;
-        //        // var s = status.GetValue(null);
-        //        //if (status.GetValue(null).ToString() == "Enroute")
-        //        //{
-        //        string val = property.Name.ToString();
-        //        string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-        //        if (val.Contains("Status"))
-        //        {
-        //            var status = type.GetProperty(val);
-        //            //if (status.GetValue(null).ToString() == "Enroute")
-        //            //{
-        //            //    Label lbl = new Label();
-        //            //    lbl.Width = 200;
-        //            //    lbl.BackColor = System.Drawing.Color.Lime;
-        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-        //            //    placeholder.Controls.Add(lbl);
-        //            //    LiteralControl linebreak = new LiteralControl("<br>");
-        //            //    placeholder.Controls.Add(linebreak);
-
-        //            //}
-        //            if (status.GetValue(null).ToString() == "Here")
-        //            {
-        //                Label lbl = new Label();
-        //                lbl.Width = 200;
-        //                lbl.BackColor = System.Drawing.Color.Yellow;
-        //                //  lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
-        //                lbl.Text = name + " - Arrived";
-        //                PlaceHolder1.Controls.Add(lbl);
-        //                LiteralControl linebreak = new LiteralControl("<br>");
-        //                PlaceHolder1.Controls.Add(linebreak);
-
-        //            }
-        //            //if (status.GetValue(null).ToString() == "Done")
-        //            //{
-        //            //    Label lbl = new Label();
-        //            //    lbl.Width = 200;
-        //            //    lbl.BackColor = System.Drawing.Color.Red;
-        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
-        //            //    placeholder.Controls.Add(lbl);
-        //            //    LiteralControl linebreak = new LiteralControl("<br>");
-        //            //    placeholder.Controls.Add(linebreak);
-
-        //            //}
-
-        //        }
-        //    }
-        //    foreach (PropertyInfo property in properties)
-        //    {
-
-        //        //  string NameStatus = RemoveSpace(name) + "Status";
-        //        //var status = type.GetProperty(nameStatus);
-        //        // var name = status.Name;
-        //        // var s = status.GetValue(null);
-        //        //if (status.GetValue(null).ToString() == "Enroute")
-        //        //{
-        //        string val = property.Name.ToString();
-        //        string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-        //        if (val.Contains("Status"))
-        //        {
-        //            var status = type.GetProperty(val);
-        //            //if (status.GetValue(null).ToString() == "Enroute")
-        //            //{
-        //            //    Label lbl = new Label();
-        //            //    lbl.Width = 200;
-        //            //    lbl.BackColor = System.Drawing.Color.Lime;
-        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-        //            //    placeholder.Controls.Add(lbl);
-        //            //    LiteralControl linebreak = new LiteralControl("<br>");
-        //            //    placeholder.Controls.Add(linebreak);
-
-        //            //}
-        //            //if (status.GetValue(null).ToString() == "Here")
-        //            //{
-        //            //    Label lbl = new Label();
-        //            //    lbl.Width = 200;
-        //            //    lbl.BackColor = System.Drawing.Color.Yellow;
-        //            //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Arrvied";
-        //            //    placeholder.Controls.Add(lbl);
-        //            //    LiteralControl linebreak = new LiteralControl("<br>");
-        //            //    placeholder.Controls.Add(linebreak);
-
-        //            //}
-        //            if (status.GetValue(null).ToString() == "Done")
-        //            {
-        //                Label lbl = new Label();
-        //                lbl.Width = 200;
-        //                lbl.BackColor = System.Drawing.Color.Red;
-        //                //  lbl.Text = property.Name.ToString().Replace("Status", "") + " - Done";
-        //                lbl.Text = name + " - Done";
-        //                PlaceHolder1.Controls.Add(lbl);
-        //                LiteralControl linebreak = new LiteralControl("<br>");
-        //                PlaceHolder1.Controls.Add(linebreak);
-
-        //            }
-
-        //        }
-
-        //    }
-        //}
+      
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (!isMobile)
+            if (!IsPageRefresh)
             {
                 Provider.Reset();
                 Response.Redirect("~/index.aspx");
@@ -511,7 +343,7 @@ namespace WebApplication1
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            if (!isMobile)
+            if (!IsPageRefresh)
             {
                
                 Response.Redirect("~/login.aspx");
@@ -520,11 +352,13 @@ namespace WebApplication1
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            if (!IsPageRefresh)
             Response.Redirect("~/log.aspx");
         }
 
         protected void Button4_Click(object sender, EventArgs e)
         {
+            if (!IsPageRefresh)
             Response.Redirect("~/configure.aspx");
         }
     }
