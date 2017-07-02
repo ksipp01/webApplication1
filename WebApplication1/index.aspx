@@ -27,7 +27,7 @@ html {
   /*  color: #ffffff;*/
     text-align: left;
     font-size: 26px;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  /* box-shadow: 5px 5px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
 }
 .header {
     background-color: #ff0000;
@@ -41,8 +41,9 @@ html {
        }
   .button {
            margin-right : 30px;
-           
+     
            text-align: center;
+        /*   margin-top: 20px;*/
        }
 .textbox1 {
     width:30px;
@@ -50,9 +51,14 @@ html {
     float:right;
     display:block;
 }
+.placeholder{
+    margin-top: 5px;
+}
+
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
+    
 }
 @media only screen and (min-width: 600px) {
     /* For tablets: */
@@ -148,14 +154,13 @@ html {
         <asp:Label ID="Label9" runat="server" Text="PAs Done" BackColor="Red" Font-Size="26px" Font-Underline="True"></asp:Label><br />
     <asp:PlaceHolder ID="PlaceHolder8" runat="server"></asp:PlaceHolder>
     <br />  
-</div>
     </div>
-  <div class="footer">
-    <asp:Button ID="Button1" runat="server" Text="Reset" CssClass="button" OnClick="Button1_Click" Width="90px" />
-      <asp:Button ID="Button2" runat="server" CssClass="button" Text="Enter ETA" OnClick="Button2_Click" />
-      <asp:Button ID="Button3" runat="server" CssClass="button" Text="View Log" OnClick="Button3_Click" Width="90px" />
-      <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Configure" Width="90px" />
-      <br />
+    </div>
+    <div class="footer">
+    <asp:Button ID="Button1" runat="server" Text="Reset" CssClass="button" OnClick="Button1_Click" Width="90px" />   
+      <asp:Button ID="Button2" runat="server" CssClass="button" Text="Enter ETA" Width="90px" OnClick="Button2_Click" /> 
+      <asp:Button ID="Button3" runat="server" CssClass="button" Text="View Log" OnClick="Button3_Click" Width="90px" />    
+      <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" CssClass="button" Text="Configure" Width="90px" />   
       </div>
     </form>
 </body>

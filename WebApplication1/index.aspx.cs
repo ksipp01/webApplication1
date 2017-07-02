@@ -37,6 +37,9 @@ namespace WebApplication1
         private Boolean IsPageRefresh = false;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
+
             CancelUnexpectedRePost();
             if (!IsPostBack)
             {
@@ -66,10 +69,11 @@ namespace WebApplication1
                 {
                     isMobile = true;
                     // HttpContext.Current.Response.Redirect("~/login.aspx");
-                    Button1.Enabled = false;
-                    Button2.Enabled = false;
-                    Button3.Enabled = false;
-                    Button4.Enabled = false;
+                  //  Button1.Enabled = false;
+                    Button1.Visible = false;
+                    Button2.Visible = false;
+                    Button3.Visible = false;
+                    Button4.Visible = false;
 
                 }
                 TextBox67.BackColor = System.Drawing.Color.Yellow;
@@ -98,6 +102,7 @@ namespace WebApplication1
                     lbl.Width = 350;
                         lbl.Font.Size = 16;
                         lbl.BackColor = System.Drawing.Color.Lime;
+                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px"; 
                     btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
                         btn.Font.Size = 14;
                         string btnName = Provider.providers[i].Name;
@@ -136,7 +141,8 @@ namespace WebApplication1
                     lbl.Width = 350;
                         lbl.Font.Size = 16;
                         lbl.BackColor = System.Drawing.Color.Yellow;
-                    string btnName = Provider.providers[i].Name;
+                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                        string btnName = Provider.providers[i].Name;
                     btn = new Button() { ID = btnName + " _btn", Text = "Done" };
                         btn.Font.Size = 14;
                         // btn.Click += new EventHandler(Dymanic_Method);
@@ -177,6 +183,7 @@ namespace WebApplication1
                         Label lbl = new Label();
                         lbl.Width = 350;
                         lbl.Font.Size = 16;
+                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.BackColor = System.Drawing.Color.Red;
                         string btnName = Provider.providers[i].Name;
                         //btn = new Button() { ID = btnName + " _btn", Text = "Done" };
@@ -193,6 +200,7 @@ namespace WebApplication1
                         //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                         //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
                         lbl.Text = Provider.providers[i].Name + " - Done" + " at " + Provider.providers[i].Eta.ToString("HHmm");
+
                         if (Provider.providers[i].Type == "MD")
                         {
                             PlaceHolder7.Controls.Add(lbl);
@@ -214,7 +222,7 @@ namespace WebApplication1
                     Label lbl = new Label();
                     lbl.Width = 350;
                         lbl.Font.Size = 16;
-
+                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         if (Provider.providers[i].Type == "MD")
                         {
                             lbl.Text = Provider.providers[i].Name;
@@ -239,7 +247,7 @@ namespace WebApplication1
                         Label lbl = new Label();
                         lbl.Width = 350;
                         lbl.Font.Size = 16;
-
+                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         if (Provider.providers[i].Type == "PA")
                         {
                             lbl.Text = Provider.providers[i].Name;
