@@ -16,7 +16,7 @@
        }
        [class*="col-"] {
     float: left;
-    padding: 10px;
+    padding: 5px;
 }	
 html {
     font-family: "Lucida Sans", sans-serif;
@@ -32,11 +32,11 @@ html {
 .header {
     background-color: #ff0000;
     color: #ffffff;
-    padding: 15px;
+    padding: 5px;
 
 }
  .footer {
-           padding: 15px;
+           padding: 5px;
            text-align: center;
        }
   .button {
