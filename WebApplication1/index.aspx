@@ -23,7 +23,7 @@ html {
 }
 .aside {
    /* background-color: #33b5e5; */
-    padding: 30px;
+    padding: 5px;
   /*  color: #ffffff;*/
     text-align: left;
     font-size: 26px;
