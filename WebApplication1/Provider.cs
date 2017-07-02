@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.IO;
+using System.Web.UI;
 namespace WebApplication1
 {
     public class Provider
@@ -157,8 +158,8 @@ namespace WebApplication1
             //  Provider[] providers = new Provider[3];
             //string path = @"C:\temp\test.txt";
             string path = HttpContext.Current.Server.MapPath("~/App_Data/Test.txt");
-       //     if (File.Exists(path))
-            //    {
+            if (File.Exists(path))
+            {
                 using (StreamReader textFile = new StreamReader(path))
                 {
                     int index = 0;
@@ -190,7 +191,11 @@ namespace WebApplication1
 
 
                 }
-          //  }
+            }
+            else
+                HttpContext.Current.Response.Redirect("~/configure.aspx");
+                
+           
         }
         public static void Reset()
         {

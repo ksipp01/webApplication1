@@ -63,6 +63,7 @@ namespace WebApplication1
             Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC_Tracker" + DateTime.Now.ToString("yyyyMMddHHmm") + ".txt");
             Response.Write(text);
             Response.End();
+            
         }
 
         //protected void Button2_Click(object sender, EventArgs e)
