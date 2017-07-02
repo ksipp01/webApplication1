@@ -41,7 +41,11 @@ namespace WebApplication1
             if (_httpRequest.Browser.IsMobileDevice)
             {
                 isMobile = true;
-               // HttpContext.Current.Response.Redirect("~/login.aspx");
+                // HttpContext.Current.Response.Redirect("~/login.aspx");
+                Button1.Enabled = false;
+                Button2.Enabled = false;
+                Button3.Enabled = false;
+                Button4.Enabled = false;
               
             }
 
