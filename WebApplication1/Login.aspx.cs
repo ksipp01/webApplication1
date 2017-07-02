@@ -101,7 +101,7 @@ namespace WebApplication1
 
                 if (_httpRequest.Browser.IsMobileDevice) // only use cookies if mobile device.  This way if HUC enters from desktop, the name TB is blank
                 {
-
+                    ListBox1.Enabled = false;
                     TextBox1.Text = string.Empty;
                     TextBox2.Text = string.Empty;
                     TextBox1.BackColor = default(System.Drawing.Color);
@@ -213,6 +213,10 @@ namespace WebApplication1
                         Provider.providers[i].Status = "Enroute";
                         Provider.providers[i].Eta = time.Add(eta);
                         Log.Logstring += Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm") + "\n";
+                        if (Provider.providers[i].Type == "MD")
+                            Provider.MDrespond++;
+                        else
+                            Provider.PArespond++;
                     }
                 }
             TextBox2.BackColor = System.Drawing.Color.Lime;
