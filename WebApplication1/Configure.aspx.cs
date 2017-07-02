@@ -22,6 +22,15 @@ namespace WebApplication1
                 string Savepath = Server.MapPath("~/App_Data/" + FileUpload1.FileName);
                 FileUpload1.SaveAs(Savepath);
                 Provider.ReadText();
+
+                for (int i = 0; i < Provider.providers.Count(); i++)
+                {
+                    if (Provider.providers[i] != null)
+                    {
+                        TextBox1.Text += Provider.providers[i].Name + "\r\n";
+                    }
+                }
+
             }
         }
     }
