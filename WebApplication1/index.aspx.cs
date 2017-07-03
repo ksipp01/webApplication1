@@ -100,7 +100,7 @@ namespace WebApplication1
                 {
                     Label lbl = new Label();
                     lbl.Width = 350;
-                        lbl.Font.Size = 16;
+                        lbl.Font.Size = 14;
                         lbl.BackColor = System.Drawing.Color.Lime;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "80%";
@@ -141,7 +141,7 @@ namespace WebApplication1
                 {
                     Label lbl = new Label();
                     lbl.Width = 350;
-                        lbl.Font.Size = 16;
+                        lbl.Font.Size = 14;
                         lbl.BackColor = System.Drawing.Color.Yellow;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "80%";
@@ -185,8 +185,9 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == "Done")
                     {
                         Label lbl = new Label();
-                        lbl.Width = 350;
-                        lbl.Font.Size = 16;
+                        //  lbl.Width = 350;
+                    
+                        lbl.Font.Size = 14;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "100%";
                         lbl.BackColor = System.Drawing.Color.Red;
@@ -226,7 +227,7 @@ namespace WebApplication1
                 {
                     Label lbl = new Label();
                     lbl.Width = 350;
-                        lbl.Font.Size = 16;
+                        lbl.Font.Size = 14;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "80%";
                         if (Provider.providers[i].Type == "MD")
@@ -253,7 +254,7 @@ namespace WebApplication1
                     {
                         Label lbl = new Label();
                         lbl.Width = 350;
-                        lbl.Font.Size = 16;
+                        lbl.Font.Size = 14;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "80%";
                         if (Provider.providers[i].Type == "PA")
