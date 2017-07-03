@@ -35,6 +35,10 @@ html {
     padding: 5px;
 
 }
+P
+{
+    font-size: 24px;
+}
  .footer {
            padding: 5px;
            text-align: center;
