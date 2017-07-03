@@ -127,21 +127,21 @@ html {
 </div>
  <div class="col-3 col-m-12">   
 
-        <asp:Label ID="Label2" runat="server" Text="MD Enroute" BackColor="Lime" Font-Size="26px" Font-Underline="True"></asp:Label> <br />
+        <asp:Label ID="Label2" runat="server" Text="MD Enroute" BackColor="Lime" Font-Size="22px" Font-Underline="True"></asp:Label> <br />
         <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder><br />
-                      <asp:Label ID="Label4" runat="server" Text="MD Here" BackColor="Yellow" Font-Size="26px" Font-Underline="True"></asp:Label> <br />      
+                      <asp:Label ID="Label4" runat="server" Text="MD Here" BackColor="Yellow" Font-Size="22px" Font-Underline="True"></asp:Label> <br />      
         <asp:PlaceHolder ID="PlaceHolder3" runat="server"></asp:PlaceHolder><br />
-                           <asp:Label ID="Label6" runat="server" Text="MD Not Responded" Font-Size="26px" Font-Underline="True"></asp:Label><br />
+                           <asp:Label ID="Label6" runat="server" Text="MD Not Responded" Font-Size="22px" Font-Underline="True"></asp:Label><br />
              <asp:PlaceHolder ID="PlaceHolder4" runat="server"></asp:PlaceHolder>
             <br />
      </div>
   <div class="col-3 col-m-12">   
 
-      <asp:Label ID="Label3" runat="server" Text="PA Enroute" BackColor="Lime" Font-Size="26px" Font-Underline="True"></asp:Label><br />
+      <asp:Label ID="Label3" runat="server" Text="PA Enroute" BackColor="Lime" Font-Size="22px" Font-Underline="True"></asp:Label><br />
         <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder><br />
-      <asp:Label ID="Label5" runat="server" Text="PA Here" BackColor="Yellow" Font-Size="26px" Font-Underline="True"></asp:Label><br />
+      <asp:Label ID="Label5" runat="server" Text="PA Here" BackColor="Yellow" Font-Size="22px" Font-Underline="True"></asp:Label><br />
                  <asp:PlaceHolder ID="PlaceHolder6" runat="server"></asp:PlaceHolder>     <br />        
-                <asp:Label ID="Label7" runat="server" Text="PA Not Responded" Font-Size="26px" Font-Underline="True"></asp:Label>  <br />
+                <asp:Label ID="Label7" runat="server" Text="PA Not Responded" Font-Size="22px" Font-Underline="True"></asp:Label>  <br />
               <asp:PlaceHolder ID="PlaceHolder5" runat="server"></asp:PlaceHolder>        
     <br />
 
@@ -149,10 +149,10 @@ html {
 </div>
 <div class="col-3 col-m-12">   
 
-           <asp:Label ID="Label8" runat="server" Text="MDs Done" BackColor="Red" Font-Size="26px" Font-Underline="True"></asp:Label><br /> 
+           <asp:Label ID="Label8" runat="server" Text="MDs Done" BackColor="Red" Font-Size="22px" Font-Underline="True"></asp:Label><br /> 
             <asp:PlaceHolder ID="PlaceHolder7" runat="server"></asp:PlaceHolder>
             <br />
-        <asp:Label ID="Label9" runat="server" Text="PAs Done" BackColor="Red" Font-Size="26px" Font-Underline="True"></asp:Label><br />
+        <asp:Label ID="Label9" runat="server" Text="PAs Done" BackColor="Red" Font-Size="22px" Font-Underline="True"></asp:Label><br />
     <asp:PlaceHolder ID="PlaceHolder8" runat="server"></asp:PlaceHolder>
     <br />  
     </div>
