@@ -106,7 +106,7 @@ namespace WebApplication1
                         lbl.Style[HtmlTextWriterStyle.Width] = "80%";
                     btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
                         btn.Font.Size = 14;
-                        btn.Style[HtmlTextWriterStyle.Width] = "15%";
+                        btn.Style[HtmlTextWriterStyle.Width] = "20%";
                         string btnName = Provider.providers[i].Name;
                     // btn.Click += new EventHandler(Dymanic_Method);
                     btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
@@ -148,7 +148,7 @@ namespace WebApplication1
                         string btnName = Provider.providers[i].Name;
                     btn = new Button() { ID = btnName + " _btn", Text = "Done" };
                         btn.Font.Size = 14;
-                        btn.Style[HtmlTextWriterStyle.Width] = "15%";
+                        btn.Style[HtmlTextWriterStyle.Width] = "20%";
                         // btn.Click += new EventHandler(Dymanic_Method);
                         btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
 
@@ -236,7 +236,7 @@ namespace WebApplication1
 
                             btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
                             btn.Font.Size = 14;
-                            btn.Style[HtmlTextWriterStyle.Width] = "15%";
+                            btn.Style[HtmlTextWriterStyle.Width] = "20%";
                             string btnName = Provider.providers[i].Name;
                             // btn.Click += new EventHandler(Dymanic_Method);
                             btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
@@ -262,7 +262,7 @@ namespace WebApplication1
                             PlaceHolder5.Controls.Add(lbl);
                             btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
                             btn.Font.Size = 14;
-                            btn.Style[HtmlTextWriterStyle.Width] = "15%";
+                            btn.Style[HtmlTextWriterStyle.Width] = "20%";
                             string btnName = Provider.providers[i].Name;
                             // btn.Click += new EventHandler(Dymanic_Method);
                             btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
