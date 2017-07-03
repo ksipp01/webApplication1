@@ -68,6 +68,18 @@ namespace WebApplication1
         {
             get
             {
+                int number = 0;
+                for (int i = 0; i < providers.Count(); i++)
+                {
+                    if (Provider.providers[i] != null)
+                    {
+                        if (providers[i].Status == "Enroute" && providers[i].Type == "MD")
+                            number++;
+                        
+                    }
+                }
+                _MDrespond = number;
+
                 return _MDrespond;
             }
 
@@ -81,6 +93,17 @@ namespace WebApplication1
         {
             get
             {
+                int number = 0;
+                for (int i = 0; i < providers.Count(); i++)
+                {
+                    if (Provider.providers[i] != null)
+                    {
+                        if (providers[i].Status == "Here" && providers[i].Type == "MD")
+                            number++;
+
+                    }
+                }
+                _Mdhere = number;
                 return _Mdhere;
             }
 
@@ -94,6 +117,17 @@ namespace WebApplication1
         {
             get
             {
+                int number = 0;
+                for (int i = 0; i < providers.Count(); i++)
+                {
+                    if (Provider.providers[i] != null)
+                    {
+                        if (providers[i].Status == "Enroute" && providers[i].Type == "PA")
+                            number++;
+
+                    }
+                }
+                _PArespond = number;
                 return _PArespond;
             }
 
@@ -107,6 +141,17 @@ namespace WebApplication1
         {
             get
             {
+                int number = 0;
+                for (int i = 0; i < providers.Count(); i++)
+                {
+                    if (Provider.providers[i] != null)
+                    {
+                        if (providers[i].Status == "Here" && providers[i].Type == "PA")
+                            number++;
+
+                    }
+                }
+                _PAhere = number;
                 return _PAhere;
             }
 
@@ -155,6 +200,7 @@ namespace WebApplication1
         public static void ReadText()
         {
             string type = "";
+            Global1.Startup = true;
             //  Provider[] providers = new Provider[3];
             //string path = @"C:\temp\test.txt";
             string path = HttpContext.Current.Server.MapPath("~/App_Data/Test.txt");
@@ -191,6 +237,7 @@ namespace WebApplication1
 
 
                 }
+                
             }
             else
                 HttpContext.Current.Response.Redirect("~/configure.aspx");
@@ -212,6 +259,8 @@ namespace WebApplication1
             Provider.MDrespond = 0;
             Provider.PAhere = 0;
             Provider.PArespond = 0;
+            Log.Logstring += "Form Reset  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\r\n";
+            Global1.Startup = false;
         }
 
     }

@@ -29,19 +29,30 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             //   _logstring += Request.QueryString["val"];
+            if (_logstring == String.Empty)
             TextBox1.Text = String.Empty;
+
             TextBox1.Text += _logstring;
             
             //if (Session["value"] != null)
             //TextBox1.Text = Session["value"].ToString();
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
+        public void ClearLog()
         {
             _logstring = "";
             TextBox1.Text = string.Empty;
             _logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\n";
             Response.Redirect("~/log.aspx");
+        }
+
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            ClearLog();
+            //_logstring = "";
+            //TextBox1.Text = string.Empty;
+            //_logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\n";
+            //Response.Redirect("~/log.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e) // save

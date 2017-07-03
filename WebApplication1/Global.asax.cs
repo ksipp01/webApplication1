@@ -10,6 +10,20 @@ namespace WebApplication1
 {
     public class Global1 : System.Web.HttpApplication
     {
+        private static bool startup = false;
+
+        public static bool Startup
+        {
+            get
+            {
+                return startup;
+            }
+
+            set
+            {
+                startup = value;
+            }
+        }
 
         protected void Application_Start(object sender, EventArgs e)
         {
@@ -18,24 +32,29 @@ namespace WebApplication1
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            Provider.ReadText();
-            //Provider[] providers = new Provider[3];
-            //string path = @"C:\temp\test.txt";
-            //using (StreamReader textFile = new StreamReader(path))
-            //{
-            //    int index = 0;
-            //    while (!textFile.EndOfStream)
-            //    {
-            //        Provider p = new Provider();
-            //        p.Name = textFile.ReadLine();
-            //        p.Status = textFile.ReadLine();
-            //        p.Type = textFile.ReadLine();
+            if (!Startup)
+            {
+                Provider.ReadText();
+              //  Log.Logstring = "";
+                Log.Logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\r\n";
+            }
+                //Provider[] providers = new Provider[3];
+                //string path = @"C:\temp\test.txt";
+                //using (StreamReader textFile = new StreamReader(path))
+                //{
+                //    int index = 0;
+                //    while (!textFile.EndOfStream)
+                //    {
+                //        Provider p = new Provider();
+                //        p.Name = textFile.ReadLine();
+                //        p.Status = textFile.ReadLine();
+                //        p.Type = textFile.ReadLine();
 
-            //        providers[index++] = p;
-            //    }
-                 
-                    
-            //}
+                //        providers[index++] = p;
+                //    }
+
+
+                //}
 
                 //
                 //HttpRequest _httpRequest = HttpContext.Current.Request;
@@ -50,8 +69,8 @@ namespace WebApplication1
                 //    }
                 //}
 
-                HttpRequest _httpRequest = HttpContext.Current.Request;
-            Log.Logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\r\n";
+          //      HttpRequest _httpRequest = HttpContext.Current.Request;
+        
             //remd all for now 6-23-17
             //if (_httpRequest.Browser.IsMobileDevice)
             //{
