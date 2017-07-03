@@ -53,6 +53,7 @@ html {
 }
 .placeholder{
     margin-top: 5px;
+    padding: 10px;
 }
 
 /* For mobile phones: */
