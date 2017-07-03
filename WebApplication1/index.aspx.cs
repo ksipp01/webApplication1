@@ -102,7 +102,8 @@ namespace WebApplication1
                     lbl.Width = 350;
                         lbl.Font.Size = 16;
                         lbl.BackColor = System.Drawing.Color.Lime;
-                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px"; 
+                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                        lbl.Style[HtmlTextWriterStyle.Width] = "85%";
                     btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
                         btn.Font.Size = 14;
                         string btnName = Provider.providers[i].Name;
@@ -142,6 +143,7 @@ namespace WebApplication1
                         lbl.Font.Size = 16;
                         lbl.BackColor = System.Drawing.Color.Yellow;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                        lbl.Style[HtmlTextWriterStyle.Width] = "85%";
                         string btnName = Provider.providers[i].Name;
                     btn = new Button() { ID = btnName + " _btn", Text = "Done" };
                         btn.Font.Size = 14;
@@ -184,6 +186,7 @@ namespace WebApplication1
                         lbl.Width = 350;
                         lbl.Font.Size = 16;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                        lbl.Style[HtmlTextWriterStyle.Width] = "85%";
                         lbl.BackColor = System.Drawing.Color.Red;
                         string btnName = Provider.providers[i].Name;
                         //btn = new Button() { ID = btnName + " _btn", Text = "Done" };
@@ -223,6 +226,7 @@ namespace WebApplication1
                     lbl.Width = 350;
                         lbl.Font.Size = 16;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                        lbl.Style[HtmlTextWriterStyle.Width] = "85%";
                         if (Provider.providers[i].Type == "MD")
                         {
                             lbl.Text = Provider.providers[i].Name;
@@ -248,6 +252,7 @@ namespace WebApplication1
                         lbl.Width = 350;
                         lbl.Font.Size = 16;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                        lbl.Style[HtmlTextWriterStyle.Width] = "85%";
                         if (Provider.providers[i].Type == "PA")
                         {
                             lbl.Text = Provider.providers[i].Name;

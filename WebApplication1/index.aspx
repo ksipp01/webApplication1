@@ -112,16 +112,16 @@ html {
   <div class="col-3 col-m-12">     
       <div class="aside">
        <p>MDs Responding:          
-      <asp:TextBox ID="TextBox68" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px" ></asp:TextBox></p>
+      <asp:TextBox ID="TextBox68" runat="server" CssClass="textbox1" Font-Size="Large" Width="30px" ></asp:TextBox></p>
        
            <p> MDs Here:
-         <asp:TextBox ID="TextBox67" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>
+         <asp:TextBox ID="TextBox67" runat="server" CssClass="textbox1" Font-Size="Large" Width="30px"></asp:TextBox></p>
         
 <!-- all PA stuff here-->
       <p>  PAs Responding:
-          <asp:TextBox ID="TextBox70" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>
+          <asp:TextBox ID="TextBox70" runat="server" CssClass="textbox1" Font-Size="Large" Width="30px"></asp:TextBox></p>
     <p> PAs Here:  
-       <asp:TextBox ID="TextBox69" runat="server" CssClass="textbox1" Font-Size="Large" Width="50px"></asp:TextBox></p>   
+       <asp:TextBox ID="TextBox69" runat="server" CssClass="textbox1" Font-Size="Large" Width="30px"></asp:TextBox></p>   
   </div>
 </div>
  <div class="col-3 col-m-12">   
