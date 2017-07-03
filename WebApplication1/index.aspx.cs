@@ -123,7 +123,11 @@ namespace WebApplication1
                         TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
                         double m = diff.TotalMinutes;
                         m = Math.Round(m, MidpointRounding.AwayFromZero);
-
+                        if (m < 0)
+                        {
+                            lbl.BorderWidth = 4;
+                            lbl.BorderColor = System.Drawing.Color.Red;
+                        }
                         //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                         //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
                         lbl.Text = Provider.providers[i].Name + " - " + " ETA: " + m.ToString() + "min";
