@@ -90,7 +90,11 @@ namespace WebApplication1
         //    //  TextBox1.Text = Provider.providers[4].Name + " " + Provider.providers[4].Type;
         //    FindStatus();
        // }
-        Button btn;
+
+
+ 
+       
+         Button btn;
         private void FindStatus()
         {
             for(int i = 0; i < Provider.providers.Count(); i++)
@@ -116,7 +120,7 @@ namespace WebApplication1
                    
                     //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                     //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    lbl.Text = Provider.providers[i].Name + " - Enroute" + " ETA: " + m.ToString();
+                    lbl.Text = Provider.providers[i].Name + " - " + " ETA: " + m.ToString();
                     
                         if (Provider.providers[i].Type == "MD")
                         {
@@ -161,7 +165,7 @@ namespace WebApplication1
 
                     //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                     //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    lbl.Text = Provider.providers[i].Name + " - Here" + " at " + Provider.providers[i].Eta.ToString("HHmm");
+                    lbl.Text = Provider.providers[i].Name + " - " +  Provider.providers[i].Eta.ToString("HHmm");
                         if (Provider.providers[i].Type == "MD")
                         {
                             PlaceHolder3.Controls.Add(lbl);
@@ -205,7 +209,7 @@ namespace WebApplication1
 
                         //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                         //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                        lbl.Text = Provider.providers[i].Name + " - Done" + " at " + Provider.providers[i].Eta.ToString("HHmm");
+                        lbl.Text = Provider.providers[i].Name + " - "  + Provider.providers[i].Eta.ToString("HHmm");
 
                         if (Provider.providers[i].Type == "MD")
                         {
