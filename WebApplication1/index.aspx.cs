@@ -97,36 +97,36 @@ namespace WebApplication1
          Button btn;
         private void FindStatus()
         {
-            for(int i = 0; i < Provider.providers.Count(); i++)
+            for (int i = 0; i < Provider.providers.Count(); i++)
             {
                 if (Provider.providers[i] != null)
-                if (Provider.providers[i].Status == "Enroute")
-                {
-                    Label lbl = new Label();
-                    lbl.Width = 350;
+                    if (Provider.providers[i].Status == "Enroute")
+                    {
+                        Label lbl = new Label();
+                        lbl.Width = 350;
                         lbl.Font.Size = 14;
                         lbl.BackColor = System.Drawing.Color.Lime;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "80%";
-                    btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
+                        btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
                         btn.Font.Size = 14;
                         btn.Style[HtmlTextWriterStyle.Width] = "20%";
                         string btnName = Provider.providers[i].Name;
-                    // btn.Click += new EventHandler(Dymanic_Method);
-                    btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
-                    TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
-                    double m = diff.TotalMinutes;
-                    m = Math.Round(m, MidpointRounding.AwayFromZero);
-                   
-                    //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    lbl.Text = Provider.providers[i].Name + " - " + " ETA: " + m.ToString();
-                    
+                        // btn.Click += new EventHandler(Dymanic_Method);
+                        btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+                        TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
+                        double m = diff.TotalMinutes;
+                        m = Math.Round(m, MidpointRounding.AwayFromZero);
+
+                        //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
+                        //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+                        lbl.Text = Provider.providers[i].Name + " - " + " ETA: " + m.ToString() + "min";
+
                         if (Provider.providers[i].Type == "MD")
                         {
                             PlaceHolder1.Controls.Add(lbl);
                             if (!isMobile)
-                            PlaceHolder1.Controls.Add(btn);
+                                PlaceHolder1.Controls.Add(btn);
                             LiteralControl linebreak = new LiteralControl("<br>");
                             PlaceHolder1.Controls.Add(linebreak);
                         }
@@ -138,19 +138,19 @@ namespace WebApplication1
                             LiteralControl linebreak = new LiteralControl("<br>");
                             PlaceHolder2.Controls.Add(linebreak);
                         }
-                   
-                }
+
+                    }
                 if (Provider.providers[i] != null)
                     if (Provider.providers[i].Status == "Here")
-                {
-                    Label lbl = new Label();
-                    lbl.Width = 350;
+                    {
+                        Label lbl = new Label();
+                        lbl.Width = 350;
                         lbl.Font.Size = 14;
                         lbl.BackColor = System.Drawing.Color.Yellow;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "80%";
                         string btnName = Provider.providers[i].Name;
-                    btn = new Button() { ID = btnName + " _btn", Text = "Done" };
+                        btn = new Button() { ID = btnName + " _btn", Text = "Done" };
                         btn.Font.Size = 14;
                         btn.Style[HtmlTextWriterStyle.Width] = "20%";
                         // btn.Click += new EventHandler(Dymanic_Method);
@@ -158,14 +158,14 @@ namespace WebApplication1
 
 
 
-                    //TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
-                    //double m = diff.TotalMinutes;
-                    //m = Math.Round(m, MidpointRounding.AwayFromZero);
+                        //TimeSpan diff = (Provider.providers[i].Eta.Subtract(DateTime.Now));
+                        //double m = diff.TotalMinutes;
+                        //m = Math.Round(m, MidpointRounding.AwayFromZero);
 
 
-                    //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
-                    //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                    lbl.Text = Provider.providers[i].Name + " - " +  Provider.providers[i].Eta.ToString("HHmm");
+                        //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
+                        //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
+                        lbl.Text = Provider.providers[i].Name + " - " + Provider.providers[i].Eta.ToString("HHmm") + "hrs";
                         if (Provider.providers[i].Type == "MD")
                         {
                             PlaceHolder3.Controls.Add(lbl);
@@ -184,13 +184,15 @@ namespace WebApplication1
                         }
 
 
-                }
-                if (Provider.providers[i] != null)
+                    }
+                if (!isMobile) // don't display MD/PA Done for mobile.  
+                {
+                    if (Provider.providers[i] != null)
                     if (Provider.providers[i].Status == "Done")
                     {
                         Label lbl = new Label();
                         //  lbl.Width = 350;
-                    
+
                         lbl.Font.Size = 14;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "100%";
@@ -209,76 +211,80 @@ namespace WebApplication1
 
                         //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                         //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                        lbl.Text = Provider.providers[i].Name + " - "  + Provider.providers[i].Eta.ToString("HHmm");
-
-                        if (Provider.providers[i].Type == "MD")
-                        {
-                            PlaceHolder7.Controls.Add(lbl);
-                            //     PlaceHolder1.Controls.Add(btn);
-                            LiteralControl linebreak = new LiteralControl("<br>");
-                            PlaceHolder7.Controls.Add(linebreak);
-                        }
-                        else
-                        {
-                            PlaceHolder8.Controls.Add(lbl);
-                            //     PlaceHolder1.Controls.Add(btn);
-                            LiteralControl linebreak = new LiteralControl("<br>");
-                            PlaceHolder8.Controls.Add(linebreak);
+                        lbl.Text = Provider.providers[i].Name + " - " + Provider.providers[i].Eta.ToString("HHmm") + "hrs";
+                       
+                            if (Provider.providers[i].Type == "MD")
+                            {
+                                PlaceHolder7.Controls.Add(lbl);
+                                //     PlaceHolder1.Controls.Add(btn);
+                                LiteralControl linebreak = new LiteralControl("<br>");
+                                PlaceHolder7.Controls.Add(linebreak);
+                            }
+                            else
+                            {
+                                PlaceHolder8.Controls.Add(lbl);
+                                //     PlaceHolder1.Controls.Add(btn);
+                                LiteralControl linebreak = new LiteralControl("<br>");
+                                PlaceHolder8.Controls.Add(linebreak);
+                            }
                         }
                     }
-                if (Provider.providers[i] != null)
-                    if (Provider.providers[i].Status == null) // List MD that have not responded
+                if (!isMobile) // don't display non-responders for mobile version
                 {
-                    Label lbl = new Label();
-                    lbl.Width = 350;
-                        lbl.Font.Size = 14;
-                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
-                        lbl.Style[HtmlTextWriterStyle.Width] = "80%";
-                        if (Provider.providers[i].Type == "MD")
+                    if (Provider.providers[i] != null)
+                        if (Provider.providers[i].Status == null) // List MD that have not responded
                         {
-                            lbl.Text = Provider.providers[i].Name;
-                            PlaceHolder4.Controls.Add(lbl);
+                            Label lbl = new Label();
+                            lbl.Width = 350;
+                            lbl.Font.Size = 14;
+                            lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                            lbl.Style[HtmlTextWriterStyle.Width] = "80%";
+                            if (Provider.providers[i].Type == "MD")
+                            {
+                                lbl.Text = Provider.providers[i].Name;
+                                PlaceHolder4.Controls.Add(lbl);
 
-                            btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
-                            btn.Font.Size = 14;
-                            btn.Style[HtmlTextWriterStyle.Width] = "20%";
-                            string btnName = Provider.providers[i].Name;
-                            // btn.Click += new EventHandler(Dymanic_Method);
-                            btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
-                            if (!isMobile)
-                                PlaceHolder4.Controls.Add(btn);
-                            LiteralControl linebreak = new LiteralControl("<br>");
-                            PlaceHolder4.Controls.Add(linebreak);
+                                btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
+                                btn.Font.Size = 14;
+                                btn.Style[HtmlTextWriterStyle.Width] = "20%";
+                                string btnName = Provider.providers[i].Name;
+                                // btn.Click += new EventHandler(Dymanic_Method);
+                                btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+                                if (!isMobile)
+                                    PlaceHolder4.Controls.Add(btn);
+                                LiteralControl linebreak = new LiteralControl("<br>");
+                                PlaceHolder4.Controls.Add(linebreak);
+                            }
+
+
                         }
+                    if (Provider.providers[i] != null) // list PAs that have not responded
+                        if (Provider.providers[i].Status == null)
+                        {
+                            Label lbl = new Label();
+                            lbl.Width = 350;
+                            lbl.Font.Size = 14;
+                            lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                            lbl.Style[HtmlTextWriterStyle.Width] = "80%";
+                            if (Provider.providers[i].Type == "PA")
+                            {
+                                lbl.Text = Provider.providers[i].Name;
+                                PlaceHolder5.Controls.Add(lbl);
+                                btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
+                                btn.Font.Size = 14;
+                                btn.Style[HtmlTextWriterStyle.Width] = "20%";
+                                string btnName = Provider.providers[i].Name;
+                                // btn.Click += new EventHandler(Dymanic_Method);
+                                btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+                                if (!isMobile)
+                                    PlaceHolder5.Controls.Add(btn);
+                                LiteralControl linebreak = new LiteralControl("<br>");
+                                PlaceHolder5.Controls.Add(linebreak);
+                            }
 
+                        }
 
                 }
-                if (Provider.providers[i] != null) // list PAs that have not responded
-                    if (Provider.providers[i].Status == null)
-                    {
-                        Label lbl = new Label();
-                        lbl.Width = 350;
-                        lbl.Font.Size = 14;
-                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
-                        lbl.Style[HtmlTextWriterStyle.Width] = "80%";
-                        if (Provider.providers[i].Type == "PA")
-                        {
-                            lbl.Text = Provider.providers[i].Name;
-                            PlaceHolder5.Controls.Add(lbl);
-                            btn = new Button() { ID = Provider.providers[i].Name.ToString() + " _btn", Text = "Here" };
-                            btn.Font.Size = 14;
-                            btn.Style[HtmlTextWriterStyle.Width] = "20%";
-                            string btnName = Provider.providers[i].Name;
-                            // btn.Click += new EventHandler(Dymanic_Method);
-                            btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
-                            if (!isMobile)
-                                PlaceHolder5.Controls.Add(btn);
-                            LiteralControl linebreak = new LiteralControl("<br>");
-                            PlaceHolder5.Controls.Add(linebreak);
-                        }
-
-                    }
-
             }
         }
 
@@ -295,7 +301,7 @@ namespace WebApplication1
                         {
                             Provider.providers[i].Status = "Here";
                             justShowedUp = true;
-                            Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\r\n";
+                            Log.Logstring += Provider.providers[i].Name + ": Arrived at " + DateTime.Now.ToString("HHmm") + "\r\n";
                             if (Provider.providers[i].Type == "MD")
                             {
                                 Provider.Mdhere++;
