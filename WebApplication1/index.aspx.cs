@@ -154,6 +154,12 @@ namespace WebApplication1
                         lbl.Font.Size = 14;
                         lbl.BackColor = System.Drawing.Color.Yellow;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                        string btnName = Provider.providers[i].Name;
+                        btn = new Button() { ID = btnName + " _btn", Text = "Done" };
+                        btn.Font.Size = 14;
+
+                        // btn.Click += new EventHandler(Dymanic_Method);
+                        btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
                         if (!isMobile)
                         {
                             btn.Style[HtmlTextWriterStyle.Width] = "20%";
@@ -162,12 +168,7 @@ namespace WebApplication1
                         else
                             lbl.Style[HtmlTextWriterStyle.Width] = "100%";
 
-                        string btnName = Provider.providers[i].Name;
-                        btn = new Button() { ID = btnName + " _btn", Text = "Done" };
-                        btn.Font.Size = 14;
-                
-                        // btn.Click += new EventHandler(Dymanic_Method);
-                        btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };
+
 
 
 
