@@ -245,6 +245,7 @@ namespace WebApplication1
                     }
                 if (!isMobile) // don't display non-responders for mobile version
                 {
+                   
                     if (Provider.providers[i] != null)
                         if (Provider.providers[i].Status == null) // List MD that have not responded
                         {
@@ -298,6 +299,13 @@ namespace WebApplication1
 
                         }
 
+                }
+                else // if it is mobile 
+                {
+                    Label6.Text = "";
+                    Label7.Text = "";
+                    Label8.Text = "";
+                    Label9.Text = "";
                 }
             }
         }
