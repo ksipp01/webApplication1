@@ -215,7 +215,7 @@ namespace WebApplication1
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "100%";
                         lbl.BackColor = System.Drawing.Color.Red;
-                        string btnName = Provider.providers[i].Name;
+                       // string btnName = Provider.providers[i].Name;
                         //btn = new Button() { ID = btnName + " _btn", Text = "Done" };
                         //// btn.Click += new EventHandler(Dymanic_Method);
                         //btn.Click += (sender, EventArgs) => { Dymanic_Method(sender, EventArgs, btnName); };

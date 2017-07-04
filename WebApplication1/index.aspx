@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <style type="text/css">
       *{box-sizing:border-box;
 
@@ -14,10 +14,7 @@
            clear: both;
            display: table;
        }
-       [class*="col-"] {
-    float: left;
-    padding: 5px;
-}	
+  
 html {
     font-family: "Lucida Sans", sans-serif;
 }
@@ -33,7 +30,9 @@ html {
     background-color: #ff0000;
     color: #ffffff;
     padding: 5px;
-
+ position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
 P
 {
@@ -43,6 +42,7 @@ P
            padding: 5px;
            text-align: center;
        }
+ 
   .button {
            margin-right : 30px;
      
@@ -59,14 +59,30 @@ P
     margin-top: 5px;
     padding: 10px;
 }
+ hr {
+           border:solid 1px black;
+  clear:both;
+  display:block;
+  width: 98%;               
 
+  height: 1px;
+  margin-top: 60px;
+
+       }
+     [class*="col-"] {
+    float: left;
+    padding: 5px;
+    margin-top: 30px;
+}	
 /* For mobile phones: */
 [class*="col-"] {
+    margin-top: 30px;
     width: 100%;
     
 }
 @media only screen and (min-width: 600px) {
-    /* For tablets: */
+  
+     /* For tablets: */
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
     .col-m-3 {width: 25%;}
@@ -79,6 +95,7 @@ P
     .col-m-10 {width: 83.33%;}
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
+   
 }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
@@ -106,16 +123,25 @@ P
    
    <div class="header">
        <h1>EMPAC - Tracker</h1>
+  
        </div>
-  <hr /> 
-       
+   
+      
+          
         <asp:HiddenField runat="server" ID="_repostcheckcode"  />
             <meta http-equiv="refresh" content="20" />
+        <div class="row">
+             <div class="col-12 col-m-12"> 
+  <hr />        
+            </div>
+            </div>
           <br />
 <div class="row">
-
+      
   <div class="col-3 col-m-12">     
       <div class="aside">
+  
+       
        <p>MDs Responding:          
       <asp:TextBox ID="TextBox68" runat="server" CssClass="textbox1" Font-Size="Large" Width="30px" ></asp:TextBox></p>
        
@@ -131,21 +157,21 @@ P
 </div>
  <div class="col-3 col-m-12">   
 
-        <asp:Label ID="Label2" runat="server" Text="MD Enroute" BackColor="Lime" Font-Size="22px" Font-Underline="True"></asp:Label> <br />
+        <asp:Label ID="Label2" runat="server" Text="MDs Enroute" BackColor="Lime" Font-Size="22px" Font-Underline="True"></asp:Label> <br />
         <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder><br />
-                      <asp:Label ID="Label4" runat="server" Text="MD Here" BackColor="Yellow" Font-Size="22px" Font-Underline="True"></asp:Label> <br />      
+                      <asp:Label ID="Label4" runat="server" Text="MDs Here" BackColor="Yellow" Font-Size="22px" Font-Underline="True"></asp:Label> <br />      
         <asp:PlaceHolder ID="PlaceHolder3" runat="server"></asp:PlaceHolder><br />
-                           <asp:Label ID="Label6" runat="server" Text="MD Not Responded" Font-Size="22px" Font-Underline="True"></asp:Label><br />
+                           <asp:Label ID="Label6" runat="server" Text="MDs Not Responded" Font-Size="22px" Font-Underline="True"></asp:Label><br />
              <asp:PlaceHolder ID="PlaceHolder4" runat="server"></asp:PlaceHolder>
             <br />
      </div>
   <div class="col-3 col-m-12">   
 
-      <asp:Label ID="Label3" runat="server" Text="PA Enroute" BackColor="Lime" Font-Size="22px" Font-Underline="True"></asp:Label><br />
+      <asp:Label ID="Label3" runat="server" Text="PAs Enroute" BackColor="Lime" Font-Size="22px" Font-Underline="True"></asp:Label><br />
         <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder><br />
-      <asp:Label ID="Label5" runat="server" Text="PA Here" BackColor="Yellow" Font-Size="22px" Font-Underline="True"></asp:Label><br />
+      <asp:Label ID="Label5" runat="server" Text="PAs Here" BackColor="Yellow" Font-Size="22px" Font-Underline="True"></asp:Label><br />
                  <asp:PlaceHolder ID="PlaceHolder6" runat="server"></asp:PlaceHolder>     <br />        
-                <asp:Label ID="Label7" runat="server" Text="PA Not Responded" Font-Size="22px" Font-Underline="True"></asp:Label>  <br />
+                <asp:Label ID="Label7" runat="server" Text="PAs Not Responded" Font-Size="22px" Font-Underline="True"></asp:Label>  <br />
               <asp:PlaceHolder ID="PlaceHolder5" runat="server"></asp:PlaceHolder>        
     <br />
 
@@ -154,8 +180,7 @@ P
 <div class="col-3 col-m-12">   
 
            <asp:Label ID="Label8" runat="server" Text="MDs Done" BackColor="Red" Font-Size="22px" Font-Underline="True"></asp:Label><br /> 
-            <asp:PlaceHolder ID="PlaceHolder7" runat="server"></asp:PlaceHolder>
-            <br />
+            <asp:PlaceHolder ID="PlaceHolder7" runat="server"></asp:PlaceHolder><br />         
         <asp:Label ID="Label9" runat="server" Text="PAs Done" BackColor="Red" Font-Size="22px" Font-Underline="True"></asp:Label><br />
     <asp:PlaceHolder ID="PlaceHolder8" runat="server"></asp:PlaceHolder>
     <br />  
