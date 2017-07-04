@@ -104,7 +104,8 @@ namespace WebApplication1
                     {
                         Label lbl = new Label();
                         lbl.Width = 350;
-                        lbl.Font.Size = 14;
+                        //  lbl.Font.Size = 14;
+                        lbl.Style[HtmlTextWriterStyle.FontSize] = "80%";
                         lbl.BackColor = System.Drawing.Color.Lime;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                        
@@ -130,7 +131,7 @@ namespace WebApplication1
                         }
                         //    string name = Regex.Replace(property.Name.ToString().Replace("Status", ""), "([a-z])_?([A-Z])", "$1 $2");
                         //    lbl.Text = property.Name.ToString().Replace("Status", "") + " - Enroute";
-                        lbl.Text = Provider.providers[i].Name + " - " + " ETA: " + m.ToString() + "min";
+                        lbl.Text =  Provider.providers[i].Name + " - " + " ETA: " + m.ToString() + "min";
 
                         if (Provider.providers[i].Type == "MD")
                         {
@@ -155,7 +156,8 @@ namespace WebApplication1
                     {
                         Label lbl = new Label();
                         lbl.Width = 350;
-                        lbl.Font.Size = 14;
+                        //  lbl.Font.Size = 14;
+                        lbl.Style[HtmlTextWriterStyle.FontSize] = "80%";
                         lbl.BackColor = System.Drawing.Color.Yellow;
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         string btnName = Provider.providers[i].Name;
@@ -209,10 +211,12 @@ namespace WebApplication1
                     if (Provider.providers[i].Status == "Done")
                     {
                         Label lbl = new Label();
-                        //  lbl.Width = 350;
+                              lbl.Width = 350;
 
-                        lbl.Font.Size = 14;
-                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                           // lbl.Font.Size = 14;
+                            lbl.Style[HtmlTextWriterStyle.FontSize] = "80%";
+                           
+                            lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
                         lbl.Style[HtmlTextWriterStyle.Width] = "100%";
                         lbl.BackColor = System.Drawing.Color.Red;
                        // string btnName = Provider.providers[i].Name;
