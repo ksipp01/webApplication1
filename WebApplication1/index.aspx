@@ -64,19 +64,19 @@ P
   clear:both;
   display:block;
   width: 98%;               
-
+  margin-top: 80px;
   height: 1px;
-  margin-top: 60px;
+
 
        }
      [class*="col-"] {
     float: left;
     padding: 5px;
-    margin-top: 30px;
+    margin-top: 10px;
 }	
 /* For mobile phones: */
 [class*="col-"] {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 100%;
     
 }
@@ -130,12 +130,12 @@ P
           
         <asp:HiddenField runat="server" ID="_repostcheckcode"  />
             <meta http-equiv="refresh" content="20" />
-        <div class="row">
-             <div class="col-12 col-m-12"> 
-  <hr />        
-            </div>
-            </div>
+
           <br />
+
+      <hr />
+  
+
 <div class="row">
       
   <div class="col-3 col-m-12">     
