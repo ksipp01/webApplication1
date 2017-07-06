@@ -108,6 +108,7 @@ namespace WebApplication1
                     TextBox2.BackColor = default(System.Drawing.Color);
                     if (Request.Cookies["user"] != null)
                     {
+                        ListBox1.Enabled = false;
                         TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
 
                         name = UppercaseWords(TextBox1.Text);
@@ -351,6 +352,7 @@ namespace WebApplication1
 
         protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (Page.IsPostBack)
             TextBox1.Text = ListBox1.SelectedItem.Text;
         }
 
