@@ -108,7 +108,7 @@ namespace WebApplication1
                     TextBox2.BackColor = default(System.Drawing.Color);
                     if (Request.Cookies["user"] != null)
                     {
-                        ListBox1.Enabled = false;
+                        ListBox1.Visible = false;
                         TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
 
                         name = UppercaseWords(TextBox1.Text);
@@ -155,7 +155,15 @@ namespace WebApplication1
 
                     }
                     else
+                    {
+                        Label lbl = new Label();
+                        lbl.Style[HtmlTextWriterStyle.FontSize] = "80%";
+                        lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                        lbl.Text = "First Time use: Select your name from list above" + "<br>" + "Ensure correct selection then click \"Submit\"" + "<br>" +  "Your name will auto-populate with subsequent use";
+                        PlaceHolder1.Controls.Add(lbl);
                         return;
+                    }
+                
 
                 }
                 //  TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
@@ -354,6 +362,11 @@ namespace WebApplication1
         {
             if (Page.IsPostBack)
             TextBox1.Text = ListBox1.SelectedItem.Text;
+            Label lbl = new Label();
+            lbl.Style[HtmlTextWriterStyle.FontSize] = "80%";
+            lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+            lbl.Text = "First Time use: Select your name from list above" + "<br>" + "Ensure correct selection then click \"Submit\"" + "<br>" + "Your name will auto-populate with subsequent use";
+            PlaceHolder1.Controls.Add(lbl);
         }
 
         //protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
