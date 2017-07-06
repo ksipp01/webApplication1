@@ -101,7 +101,7 @@ namespace WebApplication1
 
                 if (_httpRequest.Browser.IsMobileDevice) // only use cookies if mobile device.  This way if HUC enters from desktop, the name TB is blank
                 {
-                    ListBox1.Enabled = false;
+                  //  ListBox1.Enabled = false;
                     TextBox1.Text = string.Empty;
                     TextBox2.Text = string.Empty;
                     TextBox1.BackColor = default(System.Drawing.Color);
@@ -352,7 +352,12 @@ namespace WebApplication1
         protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             TextBox1.Text = ListBox1.SelectedItem.Text;
-            //    Response.Redirect("~/login.aspx");
         }
+
+        //protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    TextBox1.Text = ListBox1.SelectedItem.Text;
+        //    //    Response.Redirect("~/login.aspx");
+        //}
     }
 }

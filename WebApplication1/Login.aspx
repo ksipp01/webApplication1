@@ -5,7 +5,7 @@
        
         <asp:Label ID="Label2" runat="server" Text="Name:" Font-Names="Arial"></asp:Label>  <br />       
         <br />
-        <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged" Width="150px"></asp:ListBox>
+        <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged" Width="150px" AutoPostBack="True"></asp:ListBox>
     
         <br />
         <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged" Font-Names="Arial"></asp:TextBox>
