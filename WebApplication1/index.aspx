@@ -38,7 +38,7 @@ html {
 }
 P
 {
-    font-size: 28px;
+    font-size: 26px;
         margin-top: .3em;
     margin-bottom: .3em;
  
