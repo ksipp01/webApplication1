@@ -39,8 +39,8 @@ html {
 P
 {
     font-size: 26px;
-        margin-top: .3em;
-    margin-bottom: .3em;
+        margin-top: .5em;
+    margin-bottom: .5em;
  
 }
  .footer {
