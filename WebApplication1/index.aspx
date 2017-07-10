@@ -17,7 +17,7 @@
   
 html {
     font-family: "Lucida Sans", sans-serif;
-    font-size: 28px;
+    font-size: 26px;
 }
 .aside {
    /* background-color: #33b5e5; */
