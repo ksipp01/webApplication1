@@ -17,7 +17,7 @@
   
 html {
     font-family: "Lucida Sans", sans-serif;
-    font-size: 26px;
+    font-size: 28px;
 }
 .aside {
    /* background-color: #33b5e5; */
@@ -38,7 +38,10 @@ html {
 }
 P
 {
-    font-size: 24px;
+    font-size: 28px;
+        margin-top: .3em;
+    margin-bottom: .3em;
+ 
 }
  .footer {
            padding: 5px;
@@ -52,10 +55,11 @@ P
         /*   margin-top: 20px;*/
        }
 .textbox1 {
-    width:30px;
+    width:40px;
     text-align:left;
     float:right;
     display:block;
+    font-size: 80%;
 }
 .placeholder{
     margin-top: 5px;
@@ -146,35 +150,35 @@ P
   
        
        <p>MDs Responding:          
-      <asp:TextBox ID="TextBox68" runat="server" CssClass="textbox1"  Width="30px" ></asp:TextBox></p>
+      <asp:TextBox ID="TextBox68" runat="server" CssClass="textbox1"></asp:TextBox></p>
        
-           <p> MDs Here:
-         <asp:TextBox ID="TextBox67" runat="server" CssClass="textbox1"  Width="30px"></asp:TextBox></p>
+           <p>MDs Here:
+         <asp:TextBox ID="TextBox67" runat="server" CssClass="textbox1"></asp:TextBox></p>
         
 <!-- all PA stuff here-->
       <p>  PAs Responding:
-          <asp:TextBox ID="TextBox70" runat="server" CssClass="textbox1"  Width="30px"></asp:TextBox></p>
+          <asp:TextBox ID="TextBox70" runat="server" CssClass="textbox1"></asp:TextBox></p>
     <p> PAs Here:  
-       <asp:TextBox ID="TextBox69" runat="server" CssClass="textbox1"  Width="30px"></asp:TextBox></p>   
+       <asp:TextBox ID="TextBox69" runat="server" CssClass="textbox1"></asp:TextBox></p>   
   </div>
 </div>
  <div class="col-3 col-m-12">   
 
-        <asp:Label ID="Label2" runat="server" Text="MDs Enroute" BackColor="Lime" Font-Size="90%" Font-Underline="True"></asp:Label> <br />
+        <asp:Label ID="Label2" runat="server" Text="MDs Enroute" BackColor="Lime" Font-Underline="True"></asp:Label> <br />
         <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder><br />
-                      <asp:Label ID="Label4" runat="server" Text="MDs Here" BackColor="Yellow" Font-Size="90%" Font-Underline="True"></asp:Label> <br />      
+                      <asp:Label ID="Label4" runat="server" Text="MDs Here" BackColor="Yellow" Font-Underline="True"></asp:Label> <br />      
         <asp:PlaceHolder ID="PlaceHolder3" runat="server"></asp:PlaceHolder><br />
-                           <asp:Label ID="Label6" runat="server" Text="MDs Not Responded" Font-Size="90%" Font-Underline="True"></asp:Label><br />
+                           <asp:Label ID="Label6" runat="server" Text="MDs Not Responded" Font-Underline="True"></asp:Label><br />
              <asp:PlaceHolder ID="PlaceHolder4" runat="server"></asp:PlaceHolder>
             <br />
      </div>
   <div class="col-3 col-m-12">   
 
-      <asp:Label ID="Label3" runat="server" Text="PAs Enroute" BackColor="Lime" Font-Size="90%" Font-Underline="True"></asp:Label><br />
+      <asp:Label ID="Label3" runat="server" Text="PAs Enroute" BackColor="Lime" Font-Underline="True"></asp:Label><br />
         <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder><br />
-      <asp:Label ID="Label5" runat="server" Text="PAs Here" BackColor="Yellow" Font-Size="90%" Font-Underline="True"></asp:Label><br />
+      <asp:Label ID="Label5" runat="server" Text="PAs Here" BackColor="Yellow" Font-Underline="True"></asp:Label><br />
                  <asp:PlaceHolder ID="PlaceHolder6" runat="server"></asp:PlaceHolder>     <br />        
-                <asp:Label ID="Label7" runat="server" Text="PAs Not Responded" Font-Size="90%" Font-Underline="True"></asp:Label>  <br />
+                <asp:Label ID="Label7" runat="server" Text="PAs Not Responded" Font-Underline="True"></asp:Label>  <br />
               <asp:PlaceHolder ID="PlaceHolder5" runat="server"></asp:PlaceHolder>        
     <br />
 
@@ -182,9 +186,9 @@ P
 </div>
 <div class="col-3 col-m-12">   
 
-           <asp:Label ID="Label8" runat="server" Text="MDs Done" BackColor="Red" Font-Size="90%" Font-Underline="True"></asp:Label><br /> 
+           <asp:Label ID="Label8" runat="server" Text="MDs Done" BackColor="Red" Font-Underline="True"></asp:Label><br /> 
             <asp:PlaceHolder ID="PlaceHolder7" runat="server"></asp:PlaceHolder><br />         
-        <asp:Label ID="Label9" runat="server" Text="PAs Done" BackColor="Red" Font-Size="90%" Font-Underline="True"></asp:Label><br />
+        <asp:Label ID="Label9" runat="server" Text="PAs Done" BackColor="Red" Font-Underline="True"></asp:Label><br />
     <asp:PlaceHolder ID="PlaceHolder8" runat="server"></asp:PlaceHolder>
     <br />  
     </div>
