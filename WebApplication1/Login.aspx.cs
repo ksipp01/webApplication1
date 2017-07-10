@@ -157,9 +157,9 @@ namespace WebApplication1
                     else
                     {
                         Label lbl = new Label();
-                        lbl.Style[HtmlTextWriterStyle.FontSize] = "80%";
+                        lbl.Style[HtmlTextWriterStyle.FontSize] = "60%";
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
-                        lbl.Text = "First Time use: Select your name from list above" + "<br>" + "Ensure correct selection then click \"Submit\"" + "<br>" +  "Your name will auto-populate with subsequent use";
+                        lbl.Text = "First Time use: " + "<br>" + "-Select your name from list above" + "<br>" + "-Ensure correct selection then click \"Submit\"" + "<br>" +  "-Your name will auto-populate with subsequent use";
                         PlaceHolder1.Controls.Add(lbl);
                         return;
                     }
