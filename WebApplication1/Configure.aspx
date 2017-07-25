@@ -10,7 +10,9 @@
     <form id="form1" runat="server">
     <div>
     Select the configuration file.  <br />   
-       Use Notepad to make a .txt file in the following format: <br />  
+       Use Notepad to make a .txt file in the following format: 
+        <br />
+        (Make sure it contains MD, PA and end)<br />  
          <br />  
         MD <br />  
         Firstname Lastname <br />  

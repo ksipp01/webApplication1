@@ -7,6 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
+
+
+    //this copies the contents of the configure text file to a .txt file on the server.  
+
     public partial class Configure : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)

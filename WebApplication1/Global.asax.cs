@@ -32,7 +32,7 @@ namespace WebApplication1
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            if (!Startup)
+            if (!Startup)  //read the .txt file on the server to populate th3 global.provider class.   only done at first session start
             {
                 Provider.ReadText();
               //  Log.Logstring = "";
