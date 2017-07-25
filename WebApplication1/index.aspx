@@ -164,7 +164,7 @@ P
 </div>
  <div class="col-3 col-m-12">   
 
-        <asp:Label ID="Label2" runat="server" Text="MDs Enroute" BackColor="Lime" Font-Underline="True"></asp:Label> <br />
+        <asp:Label ID="Label2" runat="server" Text="MDs Responding" BackColor="Lime" Font-Underline="True"></asp:Label> <br />
         <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder><br />
                       <asp:Label ID="Label4" runat="server" Text="MDs Here" BackColor="Yellow" Font-Underline="True"></asp:Label> <br />      
         <asp:PlaceHolder ID="PlaceHolder3" runat="server"></asp:PlaceHolder><br />
@@ -174,7 +174,7 @@ P
      </div>
   <div class="col-3 col-m-12">   
 
-      <asp:Label ID="Label3" runat="server" Text="PAs Enroute" BackColor="Lime" Font-Underline="True"></asp:Label><br />
+      <asp:Label ID="Label3" runat="server" Text="PAs Responding" BackColor="Lime" Font-Underline="True"></asp:Label><br />
         <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder><br />
       <asp:Label ID="Label5" runat="server" Text="PAs Here" BackColor="Yellow" Font-Underline="True"></asp:Label><br />
                  <asp:PlaceHolder ID="PlaceHolder6" runat="server"></asp:PlaceHolder>     <br />        
