@@ -177,7 +177,7 @@ namespace WebApplication1
             //{
             //    name = RemoveSpace(UppercaseWords(TextBox1.Text));
             //    Response.Cookies["user"].Value = name;
-            //    Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+                Response.Cookies["user"].Expires = DateTime.Now.AddDays(10000);
             //}
 
 
