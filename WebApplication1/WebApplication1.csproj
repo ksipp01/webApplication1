@@ -100,6 +100,7 @@
     <Content Include="android-chrome-512x512.png" />
     <Content Include="apple-touch-icon.png" />
     <Content Include="browserconfig.xml" />
+    <Content Include="close.html" />
     <Content Include="Configure.aspx" />
     <Content Include="favicon-16x16.png" />
     <Content Include="favicon-32x32.png" />
