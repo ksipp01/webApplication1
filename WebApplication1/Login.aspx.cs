@@ -107,7 +107,7 @@ namespace WebApplication1
                     TextBox2.Text = string.Empty;
                     TextBox1.BackColor = default(System.Drawing.Color);
                     TextBox2.BackColor = default(System.Drawing.Color);
-                     if (Request.Cookies["user"] != null)
+                     if (Request.Cookies["user"].Value != "")
                     {
                         ListBox1.Visible = false;
                           TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
