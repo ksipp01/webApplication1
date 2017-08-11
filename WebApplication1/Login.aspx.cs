@@ -107,60 +107,72 @@ namespace WebApplication1
                     TextBox2.Text = string.Empty;
                     TextBox1.BackColor = default(System.Drawing.Color);
                     TextBox2.BackColor = default(System.Drawing.Color);
-                     if (Request.Cookies["user"].Value != "")
+                    if (Request.Cookies["user"] != null)
                     {
-                        ListBox1.Visible = false;
-                          TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
-                      //  TextBox1.Text = cookie["user"];
-                        name = UppercaseWords(TextBox1.Text);
+                        if (Request.Cookies["user"].Value != "")
+                        {
+                            ListBox1.Visible = false;
+                            TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
+                            //  TextBox1.Text = cookie["user"];
+                            name = UppercaseWords(TextBox1.Text);
 
 
-                        for (int i = 0; i < Provider.providers.Count(); i++)
-                            if (Provider.providers[i] != null)
-                            {
-                                if (Provider.providers[i].Name == name)
+                            for (int i = 0; i < Provider.providers.Count(); i++)
+                                if (Provider.providers[i] != null)
                                 {
-                                    TextBox1.BackColor = System.Drawing.Color.Lime;
-                                    Button2.Enabled = false;
+                                    if (Provider.providers[i].Name == name)
+                                    {
+                                        TextBox1.BackColor = System.Drawing.Color.Lime;
+                                        Button2.Enabled = false;
+                                    }
                                 }
-                            }
 
 
-                        //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
-                        //     Response.Cookies["user"].Value = name;
-                        //     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+                            //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
+                            //     Response.Cookies["user"].Value = name;
+                            //     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
 
-                        //   var propval = prop.GetValue(ob);
-
-
-
-                        //var type = typeof(Global);
-
-                        //var prop = type.GetProperty(RemoveSpace(name));
-                        //if (prop != null)
-                        //{
-                        //    Response.Cookies["user"].Value = name;
-                        //    //  Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-                        //    Response.Cookies["user"].Expires = DateTime.MaxValue;
-                        //    TextBox1.BackColor = System.Drawing.Color.Lime;
-                        //    TextBox1.Text = Response.Cookies["user"].Value;
-                        //    Button2.Enabled = false;
-                        //}
-                        //else
-                        //    TextBox1.Text = "Invalid User";
+                            //   var propval = prop.GetValue(ob);
 
 
+
+                            //var type = typeof(Global);
+
+                            //var prop = type.GetProperty(RemoveSpace(name));
+                            //if (prop != null)
+                            //{
+                            //    Response.Cookies["user"].Value = name;
+                            //    //  Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+                            //    Response.Cookies["user"].Expires = DateTime.MaxValue;
+                            //    TextBox1.BackColor = System.Drawing.Color.Lime;
+                            //    TextBox1.Text = Response.Cookies["user"].Value;
+                            //    Button2.Enabled = false;
+                            //}
+                            //else
+                            //    TextBox1.Text = "Invalid User";
 
 
 
 
+
+
+                        }
+                        else
+                        {
+                            Label lbl = new Label();
+                            lbl.Style[HtmlTextWriterStyle.FontSize] = "60%";
+                            lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
+                            lbl.Text = "First Time use: " + "<br>" + "-Select your name from list above" + "<br>" + "-Ensure correct selection then click \"Submit\"" + "<br>" + "-Your name will auto-fill from now on";
+                            PlaceHolder1.Controls.Add(lbl);
+                            return;
+                        }
                     }
                     else
                     {
                         Label lbl = new Label();
                         lbl.Style[HtmlTextWriterStyle.FontSize] = "60%";
                         lbl.Style[HtmlTextWriterStyle.MarginTop] = "5px";
-                        lbl.Text = "First Time use: " + "<br>" + "-Select your name from list above" + "<br>" + "-Ensure correct selection then click \"Submit\"" + "<br>" +  "-Your name will auto-fill from now on";
+                        lbl.Text = "First Time use: " + "<br>" + "-Select your name from list above" + "<br>" + "-Ensure correct selection then click \"Submit\"" + "<br>" + "-Your name will auto-fill from now on";
                         PlaceHolder1.Controls.Add(lbl);
                         return;
                     }
