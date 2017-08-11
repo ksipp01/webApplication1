@@ -110,8 +110,8 @@ namespace WebApplication1
 
         protected void Session_End(object sender, EventArgs e)
         {
-            Log.Logstring += "EMPAC Provider Tracker:  Session Ended - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\r\n";
-
+            Log.Logstring += "EMPAC Provider Tracker:  Session Ended - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + " hrs\r\n";
+            Log.SendEmail();
         }
 
         protected void Application_End(object sender, EventArgs e)

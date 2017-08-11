@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Text;
+using System.Net.Mail;
+
 
 namespace WebApplication1
 {
@@ -41,7 +43,7 @@ namespace WebApplication1
         {
             _logstring = "";
             TextBox1.Text = string.Empty;
-            _logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\n";
+            _logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + " hrs\n";
             Response.Redirect("~/log.aspx");
         }
 
@@ -54,6 +56,10 @@ namespace WebApplication1
             //_logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\n";
             //Response.Redirect("~/log.aspx");
         }
+
+       
+
+
 
         protected void Button2_Click(object sender, EventArgs e) // save
         {
@@ -73,9 +79,61 @@ namespace WebApplication1
             //   Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC-Tracker Log.txt\"");
             Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC_Tracker" + DateTime.Now.ToString("yyyyMMddHHmm") + ".txt");
             Response.Write(text);
+    
             Response.End();
-            
+
         }
+
+        public static void SendEmail()
+        {
+           
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                //  string output = "Output";
+                sb.Append(_logstring);
+                sb.Append("\r\n");
+                string text = sb.ToString();
+         
+                    MailMessage Mail = new MailMessage();
+
+                Mail.IsBodyHtml = true;
+                Mail.Body = text;
+                Mail.BodyEncoding = System.Text.Encoding.ASCII;
+                Mail.Body = Mail.Body.Replace(Environment.NewLine, "<br/>");
+                
+                    Mail.Subject = ("EMPAC Tracker Log" + DateTime.Now.ToString("yyyyMMddHHmm"));
+                   Mail.From = new MailAddress("ksipp911@gmail.com");
+
+                    Mail.To.Add(new MailAddress("k.sipprell@mchsi.com"));
+                //Attachment attach = new Attachment(file);
+                //Mail.Attachments.Add(attach);
+
+                    System.Net.Mail.SmtpClient Smtp = new SmtpClient();
+
+                    Smtp.Host = ("smtp.gmail.com"); // for example gmail smtp server
+
+                    Smtp.EnableSsl = true;
+                    Smtp.Port = 587;
+                //    textBox27.Text = user.ToString();
+                    // Smtp.Credentials = new System.Net.NetworkCredential("ksipp911@gmail.com", "cloe$1124");
+                    Smtp.Credentials = new System.Net.NetworkCredential("ksipp911@gmail.com", "bjkpclbnvugylkei");
+
+                    Smtp.Send(Mail);
+                    //FileLog("message sent to " + to.ToString());
+                    //Log("message sent to " + to.ToString());
+              
+            }
+            catch (SmtpFailedRecipientException ex)
+            {
+            //    Log("Send Mail Error" + ex.ToString());
+            //    //  Send("Send Mail Error" + ex.ToString());
+            //    FileLog("Send Mail Error" + ex.ToString());
+            }
+        }
+
+     
+
 
         //protected void Button2_Click(object sender, EventArgs e)
         //{
