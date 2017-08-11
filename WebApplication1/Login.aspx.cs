@@ -64,6 +64,7 @@ namespace WebApplication1
 
 
         HttpRequest _httpRequest = HttpContext.Current.Request;
+   
         protected void Page_Load(object sender, EventArgs e)
         {
             TextBox1.BackColor = default(System.Drawing.Color);
@@ -106,11 +107,11 @@ namespace WebApplication1
                     TextBox2.Text = string.Empty;
                     TextBox1.BackColor = default(System.Drawing.Color);
                     TextBox2.BackColor = default(System.Drawing.Color);
-                    if (Request.Cookies["user"] != null)
+                     if (Request.Cookies["user"] != null)
                     {
                         ListBox1.Visible = false;
-                        TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
-
+                          TextBox1.Text = Server.HtmlEncode(Request.Cookies["user"].Value);
+                      //  TextBox1.Text = cookie["user"];
                         name = UppercaseWords(TextBox1.Text);
 
 
@@ -177,7 +178,7 @@ namespace WebApplication1
             //{
             //    name = RemoveSpace(UppercaseWords(TextBox1.Text));
             //    Response.Cookies["user"].Value = name;
-                Response.Cookies["user"].Expires = DateTime.Now.AddDays(10000);
+           //     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1000);
             //}
 
 
@@ -338,9 +339,12 @@ namespace WebApplication1
             //       Button2.Enabled = false;
             name = UppercaseWords(TextBox1.Text);
             //   Response.Cookies["user"].Value = RemoveSpace(UppercaseWords(TextBox1.Text));
-            Response.Cookies["user"].Value = name;
-            Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
 
+
+          //  remd 8-10-17
+            Response.Cookies["user"].Value = name;
+            Response.Cookies["user"].Expires = DateTime.Now.AddYears(10);
+         
 
             //   var propval = prop.GetValue(ob);
             //var type = typeof(Global);
