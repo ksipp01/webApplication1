@@ -57,7 +57,7 @@ namespace WebApplication1
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            //this doesn't work.  still re-wristes log
+            //this doesn't work.  still re-wristes log..
 
             CancelUnexpectedRePost();
             if (!IsPostBack)
