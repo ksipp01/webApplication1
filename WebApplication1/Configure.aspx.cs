@@ -26,7 +26,8 @@ namespace WebApplication1
             {
               //  string Savepath = Server.MapPath("~/Uploaded/" + FileUpload1.FileName);
                 Savepath = Server.MapPath("~/App_Data/" + FileUpload1.FileName);
-                FileUpload1.SaveAs(Savepath + "EMPAC_Tracker_config.txt");
+                //FileUpload1.SaveAs(Savepath + "EMPAC_Tracker_config.txt");
+                FileUpload1.SaveAs(Savepath);
                 Provider.ReadText(Savepath);
 
                 for (int i = 0; i < Provider.providers.Count(); i++)
