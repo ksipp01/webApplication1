@@ -13,6 +13,8 @@ namespace WebApplication1
 
     public partial class Configure : System.Web.UI.Page
     {
+        public static string Savepath;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -23,9 +25,9 @@ namespace WebApplication1
             if (FileUpload1.HasFile)
             {
               //  string Savepath = Server.MapPath("~/Uploaded/" + FileUpload1.FileName);
-                string Savepath = Server.MapPath("~/App_Data/" + FileUpload1.FileName);
-                FileUpload1.SaveAs(Savepath);
-                Provider.ReadText();
+                Savepath = Server.MapPath("~/App_Data/" + FileUpload1.FileName);
+                FileUpload1.SaveAs(Savepath + "EMPAC_Tracker_config.txt");
+                Provider.ReadText(Savepath);
 
                 for (int i = 0; i < Provider.providers.Count(); i++)
                 {
@@ -34,7 +36,7 @@ namespace WebApplication1
                         TextBox1.Text += Provider.providers[i].Name + "\r\n";
                     }
                 }
-
+                TextBox1.Text += "Email to: " + Provider.EmailTo;
             }
         }
     }

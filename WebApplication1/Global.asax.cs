@@ -32,11 +32,17 @@ namespace WebApplication1
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            Configure.Savepath = Server.MapPath("~/App_Data/" + "EMPAC_Tracker_config.txt");
             if (!Startup)  //read the .txt file on the server to populate th3 global.provider class.   only done at first session start
             {
-                Provider.ReadText();
-              //  Log.Logstring = "";
-                Log.Logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\r\n";
+                if (!File.Exists(Configure.Savepath))
+                    Response.Redirect("~/configure.aspx");
+                else
+                {
+                    Provider.ReadText(Configure.Savepath);
+                    //  Log.Logstring = "";
+                    Log.Logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\r\n";
+                }
             }
                 //Provider[] providers = new Provider[3];
                 //string path = @"C:\temp\test.txt";

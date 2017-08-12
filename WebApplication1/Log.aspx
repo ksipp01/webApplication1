@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+           
     <title></title>
     <style>
       .button {
@@ -27,6 +28,8 @@
         <br />
                 <asp:Button ID="Button1" runat="server" CssClass="button" OnClick="Button1_Click" Text="Clear Log" />
         <asp:Button ID="Button2" runat="server" CssClass="button" Text="Save Log" OnClick="Button2_Click" />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Send email" />
+        <asp:HiddenField ID="_repostcheckcode" runat="server" />
         </div>
    
         </form>

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.IO;
 using System.Text;
 using System.Net.Mail;
+using System.Reflection;
 
 
 namespace WebApplication1
@@ -14,6 +15,12 @@ namespace WebApplication1
     public partial class Log : System.Web.UI.Page
     {
         private static string _logstring;
+        private Boolean IsPageRefresh = false;
+
+       
+
+
+
 
         public static string Logstring
         {
@@ -27,15 +34,57 @@ namespace WebApplication1
                 _logstring = value;
             }
         }
+        private void CancelUnexpectedRePost()
+        {
+            string clientCode = _repostcheckcode.Value;
 
+            //Get Server Code from session (Or Empty if null)
+            string serverCode = Session["_repostcheckcode"] as string ?? "";
+
+            if (!IsPostBack || clientCode.Equals(serverCode))
+            {
+                //Codes are equals - The action was initiated by the user
+                //Save new code (Can use simple counter instead Guid)
+                string code = Guid.NewGuid().ToString();
+                _repostcheckcode.Value = code;
+                Session["_repostcheckcode"] = code;
+            }
+            else
+            {
+                //Unexpected action - caused by F5 (Refresh) button
+                Response.Redirect(Request.Url.AbsoluteUri);
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            //   _logstring += Request.QueryString["val"];
-            if (_logstring == String.Empty)
-            TextBox1.Text = String.Empty;
+            //this doesn't work.  still re-wristes log
 
-            TextBox1.Text += _logstring;
-            
+            CancelUnexpectedRePost();
+            if (!IsPostBack)
+            {
+                ViewState["postids"] = System.Guid.NewGuid().ToString();
+                Session["postid"] = ViewState["postids"].ToString();
+            }
+            else
+            {
+                if (ViewState["postids"].ToString() != Session["postid"].ToString())
+                {
+                    IsPageRefresh = true;
+                }
+                Session["postid"] = System.Guid.NewGuid().ToString();
+                ViewState["postids"] = Session["postid"].ToString();
+            }
+
+
+
+            if (!IsPageRefresh)
+            {
+                //   _logstring += Request.QueryString["val"];
+                if (_logstring == String.Empty)
+                    TextBox1.Text = String.Empty;
+
+                TextBox1.Text += _logstring;
+            }
             //if (Session["value"] != null)
             //TextBox1.Text = Session["value"].ToString();
         }
@@ -86,53 +135,60 @@ namespace WebApplication1
 
         public static void SendEmail()
         {
-           
-            try
+            if (Provider.EmailTo != "")
             {
-                StringBuilder sb = new StringBuilder();
-                //  string output = "Output";
-                sb.Append(_logstring);
-                sb.Append("\r\n");
-                string text = sb.ToString();
-         
+                try
+                {
+                    StringBuilder sb = new StringBuilder();
+                    //  string output = "Output";
+                    sb.Append(_logstring);
+                    sb.Append("\r\n");
+                    string text = sb.ToString();
+
                     MailMessage Mail = new MailMessage();
 
-                Mail.IsBodyHtml = true;
-                Mail.Body = text;
-                Mail.BodyEncoding = System.Text.Encoding.ASCII;
-                Mail.Body = Mail.Body.Replace(Environment.NewLine, "<br/>");
-                
-                    Mail.Subject = ("EMPAC Tracker Log" + DateTime.Now.ToString("yyyyMMddHHmm"));
-                   Mail.From = new MailAddress("ksipp911@gmail.com");
+                    Mail.IsBodyHtml = true;
+                    Mail.Body = text;
+                    Mail.BodyEncoding = System.Text.Encoding.ASCII;
+                    Mail.Body = Mail.Body.Replace(Environment.NewLine, "<br/>");
 
-                    Mail.To.Add(new MailAddress("k.sipprell@mchsi.com"));
-                //Attachment attach = new Attachment(file);
-                //Mail.Attachments.Add(attach);
+                    Mail.Subject = ("EMPAC Tracker Log" + DateTime.Now.ToString("yyyyMMddHHmm"));
+                    Mail.From = new MailAddress("EMPACTracker@EMPAC-Tracker.azurewebsites.net");
+
+                    Mail.To.Add(new MailAddress(Provider.EmailTo));
+                    //Attachment attach = new Attachment(file);
+                    //Mail.Attachments.Add(attach);
 
                     System.Net.Mail.SmtpClient Smtp = new SmtpClient();
 
-                    Smtp.Host = ("smtp.gmail.com"); // for example gmail smtp server
+                    Smtp.Host = ("smtp.sendgrid.net"); // for example gmail smtp server
 
                     Smtp.EnableSsl = true;
                     Smtp.Port = 587;
-                //    textBox27.Text = user.ToString();
-                    // Smtp.Credentials = new System.Net.NetworkCredential("ksipp911@gmail.com", "cloe$1124");
-                    Smtp.Credentials = new System.Net.NetworkCredential("ksipp911@gmail.com", "bjkpclbnvugylkei");
+                    //    textBox27.Text = user.ToString();
+                    Smtp.Credentials = new System.Net.NetworkCredential("azure_4c4e0cc6f7169324ca1f9cae62ab0822@azure.com", Provider.EmailPswd);
+                    //      Smtp.Credentials = new System.Net.NetworkCredential("fleetadd01@gmail.com", "");
 
                     Smtp.Send(Mail);
                     //FileLog("message sent to " + to.ToString());
                     //Log("message sent to " + to.ToString());
-              
-            }
-            catch (SmtpFailedRecipientException ex)
-            {
-            //    Log("Send Mail Error" + ex.ToString());
-            //    //  Send("Send Mail Error" + ex.ToString());
-            //    FileLog("Send Mail Error" + ex.ToString());
+
+                }
+                catch (SmtpFailedRecipientException ex)
+                {
+                    //    Log("Send Mail Error" + ex.ToString());
+                    //    //  Send("Send Mail Error" + ex.ToString());
+                    //    FileLog("Send Mail Error" + ex.ToString());
+                }
             }
         }
 
-     
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            SendEmail();
+        }
+
+
 
 
         //protected void Button2_Click(object sender, EventArgs e)

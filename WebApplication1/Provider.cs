@@ -13,6 +13,33 @@ namespace WebApplication1
         private string _type;
         private DateTime _eta;
 
+        private static string _emailPswd;
+        private static string _emailTo;
+
+        public static string EmailPswd
+        {
+            get
+            {
+                return _emailPswd;
+            }
+            set
+            {
+                _emailPswd = value;
+            }
+        }
+       
+        public static string EmailTo
+        {
+            get
+            {
+                return _emailTo;
+            }
+
+            set
+            {
+                _emailTo = value;
+            }
+        }
         public string Name
         {
             get
@@ -24,7 +51,6 @@ namespace WebApplication1
                 _name = value;
             }
         }
-
         public string Status
         {
             get
@@ -161,6 +187,7 @@ namespace WebApplication1
             }
         }
 
+        
         public Provider (string name, string status, string type, DateTime eta)
         {
             _name = name;
@@ -197,13 +224,13 @@ namespace WebApplication1
         private static int _PAhere = 0;
 
 
-        public static void ReadText()
+        public static void ReadText(string path)
         {
             string type = "";
             Global1.Startup = true;
             //  Provider[] providers = new Provider[3];
             //string path = @"C:\temp\test.txt";
-            string path = HttpContext.Current.Server.MapPath("~/App_Data/Test.txt");
+       //     string path = HttpContext.Current.Server.MapPath("~/App_Data/Test.txt");
             if (File.Exists(path))
             {
                 using (StreamReader textFile = new StreamReader(path))
@@ -214,8 +241,13 @@ namespace WebApplication1
                     {
                         Provider p = new Provider();
                         string read = textFile.ReadLine();
-                        if (read == "end")
+                       if (read.Substring(0,2) == "en")
+                        {
+                            _emailTo = p.Between(read, "To:", "Pswd:");
+                            _emailPswd = p.After(read, "Pswd:");
                             break;
+                        }
+                           
                         if (read == "MD")
                         {
                             type = "MD";
@@ -244,6 +276,43 @@ namespace WebApplication1
                 
            
         }
+        private string Between(string value, string a, string b)
+        {
+            int posA = value.IndexOf(a);
+            int posB = value.LastIndexOf(b);
+            if (posA == -1)
+            {
+                return "";
+            }
+            if (posB == -1)
+            {
+                return "";
+            }
+            int adjustedPosA = posA + a.Length;
+            if (adjustedPosA >= posB)
+            {
+                return "";
+            }
+            return value.Substring(adjustedPosA, posB - adjustedPosA);
+        }
+        public string After(string value, string a)
+        {
+            int posA = value.LastIndexOf(a);
+            if (posA == -1)
+            {
+                return "";
+            }
+            int adjustedPosA = posA + a.Length;
+            if (adjustedPosA >= value.Length)
+            {
+                return "";
+            }
+            return value.Substring(adjustedPosA);
+        }
+
+
+
+
         public static void Reset()
         {
         
