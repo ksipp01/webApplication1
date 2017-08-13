@@ -40,5 +40,10 @@ namespace WebApplication1
                 TextBox1.Text += "Email to: " + Provider.EmailTo;
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/index.aspx");
+        }
     }
 }

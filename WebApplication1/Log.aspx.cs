@@ -188,6 +188,11 @@ namespace WebApplication1
             SendEmail();
         }
 
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/index.aspx");
+        }
+
 
 
 

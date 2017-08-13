@@ -1,4 +1,5 @@
-﻿using System;
+﻿#define DEBUG
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ using System.IO;
 
 namespace WebApplication1
 {
+
     public class Global1 : System.Web.HttpApplication
     {
         private static bool startup = false;
@@ -117,7 +119,9 @@ namespace WebApplication1
         protected void Session_End(object sender, EventArgs e)
         {
             Log.Logstring += "EMPAC Provider Tracker:  Session Ended - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + " hrs\r\n";
+#if (DEBUG == false)
             Log.SendEmail();
+#endif
         }
 
         protected void Application_End(object sender, EventArgs e)
