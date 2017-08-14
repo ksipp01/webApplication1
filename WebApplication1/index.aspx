@@ -200,7 +200,7 @@ P
     </div>
     </div>
     <div class="footer">
-    <asp:Button ID="Button1" runat="server" Text="Reset" CssClass="button" OnClick="Button1_Click" Width="90px" />   
+    <asp:Button ID="Button1" runat="server" Text="Reset" CssClass="button" OnClientClick="return confirm('Are you sure you want to reset? All data will be lost')" OnClick="Button1_Click" Width="90px" />   
       <asp:Button ID="Button2" runat="server" CssClass="button" Text="Enter ETA" Width="90px" OnClick="Button2_Click" /> 
       <asp:Button ID="Button3" runat="server" CssClass="button" Text="View Log" OnClick="Button3_Click" Width="90px" />    
       <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" CssClass="button" Text="Configure" Width="90px" />   

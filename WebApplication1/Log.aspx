@@ -26,7 +26,7 @@
         <asp:TextBox ID="TextBox1" runat="server" Height="850px" TextMode="MultiLine" Width="812px"></asp:TextBox>
         <br />
         <br />
-                <asp:Button ID="Button1" runat="server" CssClass="button" OnClick="Button1_Click" Text="Clear Log" />
+                <asp:Button ID="Button1" runat="server" CssClass="button" OnClick="Button1_Click" OnClientClick="return confirm('Are you sure you want to clear? All data will be lost')" Text="Clear Log" />
         <asp:Button ID="Button2" runat="server" CssClass="button" Text="Save Log" OnClick="Button2_Click" />
         <asp:Button ID="Button3" runat="server" CssClass="button" OnClick="Button3_Click" Text="Send email" />     
                 <asp:Button ID="Button4" runat="server" CssClass="button" Text="Main Page" OnClick="Button4_Click" />

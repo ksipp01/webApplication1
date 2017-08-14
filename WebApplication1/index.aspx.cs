@@ -394,6 +394,7 @@ namespace WebApplication1
         {
             if (!IsPageRefresh)
             {
+
                 Provider.Reset();
                 Response.Redirect("~/index.aspx");
             }
