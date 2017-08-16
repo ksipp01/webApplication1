@@ -222,37 +222,41 @@ namespace WebApplication1
 
         protected void Button1_Click(object sender, EventArgs e) // submit ETA
         {
-            int minutes = Convert.ToInt16(TextBox2.Text);
-            DateTime time = DateTime.Now;
-            TimeSpan eta = new TimeSpan(0, minutes, 0);
+            if (TextBox2.Text != "")
+            {
+                int minutes = Convert.ToInt16(TextBox2.Text);
+                DateTime time = DateTime.Now;
+                TimeSpan eta = new TimeSpan(0, minutes, 0);
 
 
-            for (int i = 0; i < Provider.providers.Count(); i++)
-                if (Provider.providers[i] != null)
-                {
-                    if (Provider.providers[i].Name == name)
+                for (int i = 0; i < Provider.providers.Count(); i++)
+                    if (Provider.providers[i] != null)
                     {
-                        Provider.providers[i].Status = "Enroute";
-                        Provider.providers[i].Eta = time.Add(eta);
-                        Log.Logstring += Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm") + "\r\n";
-                        Log.LogFile(Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm"));
-                        if (Provider.providers[i].Type == "MD")
-                            Provider.MDrespond++;
-                        else
-                            Provider.PArespond++;
+                        if (Provider.providers[i].Name == name)
+                        {
+                            Provider.providers[i].Status = "Enroute";
+                            Provider.providers[i].Eta = time.Add(eta);
+                            Log.Logstring += Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm") + "\r\n";
+                            Log.LogFile(Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm"));
+                            if (Provider.providers[i].Type == "MD")
+                                Provider.MDrespond++;
+                            else
+                                Provider.PArespond++;
+                        }
                     }
-                }
-            TextBox2.BackColor = System.Drawing.Color.Lime;
-            //else
-            //    return;
+                TextBox2.BackColor = System.Drawing.Color.Lime;
+                //else
+                //    return;
 
-            if (!_httpRequest.Browser.IsMobileDevice)
-                Response.Redirect("~/index.aspx");  // redirect back to index for HUC ETA entry.  
-            else
-                Response.Redirect("~/success.aspx");
+                if (!_httpRequest.Browser.IsMobileDevice)
+                    Response.Redirect("~/index.aspx");  // redirect back to index for HUC ETA entry.  
+                else
+                    Response.Redirect("~/success.aspx");
 
 
-            
+
+            }
+        
 
 
         }
