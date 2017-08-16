@@ -104,6 +104,7 @@
     <Content Include="favicon-16x16.png" />
     <Content Include="favicon-32x32.png" />
     <Content Include="favicon.ico" />
+    <Content Include="FileManager.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Mobile\Default.aspx" />
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="Configure.aspx.designer.cs">
       <DependentUpon>Configure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager.aspx.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager.aspx.designer.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

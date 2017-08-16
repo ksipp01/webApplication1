@@ -12,7 +12,7 @@ namespace WebApplication1
     public partial class TestProviderClass : System.Web.UI.Page
     {
         private bool isMobile = false;
-
+        private bool firstload = true;
         private void CancelUnexpectedRePost()
         {
             string clientCode = _repostcheckcode.Value;
@@ -37,7 +37,29 @@ namespace WebApplication1
         private Boolean IsPageRefresh = false;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            //   if (!IsPostBack && Session["IsAlreadyLoad"] == null && Provider.ActiveSession == false) //read the .txt file on the server to populate th3 global.provider class.   only done at first session start
+            if (!Provider.ActiveSession)
+            {
+                if (!System.IO.File.Exists(Configure.Savepath))
+                    Response.Redirect("~/configure.aspx");
+                else
+                {
+                    Provider.ReadText(Configure.Savepath);
+                      Log.Logstring = "";
+                        Log.Logstring += "EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\r\n";
+
+                    if (!System.IO.File.Exists(Log.LogPath))
+                        System.IO.File.WriteAllText(Log.LogPath, Log.Logstring);
+                    else
+                        Log.LogFile("EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs");
+                }
             
+            }
+
+
+
+
 
 
             CancelUnexpectedRePost();
@@ -45,6 +67,10 @@ namespace WebApplication1
             {
                 ViewState["postids"] = System.Guid.NewGuid().ToString();
                 Session["postid"] = ViewState["postids"].ToString();
+
+              
+               
+
             }
             else
             {
@@ -61,8 +87,16 @@ namespace WebApplication1
             TextBox69.Text = Provider.PAhere.ToString();
             TextBox70.Text = Provider.PArespond.ToString();
 
+
+
+
+
             if (!IsPageRefresh)
             {
+
+               
+
+
 
                 HttpRequest _httpRequest = HttpContext.Current.Request;
                 if (_httpRequest.Browser.IsMobileDevice)
@@ -82,6 +116,9 @@ namespace WebApplication1
                 TextBox70.BackColor = System.Drawing.Color.Lime;
     
                 FindStatus();
+
+               
+
 
             }
         }
@@ -331,7 +368,8 @@ namespace WebApplication1
                         {
                             Provider.providers[i].Status = "Here";
                             justShowedUp = true;
-                            Log.Logstring += Provider.providers[i].Name + ": Arrived at " + DateTime.Now.ToString("HHmm") + "\r\n";
+                            Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\r\n";
+                            Log.LogFile(Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm"));
                             if (Provider.providers[i].Type == "MD")
                             {
                                 Provider.Mdhere++;
@@ -358,6 +396,7 @@ namespace WebApplication1
                     {
                         Provider.providers[i].Status = "Done";
                        Log.Logstring += Provider.providers[i].Name + ": Complete - " + DateTime.Now.ToString("HHmm") + "\r\n";
+                            Log.LogFile(Provider.providers[i].Name + ": Complete - " + DateTime.Now.ToString("HHmm"));    
                             if (Provider.providers[i].Type == "MD")
                             Provider.Mdhere--;
 
@@ -369,7 +408,8 @@ namespace WebApplication1
                     {
                         Provider.providers[i].Status = "Here";
                         Log.Logstring += Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm") + "\r\n";
-                          if (Provider.providers[i].Type == "MD")
+                                Log.LogFile(Provider.providers[i].Name + ": Arrived - " + DateTime.Now.ToString("HHmm"));
+                                if (Provider.providers[i].Type == "MD")
                         {
                             Provider.MDrespond--;
                             Provider.Mdhere++;

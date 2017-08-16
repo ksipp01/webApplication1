@@ -17,11 +17,11 @@ namespace WebApplication1
         private static string _logstring;
         private Boolean IsPageRefresh = false;
 
-       
 
 
 
 
+        private static string logPath;
         public static string Logstring
         {
             get
@@ -31,10 +31,30 @@ namespace WebApplication1
 
             set
             {
-                _logstring = value;
+               _logstring = value;
+                         
             }
         }
-        private void CancelUnexpectedRePost()
+
+        public static string LogPath
+        {
+            get
+            {
+                return logPath;
+            }
+
+            set
+            {
+                logPath = value;
+            }
+        }
+        public static void LogFile(string text)
+        {
+            File.AppendAllText(LogPath, text + "\r\n");
+        }
+
+        private void CancelUnexpectedRePost() //Simple Web User Control prevents unexpected action caused by Refresh Button  
+            //from:  https://www.codeproject.com/Tips/319955/How-to-prevent-Re-Post-action-caused-by-pressing-b 
         {
             string clientCode = _repostcheckcode.Value;
 
@@ -57,7 +77,7 @@ namespace WebApplication1
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            //this doesn't work.  still re-wristes log....
+            //this doesn't work.  still re-writes log....
 
             CancelUnexpectedRePost();
             if (!IsPostBack)
@@ -128,7 +148,7 @@ namespace WebApplication1
             //   Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC-Tracker Log.txt\"");
             Response.AppendHeader("content-disposition", "attachment;filename=\"EMPAC_Tracker" + DateTime.Now.ToString("yyyyMMddHHmm") + ".txt");
             Response.Write(text);
-    
+            File.WriteAllText(Server.MapPath("~/App_Data/" + "EMPAC_Tracker" + DateTime.Now.ToString("yyyyMMddHHmm") + ".txt"), text);
             Response.End();
 
         }
