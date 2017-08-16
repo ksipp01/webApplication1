@@ -15,6 +15,8 @@
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" Text="Delete"  OnClientClick="return confirm('Are you sure you want to delete this file? All data will be lost')" OnClick="Button1_Click" />
+    &nbsp;
+        <asp:Button ID="Button2" runat="server" Text=" Save " OnClick="Button2_Click" />
     </form>
 </body>
 </html>

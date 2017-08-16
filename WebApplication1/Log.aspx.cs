@@ -213,6 +213,11 @@ namespace WebApplication1
             Response.Redirect("~/index.aspx");
         }
 
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FileManager.aspx");
+        }
+
 
 
 
