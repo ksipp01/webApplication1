@@ -235,6 +235,7 @@ namespace WebApplication1
                         Provider.providers[i].Status = "Enroute";
                         Provider.providers[i].Eta = time.Add(eta);
                         Log.Logstring += Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm") + "\r\n";
+                        Log.LogFile(Provider.providers[i].Name + ":" + TextBox2.Text + " min ETA - " + DateTime.Now.ToString("HHmm"));
                         if (Provider.providers[i].Type == "MD")
                             Provider.MDrespond++;
                         else

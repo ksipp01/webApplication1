@@ -12,6 +12,7 @@ namespace WebApplication1
         private string _status;
         private string _type;
         private DateTime _eta;
+        private static bool activeSession;
 
         private static string _emailPswd;
         private static string _emailTo;
@@ -187,7 +188,19 @@ namespace WebApplication1
             }
         }
 
-        
+        public static bool ActiveSession
+        {
+            get
+            {
+                return activeSession;
+            }
+
+            set
+            {
+                activeSession = value;
+            }
+        }
+
         public Provider (string name, string status, string type, DateTime eta)
         {
             _name = name;
@@ -227,8 +240,9 @@ namespace WebApplication1
         public static void ReadText(string path)
         {
             string type = "";
-            Global1.Startup = true;
+         //   Global1.Startup = true;
             //  Provider[] providers = new Provider[3];
+            activeSession = true;
             //string path = @"C:\temp\test.txt";
        //     string path = HttpContext.Current.Server.MapPath("~/App_Data/Test.txt");
             if (File.Exists(path))
@@ -329,7 +343,8 @@ namespace WebApplication1
             Provider.PAhere = 0;
             Provider.PArespond = 0;
             Log.Logstring += "Form Reset  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs\r\n";
-            Global1.Startup = false;
+            Log.LogFile("Form Reset  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm"));
+            Provider.ActiveSession = false;
         }
 
     }
