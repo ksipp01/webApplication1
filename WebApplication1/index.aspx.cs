@@ -54,11 +54,7 @@ namespace WebApplication1
                     else
                         Log.LogFile("EMPAC Provider Tracker:  Begin  - " + DateTime.Now.ToString("MM/dd/yyyy HHmm") + "hrs");
                 }
-<<<<<<< HEAD
-            
-=======
-             //   Session["IsAlreadyLoad"] = true;
->>>>>>> fdb798cce03dee98d9fffdae827b88f9b5fc0790
+
             }
 
 
