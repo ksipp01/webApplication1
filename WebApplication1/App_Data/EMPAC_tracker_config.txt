@@ -1,7 +1,6 @@
 MD
 Karen Anderson
 Laresa Deboer
-Dan Dewey
 Jose Dundee
 Sarah Dundee
 Sara Fish
@@ -12,9 +11,11 @@ Valerie Johnson
 Dave Larson
 Lisa Larson
 Amy Osborn
+Chris Ott
 Greg Peterson
 Yo Schugel
 Kevin Sipprell
+Chris Solie
 PA
 Emily Anderson
 Jerod Barnes
